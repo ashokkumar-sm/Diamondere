@@ -63,7 +63,7 @@ Feature: Testing Homepage of Diamondere
         Then I ensure the Black Diamond redirects to the Black Diamond rings page
 
     #10
-    @smoketest1
+    @smoketest
     Scenario: Checking the shop by precious Gemstone submenu under Rings Menu
         Given I hover over the Rings menu
         Then I Ensure that Rings submenu dropdown is visible
