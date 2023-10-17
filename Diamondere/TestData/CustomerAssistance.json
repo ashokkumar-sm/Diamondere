@@ -1,0 +1,55 @@
+{
+    "RequestCallBack": 
+    {
+        "txtNameLoggedIn": "DMD Test",
+        "txtEmailLoggedIn": "testautomation3@gmail.com",
+        "Name": "TEST",
+        "Phone": "458726581315",
+        "Email": "dmdtest@yahoo.com",
+        "InvalidName1": "147852",
+        "InvalidName2": "$&*()$#@",
+        "InvalidName3": "Abc785^&*",
+        "InvalidName4": "          ",
+        "InvalidPhone": "*789@#abc",
+        "CCPhone": "(+91)8457858212",
+        "InvalidEmail1": "litefury@domaincom",
+        "InvalidEmail2": "litefury.domain.com",
+        "InvalidEmail3": "litefury@domain..com",
+        "InvalidEmail4": "litefury@domain@com",
+        "InvalidEmail5": "litefury@.com",
+        "InvalidEmail6": "litefury@domain.",
+        "InvalidEmail7": "litefury@.domain.com",
+        "InvalidEmail8": ".litefury@domain.com",
+        "InvalidEmail9": "litefury.@domain.com",
+        "InvalidEmail10": "litefury@domain.com.",
+        "ExceedCharLimitName": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwx",
+        "ExceedCharLimitPhone": "12345678901234567890",
+        "ExceedCharLimitEmail": "testing.abcdefghijklmnopqrstuvwxyz@gmail.com"
+    },
+
+    "ContactUs": 
+    {
+        "Message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in est ante in nibh mauris cursus mattis. Viverra suspendisse potenti nullam ac tortor. @RandomUsername tristique justo nec ligula ultricies. In hac habitasse platea dictumst. 'https://staging.diamondere.com/p/rings-bridal-ring-set-amina-8091-7948?metal=14k-white-gold&stones=pink-tourmaline&stones=si-diamond' for $5,828",
+        "RestrictedCharMessage": "[]"
+    },
+
+    "JoinDiamondereCommunity": 
+    {
+        "AlreadyRegEmail": "dmdtest@yahoo.com",
+        "FirstName": "DMD",
+        "BirthMonth": "09",
+        "BirthDate": "02",
+        "CharValidationBirthday1": "@%",
+        "CharValidationBirthday2": "ab",
+        "CharValidationBirthday3": "Z1",
+        "CharValidationBirthday4": "#5",
+        "InvalidBirthMonth": "15",
+        "InvalidBirthDate": "51"
+    },
+
+    "ShareProduct":
+    {
+        "FriendName": "Test Abc",
+        "FriendEmail": "testabc@gmail.com"
+    }
+}

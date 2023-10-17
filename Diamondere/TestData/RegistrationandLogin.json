@@ -1,0 +1,34 @@
+{
+"RegandLoginlinks":{
+    "RegistrationSuccessPage": "https://staging.diamondere.com/information/registrationsuccess",
+    "AllRings": "https://staging.diamondere.com/rings",
+    "ForgotPassword": "https://www.diamondere.com/forgot-password",
+    "LoginPage": "https://staging.diamondere.com/login",
+    "RegistrationFirstName": "DMDauto",
+    "RegistrationLastName":"Testingauto",
+    "RegistrationEmail":"diamonderetest@gmail.com",
+    "LoginEmail":"testautomation3@gmail.com",
+    "RegistrationPassword":"Pass@123",
+    "TermsofUsePage":"https://staging.diamondere.com/information/terms",
+    "Free100DaysReturn":"https://staging.diamondere.com/information/return-policy",
+    "ComplimenratyGlobalShipping":"https://staging.diamondere.com/information/shipping-policy",
+    "FreeResizing":"https://staging.diamondere.com/information/resizing",
+    "ComplimentaryEngraving":"https://staging.diamondere.com/information/why-diamondere",
+    "EmeraldRings":"https://staging.diamondere.com/rings/emerald-rings",
+    "SolitaireRings":"https://staging.diamondere.com/rings/engagement-rings?design=solitaire",
+    "HeartPendants":"https://staging.diamondere.com/necklaces/heart-necklaces",
+    "Chandlierearrings":"https://staging.diamondere.com/earrings/chandelier-earrings",
+    "Cufflinks":"https://staging.diamondere.com/mens/cufflinks",
+    "SpecCharacterFirstName":"!#$123  Jkn",
+    "SpecCharacterLastName":"!#$123  Jkn",
+    "SpecCharacterEmail":"!#$123  Jkn",
+    "InvalidPW":"236657",
+    "HomePage": "https://staging.diamondere.com/",
+    "InvalidMail":"stest@gmail.com",
+    "ForgotPasswordPage":"https://staging.diamondere.com/forgot-password",
+    "UnregisteredEmail":"dmdauto@gmail.com",
+
+    "CheckoutEmail": "testautomation2@gmail.com",
+    "CheckoutPassword": "Pass@123"
+  }
+}

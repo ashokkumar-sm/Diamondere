@@ -1,0 +1,57 @@
+{
+    "Browserlink":{
+        "homeurl": "https://staging.diamondere.com/",
+        "categoryurl":"https://staging.diamondere.com/rings",
+        "gemstoneurl":"https://staging.diamondere.com/rings/ruby-rings",
+        "customdiamondurl":"https://staging.diamondere.com/p/rings-sidestone-xylos-10847-10676?metal=14k-white-gold&stones=custom-diamond&stones=si-diamond",
+        "customlabdiamondurl":"https://staging.diamondere.com/p/rings-sidestone-xylos-10847-10676?metal=14k-white-gold&stones=custom-diamond&stones=si-diamond&forcemyoj=true&featurestone=lab",
+        "menscategoryurl":"https://staging.diamondere.com/mens/mens-rings"
+    },
+    "Socialnetworklink":{
+        "mailurl":"https://staging.diamondere.com/share-product",
+        "pinteresturl":"https://www.pinterest.com/pin/create/button/?url=https://staging.diamondere.com/p/rings-sidestone-xylos-10847-10676?metal=14k-white-gold&stones=ruby&stones=si-diamond&media=https://images.diamondere.com/new_images/products/xylos/xylos_wg_ru_di_0.jpg&description=Xylos%20Ring%20with%20Round%20Ruby,%20SI%20Diamond%20|%200.77%20carats%20Round%20Ruby%20Sidestone%20Ring%20in%2014k%20White%20Gold%20|%20Diamondere",
+        "facebookurl":"https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fstaging.diamondere.com%252Fp%252Frings-sidestone-xylos-10847-10676%253Fmetal%253D14k-white-gold%26stones%3Dsi-diamond%26t%3DXylos%2BRing%2Bwith%2BRound%2BRuby%252C%2BSI%2BDiamond%2B%257C%2B0.77%2Bcarats%2BRound%2BRuby%2BSidestone%2BRing%2Bin%2B14k%2BWhite%2BGold%2B%257C%2BDiamondere&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=en_GB"
+    },
+    "specialmessagetext":{
+        "text":"Diamondere99"
+    },
+    "Recentlyviewed":{
+        "page3url":"https://staging.diamondere.com/p/rings-wedding-ring-danette-35-35?metal=14k-white-gold&stones=ruby&stones=si-diamond"
+    },
+    "Policy":{
+        "return":"https://staging.diamondere.com/information/return-policy",
+        "warranty":"https://staging.diamondere.com/information/warranty"
+    },
+    "Selected":{
+        "Quality":"Natural AAAA",
+        "Size": "0.57 Cts.",
+        "Bandwidth":"5.5 MM",
+        "MensBandwidth":"5.5 MM"
+    },
+    "Deliveryarea":{
+        "Deliverydate":"Sep 01-04"
+    },
+    "Price":{
+        "changedpricebyringsize":"$2,073",
+        "changedcoupleherpricebyringsize":"$1,733",
+        "changedpricebymetal":"2073",
+        "changedpricebyearringback":"$3,107",
+        "changedpricesizeandquality":"2367",
+        "changedpricebybandwidth":"1733",
+        "changedpricebybraceletlengthN":"3629",
+        "changedpricebychain":"160"
+    },
+    "ProductDetails":{
+        "Centerstone-Type":"Emerald",
+        "Centerstone-Quality":"Heirloom",
+        "Accentstones-Type":"Emeralds",
+        "Accentstones-Quality":"Heirloom",
+        "Accentstone1-Type":"Emeralds",
+        "Accentstone1-Quality":"Heirloom",
+        "Accentstone2-Type":"White Sapphires",
+        "Accentstone2-Metal":"14k White Gold",
+        "Accentstone2-RingThickness":"2.4 mm"
+    }
+
+
+}

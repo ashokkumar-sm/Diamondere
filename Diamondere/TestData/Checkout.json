@@ -1,0 +1,47 @@
+{
+    "Shipping": 
+    {
+        "FirstName": "Automation",
+        "LastName": "Testing",
+        "Email": "dmdtestautomation@gmail.com",
+        "Phone": "(256)459-1992",
+        "Address": "No. 1/5396",
+        "AddressLine2": "Block A, North Reese Avenue - #2", 
+        "City": "88 Carmel-by-the-Sea",
+        "Zip": "93722",
+        "RestrictedCharFirstName": "ø 1 Eleña",
+        "RestrictedCharLastName": "O'Donnell 4",
+        "InvalidEmail1": "litefury@domaincom",
+        "InvalidEmail2": "litefury.domain.com",
+        "InvalidEmail3": "litefury@domain..com",
+        "InvalidEmail4": "litefury@domain@com",
+        "InvalidEmail5": "litefury@.com",
+        "InvalidEmail6": "litefury@domain.",
+        "InvalidEmail7": "litefury@.domain.com",
+        "InvalidEmail8": ".litefury@domain.com",
+        "InvalidEmail9": "litefury.@domain.com",
+        "InvalidEmail10": "litefury@domain.com.",
+        "InvalidPhone1": "Abc123",
+        "InvalidPhone2": "@$*890",
+        "SpecialCharState": "1 - Jammu & Kashmir",
+        "SpecialCharZip": "Zip(76548)",
+        "EditedName": "Diamondere"
+    },
+    "Billing": 
+    {
+        "FirstName": "Lite",
+        "LastName": "Test",
+        "Email": "litefurytestautomation@yahoo.com",
+        "Phone": "(256)441-17892",
+        "Address": "#3, A/123",
+        "AddressLine2": "ABC Avenue - #5", 
+        "City": "88 Fresnø",
+        "Zip": "78722",
+        "EditedEmail": "automationtesting@gmail.com"
+    },
+    "CheckoutLoggedIn": {
+        "FirstName": "Automation Checkout",
+        "LastName": "Testing",
+        "Email": "testautomation2@gmail.com"
+    }
+}

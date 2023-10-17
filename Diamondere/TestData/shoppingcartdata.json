@@ -1,0 +1,21 @@
+{
+    "Browserlink":{
+        "shoppingcarturl": "https://staging.diamondere.com/shoppingcart",
+        "page3url":"https://staging.diamondere.com/p/rings-sidestone-xylos-10847-10676?metal=14k-white-gold&stones=ruby&stones=si-diamond",
+        "mensbandurl":"https://staging.diamondere.com/mens/vvs-diamond-mens-rings?customstone=di-951660-3-vid298&myojId=715087-4_61514-9&matchingJewellery=mens_band&product=1226_nilah_wg14_dicst"
+    },
+    "needassistancelink":{
+        "emailus":"https://staging.diamondere.com/information/contact-us",
+        "requestcallback": "https://staging.diamondere.com/information/toll-free-contact"
+    },
+    "paymentlink":{
+        "affirm":"https://staging.diamondere.com/information/financing-options"
+    },
+    "accreditation":{
+        "accreditationbusniess":"https://www.bbb.org/us/ca/redwood-city/profile/jewelry-stores/diamondere-inc-1116-873976",
+        "norton":"https://seal.digicert.com/seals/popup/?tag=bbpkGMsC&referer=www.diamondere.com&lang=en"
+    },
+    "information":{
+        "additionaldetails":"I need this ring prodcut within 2 days"
+    }
+}

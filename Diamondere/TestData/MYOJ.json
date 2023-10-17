@@ -1,0 +1,184 @@
+  
+    {
+        "StartWithADiamondLinks": 
+        {
+            "Rings": "https://staging.diamondere.com/loose-diamonds?category=rings&shapes=round",
+            "Engagement": "https://staging.diamondere.com/loose-diamonds?category=rings&shapes=round",
+            "Earrings": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round",
+            "Necklaces": "https://staging.diamondere.com/loose-diamonds?category=necklaces&shapes=round",
+            "Mens": "https://staging.diamondere.com/loose-diamonds?category=mens-rings&shapes=round"
+        },
+
+        "StartWithALabDiamondLinks":
+        {
+            "Rings": "https://staging.diamondere.com/loose-lab-created-diamonds?category=rings&shapes=round",
+            "Engagement": "https://staging.diamondere.com/loose-lab-created-diamonds?category=rings&shapes=round",
+            "Earrings": "https://staging.diamondere.com/loose-lab-created-diamonds?category=earrings&shapes=round",
+            "Necklaces": "https://staging.diamondere.com/loose-lab-created-diamonds?category=necklaces&shapes=round",
+            "Mens": "https://staging.diamondere.com/loose-lab-created-diamonds?category=mens-rings&shapes=round"
+        },
+
+        "LooseDiamondsLinks":
+        {
+            "LooseDiamonds": "https://staging.diamondere.com/loose-diamonds?shapes=round",
+            "LooseLabDiamonds": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=round"
+        },
+
+        "Filters":
+        {
+            "OvalAndGEarrings": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=oval&colorfrom=g",
+            "OvalRingDiamonds": "https://staging.diamondere.com/loose-diamonds?category=rings&shapes=oval",
+            "OvalMensRingDiamonds": "https://staging.diamondere.com/loose-lab-created-diamonds?category=mens-rings&shapes=oval",
+            
+            "DraggedPriceUrl": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round&pricetotalfrom=5000&pricetotalto=10000",
+            "MinPrice": "5000",
+            "MaxPrice": "10000",
+            "EnteredPriceUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=round&pricetotalfrom=5000&pricetotalto=10000",
+            "InvalidMinPrice": "45",
+            "InvalidMaxPrice": "999999",
+            "InvalidCharMinPrice": "&*(abc",
+            "InvalidCharMaxPrice": "e+",
+            "DecimalMinPrice": "1100.5",
+            "DecimalMaxPrice": "9999.5",
+            "IncrementAndDecrementPrice": "https://staging.diamondere.com/loose-diamonds?shapes=round&pricetotalfrom=51&pricetotalto=99998",
+
+            "DraggedCaratUrl": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round&sizefrom=1.5&sizeto=15",
+            "MinCarat": "1.5",
+            "MaxCarat": "15",
+            "EnteredCaratUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=round&sizefrom=1.5&sizeto=15",
+            "InvalidMinCarat": "0.1",
+            "InvalidMaxCarat": "33",
+            "InvalidCharMinCarat": "&*(abc",
+            "InvalidCharMaxCarat": "e+",
+            "DecimalMinCarat": "0.55",
+            "DecimalMaxCarat": "20.99",
+            "DecimalCaratUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=earrings&shapes=round&sizefrom=0.55&sizeto=20.99",
+            "InvalidDecimalMinCarat": "0.802",
+            "InvalidDecimalMaxCarat": "15.992",
+            "IncrementAndDecrementCarat": "https://staging.diamondere.com/loose-diamonds?shapes=round&sizefrom=0.21&sizeto=29.99",
+
+            "DragToLeftUrl": "https://staging.diamondere.com/loose-diamonds?category=rings&shapes=round&colorto=e&clarityto=if&cutto=very%20good&polishto=very%20good&fluorescenceto=faint&symmetryto=very%20good",
+            "DragToRightUrl": "https://staging.diamondere.com/loose-diamonds?category=mens-rings&shapes=round&colorfrom=m&clarityfrom=i3&cutfrom=ideal&polishfrom=ideal&fluorescencefrom=very%20strong&symmetryfrom=ideal",
+
+            "DraggedClarityUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=earrings&shapes=round&clarityfrom=vs1&clarityto=si3",
+
+            "DraggedColorUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=mens-rings&shapes=round&colorfrom=f&colorto=k",
+
+            "DraggedSymmetryUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=round&symmetryfrom=very%20good&symmetryto=ideal",
+
+            "DraggedFluorescenceUrl": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round&fluorescencefrom=faint&fluorescenceto=very%20strong",
+            
+            "DraggedLengthUrl": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round&lengthMin=5&lengthMax=7",
+            "MinLength": "5",
+            "MaxLength": "7"  ,
+            "EnteredLengthUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=earrings&shapes=round&lengthMin=5&lengthMax=7",
+            "InvalidMinLength": "2",
+            "InvalidMaxLength": "15",
+            "InvalidCharMinLength": "&*(abc",
+            "InvalidCharMaxLength": "e+",
+            "DecimalMinLength": "6.21",
+            "DecimalMaxLength": "7.25" ,
+            "DecimalLengthUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=earrings&shapes=round&lengthMin=6.21&lengthMax=7.25",
+            "InvalidDecimalMinLength": "5.214",
+            "InvalidDecimalMaxLength": "6.258",
+            "IncrementAndDecrementLength": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round&lengthMin=4.51&lengthMax=7.99",
+            
+            "DraggedBreadthUrl": "https://staging.diamondere.com/loose-diamonds?category=necklaces&shapes=round&breadthMin=6&breadthMax=8",
+            "MinBreadth": "6",
+            "MaxBreadth": "8",
+            "MaxBreadthReEnter": "7",
+            "EnteredBreadthUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=necklaces&shapes=round&breadthMin=6&breadthMax=8",
+            "InvalidMinBreadth": "2",
+            "InvalidMaxBreadth": "10",
+            "InvalidCharMinBreadth": "&*(abc",
+            "InvalidCharMaxBreadth": "e+",
+            "DecimalMinBreadth": "5.87",
+            "DecimalMaxBreadth": "7.35",
+            "DecimalBreadthUrl": "https://staging.diamondere.com/loose-diamonds?category=necklaces&shapes=round&breadthMin=5.87&breadthMax=7.35",
+            "InvalidDecimalMinBreadth": "6.557",
+            "InvalidDecimalMaxBreadth": "6.881",
+            "IncrementAndDecrementBreadth": "https://staging.diamondere.com/loose-lab-created-diamonds?category=necklaces&shapes=round&breadthMin=5.01&breadthMax=8.99",
+
+            "DraggedTableUrl": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round&tablepercentfrom=28&tablepercentto=65",
+            "MinTable": "28",
+            "MaxTable": "65",
+            "EnteredTableUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=round&tablepercentfrom=28&tablepercentto=65",
+            "InvalidMinTable": "0",
+            "InvalidMaxTable": "125",
+            "InvalidCharMinTable": "&*(abc",
+            "InvalidCharMaxTable": "e+",
+            "DecimalMinTable": "45.8",
+            "DecimalMaxTable": "72.4",
+            "IncrementAndDecrementTable": "https://staging.diamondere.com/loose-diamonds?shapes=round&tablepercentfrom=2&tablepercentto=99",
+
+            "DraggedDepthUrl": "https://staging.diamondere.com/loose-diamonds?category=earrings&shapes=round&depthpercentfrom=35&depthpercentto=84",
+            "MinDepth": "35",
+            "MaxDepth": "84",
+            "EnteredDepthUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=round&depthpercentfrom=35&depthpercentto=84",
+            "InvalidMinDepth": "0",
+            "InvalidMaxDepth": "101",
+            "InvalidCharMinDepth": "&*(abc",
+            "InvalidCharMaxDepth": "e+",
+            "DecimalMinDepth": "27.4",
+            "DecimalMaxDepth": "88.2",
+            "IncrementAndDecrementDepth": "https://staging.diamondere.com/loose-diamonds?shapes=round&depthpercentfrom=2&depthpercentto=99",
+
+            "DraggedCutUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=mens-rings&shapes=round&cutfrom=very%20good&cutto=ideal",
+
+            "DraggedPolishUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=rings&shapes=round&polishfrom=very%20good&polishto=ideal",
+
+            "UncheckGIAUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?category=necklaces&shapes=round&selectedlabs=igi",
+            "UncheckIGIUrl": "https://staging.diamondere.com/loose-diamonds?category=mens-rings&shapes=round&selectedlabs=gia",
+
+            "MultipleFiltersUrl": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=oval&pricetotalfrom=5000&pricetotalto=10000&colorfrom=f&colorto=k&selectedlabs=gia&tablepercentfrom=28&tablepercentto=65&symmetryfrom=very%20good&symmetryto=ideal",
+
+            "Carat30": "30",
+
+            "Price1500": "1500",
+            "Price1500Url": "https://staging.diamondere.com/loose-lab-created-diamonds?shapes=round&pricetotalfrom=1500&pricetotalto=1500"
+        },
+
+        "DiamondDetailsPage":
+        {
+            "GIAReport": "https://www.gia.edu/report-check",
+            "PageNumber": "3"
+        },
+
+        "Reviews":
+        {
+            "Rings": "https://staging.diamondere.com/customer-reviews/rings",
+            "Earrings": "https://staging.diamondere.com/customer-reviews/earrings",
+            "Necklaces": "https://staging.diamondere.com/customer-reviews/necklaces",
+            "MensRings": "https://staging.diamondere.com/customer-reviews/mens/mens-rings",
+            "ReturnspolicyMYOJ": "https://staging.diamondere.com/information/return-policy",
+            "ShippingpolicyMYOJ": "https://staging.diamondere.com/information/shipping-policy",
+            "ResizingpolicyMYOJ": "https://staging.diamondere.com/information/resizing"
+        },
+
+        "Cart":
+        {
+            "ShoppingCartUrl": "https://staging.diamondere.com/shoppingcart"
+        },
+
+        "StartWithASettingLinks": 
+        {
+            "Rings": "https://staging.diamondere.com/rings/diamond-rings?design=engagement-rings&forcemyoj=true",
+            "Engagement": "https://staging.diamondere.com/rings/diamond-rings?design=engagement-rings",
+            "Earrings": "https://staging.diamondere.com/earrings/diamond-earrings?forcemyoj=true",
+            "Necklaces": "https://staging.diamondere.com/necklaces/diamond-necklaces?forcemyoj=true",
+            "Mens": "https://staging.diamondere.com/mens/diamond-mens-rings?forcemyoj=true"
+        },
+
+        
+        "RequestCustomOrder": 
+        {
+        "RequestCustomorderPage": "https://staging.diamondere.com/information/create-your-custom-design",
+        "CutomerNameReqCustom":"Test",
+        "CustomerEmail":"diamonderetestautomation1@gmail.com",
+        "CustomerPhoneNumber":"1234567890",
+        "CustomizationRequest":"Need the same ring with blackgold metal",
+        "SpecialCharcterName":"123%^&svpp"
+        }
+
+    }
+    

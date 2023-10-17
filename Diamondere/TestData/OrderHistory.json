@@ -1,0 +1,7 @@
+{
+    "OrderHistory": {
+        "OrderHistoryPage":"https://staging.diamondere.com/order-history",
+        "OrderHistoryPage1":"https://staging.diamondere.com/order-details?on=ORDER-DEV-36991&ln=Testing",
+        "OrderDetailsPage2":"https://staging.diamondere.com/order-details?on=ORDER-STG-38080&ln=Test"
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "WriteReview": {
+
+      "Name": "TestDiamondere",
+      "EmailId": "diamonderetestautomation1@gmail.com",
+      "Password":"Pass@123",
+      "Location": "Chennai",
+      "ReviewTitle": "MARVELLOUS EMERALD108",
+      "ReviewComments": "Diamondere provides a best finish emerald as per our desire108",
+      "InvalidName":"108Diamondere",
+      "InvalidEmailId":"diamonderetestautomation1 gmail.com",
+      "InvalidLocation":"Chennai%",
+      "InvalidReviewTitle":"MARVELLOUS EMERALD108&",
+      "InvalidReviewComments":"Diamondere provides a best finish emerald as per our desire#",
+      "MaxName":"108TestRetestagaintestcheckagainDiamondere",
+      "MaxEmailId":"diamonderetestautomationretest1@gmail.com",
+      "MaxLocation":"ChennaiBangaloreAmericaHyderabadrecheckChennai",
+      "MaxReviewtitle":"This is the rare and beautiful MARVELLOUS EMERALD108",
+      "MaxReviewComments": "Diamondere provides a best finish emerald as per our desire108. We really love this product a lot. Thanks to Diamondere for providing such a great product within the expected time with proper certification"
+
+    },
+
+     "MayWeAssistyou": {
+
+      "Namemaywe":"TestDiamondere",
+      "EmailAddressmaywe":"diamonderetestautomation1@gmail.com",
+      "Querymaywe":"Need citrine stone instead of emerald",
+      "Invalidnamemaywe":"108Diamondere",
+      "InvalidEmailIdmaywe":"diamonderetestautomation1 gmail.com", 
+      "InvalidQuerymaywe":"[Need ruby stone instead of Emerald]",
+      "MaxNamemaywe":"108TestRetestagaintestcheckagainDiamondere",
+      "MaxQuerymaywe":"Need citrine stone instead of emerald. Need some products in multisapphire or say rainbowsapphire in same model. Need more customized options here with some unigue set of diamond collections and customized ring sizes"
+      
+    },
+
+     "Reviewsscreening":{
+      "AccreditedBusinessURL":"https://www.bbb.org/us/ca/redwood-city/profile/jewelry-stores/diamondere-inc-1116-873976",
+      "DiamondereRingsReviewURL":"https://staging.diamondere.com/customer-reviews/rings"
+     
+
+
+
+
+
+
+     }
+     
+
+
+
+
+
+
+
+    
+    
+}

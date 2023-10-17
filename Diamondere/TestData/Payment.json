@@ -1,0 +1,29 @@
+{
+    "OrderHistory": {
+        "OrderHistoryPage":"https://staging.diamondere.com/order-history",
+        "OrderHistoryPage1":"https://staging.diamondere.com/order-details?on=ORDER-DEV-36991&ln=Testing",
+        "OrderDetailsPage2":"https://staging.diamondere.com/order-details?on=ORDER-DEV-37002&ln=Testing",
+        "VisacardNumber":"4242424242424242",
+        "ValidMonth":"1228",
+        "ValidCVC":"123",
+        "InvalidCard":"7009 7467 8947 8866",
+        "InvalidMonthYear":"1121",
+        "InvalidCVV":"@13",
+        "MasterCardNumber":"5555555555554444",
+        "AmexcardNumber":"378282246310005",
+        "AmexCVV":"2344",
+        "DinnersClubCardNumber":"3056930009020004",
+        "GenericDecline":"4000000000000002",
+        "Insufficientfund":"4000000000009995",
+        "Lostcard":"4000000000009987",
+        "ProcessingError":"4000000000000119",
+        "USA mobile":"(256)459-1992",
+        "IndianMobile":"8754900900",
+        "Affirm pin":"123456",
+        "checkoutpage":"https://staging.diamondere.com/order-address",
+        "PayPalVisa": "4012000033330026",
+        "PayPalCity": "Los Angeles",
+        "PayPalZip": "90001"
+
+    }
+}
