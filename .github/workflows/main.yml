@@ -43,7 +43,7 @@ jobs:
 
       - name: Run WebDriverIO tests in Selenium Grid
         run: |
-          npx wdio wdio.conf.js --cucumberOpts.tagExpression="@smoketest1" --headless --log=ERROR --maxInstances=20
+          npx wdio wdio.conf.js --cucumberOpts.tagExpression="@smoketest" --headless --log=ERROR --maxInstances=20
         continue-on-error: true
 
       - name: Compress HTML Artifacts
@@ -65,7 +65,7 @@ jobs:
           username: qa@litefury.com
           password: wpra uabk nhiz cmtq
           subject: "Diamondere Automation Report"
-          to: ashok@litefury.com, pradeep.ac@litefury.com, resshmaa@litefury.com
+          to: ashok@litefury.com, pradeep.ac@litefury.com, resshmaa@litefury.com, rajeev@diamondere.com
           from: Test Suite
           attachments: "./DiamondereTestReport.zip"
 
