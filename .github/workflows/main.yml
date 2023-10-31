@@ -1,8 +1,9 @@
 name: WebDriverIO Tests
 
 on:
-  schedule:
-    - cron: '0 0 */15 * *'
+  push:
+        branches:
+          - main
 
 jobs:
   webdriverio:
