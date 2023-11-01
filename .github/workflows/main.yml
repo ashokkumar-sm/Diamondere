@@ -70,7 +70,7 @@ jobs:
 
       - name: Notify Google Space
         run: |
-          ARTIFACT_URL="https://github.com/QualAssured/Diamondere/actions/runs/${{ github.run_id }}"
+          ARTIFACT_URL="https://github.com/ashokkumar-sm/Diamondere/actions/runs/${{ github.run_id }}"
           curl -X POST -H "Content-Type: application/json" -d '{
             "text": "Diamondere UI Automation pipeline has run, To View the results select below link and download Artifact: [Artifact Link]('"$ARTIFACT_URL"')" 
           }' "https://chat.googleapis.com/v1/spaces/AAAA0YcuuUU/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=QgXMWEKoe8v-PLIVw3ONIyttpuKIvqA-8gmK6g_u79g"
