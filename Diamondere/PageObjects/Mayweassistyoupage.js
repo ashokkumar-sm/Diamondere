@@ -80,68 +80,68 @@ class mayweassist{
         return $('//button[@class="delete"]')
     }
 
-    selectbuttonmaywe(){
-        ElementUtil.waitForClickable(this.btnMayWeAssistYou, 50, "wait for page load")
-        ElementUtil.click(this.btnMayWeAssistYou,"Select May we Assist you button")
+    async selectbuttonmaywe(){
+        await ElementUtil.waitForClickable(this.btnMayWeAssistYou, 50, "wait for page load")
+        await ElementUtil.click(this.btnMayWeAssistYou,"Select May we Assist you button")
     }
 
-    selectclosebutton(){
-        ElementUtil.waitForClickable(this.btnCloseMayWeAssistYou, 50, "wait for page load")
-        ElementUtil.click(this.btnCloseMayWeAssistYou,"Select close button")
+    async selectclosebutton(){
+        await ElementUtil.waitForClickable(this.btnCloseMayWeAssistYou, 50, "wait for page load")
+        await ElementUtil.click(this.btnCloseMayWeAssistYou,"Select close button")
     }
 
-    selectsubmitbuttonmaywe(){
-        ElementUtil.waitForClickable(this.btnAssistSubmit, 50, "wait for page load")
-        ElementUtil.click(this.btnAssistSubmit,"Select Submit button")
+    async selectsubmitbuttonmaywe(){
+        await ElementUtil.waitForClickable(this.btnAssistSubmit, 50, "wait for page load")
+        await ElementUtil.click(this.btnAssistSubmit,"Select Submit button")
     }
 
-    selectcancelbuttonmaywe(){
-        ElementUtil.waitForClickable(this.btnAssistCancel, 50, "wait for page load")
-        ElementUtil.click(this.btnAssistCancel,"Select cancel button")
+    async selectcancelbuttonmaywe(){
+        await ElementUtil.waitForClickable(this.btnAssistCancel, 50, "wait for page load")
+        await ElementUtil.click(this.btnAssistCancel,"Select cancel button")
     }
 
-    enternamemaywe(){
-        ElementUtil.waitForClickable(this.txtBoxAssistName, 50, "wait for page load")
-        ElementUtil.sendText(this.txtBoxAssistName,data.MayWeAssistyou.Namemaywe,"Enter name in name field")
+    async enternamemaywe(){
+        await ElementUtil.waitForClickable(this.txtBoxAssistName, 50, "wait for page load")
+        await ElementUtil.sendText(this.txtBoxAssistName,data.MayWeAssistyou.Namemaywe,"Enter name in name field")
     }
 
-    enteremailmaywe(){
-        ElementUtil.sendText(this.txtBoxAssistEmail,data.MayWeAssistyou.EmailAddressmaywe,"Enter email address in emailId field")
+    async enteremailmaywe(){
+        await ElementUtil.sendText(this.txtBoxAssistEmail,data.MayWeAssistyou.EmailAddressmaywe,"Enter email address in emailId field")
     }
 
-    enterquerymaywe(){
-        ElementUtil.sendText(this.txtBoxAssistQuery,data.MayWeAssistyou.Querymaywe,"Enter your query in query field")
+    async enterquerymaywe(){
+        await ElementUtil.sendText(this.txtBoxAssistQuery,data.MayWeAssistyou.Querymaywe,"Enter your query in query field")
     }
 
-    enterinvalidnamemaywe(){
-        ElementUtil.waitForClickable(this.txtBoxAssistName, 50, "wait for page load")
-        ElementUtil.sendText(this.txtBoxAssistName,data.MayWeAssistyou.Invalidnamemaywe,"Enter invalid name in name field")
+    async enterinvalidnamemaywe(){
+        await ElementUtil.waitForClickable(this.txtBoxAssistName, 50, "wait for page load")
+        await ElementUtil.sendText(this.txtBoxAssistName,data.MayWeAssistyou.Invalidnamemaywe,"Enter invalid name in name field")
     }
 
-    enterinvalidemailmaywe(){
-        ElementUtil.sendText(this.txtBoxAssistEmail,data.MayWeAssistyou.InvalidEmailIdmaywe,"Enter invalid email address in emailId field")
+    async enterinvalidemailmaywe(){
+        await ElementUtil.sendText(this.txtBoxAssistEmail,data.MayWeAssistyou.InvalidEmailIdmaywe,"Enter invalid email address in emailId field")
     }
 
-    enterinvalidquerymaywe(){
-        ElementUtil.sendText(this.txtBoxAssistQuery,data.MayWeAssistyou.InvalidQuerymaywe,"Enter invalid query in query field")
+    async enterinvalidquerymaywe(){
+        await ElementUtil.sendText(this.txtBoxAssistQuery,data.MayWeAssistyou.InvalidQuerymaywe,"Enter invalid query in query field")
     }
 
-    enterdesignlinkinquerymaywe(){
-        ElementUtil.sendText(this.txtBoxAssistQuery,diamondere.config.Designlinkforqueryfield,"Enter Design link in query field")
+    async enterdesignlinkinquerymaywe(){
+        await ElementUtil.sendText(this.txtBoxAssistQuery,diamondere.config.Designlinkforqueryfield,"Enter Design link in query field")
     }
 
-    entermaxlimitnamemaywe(){
-        ElementUtil.waitForClickable(this.txtBoxAssistName, 50, "wait for page load")
-        ElementUtil.sendText(this.txtBoxAssistName,data.MayWeAssistyou.MaxNamemaywe,"Enter more than 40 characters in name field")
+    async entermaxlimitnamemaywe(){
+        await ElementUtil.waitForClickable(this.txtBoxAssistName, 50, "wait for page load")
+        await ElementUtil.sendText(this.txtBoxAssistName,data.MayWeAssistyou.MaxNamemaywe,"Enter more than 40 characters in name field")
     }
 
-    entermaxlimitquerymaywe(){
-        ElementUtil.sendText(this.txtBoxAssistQuery,data.MayWeAssistyou.MaxQuerymaywe,"Enter more than 200 characters in query field")
+    async entermaxlimitquerymaywe(){
+        await ElementUtil.sendText(this.txtBoxAssistQuery,data.MayWeAssistyou.MaxQuerymaywe,"Enter more than 200 characters in query field")
     }
 
-    selectclosebuttonsuccessassist(){
-        ElementUtil.waitForClickable(this.btncloseAssistSuccess, 50, "wait for page load")
-        ElementUtil.click(this.btncloseAssistSuccess,"Select close button in Success popup")
+    async selectclosebuttonsuccessassist(){
+        await ElementUtil.waitForClickable(this.btncloseAssistSuccess, 50, "wait for page load")
+        await ElementUtil.click(this.btncloseAssistSuccess,"Select close button in Success popup")
     }
 
 

@@ -649,6 +649,10 @@ class Page2 {
     return $('//label[@for="carat3"]');
   }
 
+  get tag1to2Carat() {
+    return $('//span[contains(text(),"1.0 - 2.0 carat")]')
+  }
+  
   get lnkFilterMetal() {
     return $('//span[@class="is-capitalize has-text-weight-semibold" and contains(text(),"Metal")]');
   }
@@ -1831,628 +1835,628 @@ class Page2 {
   }
 
 
-  selectRingscategory() {
-    ElementUtil.waitForDisplayed(this.lnkHomecategory, 50, "Wait for page to load")
-    ElementUtil.click(this.lnkHomecategory, "Select Ring category")
+  async selectRingscategory() {
+    await ElementUtil.waitForDisplayed(this.lnkHomecategory, 50, "Wait for page to load")
+    await ElementUtil.click(this.lnkHomecategory, "Select Ring category")
   }
 
-  selectEmeraldgemstonerings() {
-    ElementUtil.mouseHover(this.lnkHomecategory, "Hover menu");
-    ElementUtil.waitForClickable(this.lnkemeraldgemstonerings, 15, "Wait for page to load");
-    //ElementUtil.mouseHover(this.lnkemeraldgemstonerings, "Hover emerald")
-    ElementUtil.forceClick(this.lnkemeraldgemstonerings, "Select Emerald under precious gemstone");
-    BrowserUtil.wait(10);
-    ElementUtil.waitForDisplayed(this.sctnFilterTab, 60, "wait for page load")
+  async selectEmeraldgemstonerings() {
+    await ElementUtil.mouseHover(this.lnkHomecategory, "Hover menu");
+    await ElementUtil.waitForClickable(this.lnkemeraldgemstonerings, 15, "Wait for page to load");
+    //await ElementUtil.mouseHover(this.lnkemeraldgemstonerings, "Hover emerald")
+    await ElementUtil.forceClick(this.lnkemeraldgemstonerings, "Select Emerald under precious gemstone");
+    await BrowserUtil.wait(10);
+    await ElementUtil.waitForDisplayed(this.sctnFilterTab, 60, "wait for page load")
   }
 
-  selectViewEmeraldvideo() {
-    ElementUtil.scrollIntoView(this.boxinlinedescription, "Select View Emerald link")
-    ElementUtil.mouseHover(this.lnkviewemerald, "Select View Emerald link")
-    ElementUtil.click(this.lnkviewemerald, "Select View Emerald link")
+  async selectViewEmeraldvideo() {
+    await ElementUtil.scrollIntoView(this.boxinlinedescription, "Select View Emerald link")
+    await ElementUtil.mouseHover(this.lnkviewemerald, "Select View Emerald link")
+    await ElementUtil.click(this.lnkviewemerald, "Select View Emerald link")
   }
 
-  selectStarSEOemeraldring() {
-    ElementUtil.scrollIntoView(this.boxSEO, "Select rating star link")
-    ElementUtil.mouseHover(this.lnkstarSEOEmeraldRing, "Select rating star link")
-    ElementUtil.forceClick(this.lnkstarSEOEmeraldRing, "Select rating star link")
-    BrowserUtil.wait(10);
+  async selectStarSEOemeraldring() {
+    await ElementUtil.scrollIntoView(this.boxSEO, "Select rating star link")
+    await ElementUtil.mouseHover(this.lnkstarSEOEmeraldRing, "Select rating star link")
+    await ElementUtil.forceClick(this.lnkstarSEOEmeraldRing, "Select rating star link")
+    await BrowserUtil.wait(10);
   }
 
-  selectSEOVintagering() {
-    browser.back();
-    // BrowserUtil.wait(10);
-    ElementUtil.waitForDisplayed(this.boxSEO, 50, "Get back to the page 2- emerald rings");
-    ElementUtil.scrollIntoView(this.boxSEO, "Select rating star link")
-    ElementUtil.click(this.lnkSEOdescrVintageEmeraldRing, "Select Vintage ring link")
+  async selectSEOVintagering() {
+    await browser.back();
+    // await BrowserUtil.wait(10);
+    await ElementUtil.waitForDisplayed(this.boxSEO, 50, "Get back to the page 2- emerald rings");
+    await ElementUtil.scrollIntoView(this.boxSEO, "Select rating star link")
+    await ElementUtil.click(this.lnkSEOdescrVintageEmeraldRing, "Select Vintage ring link")
   }
 
-  selectSEOCladdaghring() {
-    browser.back();
-    // BrowserUtil.wait(10);
-    ElementUtil.waitForDisplayed(this.boxSEO, 50, "Get back to the page 2- emerald rings");
-    ElementUtil.scrollIntoView(this.boxSEO, "Select rating star link")
-    ElementUtil.click(this.lnkSEOdescrCladdaghEmeraldRing, "Select Claddagh ring link")
+  async selectSEOCladdaghring() {
+    await browser.back();
+    // await BrowserUtil.wait(10);
+    await ElementUtil.waitForDisplayed(this.boxSEO, 50, "Get back to the page 2- emerald rings");
+    await ElementUtil.scrollIntoView(this.boxSEO, "Select rating star link")
+    await ElementUtil.click(this.lnkSEOdescrCladdaghEmeraldRing, "Select Claddagh ring link")
   }
 
-  selectDanetteemeraldring() {
-    ElementUtil.click(this.txtdanettePDemeraldring, "Select Danette product")
+  async selectDanetteemeraldring() {
+    await ElementUtil.click(this.txtdanettePDemeraldring, "Select Danette product")
   }
 
-  selectengagementcategory() {
-    ElementUtil.waitForDisplayed(this.lnkengagementcategory, 50, "Select Engagement category")
-    ElementUtil.click(this.lnkengagementcategory, "Select Engagement category")
+  async selectengagementcategory() {
+    await ElementUtil.waitForDisplayed(this.lnkengagementcategory, 50, "Select Engagement category")
+    await ElementUtil.click(this.lnkengagementcategory, "Select Engagement category")
   }
 
-  selectsolitaireengagement() {
-    ElementUtil.mouseHover(this.lnkengagementcategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnksolitaireengagement, 10, "Wait for page to load");
-    ElementUtil.click(this.lnksolitaireengagement, "Select solitaire under engagement");
-    BrowserUtil.wait(8);
+  async selectsolitaireengagement() {
+    await ElementUtil.mouseHover(this.lnkengagementcategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnksolitaireengagement, 10, "Wait for page to load");
+    await ElementUtil.click(this.lnksolitaireengagement, "Select solitaire under engagement");
+    await BrowserUtil.wait(8);
   }
 
-  selectMiyaproduct() {
-    ElementUtil.click(this.txtMiyaPDsolitairering, "Select Miya product")
+  async selectMiyaproduct() {
+    await ElementUtil.click(this.txtMiyaPDsolitairering, "Select Miya product")
   }
 
-  selectweddingcategory() {
-    ElementUtil.waitForDisplayed(this.lnkweddingcategory, 50, "Wait for the page to load")
-    ElementUtil.click(this.lnkweddingcategory, "Select wedding category")
+  async selectweddingcategory() {
+    await ElementUtil.waitForDisplayed(this.lnkweddingcategory, 50, "Wait for the page to load")
+    await ElementUtil.click(this.lnkweddingcategory, "Select wedding category")
   }
 
-  selectEternitybands() {
-    ElementUtil.mouseHover(this.lnkweddingcategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnketernitybands, 10, "Wait for page to load");
-    ElementUtil.click(this.lnketernitybands, "Select Eternity bands");
-    BrowserUtil.wait(8);
+  async selectEternitybands() {
+    await ElementUtil.mouseHover(this.lnkweddingcategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnketernitybands, 10, "Wait for page to load");
+    await ElementUtil.click(this.lnketernitybands, "Select Eternity bands");
+    await BrowserUtil.wait(8);
   }
 
-  selectJeanproduct() {
-    ElementUtil.click(this.txtJeanPDEternityBands, "Select Jean Product under Eternity Bands")
+  async selectJeanproduct() {
+    await ElementUtil.click(this.txtJeanPDEternityBands, "Select Jean Product under Eternity Bands")
   }
 
-  selectbraceletscategory() {
-    ElementUtil.waitForDisplayed(this.lnkbraceletscategory, 20, "Wait for the page to load")
-    ElementUtil.click(this.lnkbraceletscategory, "Select Bracelet category")
+  async selectbraceletscategory() {
+    await ElementUtil.waitForDisplayed(this.lnkbraceletscategory, 20, "Wait for the page to load")
+    await ElementUtil.click(this.lnkbraceletscategory, "Select Bracelet category")
   }
 
-  selectTennisbracelets() {
-    ElementUtil.mouseHover(this.lnkbraceletscategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnkTennisbracelets, 10, "Wait for page to load");
-    ElementUtil.click(this.lnkTennisbracelets, "Select Tennis Bracelet");
-    BrowserUtil.wait(8);
+  async selectTennisbracelets() {
+    await ElementUtil.mouseHover(this.lnkbraceletscategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnkTennisbracelets, 10, "Wait for page to load");
+    await ElementUtil.click(this.lnkTennisbracelets, "Select Tennis Bracelet");
+    await BrowserUtil.wait(8);
   }
 
-  selectstarlnkTennisbracelets() {
-    ElementUtil.scrollIntoView(this.boxSEO, "Scroll to SEO section")
-    ElementUtil.click(this.lnkstarSEOTennisBracelets, "Select rating star in SEO section - Tennis Bracelet");
-    BrowserUtil.wait(10);
+  async selectstarlnkTennisbracelets() {
+    await ElementUtil.scrollIntoView(this.boxSEO, "Scroll to SEO section")
+    await ElementUtil.click(this.lnkstarSEOTennisBracelets, "Select rating star in SEO section - Tennis Bracelet");
+    await BrowserUtil.wait(10);
   }
 
-  selectZainabTennisbracelets() {
-    ElementUtil.click(this.txtZainabPDTennisBracelets, "Select Zainab product - Tennis Bracelet")
+  async selectZainabTennisbracelets() {
+    await ElementUtil.click(this.txtZainabPDTennisBracelets, "Select Zainab product - Tennis Bracelet")
   }
 
-  selectEarringscategory() {
-    ElementUtil.waitForDisplayed(this.lnkearringscategory, 15, "Wait for the page to load")
-    ElementUtil.click(this.lnkearringscategory, "Select Earrings category")
+  async selectEarringscategory() {
+    await ElementUtil.waitForDisplayed(this.lnkearringscategory, 15, "Wait for the page to load")
+    await ElementUtil.click(this.lnkearringscategory, "Select Earrings category")
   }
 
-  selectDropEarrings() {
-    ElementUtil.mouseHover(this.lnkearringscategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnkDropearrings, 10, "Wait for page to load");
-    ElementUtil.click(this.lnkDropearrings, "Select Drop Earrings under Earrings category");
-    BrowserUtil.wait(8);
+  async selectDropEarrings() {
+    await ElementUtil.mouseHover(this.lnkearringscategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnkDropearrings, 10, "Wait for page to load");
+    await ElementUtil.click(this.lnkDropearrings, "Select Drop Earrings under Earrings category");
+    await BrowserUtil.wait(8);
   }
 
-  selectstarlnkDropEarrings() {
-    ElementUtil.scrollIntoView(this.boxSEO, "Scroll to SEO section")
-    ElementUtil.click(this.lnkstarSEODropearrings, "Select rating star in SEO - Drop Earrings")
-    BrowserUtil.wait(10)
+  async selectstarlnkDropEarrings() {
+    await ElementUtil.scrollIntoView(this.boxSEO, "Scroll to SEO section")
+    await ElementUtil.click(this.lnkstarSEODropearrings, "Select rating star in SEO - Drop Earrings")
+    await BrowserUtil.wait(10)
   }
 
-  selectValoniaDropearrings() {
-    ElementUtil.click(this.txtValoniaPDDropearrings, "Select Valonia product - Drop Earrings")
+  async selectValoniaDropearrings() {
+    await ElementUtil.click(this.txtValoniaPDDropearrings, "Select Valonia product - Drop Earrings")
   }
 
-  selectNecklacecategory() {
-    ElementUtil.waitForDisplayed(this.lnknecklacescategory, 15, "Wait for the page to load")
-    ElementUtil.click(this.lnknecklacescategory, "Select Necklace category")
+  async selectNecklacecategory() {
+    await ElementUtil.waitForDisplayed(this.lnknecklacescategory, 15, "Wait for the page to load")
+    await ElementUtil.click(this.lnknecklacescategory, "Select Necklace category")
   }
 
-  selectHeartNecklace() {
-    ElementUtil.mouseHover(this.lnknecklacescategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnkHeartnecklaces, 15, "Wait for page to load");
-    ElementUtil.click(this.lnkHeartnecklaces, "Select Heart Necklace under Necklace category");
-    BrowserUtil.wait(8);
+  async selectHeartNecklace() {
+    await ElementUtil.mouseHover(this.lnknecklacescategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnkHeartnecklaces, 15, "Wait for page to load");
+    await ElementUtil.click(this.lnkHeartnecklaces, "Select Heart Necklace under Necklace category");
+    await BrowserUtil.wait(8);
   }
 
-  selectBelezaHeartNecklace() {
-    ElementUtil.click(this.txtBelezaPDHeartNecklace, "Select Beleza product from Heart Necklace")
+  async selectBelezaHeartNecklace() {
+    await ElementUtil.click(this.txtBelezaPDHeartNecklace, "Select Beleza product from Heart Necklace")
   }
 
-  selectstarlinkHeartNecklace() {
-    ElementUtil.scrollIntoView(this.boxSEO, "Scroll to rating star link")
-    ElementUtil.click(this.lnkstarSEOHeartNecklace, "Select star rating from SEO - Heart Necklace");
-    BrowserUtil.wait(8);
+  async selectstarlinkHeartNecklace() {
+    await ElementUtil.scrollIntoView(this.boxSEO, "Scroll to rating star link")
+    await ElementUtil.click(this.lnkstarSEOHeartNecklace, "Select star rating from SEO - Heart Necklace");
+    await BrowserUtil.wait(8);
   }
 
-  selectMenscategory() {
-    ElementUtil.waitForDisplayed(this.lnkmenscategory, 15, "Wait for the page to load")
-    ElementUtil.click(this.lnkmenscategory, "Select mens category")
+  async selectMenscategory() {
+    await ElementUtil.waitForDisplayed(this.lnkmenscategory, 15, "Wait for the page to load")
+    await ElementUtil.click(this.lnkmenscategory, "Select mens category")
   }
 
-  selectMensearrings() {
-    ElementUtil.mouseHover(this.lnkmenscategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnkmensearrings, 15, "Wait for page to load");
-    ElementUtil.click(this.lnkmensearrings, "Select Mens earrings from mens category");
-    BrowserUtil.wait(8);
+  async selectMensearrings() {
+    await ElementUtil.mouseHover(this.lnkmenscategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnkmensearrings, 15, "Wait for page to load");
+    await ElementUtil.click(this.lnkmensearrings, "Select Mens earrings from mens category");
+    await BrowserUtil.wait(8);
   }
 
-  selectSamuelMensearrings() {
-    ElementUtil.click(this.txtSamuelPDMensearrings, "Select Samuel product under Mens earrings")
+  async selectSamuelMensearrings() {
+    await ElementUtil.click(this.txtSamuelPDMensearrings, "Select Samuel product under Mens earrings")
   }
 
-  selectViewallRings() {
-    ElementUtil.waitForDisplayed(this.lnkHomecategory, 5, "Wait for page to load");
-    ElementUtil.mouseHover(this.lnkHomecategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnkViewallRings, 5, "Wait for page to load");
-    ElementUtil.mouseHover(this.lnkViewallRings, "Hover link");
-    ElementUtil.click(this.lnkViewallRings, "Select View All from rings");
-    BrowserUtil.wait(8);
+  async selectViewallRings() {
+    await ElementUtil.waitForDisplayed(this.lnkHomecategory, 5, "Wait for page to load");
+    await ElementUtil.mouseHover(this.lnkHomecategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnkViewallRings, 5, "Wait for page to load");
+    await ElementUtil.mouseHover(this.lnkViewallRings, "Hover link");
+    await ElementUtil.click(this.lnkViewallRings, "Select View All from rings");
+    await BrowserUtil.wait(8);
   }
 
-  selectStylefilter() {
-    ElementUtil.mouseHover(this.lnkFilterStyle, "Hover on Style filter")
-    ElementUtil.click(this.lnkFilterStyle, "Select Style filter")
+  async selectStylefilter() {
+    await ElementUtil.mouseHover(this.lnkFilterStyle, "Hover on Style filter")
+    await ElementUtil.click(this.lnkFilterStyle, "Select Style filter")
   }
 
-  hovermayweassistyou() {
-    ElementUtil.mouseHover(this.boxSEO, "Hover other button")
+  async hovermayweassistyou() {
+    await ElementUtil.mouseHover(this.boxSEO, "Hover other button")
   }
 
-  hoveronStylefilter() {
-    ElementUtil.mouseHover(this.lnkFilterStyle, "Hover on Style filter");
-    //BrowserUtil.wait(3)
+  async hoveronStylefilter() {
+    await ElementUtil.mouseHover(this.lnkFilterStyle, "Hover on Style filter");
+    //await BrowserUtil.wait(3)
   }
 
-  hoveronStonefilter() {
-    ElementUtil.mouseHover(this.lnkFilterStone, "Hover on Stone filter")
+  async hoveronStonefilter() {
+    await ElementUtil.mouseHover(this.lnkFilterStone, "Hover on Stone filter")
   }
 
-  hoveronShapefilter() {
-    ElementUtil.mouseHover(this.lnkFilterShape, "Hover on Shape filter")
+  async hoveronShapefilter() {
+    await ElementUtil.mouseHover(this.lnkFilterShape, "Hover on Shape filter")
   }
 
-  hoveronCaratfilter() {
-    ElementUtil.mouseHover(this.lnkFilterCaratRange, "Hover on Carat range filter")
+  async hoveronCaratfilter() {
+    await ElementUtil.mouseHover(this.lnkFilterCaratRange, "Hover on Carat range filter")
   }
 
-  hoveronMetalfilter() {
-    ElementUtil.mouseHover(this.lnkFilterMetal, "Hover on metal filter")
+  async hoveronMetalfilter() {
+    await ElementUtil.mouseHover(this.lnkFilterMetal, "Hover on metal filter")
   }
 
-  selectSidestoneoption() {
-    ElementUtil.click(this.optnSidestone, "Select Sidestone under Style filter")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
+  async selectSidestoneoption() {
+    await ElementUtil.click(this.optnSidestone, "Select Sidestone under Style filter")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
   }
 
-  selectXylosSidestonerings() {
-    ElementUtil.click(this.txtXylosPDSidestonerings, "Select Xylos under Sidestone rings")
+  async selectXylosSidestonerings() {
+    await ElementUtil.click(this.txtXylosPDSidestonerings, "Select Xylos under Sidestone rings")
   }
 
-  selecttypefilter() {
-    ElementUtil.click(this.lnkFilterTypes, "Select Style filter")
+  async selecttypefilter() {
+    await ElementUtil.click(this.lnkFilterTypes, "Select Style filter")
   }
 
-  selectStonefilter() {
-    ElementUtil.waitForClickable(this.lnkFilterStone, 60, "wait for page load")
-    ElementUtil.click(this.lnkFilterStone, "Select Stone filter")
+  async selectStonefilter() {
+    await ElementUtil.waitForClickable(this.lnkFilterStone, 60, "wait for page load")
+    await ElementUtil.click(this.lnkFilterStone, "Select Stone filter")
   }
 
-  selectPinksapphireoption() {
-    ElementUtil.click(this.optnPinkSapphire, "Select Pink Sapphire")
-    BrowserUtil.wait(5)
+  async selectPinksapphireoption() {
+    await ElementUtil.click(this.optnPinkSapphire, "Select Pink Sapphire")
+    await BrowserUtil.wait(5)
   }
 
-  selectMorganiteoption() {
-    ElementUtil.click(this.optnMorganite, "Select Morganite")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
+  async selectMorganiteoption() {
+    await ElementUtil.click(this.optnMorganite, "Select Morganite")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
   }
 
-  selectEugenePinkSapphireRings() {
-    ElementUtil.scrollIntoView(this.txtEugenePDPinkSapphire, "Select Eugene product  under Pink Sapphire")
-    ElementUtil.click(this.txtEugenePDPinkSapphire, "Select Eugene product  under Pink Sapphire")
+  async selectEugenePinkSapphireRings() {
+    await ElementUtil.scrollIntoView(this.txtEugenePDPinkSapphire, "Select Eugene product  under Pink Sapphire")
+    await ElementUtil.click(this.txtEugenePDPinkSapphire, "Select Eugene product  under Pink Sapphire")
   }
 
-  selectShapefilter() {
-    //ElementUtil.mouseHover(this.sctnFilterTab, "Hover on Filter tab")
-    ElementUtil.waitForClickable(this.lnkFilterShape, 50, "wait for page load")
-    ElementUtil.click(this.lnkFilterShape, "Select Shape filter")
+  async selectShapefilter() {
+    //await ElementUtil.mouseHover(this.sctnFilterTab, "Hover on Filter tab")
+    await ElementUtil.waitForClickable(this.lnkFilterShape, 50, "wait for page load")
+    await ElementUtil.click(this.lnkFilterShape, "Select Shape filter")
   }
 
-  selectShapefilterSearch() {
-    //ElementUtil.mouseHover(this.sctnFilterTab, "Hover on Filter tab")
-    ElementUtil.waitForClickable(this.lnkFilterShape, 50, "wait for page load")
-    ElementUtil.click(this.lnkFilterShape, "Select Shape filter")
-    ElementUtil.mouseHover(this.product1Search, "Hover product image")
+  async selectShapefilterSearch() {
+    //await ElementUtil.mouseHover(this.sctnFilterTab, "Hover on Filter tab")
+    await ElementUtil.waitForClickable(this.lnkFilterShape, 50, "wait for page load")
+    await ElementUtil.click(this.lnkFilterShape, "Select Shape filter")
+    await ElementUtil.mouseHover(this.product1Search, "Hover product image")
   }
 
-  selectPearoption() {
-    ElementUtil.click(this.optnPear, "Select Pear under Shape filter")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
+  async selectPearoption() {
+    await ElementUtil.click(this.optnPear, "Select Pear under Shape filter")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
   }
 
-  selectMarquisecutoption() {
-    ElementUtil.click(this.optnMarquiseCutSearch, "Select Marquisecut under Shape filter")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.txtproduct, "scroll down the page")
+  async selectMarquisecutoption() {
+    await ElementUtil.click(this.optnMarquiseCutSearch, "Select Marquisecut under Shape filter")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.txtproduct, "scroll down the page")
   }
 
-  selectAbove3Caratoption() {
-    ElementUtil.click(this.optnAbove3CaratSearch, "Select Marquisecut under Shape filter")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
+  async selectAbove3Caratoption() {
+    await ElementUtil.click(this.optnAbove3CaratSearch, "Select Marquisecut under Shape filter")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
   }
 
-  selectDeziPearcut() {
-    ElementUtil.click(this.txtDeziPDPearcut, "Select Dezi product")
+  async selectDeziPearcut() {
+    await ElementUtil.click(this.txtDeziPDPearcut, "Select Dezi product")
   }
 
-  selectCaratrangefilter() {
-    ElementUtil.click(this.lnkFilterCaratRange, "Select Carat Range Filter")
+  async selectCaratrangefilter() {
+    await ElementUtil.click(this.lnkFilterCaratRange, "Select Carat Range Filter")
   }
 
-  selectoption1to2Caratrange() {
-    ElementUtil.click(this.optnUnder1to2Carat, "Select 1-2 Carat Range Filter")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
+  async selectoption1to2Caratrange() {
+    await ElementUtil.click(this.optnUnder1to2Carat, "Select 1-2 Carat Range Filter")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
   }
 
-  selectMetalfilter() {
-    ElementUtil.click(this.lnkFilterMetal, "Select Metal Filter")
+  async selectMetalfilter() {
+    await ElementUtil.click(this.lnkFilterMetal, "Select Metal Filter")
   }
 
-  select14YGMetal() {
-    ElementUtil.click(this.optn14kYG, "Select 14kYG under Metal Filter")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
+  async select14YGMetal() {
+    await ElementUtil.click(this.optn14kYG, "Select 14kYG under Metal Filter")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.sctnFilterTab, "scroll down the page")
   }
 
-  selectSolace14YG() {
-    ElementUtil.click(this.txtSolacePD14YG, "Select Metal Filter")
+  async selectSolace14YG() {
+    await ElementUtil.click(this.txtSolacePD14YG, "Select Metal Filter")
   }
 
-  selectSortByFilter() {
-    ElementUtil.click(this.lnkFilterSortBy, "Select SortBy Filter")
+  async selectSortByFilter() {
+    await ElementUtil.click(this.lnkFilterSortBy, "Select SortBy Filter")
   }
 
-  selectNewArrival() {
-    ElementUtil.click(this.optnNewArrival, "Select New Arrival under SortBy Filter")
+  async selectNewArrival() {
+    await ElementUtil.click(this.optnNewArrival, "Select New Arrival under SortBy Filter")
   }
 
-  selectPricelowtohigh() {
-    ElementUtil.click(this.optnPriceLowToHigh, "Select Price Low to High under SortBy Filter")
+  async selectPricelowtohigh() {
+    await ElementUtil.click(this.optnPriceLowToHigh, "Select Price Low to High under SortBy Filter")
   }
 
-  selectPricehightolow() {
-    ElementUtil.click(this.optnPriceHighToLow, "Select Price High to Low under SortBy Filter")
+  async selectPricehightolow() {
+    await ElementUtil.click(this.optnPriceHighToLow, "Select Price High to Low under SortBy Filter")
   }
 
-  movetoSEOsection() {
-    ElementUtil.scrollIntoView(this.boxSEO, "Scroll down to SEO section");
-    ElementUtil.waitForDisplayed(this.boxSEO, "Scroll down to SEO section");
-    browser.keys(['ArrowUp']);
+  async movetoSEOsection() {
+    await ElementUtil.scrollIntoView(this.boxSEO, "Scroll down to SEO section");
+    await ElementUtil.waitForDisplayed(this.boxSEO, "Scroll down to SEO section");
+    await browser.keys(['ArrowUp']);
   }
 
-  selectTopbutton() {
-    ElementUtil.click(this.btntop, "Select Top Button in page 2")
+  async selectTopbutton() {
+    await ElementUtil.click(this.btntop, "Select Top Button in page 2")
   }
 
-  selectMayweassistbutton() {
-    ElementUtil.click(this.btnmayweassistyou, "Select May we assist you button in page 2")
+  async selectMayweassistbutton() {
+    await ElementUtil.click(this.btnmayweassistyou, "Select May we assist you button in page 2")
   }
 
-  selectclosebuttoncustomercare() {
-    ElementUtil.waitForClickable(this.btnclosecustomercaremaywe, 20, "wait for page load")
-    ElementUtil.forceClick(this.btnclosecustomercaremaywe, "Select close button in customer care button")
+  async selectclosebuttoncustomercare() {
+    await ElementUtil.waitForClickable(this.btnclosecustomercaremaywe, 20, "wait for page load")
+    await ElementUtil.forceClick(this.btnclosecustomercaremaywe, "Select close button in customer care button")
   }
 
-  selectDiamondrings() {
-    ElementUtil.mouseHover(this.txtringsshopbydiamond, "Hover on Shop By Diamond")
-    ElementUtil.waitForClickable(this.lnksddiamondrings, 15, "wait for page load")
-    ElementUtil.click(this.lnksddiamondrings, "Select Diamond rings under Shop By Diamond in rings category");
-    BrowserUtil.wait(8);
+  async selectDiamondrings() {
+    await ElementUtil.mouseHover(this.txtringsshopbydiamond, "Hover on Shop By Diamond")
+    await ElementUtil.waitForClickable(this.lnksddiamondrings, 15, "wait for page load")
+    await ElementUtil.click(this.lnksddiamondrings, "Select Diamond rings under Shop By Diamond in rings category");
+    await BrowserUtil.wait(8);
   }
 
-  selectPromiserings() {
-    ElementUtil.mouseHover(this.txtRingstyles, "Hover on Ringstyles")
-    ElementUtil.waitForClickable(this.lnkpromiserings, 15, "wait for page load")
-    ElementUtil.click(this.lnkpromiserings, "Select Promise rings under Ring styles in rings category");
-    BrowserUtil.wait(8);
+  async selectPromiserings() {
+    await ElementUtil.mouseHover(this.txtRingstyles, "Hover on Ringstyles")
+    await ElementUtil.waitForClickable(this.lnkpromiserings, 15, "wait for page load")
+    await ElementUtil.click(this.lnkpromiserings, "Select Promise rings under Ring styles in rings category");
+    await BrowserUtil.wait(8);
   }
 
-  selectExplorediamondguide() {
-    ElementUtil.waitForClickable(this.lnkexplorediamondguide, 15, "wait for page load")
-    ElementUtil.click(this.lnkexplorediamondguide, "Select Explore Diamond guide");
-    BrowserUtil.wait(8);
-    browser.switchWindow(data.Page2Links.ExplorediamondguideURL);
-    // BrowserUtil.wait(8);
+  async selectExplorediamondguide() {
+    await ElementUtil.waitForClickable(this.lnkexplorediamondguide, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexplorediamondguide, "Select Explore Diamond guide");
+    await BrowserUtil.wait(8);
+    await browser.switchWindow(data.Page2Links.ExplorediamondguideURL);
+    // await BrowserUtil.wait(8);
   }
 
-  selectBrownDiamondrings() {
-    ElementUtil.mouseHover(this.txtringsshopbydiamond, "Hover on Shop By Diamond")
-    ElementUtil.waitForClickable(this.lnksdbrowndiamondrings, 15, "wait for page load")
-    ElementUtil.click(this.lnksdbrowndiamondrings, "Select Brown Diamond rings under Shop By Diamond in rings category");
-    BrowserUtil.wait(8);
+  async selectBrownDiamondrings() {
+    await ElementUtil.mouseHover(this.txtringsshopbydiamond, "Hover on Shop By Diamond")
+    await ElementUtil.waitForClickable(this.lnksdbrowndiamondrings, 15, "wait for page load")
+    await ElementUtil.click(this.lnksdbrowndiamondrings, "Select Brown Diamond rings under Shop By Diamond in rings category");
+    await BrowserUtil.wait(8);
   }
 
-  selectExploregemstoneguide() {
-    ElementUtil.waitForClickable(this.lnkexploregemstoneguide, 15, "wait for page load")
-    ElementUtil.click(this.lnkexploregemstoneguide, "Select Explore Gemstone guide");
-    BrowserUtil.wait(8);
-    browser.switchWindow(data.Page2Links.GemstoneGuideURL);
-    // BrowserUtil.wait(5);
+  async selectExploregemstoneguide() {
+    await ElementUtil.waitForClickable(this.lnkexploregemstoneguide, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexploregemstoneguide, "Select Explore Gemstone guide");
+    await BrowserUtil.wait(8);
+    await browser.switchWindow(data.Page2Links.GemstoneGuideURL);
+    // await BrowserUtil.wait(5);
   }
 
-  selectExploreemeraldguide() {
-    ElementUtil.waitForClickable(this.lnkexploreemeraldguide, 15, "wait for page load")
-    ElementUtil.click(this.lnkexploreemeraldguide, "Select Explore Emerald guide");
-    BrowserUtil.wait(5);
-    browser.switchWindow(data.Page2Links.EmeraldGuideURL);
+  async selectExploreemeraldguide() {
+    await ElementUtil.waitForClickable(this.lnkexploreemeraldguide, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexploreemeraldguide, "Select Explore Emerald guide");
+    await BrowserUtil.wait(5);
+    await browser.switchWindow(data.Page2Links.EmeraldGuideURL);
   }
 
-  selectYellowGoldrings() {
-    ElementUtil.waitForClickable(this.lnksmyellowgoldrings, 15, "wait for page load")
-    ElementUtil.mouseHover(this.lnksmyellowgoldrings, "Hover yellow gold")
-    ElementUtil.click(this.lnksmyellowgoldrings, "Select Yellow Gold under rings");
-    BrowserUtil.wait(5)
+  async selectYellowGoldrings() {
+    await ElementUtil.waitForClickable(this.lnksmyellowgoldrings, 15, "wait for page load")
+    await ElementUtil.mouseHover(this.lnksmyellowgoldrings, "Hover yellow gold")
+    await ElementUtil.click(this.lnksmyellowgoldrings, "Select Yellow Gold under rings");
+    await BrowserUtil.wait(5)
   }
 
-  selectExploremetalguide() {
-    ElementUtil.waitForClickable(this.lnkexploremetalguide, 15, "wait for page load")
-    ElementUtil.click(this.lnkexploremetalguide, "Select Explore metal guide");
-    BrowserUtil.wait(5);
-    browser.switchWindow(data.Page2Links.MetalGuideURL);
+  async selectExploremetalguide() {
+    await ElementUtil.waitForClickable(this.lnkexploremetalguide, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexploremetalguide, "Select Explore metal guide");
+    await BrowserUtil.wait(5);
+    await browser.switchWindow(data.Page2Links.MetalGuideURL);
   }
 
-  selectRubybracelets() {
-    ElementUtil.waitForClickable(this.lnksgrubybracelets, 15, "wait for page load")
-    ElementUtil.mouseHover(this.lnksgrubybracelets, "Hover ruby")
-    ElementUtil.click(this.lnksgrubybracelets, "Select Ruby Bracelet under Shop By Gemstone")
-    BrowserUtil.wait(5);
+  async selectRubybracelets() {
+    await ElementUtil.waitForClickable(this.lnksgrubybracelets, 15, "wait for page load")
+    await ElementUtil.mouseHover(this.lnksgrubybracelets, "Hover ruby")
+    await ElementUtil.click(this.lnksgrubybracelets, "Select Ruby Bracelet under Shop By Gemstone")
+    await BrowserUtil.wait(5);
   }
 
-  selectExplorerubyguide() {
-    ElementUtil.waitForClickable(this.lnkexplorerubyguide, 15, "wait for page load")
-    ElementUtil.click(this.lnkexplorerubyguide, "Select Explore Ruby guide");
-    BrowserUtil.wait(5);
-    browser.switchWindow(data.Page2Links.RubyGuideURL);
+  async selectExplorerubyguide() {
+    await ElementUtil.waitForClickable(this.lnkexplorerubyguide, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexplorerubyguide, "Select Explore Ruby guide");
+    await BrowserUtil.wait(5);
+    await browser.switchWindow(data.Page2Links.RubyGuideURL);
   }
 
-  selectExploreJewelryBuyingguide() {
-    ElementUtil.waitForClickable(this.lnkexplorejewelryguide, 15, "wait for page load")
-    ElementUtil.click(this.lnkexplorejewelryguide, "Select Explore Jewelry Buying guide");
-    BrowserUtil.wait(5);
-    browser.switchWindow(data.Page2Links.JewelryBuyingGuideURL);
+  async selectExploreJewelryBuyingguide() {
+    await ElementUtil.waitForClickable(this.lnkexplorejewelryguide, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexplorejewelryguide, "Select Explore Jewelry Buying guide");
+    await BrowserUtil.wait(5);
+    await browser.switchWindow(data.Page2Links.JewelryBuyingGuideURL);
   }
 
-  selectSapphireearrings() {
-    ElementUtil.waitForClickable(this.lnksgsapphireearrings, 15, "wait for page load")
-    ElementUtil.mouseHover(this.lnksgsapphireearrings, "Hover sapphire")
-    ElementUtil.click(this.lnksgsapphireearrings, "Select Sapphire earrings under Shop By Gemstone")
-    BrowserUtil.wait(5);
+  async selectSapphireearrings() {
+    await ElementUtil.waitForClickable(this.lnksgsapphireearrings, 15, "wait for page load")
+    await ElementUtil.mouseHover(this.lnksgsapphireearrings, "Hover sapphire")
+    await ElementUtil.click(this.lnksgsapphireearrings, "Select Sapphire earrings under Shop By Gemstone")
+    await BrowserUtil.wait(5);
   }
 
-  selectReadmoreSapphireearrings() {
-    ElementUtil.waitForClickable(this.lnkreadmore, 15, "wait for page load")
-    ElementUtil.click(this.lnkreadmore, "Select Read more link under Sapphire earrings")
+  async selectReadmoreSapphireearrings() {
+    await ElementUtil.waitForClickable(this.lnkreadmore, 15, "wait for page load")
+    await ElementUtil.click(this.lnkreadmore, "Select Read more link under Sapphire earrings")
   }
 
-  selectExploresapphireguide() {
-    ElementUtil.waitForClickable(this.lnkexploresapphireguide, 15, "wait for page load")
-    ElementUtil.click(this.lnkexploresapphireguide, "Select Explore Sapphire guide");
-    BrowserUtil.wait(5);
-    browser.switchWindow(data.Page2Links.SapphireGuideURL);
+  async selectExploresapphireguide() {
+    await ElementUtil.waitForClickable(this.lnkexploresapphireguide, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexploresapphireguide, "Select Explore Sapphire guide");
+    await BrowserUtil.wait(5);
+    await browser.switchWindow(data.Page2Links.SapphireGuideURL);
   }
 
-  selectViewAllBracelets() {
-    ElementUtil.waitForClickable(this.lnkViewallBracelets, 15, "wait for page load")
-    ElementUtil.click(this.lnkViewallBracelets, "Select View All under Bracelets category")
-    BrowserUtil.wait(5);
+  async selectViewAllBracelets() {
+    await ElementUtil.waitForClickable(this.lnkViewallBracelets, 15, "wait for page load")
+    await ElementUtil.click(this.lnkViewallBracelets, "Select View All under Bracelets category")
+    await BrowserUtil.wait(5);
   }
 
-  selectMarquisecutbracelet() {
-    ElementUtil.waitForClickable(this.optnMarquiseCut, 15, "wait for page load")
-    ElementUtil.click(this.optnMarquiseCut, "Select Marquise cut under Bracelets category")
-    BrowserUtil.wait(5);
+  async selectMarquisecutbracelet() {
+    await ElementUtil.waitForClickable(this.optnMarquiseCut, 15, "wait for page load")
+    await ElementUtil.click(this.optnMarquiseCut, "Select Marquise cut under Bracelets category")
+    await BrowserUtil.wait(5);
   }
 
-  selectGemstoneshapereference() {
-    ElementUtil.waitForClickable(this.lnkexploreGemstoneshapereference, 15, "wait for page load")
-    ElementUtil.click(this.lnkexploreGemstoneshapereference, "Select Explore gemstone shape reference link");
-    BrowserUtil.wait(5);
-    browser.switchWindow(data.Page2Links.GemstoneshapereferenceURL);
+  async selectGemstoneshapereference() {
+    await ElementUtil.waitForClickable(this.lnkexploreGemstoneshapereference, 15, "wait for page load")
+    await ElementUtil.click(this.lnkexploreGemstoneshapereference, "Select Explore gemstone shape reference link");
+    await BrowserUtil.wait(5);
+    await browser.switchWindow(data.Page2Links.GemstoneshapereferenceURL);
   }
 
-  selectPeridotNecklace() {
-    ElementUtil.mouseHover(this.ddnecklacecategory, "Hover on necklace dropdown")
-    ElementUtil.waitForClickable(this.lnkperidotnecklace, 15, "wait for page load")
-    ElementUtil.mouseHover(this.lnkperidotnecklace, "Hover periodt")
-    ElementUtil.click(this.lnkperidotnecklace, "Select Peridot Necklace under necklace category -Shop By gemstone")
-    BrowserUtil.wait(8)
+  async selectPeridotNecklace() {
+    await ElementUtil.mouseHover(this.ddnecklacecategory, "Hover on necklace dropdown")
+    await ElementUtil.waitForClickable(this.lnkperidotnecklace, 15, "wait for page load")
+    await ElementUtil.mouseHover(this.lnkperidotnecklace, "Hover periodt")
+    await ElementUtil.click(this.lnkperidotnecklace, "Select Peridot Necklace under necklace category -Shop By gemstone")
+    await BrowserUtil.wait(8)
   }
 
-  selectHomebreadcrumbperidotneck() {
-    ElementUtil.mouseHover(this.sctnbreadcrumbperidotnecklace, "Hover on peridot necklace breadcrumb")
-    ElementUtil.waitForClickable(this.lnkHomebreadcrumbperidotneck, 15, "wait for page load")
-    ElementUtil.click(this.lnkHomebreadcrumbperidotneck, "Select Home in braedcrumb in Page 2 - peridot necklaces")
-    BrowserUtil.wait(5)
+  async selectHomebreadcrumbperidotneck() {
+    await ElementUtil.mouseHover(this.sctnbreadcrumbperidotnecklace, "Hover on peridot necklace breadcrumb")
+    await ElementUtil.waitForClickable(this.lnkHomebreadcrumbperidotneck, 15, "wait for page load")
+    await ElementUtil.click(this.lnkHomebreadcrumbperidotneck, "Select Home in braedcrumb in Page 2 - peridot necklaces")
+    await BrowserUtil.wait(5)
   }
 
-  selectnecklacesbreadcrumbperidotneck() {
-    ElementUtil.mouseHover(this.sctnbreadcrumbperidotnecklace, "Hover on peridot necklace breadcrumb")
-    ElementUtil.waitForClickable(this.lnkNecklacesbreadcrumbperidotneck, 15, "wait for page load")
-    ElementUtil.click(this.lnkNecklacesbreadcrumbperidotneck, "Select Necklaces in braedcrumb in Page 2 - peridot necklaces")
-    BrowserUtil.wait(5)
+  async selectnecklacesbreadcrumbperidotneck() {
+    await ElementUtil.mouseHover(this.sctnbreadcrumbperidotnecklace, "Hover on peridot necklace breadcrumb")
+    await ElementUtil.waitForClickable(this.lnkNecklacesbreadcrumbperidotneck, 15, "wait for page load")
+    await ElementUtil.click(this.lnkNecklacesbreadcrumbperidotneck, "Select Necklaces in braedcrumb in Page 2 - peridot necklaces")
+    await BrowserUtil.wait(5)
   }
 
-  selectBangles() {
-    ElementUtil.waitForClickable(this.lnkbangles, 15, "wait for page load")
-    ElementUtil.click(this.lnkbangles, "Select bangles under bracelet category")
-    BrowserUtil.wait(5);
+  async selectBangles() {
+    await ElementUtil.waitForClickable(this.lnkbangles, 15, "wait for page load")
+    await ElementUtil.click(this.lnkbangles, "Select bangles under bracelet category")
+    await BrowserUtil.wait(5);
   }
 
-  selectHeartcutoption() {
-    ElementUtil.waitForClickable(this.optnHeartCut, 15, "wait for page load")
-    ElementUtil.click(this.optnHeartCut, "Select Heart cut under Shape filter")
+  async selectHeartcutoption() {
+    await ElementUtil.waitForClickable(this.optnHeartCut, 15, "wait for page load")
+    await ElementUtil.click(this.optnHeartCut, "Select Heart cut under Shape filter")
   }
 
-  selectbtnremoveheartshapedfiltertag() {
-    ElementUtil.waitForClickable(this.btnremoveheartshapefiltertag, 10, "wait for page load")
-    ElementUtil.click(this.btnremoveheartshapefiltertag, "Select remove button near Heart Shaped filter tag")
+  async selectbtnremoveheartshapedfiltertag() {
+    await ElementUtil.waitForClickable(this.btnremoveheartshapefiltertag, 10, "wait for page load")
+    await ElementUtil.click(this.btnremoveheartshapefiltertag, "Select remove button near Heart Shaped filter tag")
   }
 
-  selectbtnremovelovebanglesfiltertag() {
-    ElementUtil.waitForClickable(this.btnremovelovebanglesfiltertag, 10, "wait for page load")
-    ElementUtil.click(this.btnremovelovebanglesfiltertag, "Select remove button near Love bangles filter tag")
+  async selectbtnremovelovebanglesfiltertag() {
+    await ElementUtil.waitForClickable(this.btnremovelovebanglesfiltertag, 10, "wait for page load")
+    await ElementUtil.click(this.btnremovelovebanglesfiltertag, "Select remove button near Love bangles filter tag")
   }
 
-  selectemeraldstonefilter() {
-    ElementUtil.waitForClickable(this.optnEmerald, 10, "wait for page load")
-    ElementUtil.click(this.optnEmerald, "Select emerald  under Stone filter")
+  async selectemeraldstonefilter() {
+    await ElementUtil.waitForClickable(this.optnEmerald, 10, "wait for page load")
+    await ElementUtil.click(this.optnEmerald, "Select emerald  under Stone filter")
   }
 
-  selectcushioncutshape() {
-    ElementUtil.waitForClickable(this.optnCushionCut, 10, "wait for page load")
-    ElementUtil.click(this.optnCushionCut, "Select Cushion cut  under Shape filter")
-    BrowserUtil.wait(5)
-    ElementUtil.click(this.lnkFilterShape, "Hover other button")
-    ElementUtil.mouseHover(this.btnmayweassistyou, "Hover other button")
+  async selectcushioncutshape() {
+    await ElementUtil.waitForClickable(this.optnCushionCut, 10, "wait for page load")
+    await ElementUtil.click(this.optnCushionCut, "Select Cushion cut  under Shape filter")
+    await BrowserUtil.wait(5)
+    await ElementUtil.click(this.lnkFilterShape, "Hover other button")
+    await ElementUtil.mouseHover(this.btnmayweassistyou, "Hover other button")
   }
 
-  selectRemovenearemeraldfiltertag() {
-    ElementUtil.waitForClickable(this.btnremovenearemeraldbanglesfiltertag, 10, "wait for page load")
-    ElementUtil.click(this.btnremovenearemeraldbanglesfiltertag, "Select remove button near Emerald Filter tag under Bangles")
+  async selectRemovenearemeraldfiltertag() {
+    await ElementUtil.waitForClickable(this.btnremovenearemeraldbanglesfiltertag, 10, "wait for page load")
+    await ElementUtil.click(this.btnremovenearemeraldbanglesfiltertag, "Select remove button near Emerald Filter tag under Bangles")
   }
 
-  clicksearchbox() {
-    ElementUtil.waitForClickable(this.boxsearch, 50, "wait for page load")
-    ElementUtil.click(this.boxsearch, "Click search box")
+  async clicksearchbox() {
+    await ElementUtil.waitForClickable(this.boxsearch, 50, "wait for page load")
+    await ElementUtil.click(this.boxsearch, "Click search box")
   }
 
-  enterringsinsearchbox() {
-    ElementUtil.waitForClickable(this.boxsearch, 50, "wait for page load")
-    ElementUtil.sendText(this.boxsearch, data.Page2Links.Enterringsinsearchbox, "Enter ring in searchbox")
-    BrowserUtil.wait(5)
+  async enterringsinsearchbox() {
+    await ElementUtil.waitForClickable(this.boxsearch, 50, "wait for page load")
+    await ElementUtil.sendText(this.boxsearch, data.Page2Links.Enterringsinsearchbox, "Enter ring in searchbox")
+    await BrowserUtil.wait(5)
   }
 
-  enteremeraldinsearchbox() {
-    ElementUtil.waitForClickable(this.boxsearch, 50, "wait for page load")
-    ElementUtil.sendText(this.boxsearch, data.Page2Links.Enteremeraldinsearchbox, "Enter emerald in searchbox")
-    BrowserUtil.wait(5)
+  async enteremeraldinsearchbox() {
+    await ElementUtil.waitForClickable(this.boxsearch, 50, "wait for page load")
+    await ElementUtil.sendText(this.boxsearch, data.Page2Links.Enteremeraldinsearchbox, "Enter emerald in searchbox")
+    await BrowserUtil.wait(5)
   }
 
-  selectringsinddsearchbox() {
-    ElementUtil.waitForClickable(this.txtddrings, 50, "wait for page load")
-    ElementUtil.click(this.txtddrings, "Select ring from searchbox dropdown")
-    BrowserUtil.wait(5)
+  async selectringsinddsearchbox() {
+    await ElementUtil.waitForClickable(this.txtddrings, 50, "wait for page load")
+    await ElementUtil.click(this.txtddrings, "Select ring from searchbox dropdown")
+    await BrowserUtil.wait(5)
   }
 
-  selectemeraldinddsearchbox() {
-    ElementUtil.waitForClickable(this.txtddemerald, 50, "wait for page load")
-    ElementUtil.click(this.txtddemerald, "Select emerald from searchbox dropdown")
-    BrowserUtil.wait(5)
+  async selectemeraldinddsearchbox() {
+    await ElementUtil.waitForClickable(this.txtddemerald, 50, "wait for page load")
+    await ElementUtil.click(this.txtddemerald, "Select emerald from searchbox dropdown")
+    await BrowserUtil.wait(5)
   }
 
-  selectDanetteringsearch() {
-    ElementUtil.waitForClickable(this.txtdanettePDringsearch, 50, "wait for page load")
-    ElementUtil.click(this.txtdanettePDringsearch, "Select Danette product")
-    BrowserUtil.wait(5)
+  async selectDanetteringsearch() {
+    await ElementUtil.waitForClickable(this.txtdanettePDringsearch, 50, "wait for page load")
+    await ElementUtil.click(this.txtdanettePDringsearch, "Select Danette product")
+    await BrowserUtil.wait(5)
   }
 
-  selectcontentoption() {
-    ElementUtil.waitForClickable(this.txtcontent, 50, "wait for page load")
-    ElementUtil.click(this.txtcontent, "Select content option in search page")
-    BrowserUtil.wait(5)
+  async selectcontentoption() {
+    await ElementUtil.waitForClickable(this.txtcontent, 50, "wait for page load")
+    await ElementUtil.click(this.txtcontent, "Select content option in search page")
+    await BrowserUtil.wait(5)
   }
 
-  selectRingsreview() {
-    ElementUtil.scrollIntoView(this.txtproduct, "Scroll down")
-    ElementUtil.waitForClickable(this.txtheadingRingsreview, 50, "wait for page load")
-    ElementUtil.click(this.txtheadingRingsreview, "Select Rings review under content in search page")
-    BrowserUtil.wait(10)
+  async selectRingsreview() {
+    await ElementUtil.scrollIntoView(this.txtproduct, "Scroll down")
+    await ElementUtil.waitForClickable(this.txtheadingRingsreview, 50, "wait for page load")
+    await ElementUtil.click(this.txtheadingRingsreview, "Select Rings review under content in search page")
+    await BrowserUtil.wait(10)
   }
 
-  selectMensRingsreview() {
-    browser.back();
+  async selectMensRingsreview() {
+    await browser.back();
     this.selectcontentoption();
-    ElementUtil.waitForClickable(this.txtheadingMensRingsreview, 120, "wait for page load")
-    ElementUtil.click(this.txtheadingMensRingsreview, "Select Mens Rings review under content in search page")
-    BrowserUtil.wait(10)
+    await ElementUtil.waitForClickable(this.txtheadingMensRingsreview, 120, "wait for page load")
+    await ElementUtil.click(this.txtheadingMensRingsreview, "Select Mens Rings review under content in search page")
+    await BrowserUtil.wait(10)
   }
 
-  selectEngagementRingsreview() {
-    browser.back();
+  async selectEngagementRingsreview() {
+    await browser.back();
     //this.selectcontentoption();
-    ElementUtil.waitForClickable(this.txtheadingEngagementRingsreview, 120, "wait for page load")
-    ElementUtil.click(this.txtheadingEngagementRingsreview, "Select Engagement Rings review under content in search page")
-    BrowserUtil.wait(10)
+    await ElementUtil.waitForClickable(this.txtheadingEngagementRingsreview, 120, "wait for page load")
+    await ElementUtil.click(this.txtheadingEngagementRingsreview, "Select Engagement Rings review under content in search page")
+    await BrowserUtil.wait(10)
   }
 
-  selectSectionunderbloglink() {
-    browser.back();
+  async selectSectionunderbloglink() {
+    await browser.back();
     //this.selectcontentoption();
-    ElementUtil.waitForClickable(this.txtheadingsectionunderBloglinks, 120, "wait for page load")
-    ElementUtil.click(this.txtheadingsectionunderBloglinks, "Select heading under Blog links under content in search page");
-    BrowserUtil.wait(5);
-    browser.switchWindow(data.Page2Links.SectionunderbloglinkURL);
+    await ElementUtil.waitForClickable(this.txtheadingsectionunderBloglinks, 120, "wait for page load")
+    await ElementUtil.click(this.txtheadingsectionunderBloglinks, "Select heading under Blog links under content in search page");
+    await BrowserUtil.wait(5);
+    await browser.switchWindow(data.Page2Links.SectionunderbloglinkURL);
   }
 
-  entermiyainnersearchbox() {
-    ElementUtil.waitForClickable(this.boxinnersearch, 50, "wait for page load")
-    ElementUtil.sendText(this.boxinnersearch, data.Page2Links.Miyaringsinnersearch, "Enter miya in inner searchbox")
-    BrowserUtil.wait(5)
+  async entermiyainnersearchbox() {
+    await ElementUtil.waitForClickable(this.boxinnersearch, 50, "wait for page load")
+    await ElementUtil.sendText(this.boxinnersearch, data.Page2Links.Miyaringsinnersearch, "Enter miya in inner searchbox")
+    await BrowserUtil.wait(5)
   }
 
-  selectmiyaddinnersearch() {
-    ElementUtil.waitForClickable(this.txtmiyaddinnersearch, 10, "wait for page load")
-    ElementUtil.click(this.txtmiyaddinnersearch, "Select miya from inner search dropdown")
-    BrowserUtil.wait(5)
-    ElementUtil.scrollIntoView(this.sctnFilterTab, "Scroll down")
+  async selectmiyaddinnersearch() {
+    await ElementUtil.waitForClickable(this.txtmiyaddinnersearch, 10, "wait for page load")
+    await ElementUtil.click(this.txtmiyaddinnersearch, "Select miya from inner search dropdown")
+    await BrowserUtil.wait(5)
+    await ElementUtil.scrollIntoView(this.sctnFilterTab, "Scroll down")
   }
 
-  selectwritetousinnersearch() {
-    ElementUtil.waitForClickable(this.lnkwritetousinnersearch, 50, "wait for page load")
-    ElementUtil.click(this.lnkwritetousinnersearch, "Select Write to us link present above inner search box");
-    BrowserUtil.wait(8);
-    browser.switchWindow(data.Page2Links.ContactformpageURL);
+  async selectwritetousinnersearch() {
+    await ElementUtil.waitForClickable(this.lnkwritetousinnersearch, 50, "wait for page load")
+    await ElementUtil.click(this.lnkwritetousinnersearch, "Select Write to us link present above inner search box");
+    await BrowserUtil.wait(8);
+    await browser.switchWindow(data.Page2Links.ContactformpageURL);
   }
 
-  selectReachouttoussearch() {
-    ElementUtil.waitForClickable(this.lnkreachouttousinsearch, 50, "wait for page load")
-    ElementUtil.click(this.lnkreachouttousinsearch, "Select Reach out to us link");
-    BrowserUtil.wait(5)
+  async selectReachouttoussearch() {
+    await ElementUtil.waitForClickable(this.lnkreachouttousinsearch, 50, "wait for page load")
+    await ElementUtil.click(this.lnkreachouttousinsearch, "Select Reach out to us link");
+    await BrowserUtil.wait(5)
   }
 
-  selectCouplesband() {
-    ElementUtil.waitForClickable(this.lnkCouplesband, 50, "wait for page load")
-    ElementUtil.click(this.lnkCouplesband, "Select Couples band under Types filter")
-    BrowserUtil.wait(5)
+  async selectCouplesband() {
+    await ElementUtil.waitForClickable(this.lnkCouplesband, 50, "wait for page load")
+    await ElementUtil.click(this.lnkCouplesband, "Select Couples band under Types filter")
+    await BrowserUtil.wait(5)
   }
 
-  selectHoopsearrings() {
-    ElementUtil.mouseHover(this.lnkearringscategory, "Hover menu");
-    ElementUtil.waitForDisplayed(this.lnkHoopearrings, 15, "Wait for page to load");
-    ElementUtil.forceClick(this.lnkHoopearrings, "Select Hoops earrings under earring category")
+  async selectHoopsearrings() {
+    await ElementUtil.mouseHover(this.lnkearringscategory, "Hover menu");
+    await ElementUtil.waitForDisplayed(this.lnkHoopearrings, 15, "Wait for page to load");
+    await ElementUtil.forceClick(this.lnkHoopearrings, "Select Hoops earrings under earring category")
   }
 
-  scrolltofooter() {
-    ElementUtil.scrollIntoView(this.sctnfooter, "Scrolldown to footer section");
-    ElementUtil.mouseHover(this.btnmayweassistyou, "Scrolldown to footer section");
-    //ElementUtil.waitForDisplayed(this.sctnfooter, 5, "Scrolldown to footer section");
+  async scrolltofooter() {
+    await ElementUtil.scrollIntoView(this.sctnfooter, "Scrolldown to footer section");
+    await ElementUtil.mouseHover(this.btnmayweassistyou, "Scrolldown to footer section");
+    //await ElementUtil.waitForDisplayed(this.sctnfooter, 5, "Scrolldown to footer section");
   }
 
 

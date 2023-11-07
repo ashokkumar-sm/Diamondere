@@ -127,89 +127,89 @@ class writereview{
         return $('//button[@aria-label="Close"]')
     }
 
-    movetoreadreview(){
-        ElementUtil.scrollIntoView(this.txtReadReview, "Scroll down to Read review text")
+    async movetoreadreview(){
+        await ElementUtil.scrollIntoView(this.txtReadReview, "Scroll down to Read review text")
     }
 
-    selectbtnwriteareview(){
-        ElementUtil.click(this.btnWriteAReview, "Select the write a review button")
+    async selectbtnwriteareview(){
+        await ElementUtil.click(this.btnWriteAReview, "Select the write a review button")
     }
 
-    selectstarrating(){
-        ElementUtil.click(this.starRating, "Select the star rating")
+    async selectstarrating(){
+        await ElementUtil.click(this.starRating, "Select the star rating")
     }
 
-    enternamereview(){
-        ElementUtil.sendText(this.boxnameRevForm,data.WriteReview.Name,"Send name in name field")
+    async enternamereview(){
+        await ElementUtil.sendText(this.boxnameRevForm,data.WriteReview.Name,"Send name in name field")
     }
 
-    enteremailIdreview(){
-        ElementUtil.sendText(this.boxemailRevForm,data.WriteReview.EmailId,"Send emailId in emailId field")
+    async enteremailIdreview(){
+        await ElementUtil.sendText(this.boxemailRevForm,data.WriteReview.EmailId,"Send emailId in emailId field")
     }
 
-    enterlocationreview(){
-        ElementUtil.sendText(this.boxlocationRevForm,data.WriteReview.Location,"Send Location in Location field")
+    async enterlocationreview(){
+        await ElementUtil.sendText(this.boxlocationRevForm,data.WriteReview.Location,"Send Location in Location field")
     }
 
-    enterReviewtitle(){
-        ElementUtil.sendText(this.boxtitleRevForm,data.WriteReview.ReviewTitle,"Send review title in respective field")
+    async enterReviewtitle(){
+        await ElementUtil.sendText(this.boxtitleRevForm,data.WriteReview.ReviewTitle,"Send review title in respective field")
     }
 
-    enterReviewcomments(){
-        ElementUtil.sendText(this.boxurRevCommnts,data.WriteReview.ReviewComments,"Send review comments in respective field")
+    async enterReviewcomments(){
+        await ElementUtil.sendText(this.boxurRevCommnts,data.WriteReview.ReviewComments,"Send review comments in respective field")
     }
 
-    selectSubmitbutton(){
-        ElementUtil.waitForClickable(this.btnSbmtRev, 50, "wait for page load")
-        ElementUtil.forceClick(this.btnSbmtRev,"Click on Submit button")
+    async selectSubmitbutton(){
+        await ElementUtil.waitForClickable(this.btnSbmtRev, 50, "wait for page load")
+        await ElementUtil.forceClick(this.btnSbmtRev,"Click on Submit button")
     }
 
-    enterinvalidnamereview(){
-        ElementUtil.sendText(this.boxnameRevForm,data.WriteReview.InvalidName,"Send invalid name in name field")
+    async enterinvalidnamereview(){
+        await ElementUtil.sendText(this.boxnameRevForm,data.WriteReview.InvalidName,"Send invalid name in name field")
     }
 
-    enterinvalidemailIdreview(){
-        ElementUtil.sendText(this.boxemailRevForm,data.WriteReview.InvalidEmailId,"Send invalid emailId in emailId field")
+    async enterinvalidemailIdreview(){
+        await ElementUtil.sendText(this.boxemailRevForm,data.WriteReview.InvalidEmailId,"Send invalid emailId in emailId field")
     }
 
-    enterinvalidlocationreview(){
-        ElementUtil.sendText(this.boxlocationRevForm,data.WriteReview.InvalidLocation,"Send Invalid Location in Location field")
+    async enterinvalidlocationreview(){
+        await ElementUtil.sendText(this.boxlocationRevForm,data.WriteReview.InvalidLocation,"Send Invalid Location in Location field")
     }
 
-    enterinvalidReviewtitle(){
-        ElementUtil.sendText(this.boxtitleRevForm,data.WriteReview.InvalidReviewTitle,"Send Invalid review title in respective field")
+    async enterinvalidReviewtitle(){
+        await ElementUtil.sendText(this.boxtitleRevForm,data.WriteReview.InvalidReviewTitle,"Send Invalid review title in respective field")
     }
 
-    enterinvalidReviewcomments(){
-        ElementUtil.sendText(this.boxurRevCommnts,data.WriteReview.InvalidReviewComments,"Send invalid review comments in respective field")
+    async enterinvalidReviewcomments(){
+        await ElementUtil.sendText(this.boxurRevCommnts,data.WriteReview.InvalidReviewComments,"Send invalid review comments in respective field")
     }
 
-    entermaxnamereview(){
-        ElementUtil.sendText(this.boxnameRevForm,data.WriteReview.MaxName,"Send more than 40 characters in name field")
+    async entermaxnamereview(){
+        await ElementUtil.sendText(this.boxnameRevForm,data.WriteReview.MaxName,"Send more than 40 characters in name field")
     }
     
-    entermaxemailreview(){
-        ElementUtil.sendText(this.boxemailRevForm,data.WriteReview.MaxEmailId,"Send more than 40 characters in email field")
+    async entermaxemailreview(){
+        await ElementUtil.sendText(this.boxemailRevForm,data.WriteReview.MaxEmailId,"Send more than 40 characters in email field")
     }
 
-    entermaxlocationreview(){
-        ElementUtil.sendText(this.boxlocationRevForm,data.WriteReview.MaxLocation,"Send more than 40 characters in Location field")
+    async entermaxlocationreview(){
+        await ElementUtil.sendText(this.boxlocationRevForm,data.WriteReview.MaxLocation,"Send more than 40 characters in Location field")
     }
 
-    entermaxReviewtitle(){
-        ElementUtil.sendText(this.boxtitleRevForm,data.WriteReview.MaxReviewtitle,"Send  more than 40 characters in review title field")
+    async entermaxReviewtitle(){
+        await ElementUtil.sendText(this.boxtitleRevForm,data.WriteReview.MaxReviewtitle,"Send  more than 40 characters in review title field")
     }
 
-    entermaxReviewcomments(){
-        ElementUtil.sendText(this.boxurRevCommnts,data.WriteReview.MaxReviewComments,"Send more than 200 characters in respective field")
+    async entermaxReviewcomments(){
+        await ElementUtil.sendText(this.boxurRevCommnts,data.WriteReview.MaxReviewComments,"Send more than 200 characters in respective field")
     }
 
-    selectClosebuttonWAR(){
-        ElementUtil.click(this.btnCloseWAR,"Click on Close button in Write a review popup")
+    async selectClosebuttonWAR(){
+        await ElementUtil.click(this.btnCloseWAR,"Click on Close button in Write a review popup")
     }
 
-    selectClosebuttonSuccess(){
-        ElementUtil.click(this.btnCloseSucc,"Click on Close button in Success popup")
+    async selectClosebuttonSuccess(){
+        await ElementUtil.click(this.btnCloseSucc,"Click on Close button in Success popup")
     }
 
 }

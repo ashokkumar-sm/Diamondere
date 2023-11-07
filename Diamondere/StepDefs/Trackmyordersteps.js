@@ -9,9 +9,9 @@ const data = require('../TestData/Trackmyorder.json');
 const TOM = require('../PageObjects/Trackmyorderpage');
 
 
-Given(/^I select track my order under dropdown$/, () => {
+Given(/^I select track my order under dropdown$/, async() => {
 	const track =  new trackmyorder;
-    track.selectdrptrackmyorder();
+    await track.selectdrptrackmyorder();
 });
 
 Then(/^Ensure the Track my order page is displayed$/, async() => {
@@ -27,15 +27,15 @@ Then(/^Ensure the Track my order heading, Order number field, last name field an
     await expect(track.btnsearch).toExist();
 });
 
-When(/^I enter last name in the respective field$/, () => {
+When(/^I enter last name in the respective field$/, async() => {
 	const track =  new trackmyorder;
-    track.enterlastname();
+    await track.enterlastname();
 });
 
 
-When(/^I select search button$/, () => {
+When(/^I select search button$/, async() => {
 	const track =  new trackmyorder;
-    track.selectsearchbutton();
+    await track.selectsearchbutton();
 });
 
 
@@ -44,9 +44,9 @@ Then(/^Ensure an error message is displayed under Order Id field in TOM$/, async
     await expect(track.txtmandatordernumber).toExist();
 });
 
-When(/^I enter Order Id in the respective field$/, () => {
+When(/^I enter Order Id in the respective field$/, async() => {
 	const track =  new trackmyorder;
-    track.enterOrderId();
+    await track.enterOrderId();
 });
 
 Then(/^Ensure an error message is displayed under Last name field in TOM$/, async() => {
@@ -91,9 +91,9 @@ Then(/^Ensure the Shipping and billing address section is displayed$/, async() =
     await expect(track.txtdetailsbillingaddress).toExist();
 });
 
-When(/^I enter incorrect order Id and correct last name in their respective fields$/, () => {
+When(/^I enter incorrect order Id and correct last name in their respective fields$/, async() => {
 	const track =  new trackmyorder;
-    track.enterincorrectOrderId();
+    await track.enterincorrectOrderId();
 });
 
 Then(/^Ensure an error message is displayed with no results found$/, async() => {
@@ -102,9 +102,9 @@ Then(/^Ensure an error message is displayed with no results found$/, async() => 
     await expect(track.txtmsgerror).toExist();
 });
 
-When(/^I select close button in error popup in TOM$/, () => {
+When(/^I select close button in error popup in TOM$/, async() => {
 	const track =  new trackmyorder;
-    track.selectclosebuttonTOM();
+    await track.selectclosebuttonTOM();
 });
 
 Then(/^Ensure an error message popup is closed in TOM$/, async() => {
@@ -112,9 +112,9 @@ Then(/^Ensure an error message popup is closed in TOM$/, async() => {
     await expect(track.txtheadingerrormessage).not.toExist();
 });
 
-When(/^I enter correct order Id and incorrect last name in their respective fields$/, () => {
+When(/^I enter correct order Id and incorrect last name in their respective fields$/, async() => {
 	const track =  new trackmyorder;
-    track.enterincorrectLastname();
+    await track.enterincorrectLastname();
 });
 
  
@@ -124,16 +124,16 @@ When(/^I enter correct order Id and incorrect last name in their respective fiel
 
 
 
-// Given(/^I select track my order under dropdown$/, () => {
+// Given(/^I select track my order under dropdown$/, async() => {
 // 	const track = new trackmyorderold;
 //     track.selectddtrackmyorder();
 
 // });
 
-// Then(/^Ensure the Track my order page is displayed$/, () => {
+// Then(/^Ensure the Track my order page is displayed$/, async() => {
 // 	return true;
 // });
 
-// Then(/^Ensure the Track my order heading, Order number field, last name field and search button is displayed$/, () => {
+// Then(/^Ensure the Track my order heading, Order number field, last name field and search button is displayed$/, async() => {
 // 	return true;
 // });

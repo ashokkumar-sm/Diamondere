@@ -698,135 +698,133 @@ class shoppingcart {
     }
     
 
-    movetomatchingbandlink(){
-        ElementUtil.scrollIntoView(this.viewmatchingbands,"move to view matching bands")
+    async movetomatchingbandlink(){
+        await ElementUtil.scrollIntoView(this.viewmatchingbands,"move to view matching bands")
     }
-    selectremovebutton(){
-        ElementUtil.waitForClickable(this.productremovebutton, 50, "wait for page load")
-        ElementUtil.click(this.productremovebutton,"click remove button")
+    async selectremovebutton(){
+        await ElementUtil.waitForClickable(this.productremovebutton, 50, "wait for page load")
+        await ElementUtil.click(this.productremovebutton,"click remove button")
     }
-    clickemailus(){
-        ElementUtil.waitForClickable(this.emailustext, 50, "wait for page load")
-        ElementUtil.click(this.emailustext,"click emailus")
+    async clickemailus(){
+        await ElementUtil.waitForClickable(this.emailustext, 50, "wait for page load")
+        await ElementUtil.click(this.emailustext,"click emailus")
     }
-    clickrequestcallback(){
-        ElementUtil.waitForClickable(this.requestcallbacktext, 50, "wait for page load")
-        ElementUtil.click(this.requestcallbacktext,"click request callback")
+    async clickrequestcallback(){
+        await ElementUtil.waitForClickable(this.requestcallbacktext, 50, "wait for page load")
+        await ElementUtil.click(this.requestcallbacktext,"click request callback")
     }
-    clickcheckout(){
-        ElementUtil.waitForClickable(this.checkoutbtn, 50, "wait for page load")
-        ElementUtil.click(this.checkoutbtn,"click checkout button")
-        ElementUtil.waitForDisplayed(this.topproceedtopaymentbutton, 50, "wait for page load")
+    async clickcheckout(){
+        await ElementUtil.waitForClickable(this.checkoutbtn, 50, "wait for page load")
+        await ElementUtil.click(this.checkoutbtn,"click checkout button")
+        await ElementUtil.waitForDisplayed(this.topproceedtopaymentbutton, 50, "wait for page load")
     }
-    clickcontinueshopping(){
-        ElementUtil.waitForClickable(this.continueshoppingbtn, 50, "wait for page load")
-        ElementUtil.click(this.continueshoppingbtn,"click continue shopping button")
+    async clickcontinueshopping(){
+        await ElementUtil.waitForClickable(this.continueshoppingbtn, 50, "wait for page load")
+        await ElementUtil.click(this.continueshoppingbtn,"click continue shopping button")
     }
-    clickaddringbandband(){
-        ElementUtil.waitForClickable(this.addringbandband, 50, "wait for page load")
-        ElementUtil.click(this.addringbandband,"click add ring and band")
+    async clickaddringbandband(){
+        await ElementUtil.waitForClickable(this.addringbandband, 50, "wait for page load")
+        await ElementUtil.click(this.addringbandband,"click add ring and band")
     }
-    movetocomplimentstext(){
-        ElementUtil.scrollIntoView(this.complimentstext,"move to compliments text")
+    async movetocomplimentstext(){
+        await ElementUtil.scrollIntoView(this.complimentstext,"move to compliments text")
     }
-    movetoaddtocartbtn(){
-        ElementUtil.scrollIntoView(this.settingaddtocart,"move to setting addtocart")
+    async movetoaddtocartbtn(){
+        await ElementUtil.scrollIntoView(this.settingaddtocart,"move to setting addtocart")
     }
-    clickaddtocartbtn(){
-        ElementUtil.forceClick(this.settingaddtocart,"click setting addtocart")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.topproceedtopaymentbutton, 60, "wait for page load")
+    async clickaddtocartbtn(){
+        await ElementUtil.forceClick(this.settingaddtocart,"click setting addtocart")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.topproceedtopaymentbutton, 60, "wait for page load")
     }
-    clickviewdetails(){
-        BrowserUtil.wait(3)
-        //ElementUtil.waitForClickable(this.matchingbandsproductviewdetailslink, 60, "wait for page load")
-        //ElementUtil.mouseHover(this.matchingbandsproductviewdetailslink, "Hover the link")
-        ElementUtil.click(this.matchingbandsproductviewdetailslink,"Click view details")
-        ElementUtil.scrollIntoView(this.matchingbandproductpopupXbtn, "scroll to popup")
+    async clickviewdetails(){
+        await BrowserUtil.wait(3)
+        //await ElementUtil.waitForClickable(this.matchingbandsproductviewdetailslink, 60, "wait for page load")
+        //await ElementUtil.mouseHover(this.matchingbandsproductviewdetailslink, "Hover the link")
+        await ElementUtil.click(this.matchingbandsproductviewdetailslink,"Click view details")
+        await ElementUtil.scrollIntoView(this.matchingbandproductpopupXbtn, "scroll to popup")
     }
-    clickringsizedropdown(){
-        ElementUtil.click(this.matchingbandringsizefield,"click ringsize dropdown")
+    async clickringsizedropdown(){
+        await ElementUtil.click(this.matchingbandringsizefield,"click ringsize dropdown")
     }
-    click8ukringsize(){
-        ElementUtil.click(this.matchingbandringsize8UK,"click 8UK")
+    async click8ukringsize(){
+        await ElementUtil.click(this.matchingbandringsize8UK,"click 8UK")
     }
-    entermessage(){
-        ElementUtil.sendText(this.matchingbandsproductsmfield,data.specialmessagetext.text,"Enter message")
+    async entermessage(){
+        await ElementUtil.sendText(this.matchingbandsproductsmfield,data.specialmessagetext.text,"Enter message")
     }
-    clickmbaddtocart(){
-        ElementUtil.click(this.matchingbandaddtocart,"click matching band add to cart")
+    async clickmbaddtocart(){
+        await ElementUtil.click(this.matchingbandaddtocart,"click matching band add to cart")
     }
-    clickfedexdelivery(){
-        ElementUtil.click(this.fedexshippingradiobutton,"click fedex shipping radiobutton")
+    async clickfedexdelivery(){
+        await ElementUtil.click(this.fedexshippingradiobutton,"click fedex shipping radiobutton")
     }
-    clickremoveexpressdelivery(){
-        ElementUtil.click(this.expressorderremovebtn,"click express remove button")
+    async clickremoveexpressdelivery(){
+        await ElementUtil.click(this.expressorderremovebtn,"click express remove button")
     }
-    clickeasydelivery(){
-        ElementUtil.click(this.easyshippingradiobutton,"click easy delivery radiobutton")
+    async clickeasydelivery(){
+        await ElementUtil.click(this.easyshippingradiobutton,"click easy delivery radiobutton")
     }
-    clickshowdetailslink(){
-        ElementUtil.waitForClickable(this.productcdshowdiscountdetails, 60, "wait for page load")
-        ElementUtil.click(this.productcdshowdiscountdetails,"click show discount details")
+    async clickshowdetailslink(){
+        await ElementUtil.waitForClickable(this.productcdshowdiscountdetails, 60, "wait for page load")
+        await ElementUtil.click(this.productcdshowdiscountdetails,"click show discount details")
     }
-    click5yearplan(){
-        ElementUtil.click(this.productprotectionoptionfiveyear,"click 5 year plan")
+    async click5yearplan(){
+        await ElementUtil.click(this.productprotectionoptionfiveyear,"click 5 year plan")
     }
-    enteradditionaldetails(){
-        ElementUtil.sendText(this.additionalinstructiontextarea,sdata.information.additionaldetails)
+    async enteradditionaldetails(){
+        await ElementUtil.sendText(this.additionalinstructiontextarea,sdata.information.additionaldetails)
     }
-    clickmenslink(){
-        ElementUtil.click(this.productcdaddmanbandlink,"click mens band link")
+    async clickmenslink(){
+        await ElementUtil.click(this.productcdaddmanbandlink,"click mens band link")
     }
-
-
-    clickpaypalimage(){
-        ElementUtil.forceClick(this.paymentpaypal,"click payment paypal")
+    async clickpaypalimage(){
+        await ElementUtil.forceClick(this.paymentpaypal,"click payment paypal")
     }
-    clickpopupcrossbutton(){
-        ElementUtil.click(this.popupclose,"click close popup")
+    async clickpopupcrossbutton(){
+        await ElementUtil.click(this.popupclose,"click close popup")
     }
-    clickpaypalcreditimage(){
-        ElementUtil.forceClick(this.paymentpaypalcredit,"click payment paypalcredit")
+    async clickpaypalcreditimage(){
+        await ElementUtil.forceClick(this.paymentpaypalcredit,"click payment paypalcredit")
     }
-    clickcalenderimage(){
-        ElementUtil.waitForClickable(this.paymentdiamonderepayment, 60, "wait for page load")
-        ElementUtil.click(this.paymentdiamonderepayment,"click diamonderepayment")
+    async clickcalenderimage(){
+        await ElementUtil.waitForClickable(this.paymentdiamonderepayment, 60, "wait for page load")
+        await ElementUtil.click(this.paymentdiamonderepayment,"click diamonderepayment")
     }
-    clickaffirm(){
-        ElementUtil.waitForClickable(this.paymentaffirm, 60, "wait for page load")
-        ElementUtil.click(this.paymentaffirm,"click payment affirm")
+    async clickaffirm(){
+        await ElementUtil.waitForClickable(this.paymentaffirm, 60, "wait for page load")
+        await ElementUtil.click(this.paymentaffirm,"click payment affirm")
     }
-    clickaffirmjewlrylink(){
-        ElementUtil.waitForClickable(this.affirmjewelrylink, 60, "wait for page load")
-        ElementUtil.click(this.affirmjewelrylink,"click affirm jewelrylink")
-        browser.switchWindow('https://staging.diamondere.com/information/financing-options')
-	    BrowserUtil.wait(3);
+    async clickaffirmjewlrylink(){
+        await ElementUtil.waitForClickable(this.affirmjewelrylink, 60, "wait for page load")
+        await ElementUtil.click(this.affirmjewelrylink,"click affirm jewelrylink")
+        await browser.switchWindow('https://staging.diamondere.com/information/financing-options')
+	    await BrowserUtil.wait(3);
     }
-    clickaccrediationbusiness(){
-        ElementUtil.waitForClickable(this.accrediationbusiness, 60, "wait for page load")
-        ElementUtil.click(this.accrediationbusiness,"click accrediation business")
-        browser.switchWindow('https://www.bbb.org/us/ca/redwood-city/profile/jewelry-stores/diamondere-inc-1116-873976')
-	    BrowserUtil.wait(3);
+    async clickaccrediationbusiness(){
+        await ElementUtil.waitForClickable(this.accrediationbusiness, 60, "wait for page load")
+        await ElementUtil.click(this.accrediationbusiness,"click accrediation business")
+        await browser.switchWindow('https://www.bbb.org/us/ca/redwood-city/profile/jewelry-stores/diamondere-inc-1116-873976')
+	    await BrowserUtil.wait(3);
     }
-    clicknorton(){
-        ElementUtil.waitForClickable(this.norton, 60, "wait for page load")
-        ElementUtil.click(this.norton,"click norton")
-        browser.switchWindow('https://seal.digicert.com/seals/popup/?tag=bbpkGMsC&referer=www.diamondere.com&lang=en')
-	    BrowserUtil.wait(3);
+    async clicknorton(){
+        await ElementUtil.waitForClickable(this.norton, 60, "wait for page load")
+        await ElementUtil.click(this.norton,"click norton")
+        await browser.switchWindow('https://seal.digicert.com/seals/popup/?tag=bbpkGMsC&referer=www.diamondere.com&lang=en')
+	    await BrowserUtil.wait(3);
     }
-    clickscicon(){
-        ElementUtil.click(this.shoppingcart,"click shopping cart")
+    async clickscicon(){
+        await ElementUtil.click(this.shoppingcart,"click shopping cart")
     }
-    clicktoppaymentbutton(){
-        ElementUtil.click(this.topproceedtopaymentbutton,"click top payment button")
+    async clicktoppaymentbutton(){
+        await ElementUtil.click(this.topproceedtopaymentbutton,"click top payment button")
     }
-    selectAddToCart() {
-        ElementUtil.click(this.btnAddToCartBand, "Click add to cart")
-        BrowserUtil.wait(5)
+    async selectAddToCart() {
+        await ElementUtil.click(this.btnAddToCartBand, "Click add to cart")
+        await BrowserUtil.wait(5)
     }
-    clickDiaViewdetails() {
-        ElementUtil.click(this.viewDiamdetails, "click on view diamond details link text")
+    async clickDiaViewdetails() {
+        await ElementUtil.click(this.viewDiamdetails, "click on view diamond details link text")
     }
 
 }

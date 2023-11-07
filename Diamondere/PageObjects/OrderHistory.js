@@ -180,19 +180,19 @@ class ShoppingCart {
         return $('//div[contains(text(),"Rayce")]')
     }
     
-    clickOrderHistOptn(){
-        ElementUtil.click(this.btnddorderhistory, "click the order history button")
-        BrowserUtil.wait(8);
+    async clickOrderHistOptn(){
+        await ElementUtil.click(this.btnddorderhistory, "click the order history button")
+        await BrowserUtil.wait(8);
     }
-    clickViewDetails(){
-        ElementUtil.click(this.lnkViewDetails, "click the order history button")
-        BrowserUtil.wait(5);
+    async clickViewDetails(){
+        await ElementUtil.click(this.lnkViewDetails, "click the order history button")
+        await BrowserUtil.wait(5);
     }
-    moveToaddressSection(){
-        ElementUtil.scrollIntoView(this.txtxshipandBillAdd, "Move to the address section")
+    async moveToaddressSection(){
+        await ElementUtil.scrollIntoView(this.txtxshipandBillAdd, "Move to the address section")
     }
-    movetoRayceRing(){
-        ElementUtil.scrollIntoView(this.rayceRing, "Move to the rayce ring section")
+    async movetoRayceRing(){
+        await ElementUtil.scrollIntoView(this.rayceRing, "Move to the rayce ring section")
     }
 
 }

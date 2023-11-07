@@ -12,17 +12,17 @@ Then(/^Ensure the Accredited Business icon is displayed$/, async() => {
 	await expect(reviewdisplay.lnkaccreditionicon).toExist();
 });
 
-When(/^I select Accredited and Aplus icon$/, () => {
+When(/^I select Accredited and Aplus icon$/, async() => {
 	const reviewdisplay = new screen;
-	reviewdisplay.selectaccreditionicon();
+	await reviewdisplay.selectaccreditionicon();
 });
 Then(/^Ensure it redirects to the Business bureau Diamondere certification$/, async() => {
 	const reviewdisplay = await browser.getUrl();
 	await expect(reviewdisplay).toEqual(data.Reviewsscreening.AccreditedBusinessURL);
 });
 
-Given(/^I enter into page 3 of any product has more than 6 reviews$/, () => {
-	browser.url(diamondere.config.ReviewMorethan6URL);
+Given(/^I enter into page 3 of any product has more than 6 reviews$/, async() => {
+	await browser.url(diamondere.config.ReviewMorethan6URL);
 });
 
 Then(/^Ensure the Read Reviews text, product text and star rating along with the rating number for the product is displayed$/, async() => {
@@ -55,9 +55,9 @@ Then(/^Ensure the View All Ring Reviews button is present$/, async() => {
 	await expect(reviewdisplay.btnViewAll).toExist();
 });
 
-When(/^I select View All Ring Reviews button$/, () => {
+When(/^I select View All Ring Reviews button$/, async() => {
 	const reviewdisplay = new screen;
-	reviewdisplay.selectViewallRings();
+	await reviewdisplay.selectViewallRings();
 });
 
 Then(/^Ensure it redirects to the Diamondere rings review page$/, async() => {
@@ -83,8 +83,8 @@ Then(/^Ensure the product image, rating, customer name, location, date, review t
 	await expect(reviewdisplay.txtreviewcommentsfirstrowReviewsforDiamondererings).toExist();
 });
 
-Given(/^I enter into page 3 of any product has less than 6 reviews$/, () => {
-	browser.url(diamondere.config.ReviewLessthan6URL);
+Given(/^I enter into page 3 of any product has less than 6 reviews$/, async() => {
+	await browser.url(diamondere.config.ReviewLessthan6URL);
 });
 
 Then(/^Ensure Read reviews text for All Rings and star rating and the rating number and the total user reviews text are displayed$/, async() => {
@@ -100,11 +100,11 @@ Then(/^Ensure all the details given by customers for all rings is present in the
 	await expect(reviewdisplay.txtreviewdetailsAllRings).toExist();
 });
 
-Given(/^I enter into page 3 of any product has no reviews$/, () => {
-	browser.url(diamondere.config.NoreviewURL);
+Given(/^I enter into page 3 of any product has no reviews$/, async() => {
+	await browser.url(diamondere.config.NoreviewURL);
 });
 
-When(/^I scrolldown to the free global shipping section at the bottom$/, () => {
+When(/^I scrolldown to the free global shipping section at the bottom$/, async() => {
 	const reviewdisplay = new screen;
-	reviewdisplay.movetofreeglobal();
+	await reviewdisplay.movetofreeglobal();
 });

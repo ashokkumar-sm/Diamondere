@@ -203,7 +203,7 @@ Feature: Testing Page 3 features of Diamondere - 2
         Then I ensure push back and screw back price is same 
 
     #76(metalandgemstoneBangle-page)
-    @smoketest
+    @validations
     Scenario: Checking metal and gemstone Bangle Page is displayed
         Given I browse metal and gemstone bangle product details page
         And I move to Diamonderelogo

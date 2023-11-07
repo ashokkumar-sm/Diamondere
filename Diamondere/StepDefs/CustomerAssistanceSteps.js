@@ -8,16 +8,16 @@ const context = require("../../CommonUtils/ScenarioContext");
 const RegistrationandLogin = require('../PageObjects/RegistrationandLogin');
 
 
-When(/^I logout if already logged in$/, () => {
+When(/^I logout if already logged in$/, async() => {
 	const logout = new RegistrationandLogin
-    logout.selectProfile();
+    await logout.selectProfile();
 });
 
 //REQUEST CALL BACK
 //Scenario - 1
-When(/^I select Request Call Back option$/, () => {
+When(/^I select Request Call Back option$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.selectRequestCallBack();
+    await requestCallBack.selectRequestCallBack();
 });
 
 
@@ -28,8 +28,9 @@ Then(/^I ensure it redirects to the Request Call Back page$/, async() => {
 
 
 //Scenario - 2
-Given(/^I browse Request Call Back page$/, () => {
-	browser.url(dmd.config.requestCallBackUrl);
+Given(/^I browse Request Call Back page$/, async() => {
+	await browser.url(dmd.config.requestCallBackUrl);
+    await BrowserUtil.wait(3)
 });
 
 
@@ -93,27 +94,27 @@ Then(/^I ensure the name and email fields are blank in the page$/, async() => {
 
 
 //Scenario - 8
-When(/^I enter name in the form$/, () => {
+When(/^I enter name in the form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterNameRCB();
+    await requestCallBack.enterNameRCB();
 });
 
 
-When(/^I enter phone in the form$/, () => {
+When(/^I enter phone in the form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterPhoneRCB();
+    await requestCallBack.enterPhoneRCB();
 });
 
 
-When(/^I enter email in the form$/, () => {
+When(/^I enter email in the form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterEmailRCB();
+    await requestCallBack.enterEmailRCB();
 });
 
 
-When(/^I click Request Call Back button$/, () => {
+When(/^I click Request Call Back button$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.selectBtnRCB();
+    await requestCallBack.selectBtnRCB();
 });
 
 
@@ -132,9 +133,9 @@ Then(/^I ensure the mandatory message is displayed under Name field$/, async() =
 
 
 //Scenario - 10
-When(/^I enter special characters and numbers in the name field$/, () => {
+When(/^I enter special characters and numbers in the name field$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterInvalidNameRCB();
+    await requestCallBack.enterInvalidNameRCB();
 });
 
 
@@ -152,9 +153,9 @@ Then(/^I ensure the mandatory message is displayed under Phone field$/, async() 
 
 
 //Scenario - 12
-When(/^I enter restricted special characters and alphabets in the phone field$/, () => {
+When(/^I enter restricted special characters and alphabets in the phone field$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterInvalidPhoneRCB();
+    await requestCallBack.enterInvalidPhoneRCB();
 });
 
 
@@ -165,16 +166,16 @@ Then(/^I ensure the character validation message for the phone field is displaye
 
 
 //Scenario - 13
-When(/^I enter phone number with country code in the form$/, () => {
+When(/^I enter phone number with country code in the form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterCCPhoneRCB();
+    await requestCallBack.enterCCPhoneRCB();
 });
 
 
 //Scenario - 15
-When(/^I enter invalid email address in the form$/, () => {
+When(/^I enter invalid email address in the form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterInvalidEmailRCB();
+    await requestCallBack.enterInvalidEmailRCB();
 });
 
 
@@ -185,27 +186,27 @@ Then(/^I ensure the format validation message for the email field is displayed$/
 
 
 //Scenario - 16
-When(/^I click Add to cart in page 3 of Miya$/, () => {
+When(/^I click Add to cart in page 3 of Miya$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.clickAddToCartMiya();
+    await requestCallBack.clickAddToCartMiya();
 });
 
 
-When(/^I click Proceed to Payment in Shopping Cart Page$/, () => {
+When(/^I click Proceed to Payment in Shopping Cart Page$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.clickProceedToPayment();
+    await requestCallBack.clickProceedToPayment();
 });
 
 
-When(/^I click the request call back link$/, () => {
+When(/^I click the request call back link$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.selectReqCallBackLink();
+    await requestCallBack.selectReqCallBackLink();
 });
 
 
-When(/^I click the request call back link in checkout page$/, () => {
+When(/^I click the request call back link in checkout page$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.clickReqCallBackLink();
+    await requestCallBack.clickReqCallBackLink();
 });
 
 
@@ -226,10 +227,10 @@ Then(/^I ensure it opens the request call back page in a popup$/, async() => {
 });
 
 
-When(/^I click the X button in the popup$/, () => {
+When(/^I click the X button in the popup$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    //BrowserUtil.switchToDefaultContent();
-    requestCallBack.closeReqCallBackPopup();
+    //await BrowserUtil.switchToDefaultContent();
+    await requestCallBack.closeReqCallBackPopup();
 });
 
 
@@ -240,9 +241,9 @@ Then(/^I ensure the popup is closed$/, async() => {
 
 
 //Scenario - 18
-When(/^I enter name with more than 40 characters in the form$/, () => {
+When(/^I enter name with more than 40 characters in the form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterExceedCharLimitNameRCB();
+    await requestCallBack.enterExceedCharLimitNameRCB();
 });
 
 
@@ -254,9 +255,9 @@ Then(/^I ensure the name field accepts only 40 characters in the form$/, async()
 
 
 //Scenario - 19
-When(/^I enter phone number with more than 15 characters in the form$/, () => {
+When(/^I enter phone number with more than 15 characters in the form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterExceedCharLimitPhoneRCB();
+    await requestCallBack.enterExceedCharLimitPhoneRCB();
 });
 
 
@@ -268,9 +269,9 @@ Then(/^I ensure the phone field accepts only 15 characters in the form$/, async(
 
 
 //Scenario - 20
-When(/^I enter email with more than 40 characters in Request Call Back form$/, () => {
+When(/^I enter email with more than 40 characters in Request Call Back form$/, async() => {
 	const requestCallBack = new CustomerAssistance;
-    requestCallBack.enterExceedCharLimitEmailRCB();
+    await requestCallBack.enterExceedCharLimitEmailRCB();
 });
 
 
@@ -283,9 +284,9 @@ Then(/^I ensure the email field accepts only 40 characters in Request Call Back 
 
 //CONTACT US
 //Scenario - 1
-When(/^I select Write To Us option$/, () => {
+When(/^I select Write To Us option$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.selectWriteToUs();
+    await contactUs.selectWriteToUs();
 });
 
 
@@ -295,15 +296,16 @@ Then(/^I ensure it redirects to the Contact Us page$/, async() => {
 });
 
 
-When(/^I browse back and click Contact Us link in the footer$/, () => {
+When(/^I browse back and click Contact Us link in the footer$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.selectContactUs();
+    await contactUs.selectContactUs();
 });
 
 
 //Scenario - 2
-Given(/^I browse Contact Us page$/, () => {
-	browser.url(dmd.config.contactUsUrl);
+Given(/^I browse Contact Us page$/, async() => {
+	await browser.url(dmd.config.contactUsUrl);
+    await BrowserUtil.wait(3)
 });
 
 
@@ -322,28 +324,28 @@ Then(/^I validate the presence of various fields in the Contact Us page$/, async
 
 
 //Scenario - 4
-When(/^I enter message in Contact Us form$/, () => {
+When(/^I enter message in Contact Us form$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.enterMessage();
+    await contactUs.enterMessage();
 });
 
 
-When(/^I upload image in Contact Us form$/, () => {
+When(/^I upload image in Contact Us form$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.uploadImage();
+    await contactUs.uploadImage();
 });
 
 
-When(/^I click Submit Contact Form button$/, () => {
+When(/^I click Submit Contact Form button$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickSubmitContactForm();
+    await contactUs.clickSubmitContactForm();
 });
 
 
 //Scenario - 5
-When(/^I enter special characters and numbers in the name field in Contact Us page$/, () => {
+When(/^I enter special characters and numbers in the name field in Contact Us page$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.enterInvalidNameRCB();
+    await contactUs.enterInvalidNameRCB();
 });
 
 //Scenario - 6
@@ -354,9 +356,9 @@ Then(/^I ensure the mandatory message is displayed under Email field$/, async() 
 
 
 //Scenario - 12
-When(/^I enter restricted characters in message field$/, () => {
+When(/^I enter restricted characters in message field$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.enterRestrictedChar();
+    await contactUs.enterRestrictedChar();
 });
 
 
@@ -390,23 +392,23 @@ Then(/^I verify the presence of Contact Number and Email ID$/, async() => {
 
 
 //Scenario - 18
-When(/^I click Email Us Now link in the description box$/, () => {
+When(/^I click Email Us Now link in the description box$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickEmailUsNowLink();
+    await contactUs.clickEmailUsNowLink();
 });
 
 
 //Scenario - 19
-When(/^I click Or request a call back link in the description box$/, () => {
+When(/^I click Or request a call back link in the description box$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickOrRequestACallBack();
+    await contactUs.clickOrRequestACallBack();
 });
 
 
 //Scenario - 20
-When(/^I click Learn More link in the description box$/, () => {
+When(/^I click Learn More link in the description box$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickLearnMoreStartADesignLink();
+    await contactUs.clickLearnMoreStartADesignLink();
 });
 
 
@@ -424,9 +426,9 @@ Then(/^I verify the presence of Get to Know Us section$/, async() => {
 
 
 //Scenario - 22
-When(/^I select the FAQ 1$/, () => {
+When(/^I select the FAQ 1$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.expandFAQ1();
+    await contactUs.expandFAQ1();
 });
 
 
@@ -449,27 +451,27 @@ Then(/^I validate the Why Choose Diamondere section$/, async() => {
 });
 
 
-When(/^I click Learn More under Legacy of Excellence$/, () => {
+When(/^I click Learn More under Legacy of Excellence$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickLearnMoreLegacyOfExcellence();
+    await contactUs.clickLearnMoreLegacyOfExcellence();
 });
 
 
-When(/^I click Learn More under Custom-Made$/, () => {
+When(/^I click Learn More under Custom-Made$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickLearnMoreCustomMade();
+    await contactUs.clickLearnMoreCustomMade();
 });
 
 
-When(/^I click Learn More under Fair Prices$/, () => {
+When(/^I click Learn More under Fair Prices$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickLearnMoreFairPrices();
+    await contactUs.clickLearnMoreFairPrices();
 });
 
 
-When(/^I click Learn More under Resizing$/, () => {
+When(/^I click Learn More under Resizing$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickLearnMoreResizing();
+    await contactUs.clickLearnMoreResizing();
 });
 
 
@@ -489,22 +491,22 @@ Then(/^I validate the Come be inspired section$/, async() => {
 });
 
 
-When(/^I click an image under Come be inspired section$/, () => {
+When(/^I click an image under Come be inspired section$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickImageInstagram();
+    await contactUs.clickImageInstagram();
 });
 
 
 //Scenario - 25
-When(/^I click the Email Us Now link$/, () => {
+When(/^I click the Email Us Now link$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.selectEmailUsNowLinkCheckout();
+    await contactUs.selectEmailUsNowLinkCheckout();
 });
 
 
-When(/^I click the Email Us Now link in checkout page$/, () => {
+When(/^I click the Email Us Now link in checkout page$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.clickEmailUsNowLinkCheckout();
+    await contactUs.clickEmailUsNowLinkCheckout();
 });
 
 
@@ -535,9 +537,9 @@ Then(/^I ensure it opens the contact us page in a popup$/, async() => {
 
 
 //Scenario - 27
-When(/^I upload image of invalid format in Contact Us form$/, () => {
+When(/^I upload image of invalid format in Contact Us form$/, async() => {
 	const contactUs = new CustomerAssistance;
-    contactUs.uploadInvalidImageFormat();
+    await contactUs.uploadInvalidImageFormat();
 });
 
 
@@ -556,9 +558,9 @@ Then(/^I ensure the message field has a character limit of 400 characters in Con
 
 //JOIN DIAMONDERE COMMUNITY
 //Scenario - 1
-Given(/^I scroll to footer section$/, () => {
+Given(/^I scroll to footer section$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.scrollToFooter();
+    await joinDmdCommunity.scrollToFooter();
 });
 
 
@@ -571,9 +573,9 @@ Then(/^I verify the Join Diamondere Community section$/, async() => {
 });
 
 
-When(/^I click Email field under Join Diamondere Community section$/, () => {
+When(/^I click Email field under Join Diamondere Community section$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.clickEmailJoinDmdCommunity();
+    await joinDmdCommunity.clickEmailJoinDmdCommunity();
 });
 
 
@@ -597,38 +599,39 @@ Then(/^I ensure it redirects to a new mailchimp page with all the fields$/, asyn
 
 
 //Scenario - 2
-Given(/^I browse Join Diamondere Community page$/, () => {
-	browser.url(dmd.config.joinDiamondereCommunityUrl)
+Given(/^I browse Join Diamondere Community page$/, async() => {
+	await browser.url(dmd.config.joinDiamondereCommunityUrl)
+    await BrowserUtil.wait(3)
 });
 
 
-When(/^I enter email in Join Diamondere Community form$/, () => {
+When(/^I enter email in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterEmailJoinDmd();
+    await joinDmdCommunity.enterEmailJoinDmd();
 });
 
 
-When(/^I enter first name in Join Diamondere Community form$/, () => {
+When(/^I enter first name in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterFirstNameJoinDmd();
+    await joinDmdCommunity.enterFirstNameJoinDmd();
 });
 
 
-When(/^I enter birth month in Join Diamondere Community form$/, () => {
+When(/^I enter birth month in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterBirthMonthJoinDmd();
+    await joinDmdCommunity.enterBirthMonthJoinDmd();
 });
 
 
-When(/^I enter birth date in Join Diamondere Community form$/, () => {
+When(/^I enter birth date in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterBirthDateJoinDmd();
+    await joinDmdCommunity.enterBirthDateJoinDmd();
 });
 
 
-When(/^I click Sign Me Up button$/, () => {
+When(/^I click Sign Me Up button$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.clickSignMeUp();
+    await joinDmdCommunity.clickSignMeUp();
 });
 
 
@@ -639,9 +642,9 @@ Then(/^I ensure the success message is displayed in Join Diamondere Community fo
 
 
 //Scenario - 3
-When(/^I enter invalid email address in Join Diamondere Community form$/, () => {
+When(/^I enter invalid email address in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterInvalidEmailJoinDmd();
+    await joinDmdCommunity.enterInvalidEmailJoinDmd();
 });
 
 
@@ -652,9 +655,9 @@ Then(/^I ensure the format validation message for the email field is displayed i
 
 
 //Scenario - 4
-When(/^I enter special characters and numbers in the first name field in Join Diamondere Community form$/, () => {
+When(/^I enter special characters and numbers in the first name field in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterInvalidNameJoinDmd();
+    await joinDmdCommunity.enterInvalidNameJoinDmd();
 });
 
 
@@ -665,9 +668,9 @@ Then(/^I ensure the character validation message for the first name field is dis
 
 
 //Scenario - 5
-When(/^I enter special characters and alphabets in the birth month and date fields in Join Diamondere Community form$/, () => {
+When(/^I enter special characters and alphabets in the birth month and date fields in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterInvalidBirthDayJoinDmd();
+    await joinDmdCommunity.enterInvalidBirthDayJoinDmd();
 });
 
 
@@ -692,28 +695,28 @@ Then(/^I ensure the mandatory message is displayed under first name field in Joi
 
 
 //Scenario - 9
-When(/^I enter number greater than 12 in month field$/, () => {
+When(/^I enter number greater than 12 in month field$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterInvalidBirthMonth();
+    await joinDmdCommunity.enterInvalidBirthMonth();
 });
 
 
 //Scenario - 10
-When(/^I enter number greater than 31 in date field$/, () => {
+When(/^I enter number greater than 31 in date field$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enterInvalidBirthDate();
+    await joinDmdCommunity.enterInvalidBirthDate();
 });
 
 
 //Scenario - 11
-When(/^I refresh the page, re-enter the same details and click Sign me up$/, () => {
+When(/^I refresh the page, re-enter the same details and click Sign me up$/, async() => {
     const joinDmdCommunity = new CustomerAssistance;
-    browser.refresh();
-    joinDmdCommunity.enterEmailJoinDmd();
-    joinDmdCommunity.enterFirstNameJoinDmd();
-    joinDmdCommunity.enterBirthMonthJoinDmd();
-    joinDmdCommunity.enterBirthDateJoinDmd();
-    joinDmdCommunity.clickSignMeUp();
+    await browser.refresh();
+    await joinDmdCommunity.enterEmailJoinDmd();
+    await joinDmdCommunity.enterFirstNameJoinDmd();
+    await joinDmdCommunity.enterBirthMonthJoinDmd();
+    await joinDmdCommunity.enterBirthDateJoinDmd();
+    await joinDmdCommunity.clickSignMeUp();
 });
 
 
@@ -723,9 +726,9 @@ Then(/^I ensure the already registered error message is displayed$/, async() => 
 });
 
 //Scenario - 15
-When(/^I enter already registered email in Join Diamondere Community form$/, () => {
+When(/^I enter already registered email in Join Diamondere Community form$/, async() => {
 	const joinDmdCommunity = new CustomerAssistance;
-    joinDmdCommunity.enteralreadyRegEmail()
+    await joinDmdCommunity.enteralreadyRegEmail()
 });
 
 
@@ -741,9 +744,9 @@ Then(/^I verify the social share plugins in page 3$/, async() => {
 });
 
 
-When(/^I click Email icon in page 3$/, () => {
+When(/^I click Email icon in page 3$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.clickEmailIconPage3();
+    await shareProduct.clickEmailIconPage3();
 });
 
 
@@ -797,41 +800,41 @@ Then(/^I ensure the name and email fields are blank in Share Product page$/, asy
 
 
 //Scenario - 7
-When(/^I enter email in your email field of Share Product form$/, () => {
+When(/^I enter email in your email field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterYourEmail();
+    await shareProduct.enterYourEmail();
 });
 
 
-When(/^I enter name in your friend's name field of Share Product form$/, () => {
+When(/^I enter name in your friend's name field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterYourFriendName();
+    await shareProduct.enterYourFriendName();
 });
 
 
-When(/^I enter email in your friend's email field of Share Product form$/, () => {
+When(/^I enter email in your friend's email field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterYourFriendEmail();
+    await shareProduct.enterYourFriendEmail();
 });
 
 
-When(/^I click Send to a friend button$/, () => {
+When(/^I click Send to a friend button$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.clickSendToAFriend();
+    await shareProduct.clickSendToAFriend();
 });
 
 
 //Scenario - 8
-When(/^I enter special characters, numbers and spaces without alphabets in the your name field in Share Product form$/, () => {
+When(/^I enter special characters, numbers and spaces without alphabets in the your name field in Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterInvalidYourName();
+    await shareProduct.enterInvalidYourName();
 });
 
 
 //Scenario - 9
-When(/^I enter name in your name field of Share Product form$/, () => {
+When(/^I enter name in your name field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterYourName();
+    await shareProduct.enterYourName();
 });
 
 
@@ -849,16 +852,16 @@ Then(/^I ensure the mandatory message is displayed under your friend's name fiel
 
 
 //Scenario - 11
-When(/^I enter special characters, numbers and spaces without alphabets in the your friend's name field in Share Product form$/, () => {
+When(/^I enter special characters, numbers and spaces without alphabets in the your friend's name field in Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterInvalidYourFriendName();
+    await shareProduct.enterInvalidYourFriendName();
 });
 
 
 //Scenario - 13
-When(/^I enter invalid email address in Share Product form$/, () => {
+When(/^I enter invalid email address in Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterInvalidYourEmail();
+    await shareProduct.enterInvalidYourEmail();
 });
 
 
@@ -870,23 +873,23 @@ Then(/^I ensure the mandatory message is displayed under your friend's email fie
 
 
 //Scenario - 15
-When(/^I enter invalid email address in your friend's email field of Share Product form$/, () => {
+When(/^I enter invalid email address in your friend's email field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterInvalidYourFriendEmail();
+    await shareProduct.enterInvalidYourFriendEmail();
 });
 
 
 //Scenario - 16
-When(/^I enter same email in your friend's email field of Share Product form$/, () => {
+When(/^I enter same email in your friend's email field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterSameEmail();
+    await shareProduct.enterSameEmail();
 });
 
 
 //Scenario - 17
-When(/^I enter name with more than 40 characters in your name field of Share Product form$/, () => {
+When(/^I enter name with more than 40 characters in your name field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterExceedCharLimitYourName();
+    await shareProduct.enterExceedCharLimitYourName();
 });
 
 
@@ -898,9 +901,9 @@ Then(/^I ensure the your name field accepts only 40 characters in Share Product 
 
 
 //Scenario - 18
-When(/^I enter name with more than 40 characters in your friend's name field of Share Product form$/, () => {
+When(/^I enter name with more than 40 characters in your friend's name field of Share Product form$/, async() => {
 	const shareProduct = new CustomerAssistance;
-    shareProduct.enterExceedCharLimitYourFriendName();
+    await shareProduct.enterExceedCharLimitYourFriendName();
 });
 
 

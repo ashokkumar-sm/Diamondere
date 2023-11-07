@@ -693,558 +693,558 @@ class CustomerAssistance {
 
 
     //METHODS
-    selectRequestCallBack() {
-        ElementUtil.click(this.ccrequestcallback, "Select Request Call Back")
-        BrowserUtil.wait(5)
+    async selectRequestCallBack() {
+        await ElementUtil.click(this.ccrequestcallback, "Select Request Call Back")
+        await BrowserUtil.wait(5)
     }
 
-    enterNameRCB() {
-        ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.Name, "Entering name")
+    async enterNameRCB() {
+        await ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.Name, "Entering name")
     }
 
-    enterPhoneRCB() {
-        ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.Phone, "Entering phone")
+    async enterPhoneRCB() {
+        await ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.Phone, "Entering phone")
     }
 
-    enterEmailRCB() {
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.Email, "Entering email")
+    async enterEmailRCB() {
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.Email, "Entering email")
     }
 
-    selectBtnRCB() {
-        ElementUtil.click(this.btnReqCallBack, "Click button")
+    async selectBtnRCB() {
+        await ElementUtil.click(this.btnReqCallBack, "Click button")
     }
 
-    enterInvalidNameRCB() {
-        ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
+    async enterInvalidNameRCB() {
+        await ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
         
     }
 
-    enterInvalidPhoneRCB() {
-        ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.InvalidPhone, "Entering invalid phone")
+    async enterInvalidPhoneRCB() {
+        await ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.InvalidPhone, "Entering invalid phone")
     }
 
-    enterCCPhoneRCB() {
-        ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.CCPhone, "Entering phone number with country code")
+    async enterCCPhoneRCB() {
+        await ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.CCPhone, "Entering phone number with country code")
     }
 
-    enterInvalidEmailRCB() {
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
+    async enterInvalidEmailRCB() {
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
     }
 
-    clickAddToCartMiya() {
-        BrowserUtil.wait(2)
-        ElementUtil.waitForClickable(this.btnAddToCartNormal, 50, "wait for page load")
-        ElementUtil.click(this.btnAddToCartNormal, "Click Add to cart")
+    async clickAddToCartMiya() {
+        await BrowserUtil.wait(2)
+        await ElementUtil.waitForClickable(this.btnAddToCartNormal, 50, "wait for page load")
+        await ElementUtil.click(this.btnAddToCartNormal, "Click Add to cart")
     }
 
-    clickProceedToPayment() {
-        BrowserUtil.wait(8)
-        ElementUtil.waitForClickable(this.btnProceedToPayment, 120, "wait for page load")
-        ElementUtil.click(this.btnProceedToPayment, "Click proceed to payment")
-        BrowserUtil.wait(5)
+    async clickProceedToPayment() {
+        await BrowserUtil.wait(8)
+        await ElementUtil.waitForClickable(this.btnProceedToPayment, 120, "wait for page load")
+        await ElementUtil.click(this.btnProceedToPayment, "Click proceed to payment")
+        await BrowserUtil.wait(5)
     }
 
-    selectReqCallBackLink() {
-        ElementUtil.click(this.lnkReqCallBack, "Click request call back link in checkout page")
-        ElementUtil.isVisible(this.popupContactForm, "Check the popup")
-        ElementUtil.isVisible(this.popupContactFormXbtn, "Check the popup X button")
+    async selectReqCallBackLink() {
+        await ElementUtil.click(this.lnkReqCallBack, "Click request call back link in checkout page")
+        await ElementUtil.isVisible(this.popupContactForm, "Check the popup")
+        await ElementUtil.isVisible(this.popupContactFormXbtn, "Check the popup X button")
     }
 
-    clickReqCallBackLink() {
-        ElementUtil.click(this.lnkReqCallBack, "Click request call back link in checkout page")
-        BrowserUtil.switchToFrame(this.frameReqCallBack, "switch to frame")
+    async clickReqCallBackLink() {
+        await ElementUtil.click(this.lnkReqCallBack, "Click request call back link in checkout page")
+        await BrowserUtil.switchToFrame(this.frameReqCallBack, "switch to frame")
     }
 
-    closeReqCallBackPopup() {
-        ElementUtil.click(this.popupContactFormXbtn, "Click X button")
+    async closeReqCallBackPopup() {
+        await ElementUtil.click(this.popupContactFormXbtn, "Click X button")
     }
 
-    enterExceedCharLimitNameRCB() {
-        ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.ExceedCharLimitName, "Entering name exceeding char limit")
+    async enterExceedCharLimitNameRCB() {
+        await ElementUtil.sendText(this.txtBoxName, data.RequestCallBack.ExceedCharLimitName, "Entering name exceeding char limit")
     }
 
-    enterExceedCharLimitPhoneRCB() {
-        ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.ExceedCharLimitPhone, "Entering phone exceeding char limit")
+    async enterExceedCharLimitPhoneRCB() {
+        await ElementUtil.sendText(this.txtBoxPhone, data.RequestCallBack.ExceedCharLimitPhone, "Entering phone exceeding char limit")
     }
 
-    enterExceedCharLimitEmailRCB() {
-        ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.ExceedCharLimitEmail, "Entering email exceeding char limit")
+    async enterExceedCharLimitEmailRCB() {
+        await ElementUtil.sendText(this.txtBoxEmail, data.RequestCallBack.ExceedCharLimitEmail, "Entering email exceeding char limit")
     }
 
-    selectWriteToUs() {
-        ElementUtil.click(this.ccWriteToUs, "Select Write To Us")
-        BrowserUtil.wait(3)
+    async selectWriteToUs() {
+        await ElementUtil.click(this.ccWriteToUs, "Select Write To Us")
+        await BrowserUtil.wait(3)
     }
 
-    selectContactUs() {
-        browser.back()
-        BrowserUtil.wait(5)
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to footer")
-        ElementUtil.click(this.lnkContactUsFooter, "Click Contact Us")
-        BrowserUtil.wait(5)
+    async selectContactUs() {
+        await browser.back()
+        await BrowserUtil.wait(5)
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to footer")
+        await ElementUtil.click(this.lnkContactUsFooter, "Click Contact Us")
+        await BrowserUtil.wait(5)
     }
 
-    enterMessage() {
-        ElementUtil.sendText(this.txtBoxMessage, data.ContactUs.Message, "Entering message")
+    async enterMessage() {
+        await ElementUtil.sendText(this.txtBoxMessage, data.ContactUs.Message, "Entering message")
     }
 
-    uploadImage() {
-        ElementUtil.uploadFile(this.inputFile, this.btnUploadImage,dmd.config.imageJpg, "Uploading image")
+    async uploadImage() {
+        await ElementUtil.uploadFile(this.inputFile, this.btnUploadImage,dmd.config.imageJpg, "Uploading image")
     }
 
-    clickSubmitContactForm() {
-        ElementUtil.click(this.btnSubmitContactForm, "Click submit")
+    async clickSubmitContactForm() {
+        await ElementUtil.click(this.btnSubmitContactForm, "Click submit")
     }
 
-    enterRestrictedChar() {
-        ElementUtil.sendText(this.txtBoxMessage, data.ContactUs.RestrictedCharMessage, "Entering restricted characters")
+    async enterRestrictedChar() {
+        await ElementUtil.sendText(this.txtBoxMessage, data.ContactUs.RestrictedCharMessage, "Entering restricted characters")
     }
 
-    clickEmailUsNowLink() {
-        ElementUtil.click(this.lnkEmailUsNow, "Click Email Us Now")
+    async clickEmailUsNowLink() {
+        await ElementUtil.click(this.lnkEmailUsNow, "Click Email Us Now")
     }
 
-    clickOrRequestACallBack() {
-        ElementUtil.click(this.lnkOrRequestACallBack, "Click or request a call back")
+    async clickOrRequestACallBack() {
+        await ElementUtil.click(this.lnkOrRequestACallBack, "Click or request a call back")
     }
 
-    clickLearnMoreStartADesignLink() {
-        ElementUtil.scrollIntoView(this.lnkEmailUsNow, "Scroll to Learn More link")
-        ElementUtil.click(this.lnkLearnMoreStartADesign, "Click Learn More")
+    async clickLearnMoreStartADesignLink() {
+        await ElementUtil.scrollIntoView(this.lnkEmailUsNow, "Scroll to Learn More link")
+        await ElementUtil.click(this.lnkLearnMoreStartADesign, "Click Learn More")
     }
 
-    expandFAQ1() {
-        ElementUtil.scrollIntoView(this.sctnGetToKnowUs, "Scroll to FAQ section")
-        ElementUtil.isVisible(this.sctnFAQs, "Check FAQ section")
-        ElementUtil.isVisible(this.headingFAQs, "Check FAQ heading")
-        ElementUtil.click(this.btnPlusFAQ1, "Expand FAQ 1")
+    async expandFAQ1() {
+        await ElementUtil.scrollIntoView(this.sctnGetToKnowUs, "Scroll to FAQ section")
+        await ElementUtil.isVisible(this.sctnFAQs, "Check FAQ section")
+        await ElementUtil.isVisible(this.headingFAQs, "Check FAQ heading")
+        await ElementUtil.click(this.btnPlusFAQ1, "Expand FAQ 1")
     }
 
-    clickLearnMoreLegacyOfExcellence() {
-        ElementUtil.scrollIntoView(this.headingWhyChooseDiamondere, "Scroll to Why Choose Diamondere section")
-        ElementUtil.click(this.lnkLearnMoreLegacyOfExcellence, "Click learn more")
-        BrowserUtil.wait(5)
+    async clickLearnMoreLegacyOfExcellence() {
+        await ElementUtil.scrollIntoView(this.headingWhyChooseDiamondere, "Scroll to Why Choose Diamondere section")
+        await ElementUtil.click(this.lnkLearnMoreLegacyOfExcellence, "Click learn more")
+        await BrowserUtil.wait(5)
     }
 
-    clickLearnMoreCustomMade() {
-        browser.back()
-        ElementUtil.click(this.lnkLearnMoreCustomMade, "Click learn more")
-        BrowserUtil.wait(5)
+    async clickLearnMoreCustomMade() {
+        await browser.back()
+        await ElementUtil.click(this.lnkLearnMoreCustomMade, "Click learn more")
+        await BrowserUtil.wait(5)
     }
 
-    clickLearnMoreFairPrices() {
-        browser.back()
-        ElementUtil.click(this.lnkLearnMoreFairPrices, "Click learn more")
-        BrowserUtil.wait(5)
+    async clickLearnMoreFairPrices() {
+        await browser.back()
+        await ElementUtil.click(this.lnkLearnMoreFairPrices, "Click learn more")
+        await BrowserUtil.wait(5)
     }
 
-    clickLearnMoreResizing() {
-        browser.back()
-        ElementUtil.click(this.lnkLearnMoreResizing, "Click learn more")
-        BrowserUtil.wait(5)
+    async clickLearnMoreResizing() {
+        await browser.back()
+        await ElementUtil.click(this.lnkLearnMoreResizing, "Click learn more")
+        await BrowserUtil.wait(5)
     }
 
-    clickImageInstagram() {
-        ElementUtil.scrollIntoView(this.headingWhyChooseDiamondere, "Scroll to Why Choose Diamondere section")
-        ElementUtil.click(this.lnkImageInstagram, "Click image")
-        browser.switchWindow(dmd.config.instagramUrl)
+    async clickImageInstagram() {
+        await ElementUtil.scrollIntoView(this.headingWhyChooseDiamondere, "Scroll to Why Choose Diamondere section")
+        await ElementUtil.click(this.lnkImageInstagram, "Click image")
+        await browser.switchWindow(dmd.config.instagramUrl)
     }
 
-    selectEmailUsNowLinkCheckout() {
-        ElementUtil.click(this.lnkCheckoutEmailUs, "Click Email Us Now")
-        ElementUtil.isVisible(this.popupContactForm, "Check the popup")
-        ElementUtil.isVisible(this.popupContactFormXbtn, "Check the popup X button")
+    async selectEmailUsNowLinkCheckout() {
+        await ElementUtil.click(this.lnkCheckoutEmailUs, "Click Email Us Now")
+        await ElementUtil.isVisible(this.popupContactForm, "Check the popup")
+        await ElementUtil.isVisible(this.popupContactFormXbtn, "Check the popup X button")
     }
 
-    clickEmailUsNowLinkCheckout() {
-        ElementUtil.click(this.lnkCheckoutEmailUs, "Click Email Us Now")
-        BrowserUtil.switchToFrame(this.frameContactUs, "switch to frame")
+    async clickEmailUsNowLinkCheckout() {
+        await ElementUtil.click(this.lnkCheckoutEmailUs, "Click Email Us Now")
+        await BrowserUtil.switchToFrame(this.frameContactUs, "switch to frame")
     }
 
-    uploadInvalidImageFormat() {
-        ElementUtil.uploadFile(this.inputFile, this.btnUploadImage, dmd.config.imagePng, "Uploading invalid image format")
+    async uploadInvalidImageFormat() {
+        await ElementUtil.uploadFile(this.inputFile, this.btnUploadImage, dmd.config.imagePng, "Uploading invalid image format")
     }
 
-    scrollToFooter() {
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to footer")
+    async scrollToFooter() {
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to footer")
     }
 
-    clickEmailJoinDmdCommunity() {
-        ElementUtil.click(this.txtBoxEmailJoinDCommunity, "Click Email field")
-        browser.switchWindow(dmd.config.joinDiamondereCommunityUrl)
+    async clickEmailJoinDmdCommunity() {
+        await ElementUtil.click(this.txtBoxEmailJoinDCommunity, "Click Email field")
+        await browser.switchWindow(dmd.config.joinDiamondereCommunityUrl)
     }
 
-    enterEmailJoinDmd() {
+    async enterEmailJoinDmd() {
         let randomInt = Math.floor(Math.random() * 99999)
         let email = 'litefuryautomation' + randomInt + '@litefury.com'
-        ElementUtil.sendText(this.txtBoxEmailAddress, email, "Entering the email");
+        await ElementUtil.sendText(this.txtBoxEmailAddress, email, "Entering the email");
     }
 
-    enteralreadyRegEmail() {
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.JoinDiamondereCommunity.AlreadyRegEmail, "Enter already registered email")
+    async enteralreadyRegEmail() {
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.JoinDiamondereCommunity.AlreadyRegEmail, "Enter already registered email")
     }
 
-    enterFirstNameJoinDmd() {
-        ElementUtil.sendText(this.txtBoxFirstName, data.JoinDiamondereCommunity.FirstName, "Enter first name")
+    async enterFirstNameJoinDmd() {
+        await ElementUtil.sendText(this.txtBoxFirstName, data.JoinDiamondereCommunity.FirstName, "Enter first name")
     }
 
-    enterBirthMonthJoinDmd() {
-        ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.BirthMonth, "Enter birth month")
+    async enterBirthMonthJoinDmd() {
+        await ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.BirthMonth, "Enter birth month")
     }
 
-    enterBirthDateJoinDmd() {
-        ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.BirthDate, "Enter birth date")
+    async enterBirthDateJoinDmd() {
+        await ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.BirthDate, "Enter birth date")
     }
 
-    clickSignMeUp() {
-        ElementUtil.click(this.btnSignMeUp, "Click sign me up")
+    async clickSignMeUp() {
+        await ElementUtil.click(this.btnSignMeUp, "Click sign me up")
     }
 
-    enterInvalidEmailJoinDmd() {
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
-        ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
-        ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
+    async enterInvalidEmailJoinDmd() {
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
+        await ElementUtil.isVisible(this.msgInvalidEmailAddress, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxEmailAddress, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxEmailAddress, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
     }
 
-    enterInvalidNameJoinDmd() {
-        ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxFirstName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxFirstName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxFirstName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
+    async enterInvalidNameJoinDmd() {
+        await ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxFirstName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxFirstName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxFirstName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxFirstName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
     }
 
-    enterInvalidBirthDayJoinDmd() {
-        ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday1, "Entering invalid birth month 1")
-        ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
-        ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday2, "Entering invalid birth month 2")
-        ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
-        ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday3, "Entering invalid birth month 3")
-        ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
-        ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday4, "Entering invalid birth month 4")
-        ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
-        ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday1, "Entering invalid birth date 1")
-        ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
-        ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday2, "Entering invalid birth date 2")
-        ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
-        ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday3, "Entering invalid birth date 3")
-        ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
-        ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday4, "Entering invalid birth date 4")
+    async enterInvalidBirthDayJoinDmd() {
+        await ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday1, "Entering invalid birth month 1")
+        await ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
+        await ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday2, "Entering invalid birth month 2")
+        await ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
+        await ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday3, "Entering invalid birth month 3")
+        await ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
+        await ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.CharValidationBirthday4, "Entering invalid birth month 4")
+        await ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
+        await ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday1, "Entering invalid birth date 1")
+        await ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
+        await ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday2, "Entering invalid birth date 2")
+        await ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
+        await ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday3, "Entering invalid birth date 3")
+        await ElementUtil.isVisible(this.msgInvalidBirthday, "Check invalid birthday message")
+        await ElementUtil.click(this.txtBoxBirthMonth, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.CharValidationBirthday4, "Entering invalid birth date 4")
     }
 
-    enterInvalidBirthMonth() {
-        ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.InvalidBirthMonth, "Entering invalid birth month")
+    async enterInvalidBirthMonth() {
+        await ElementUtil.sendText(this.txtBoxBirthMonth, data.JoinDiamondereCommunity.InvalidBirthMonth, "Entering invalid birth month")
     }
 
-    enterInvalidBirthDate() {
-        ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.InvalidBirthDate, "Entering invalid birth date")
+    async enterInvalidBirthDate() {
+        await ElementUtil.sendText(this.txtBoxBirthDate, data.JoinDiamondereCommunity.InvalidBirthDate, "Entering invalid birth date")
     }
 
-    clickEmailIconPage3() {
-        ElementUtil.click(this.lnkEmailThisDesign, "Click email icon")
+    async clickEmailIconPage3() {
+        await ElementUtil.click(this.lnkEmailThisDesign, "Click email icon")
     }
 
-    enterYourEmail() {
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.Email, "Entering email")
+    async enterYourEmail() {
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.Email, "Entering email")
     }
 
-    enterYourFriendName() {
-        ElementUtil.sendText(this.txtBoxYourFriendName, data.ShareProduct.FriendName, "Entering friend's name")
+    async enterYourFriendName() {
+        await ElementUtil.sendText(this.txtBoxYourFriendName, data.ShareProduct.FriendName, "Entering friend's name")
     }
 
-    enterYourFriendEmail() {
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.ShareProduct.FriendEmail, "Entering friend's email")
+    async enterYourFriendEmail() {
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.ShareProduct.FriendEmail, "Entering friend's email")
     }
 
-    clickSendToAFriend() {
-        ElementUtil.click(this.btnSendToAFriend, "Click send to a friend")
+    async clickSendToAFriend() {
+        await ElementUtil.click(this.btnSendToAFriend, "Click send to a friend")
     }
 
-    enterInvalidYourName() {
-        ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxYourName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxYourName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxYourName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
+    async enterInvalidYourName() {
+        await ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxYourName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxYourName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxYourName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
     }
 
-    enterYourName() {
-        ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.Name, "Entering name")
+    async enterYourName() {
+        await ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.Name, "Entering name")
     }
 
-    enterInvalidYourFriendName() {
-        ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxYourFriendName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxYourFriendName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
-        ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
-        ElementUtil.click(this.txtBoxYourFriendName, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
+    async enterInvalidYourFriendName() {
+        await ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName1, "Entering invalid name 1")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxYourFriendName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName2, "Entering invalid name 2")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxYourFriendName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName3, "Entering invalid name 3")
+        await ElementUtil.isVisible(this.msgInvalidName, "Check invalid name message")
+        await ElementUtil.click(this.txtBoxYourFriendName, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.InvalidName4, "Entering invalid name 4")
     }
 
-    enterInvalidYourEmail() {
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
+    async enterInvalidYourEmail() {
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourEmail, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
     }
 
-    enterInvalidYourFriendEmail() {
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
-        ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
-        ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
+    async enterInvalidYourFriendEmail() {
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail1, "Entering invalid email 1")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail2, "Entering invalid email 2")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail3, "Entering invalid email 3")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail4, "Entering invalid email 4")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail5, "Entering invalid email 5")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail6, "Entering invalid email 6")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail7, "Entering invalid email 7")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail8, "Entering invalid email 8")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail9, "Entering invalid email 9")
+        await ElementUtil.isVisible(this.msgInvalidEmail, "Check invalid email message")
+        await ElementUtil.click(this.txtBoxYourFriendEmail, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.InvalidEmail10, "Entering invalid email 10")
     }
 
-    enterSameEmail() {
-        ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.Email, "Entering friend's email as same as your email")
+    async enterSameEmail() {
+        await ElementUtil.sendText(this.txtBoxYourFriendEmail, data.RequestCallBack.Email, "Entering friend's email as same as your email")
     }
 
-    enterExceedCharLimitYourName() {
-        ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.ExceedCharLimitName, "Entering name exceeding char limit")
+    async enterExceedCharLimitYourName() {
+        await ElementUtil.sendText(this.txtBoxYourName, data.RequestCallBack.ExceedCharLimitName, "Entering name exceeding char limit")
     }
 
-    enterExceedCharLimitYourFriendName() {
-        ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.ExceedCharLimitName, "Entering friend's name exceeding char limit")
+    async enterExceedCharLimitYourFriendName() {
+        await ElementUtil.sendText(this.txtBoxYourFriendName, data.RequestCallBack.ExceedCharLimitName, "Entering friend's name exceeding char limit")
     }
 }
 module.exports = CustomerAssistance

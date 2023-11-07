@@ -4,9 +4,9 @@ const ElementUtil = require('../../CommonUtils/ElementUtil');
 const dmd = require('../Configs/dmd_' + global.testEnv + '.js');
 
 
-Given(/^I browse Diamondere website$/, () => {
-    browser.url(dmd.config.url);
-    BrowserUtil.maximize();
-    BrowserUtil.wait(3)
+Given(/^I browse Diamondere website$/, async() => {
+    await browser.url(dmd.config.url);
+    await BrowserUtil.maximize();
+    await BrowserUtil.wait(3)
 });
 

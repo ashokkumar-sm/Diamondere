@@ -253,329 +253,328 @@ class payment {
     }
 
 
-    enterCardNumber(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickcreditcardno")
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName)
+    async enterCardNumber(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickcreditcardno")
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName)
     }
-    clickpaywithYourCard(){
-        ElementUtil.click(this.paywithcardbutton, "Click Pay with card")
-        BrowserUtil.wait(10)
+    async clickpaywithYourCard(){
+        await ElementUtil.click(this.paywithcardbutton, "Click Pay with card")
+        await BrowserUtil.wait(10)
     }
-    clickpaypalcreditbtn(){
-        ElementUtil.click(this.radiopaypalcredit,"click paypalcredit radiobtn")
+    async clickpaypalcreditbtn(){
+        await ElementUtil.click(this.radiopaypalcredit,"click paypalcredit radiobtn")
     }
-    clickpaywithpaypalcreditbtn(){
-        ElementUtil.click(this.paywithpaypalcreditbutton,"click paywithpaypalcredit btn")
+    async clickpaywithpaypalcreditbtn(){
+        await ElementUtil.click(this.paywithpaypalcreditbutton,"click paywithpaypalcredit btn")
     }
-    clickPayWithcredorDebtbtn(){
-        ElementUtil.scrollIntoView(this.paypalloginbtn,"scroll to paywithcredordebtbtn in paypal")
-        BrowserUtil.wait(5)
-        ElementUtil.click(this.paypalpaywithDandCcardbtn,"click paywithcredordebtbtn in paypal")
+    async clickPayWithcredorDebtbtn(){
+        await ElementUtil.scrollIntoView(this.paypalloginbtn,"scroll to paywithcredordebtbtn in paypal")
+        await BrowserUtil.wait(5)
+        await ElementUtil.click(this.paypalpaywithDandCcardbtn,"click paywithcredordebtbtn in paypal")
     }
-    enterUSAMobile(){
-        ElementUtil.sendText(this.paypalmobilenumber,pdata.OrderHistory['USA mobile'])
+    async enterUSAMobile(){
+        await ElementUtil.sendText(this.paypalmobilenumber,pdata.OrderHistory['USA mobile'])
     }
-    enterpaypalcreditCardNum(){
-        ElementUtil.sendText(this.paypalcardnumber,pdata.OrderHistory.PayPalVisa)
-        ElementUtil.sendText(this.paypalmonth,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.paypalcvv,pdata.OrderHistory.ValidCVC)
+    async enterpaypalcreditCardNum(){
+        await ElementUtil.sendText(this.paypalcardnumber,pdata.OrderHistory.PayPalVisa)
+        await ElementUtil.sendText(this.paypalmonth,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.paypalcvv,pdata.OrderHistory.ValidCVC)
     }
-    clicktckboxasbillingaddress(){
-        ElementUtil.click(this.paypalsameasbillingtickbox, "Click paypal same as billing tickbox")
+    async clicktckboxasbillingaddress(){
+        await ElementUtil.click(this.paypalsameasbillingtickbox, "Click paypal same as billing tickbox")
     }
-    clickpaypalaccntradiobtn(){
-        ElementUtil.scrollIntoView(this.paypalsameasbillingtickbox,"Scroll to same as billing tickbox")
-        ElementUtil.click(this.paypalcreateaccounttickbox, "Click paypal create account tickbox")
+    async clickpaypalaccntradiobtn(){
+        await ElementUtil.scrollIntoView(this.paypalsameasbillingtickbox,"Scroll to same as billing tickbox")
+        await ElementUtil.click(this.paypalcreateaccounttickbox, "Click paypal create account tickbox")
     }
-    clickcontinueasguest(){
-        ElementUtil.click(this.paypalcontasguestbutton, "Click paypal continue as guest")
-        BrowserUtil.wait(15);
-        //ElementUtil.waitForDisplayed(this.paymentdonepopup, 50, "wait for page load")
+    async clickcontinueasguest(){
+        await ElementUtil.click(this.paypalcontasguestbutton, "Click paypal continue as guest")
+        await BrowserUtil.wait(15);
+        //await ElementUtil.waitForDisplayed(this.paymentdonepopup, 50, "wait for page load")
     }
-    paypalGuestCheckout() {
-        ElementUtil.waitForClickable(this.paypalCheckoutCard, 60, "wait for page load")
-        ElementUtil.sendText(this.paypalCheckoutCard, pdata.OrderHistory.PayPalVisa, "Enter VISA card number")
-        ElementUtil.waitForClickable(this.paypalCheckoutExpiry, 5, "wait for page load")
-        ElementUtil.sendText(this.paypalCheckoutExpiry, pdata.OrderHistory.ValidMonth, "Enter expiry")
-        ElementUtil.waitForClickable(this.paypalCheckoutCVV, 5, "wait for page load")
-        ElementUtil.sendText(this.paypalCheckoutCVV, pdata.OrderHistory.ValidCVC, "Enter CVV")
-        ElementUtil.waitForClickable(this.paypalCheckoutCity, 5, "wait for page load")
-        ElementUtil.click(this.paypalCheckoutCity, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.paypalCheckoutCity, pdata.OrderHistory.PayPalCity, "Enter city")
-        ElementUtil.waitForClickable(this.paypalCheckoutZip, 5, "wait for page load")
-        ElementUtil.click(this.paypalCheckoutZip, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        ElementUtil.sendText(this.paypalCheckoutZip, pdata.OrderHistory.PayPalZip, "Enter zip code")
-        ElementUtil.scrollIntoView(this.paypalCheckoutCity, "Scroll to bottom")
-        ElementUtil.forceClick(this.paypalCheckoutCheckbox, "Click ship to billing checkbox")
-        ElementUtil.waitForClickable(this.paypalCheckoutTelephone, 5, "wait for page load")
-        ElementUtil.sendText(this.paypalCheckoutTelephone, pdata.OrderHistory['USA mobile'], "Entering telephone")
-        ElementUtil.waitForClickable(this.paypalCheckoutSubmit, 5, "wait for page load")
-        ElementUtil.click(this.paypalCheckoutSubmit, "Click submit")
-        BrowserUtil.wait(15)
-        ElementUtil.waitForDisplayed(this.paymentdonepopup, 60, "wait for page load")
+    async paypalGuestCheckout() {
+        await ElementUtil.waitForClickable(this.paypalCheckoutCard, 60, "wait for page load")
+        await ElementUtil.sendText(this.paypalCheckoutCard, pdata.OrderHistory.PayPalVisa, "Enter VISA card number")
+        await ElementUtil.waitForClickable(this.paypalCheckoutExpiry, 5, "wait for page load")
+        await ElementUtil.sendText(this.paypalCheckoutExpiry, pdata.OrderHistory.ValidMonth, "Enter expiry")
+        await ElementUtil.waitForClickable(this.paypalCheckoutCVV, 5, "wait for page load")
+        await ElementUtil.sendText(this.paypalCheckoutCVV, pdata.OrderHistory.ValidCVC, "Enter CVV")
+        await ElementUtil.waitForClickable(this.paypalCheckoutCity, 5, "wait for page load")
+        await ElementUtil.click(this.paypalCheckoutCity, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.paypalCheckoutCity, pdata.OrderHistory.PayPalCity, "Enter city")
+        await ElementUtil.waitForClickable(this.paypalCheckoutZip, 5, "wait for page load")
+        await ElementUtil.click(this.paypalCheckoutZip, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        await ElementUtil.sendText(this.paypalCheckoutZip, pdata.OrderHistory.PayPalZip, "Enter zip code")
+        await ElementUtil.scrollIntoView(this.paypalCheckoutCity, "Scroll to bottom")
+        await ElementUtil.forceClick(this.paypalCheckoutCheckbox, "Click ship to billing checkbox")
+        await ElementUtil.waitForClickable(this.paypalCheckoutTelephone, 5, "wait for page load")
+        await ElementUtil.sendText(this.paypalCheckoutTelephone, pdata.OrderHistory['USA mobile'], "Entering telephone")
+        await ElementUtil.waitForClickable(this.paypalCheckoutSubmit, 5, "wait for page load")
+        await ElementUtil.click(this.paypalCheckoutSubmit, "Click submit")
+        await BrowserUtil.wait(15)
+        await ElementUtil.waitForDisplayed(this.paymentdonepopup, 60, "wait for page load")
     }
-    clickaffirmradiobutton(){
-        ElementUtil.click(this.radioaffirm,"click affirm radio button")
+    async clickaffirmradiobutton(){
+        await ElementUtil.click(this.radioaffirm,"click affirm radio button")
     }
-    clickpaywithaffirmbutton(){
-        ElementUtil.waitForClickable(this.paywithaffirmbutton, 20, "wait for page load")
-        ElementUtil.click(this.paywithaffirmbutton,"click pay with affirm button")
-        BrowserUtil.wait(5);
+    async clickpaywithaffirmbutton(){
+        await ElementUtil.waitForClickable(this.paywithaffirmbutton, 20, "wait for page load")
+        await ElementUtil.click(this.paywithaffirmbutton,"click pay with affirm button")
+        await BrowserUtil.wait(5);
     }
-    enterIndianPhoneShipping() {
-        ElementUtil.sendText(this.txtPhoneShipping, pdata.OrderHistory.IndianMobile, "Entering Indian phone")
+    async enterIndianPhoneShipping() {
+        await ElementUtil.sendText(this.txtPhoneShipping, pdata.OrderHistory.IndianMobile, "Entering Indian phone")
     }
-    enterUSAMobileAffirm(){
-        ElementUtil.sendText(this.affirmmobile,pdata.OrderHistory['USA mobile'])
+    async enterUSAMobileAffirm(){
+        await ElementUtil.sendText(this.affirmmobile,pdata.OrderHistory['USA mobile'])
     }
-    clickcontinuewithaffirm(){
-        ElementUtil.click(this.affirmcontinuebtn,"clic continue with affirm")
+    async clickcontinuewithaffirm(){
+        await ElementUtil.click(this.affirmcontinuebtn,"clic continue with affirm")
     }
-    enteraffirmpin(){
-        ElementUtil.sendText(this.affirmpassfield,pdata.OrderHistory['Affirm pin'])
-        BrowserUtil.wait(6)
+    async enteraffirmpin(){
+        await ElementUtil.sendText(this.affirmpassfield,pdata.OrderHistory['Affirm pin'])
+        await BrowserUtil.wait(6)
     }
-    click3monthinstallmentoption(){
-        ElementUtil.click(this.affirm1stoption,"click affirm 3 month installment option")
+    async click3monthinstallmentoption(){
+        await ElementUtil.click(this.affirm1stoption,"click affirm 3 month installment option")
     }
-    clickcontinuethisplan(){
-        ElementUtil.click(this.affirmchooseoption,"click affirm continue btn")
+    async clickcontinuethisplan(){
+        await ElementUtil.click(this.affirmchooseoption,"click affirm continue btn")
     }
-    clickautopay(){
-        ElementUtil.click(this.affirmautopayradiobtn,"click affirm autopay radio button")
+    async clickautopay(){
+        await ElementUtil.click(this.affirmautopayradiobtn,"click affirm autopay radio button")
     }
-    clickaffirmdisclaimer(){
-        ElementUtil.click(this.affirmdisclaimer,"click affirm disclaimer")
+    async clickaffirmdisclaimer(){
+        await ElementUtil.click(this.affirmdisclaimer,"click affirm disclaimer")
     }
-    clickaffirmcomplete(){
-        ElementUtil.click(this.affirmconfirm,"click affirm confirm")
+    async clickaffirmcomplete(){
+        await ElementUtil.click(this.affirmconfirm,"click affirm confirm")
     }
-    clickreturntomerchant(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.affirmframe,"click affirmframe")
-        ElementUtil.forceClick(this.affirmgotomerchant,"click affirm go to merchant")
-        browser.switchToWindow(getWindowName)
-        
+    async clickreturntomerchant(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.affirmframe,"click affirmframe")
+        await ElementUtil.forceClick(this.affirmgotomerchant,"click affirm go to merchant")
+        await browser.switchToWindow(getWindowName)
     }
-    enterinsuffientbalancecard(){
-        ElementUtil.sendText(this.paypalcardnumber,pdata.OrderHistory.Insufficientfund)
-        ElementUtil.sendText(this.paypalmonth,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.paypalcvv,pdata.OrderHistory.ValidCVC)
+    async enterinsuffientbalancecard(){
+        await ElementUtil.sendText(this.paypalcardnumber,pdata.OrderHistory.Insufficientfund)
+        await ElementUtil.sendText(this.paypalmonth,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.paypalcvv,pdata.OrderHistory.ValidCVC)
     }
-    clickcancelandreturnlink(){
-        ElementUtil.click(this.paypalcancelarea,"click affirm confirm")
+    async clickcancelandreturnlink(){
+        await ElementUtil.click(this.paypalcancelarea,"click affirm confirm")
     }
-    clickPaypalRadiobtn(){
-        ElementUtil.click(this.radiopaypal,"click paypal radiobutton")
+    async clickPaypalRadiobtn(){
+        await ElementUtil.click(this.radiopaypal,"click paypal radiobutton")
     }
-    clickpaywithpaypalbtn(){
-        ElementUtil.click(this.paywithpaypalbutton,"click pay with paypal btn")
+    async clickpaywithpaypalbtn(){
+        await ElementUtil.click(this.paywithpaypalbutton,"click pay with paypal btn")
     }
-    clickdiamondereinstallmentradiobtn(){
-        ElementUtil.click(this.radiothreepayment,"click diamondere installment radio btn")
+    async clickdiamondereinstallmentradiobtn(){
+        await ElementUtil.click(this.radiothreepayment,"click diamondere installment radio btn")
     }
-    clickpay1stinstallmentbtn(){
-        ElementUtil.click(this.payfirstinstallmentbutton,"click pay 1st installment")
+    async clickpay1stinstallmentbtn(){
+        await ElementUtil.click(this.payfirstinstallmentbutton,"click pay 1st installment")
     }
-    enterCardNumbervisainstallment(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterCardNumbervisainstallment(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterCardNumbermasterinstallment(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.MasterCardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterCardNumbermasterinstallment(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.MasterCardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterCardNumberamexinstallment(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexcardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexCVV)
-        browser.switchToWindow(getWindowName) 
+    async enterCardNumberamexinstallment(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexcardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexCVV)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterCardNumberdinerinstallment(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.DinnersClubCardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterCardNumberdinerinstallment(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.DinnersClubCardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterInvalidcardNumberinstallment(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCard)
-        browser.switchToWindow(getWindowName) 
+    async enterInvalidcardNumberinstallment(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCard)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterInvalidcardcvvinstallment(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCVV)
-        browser.switchToWindow(getWindowName) 
+    async enterInvalidcardcvvinstallment(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCVV)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterInvalidcardmmyyinstallment(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidMonthYear)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterInvalidcardmmyyinstallment(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.frameinstallmentcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidMonthYear)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterCardNumbermaster(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.MasterCardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName)  
+    async enterCardNumbermaster(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.MasterCardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName)  
     }
-    enterCardNumberamex(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexcardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexCVV)
-        browser.switchToWindow(getWindowName)  
+    async enterCardNumberamex(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexcardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.AmexCVV)
+        await browser.switchToWindow(getWindowName)  
     }
-    enterCardNumberdiner(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.DinnersClubCardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterCardNumberdiner(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.DinnersClubCardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
     async enterInvalidcardNumber(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCard)
-        browser.switchToWindow(getWindowName)
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCard)
+        await browser.switchToWindow(getWindowName)
     }
-    enterInvalidmonth(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidMonthYear)
-        browser.switchToWindow(getWindowName) 
+    async enterInvalidmonth(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidMonthYear)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterInvalidcvv(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCVV)
-        browser.switchToWindow(getWindowName) 
+    async enterInvalidcvv(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.VisacardNumber)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.InvalidCVV)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterinsuffientcard(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.Insufficientfund)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterinsuffientcard(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.Insufficientfund)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    entergenericcard(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.GenericDecline)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async entergenericcard(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.GenericDecline)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterlostcard(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.Lostcard)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterlostcard(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.Lostcard)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    enterprocessingcard(){
-        let getWindowName= browser.getWindowHandle()
-        BrowserUtil.wait(3)
-        BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
-        ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ProcessingError)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
-        ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
-        browser.switchToWindow(getWindowName) 
+    async enterprocessingcard(){
+        let getWindowName= await browser.getWindowHandle()
+        await BrowserUtil.wait(3)
+        await BrowserUtil.switchToFrame(this.framecreditcard,"clickframeinstallment")
+        await ElementUtil.waitForEnabled(this.creditordebitcardnumberfield, 10, "wait for element");
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ProcessingError)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidMonth)
+        await ElementUtil.sendText(this.creditordebitcardnumberfield,pdata.OrderHistory.ValidCVC)
+        await browser.switchToWindow(getWindowName) 
     }
-    clickcrossbtn(){
-        ElementUtil.click(this.btnclosesymbol,"click close button")
+    async clickcrossbtn(){
+        await ElementUtil.click(this.btnclosesymbol,"click close button")
     }
-    clicknosaving(){
-        ElementUtil.click(this.creditordebitnosaving,"click credit or debit card")
+    async clicknosaving(){
+        await ElementUtil.click(this.creditordebitnosaving,"click credit or debit card")
     }
-    clickwirepayment(){
-        ElementUtil.click(this.wirepaymentbtn,"click wirepayment btn")
+    async clickwirepayment(){
+        await ElementUtil.click(this.wirepaymentbtn,"click wirepayment btn")
     }
-    clickpaywithwirepaymentbtn(){
-        ElementUtil.click(this.paywithwirepaymentbutton,"click pay with wirepayment button")
+    async clickpaywithwirepaymentbtn(){
+        await ElementUtil.click(this.paywithwirepaymentbutton,"click pay with wirepayment button")
     }
-    clickgotopayment(){
-        ElementUtil.click(this.gotopaymentpage,"click go to payment")
+    async clickgotopayment(){
+        await ElementUtil.click(this.gotopaymentpage,"click go to payment")
     }
-    clearlocalstorage(){
-        //browser.localStorage('DELETE')
-        browser.execute('localStorage.clear()')
+    async clearlocalstorage(){
+        //await browser.localStorage('DELETE')
+        await browser.execute('localStorage.clear()')
     }
-    acceptCookies() {
-        BrowserUtil.wait(5);
-        if (ElementUtil.isVisible(this.paypalCookiesAccept, "Check the cookies popup")) {
-            ElementUtil.click(this.paypalCookiesAccept, "select accept");
-            BrowserUtil.wait(5);
+    async acceptCookies() {
+        await BrowserUtil.wait(5);
+        if (await ElementUtil.isVisible(this.paypalCookiesAccept, "Check the cookies popup")) {
+            await ElementUtil.click(this.paypalCookiesAccept, "select accept");
+            await BrowserUtil.wait(5);
         }
     }
 

@@ -97,7 +97,7 @@ Feature: Testing the checkout page of Diamondere
     #Scenario - 14
     @validations
     Scenario: Shipping - Validating the mandatory fields
-        Given I click Continue To Payment button
+        Given I select Continue To Payment button
         Then I ensure the mandatory field messages and popup are displayed 
 
     #Scenario - 15
@@ -283,7 +283,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
         Given I disable the Same as shipping address toggle button
         When I enter valid address details in Shipping & Billing section
-        When I click Continue To Payment button
+        When I select Continue To Payment button
         Then I ensure the mandatory field messages and popup are displayed 
         When I want to clear local storage
 

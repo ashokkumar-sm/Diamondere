@@ -6,14 +6,14 @@ const Homepage= require('../PageObjects/Homepage')
 const data = require('../TestData/Homepage.json');
 
 
-Given(/^I move to the Free shipping,returns,resizing and certification section$/, () => {
+Given(/^I move to the Free shipping,returns,resizing and certification section$/, async() => {
 	const bannerText= new Homepage;
-    bannerText.scrollHeader();
+    await bannerText.scrollHeader();
 });
 
-When(/^I click the Free shipping Text Link in the Homepage Banner$/, () => {
+When(/^I click the Free shipping Text Link in the Homepage Banner$/, async() => {
 	const freeshipText= new Homepage;
-    freeshipText.clickFreeShip();
+    await freeshipText.clickFreeShip();
 });
 
 Then(/^I ensure clicking the Free shipping Text Link redirects to the respective page$/, async() => {
@@ -22,9 +22,9 @@ Then(/^I ensure clicking the Free shipping Text Link redirects to the respective
 
 });
 
-Given(/^I click the Returns Text Link in the Homepage Banner$/, () => {
+Given(/^I click the Returns Text Link in the Homepage Banner$/, async() => {
 	const returnsText= new Homepage;
-    returnsText.clickReturns();
+    await returnsText.clickReturns();
 });
 
 Then(/^I ensure clicking the Returns Text Link redirects to the respective page$/, async () => {
@@ -32,9 +32,9 @@ Then(/^I ensure clicking the Returns Text Link redirects to the respective page$
     await expect(returnsText).toEqual(data.HomePageLinks.ReturnsPolicy);
 });
 
-Given(/^I click the Resizing Text Link in the Homepage Banner$/, () => {
+Given(/^I click the Resizing Text Link in the Homepage Banner$/, async() => {
 	const resizingText= new Homepage;
-    resizingText.clickResizing();
+    await resizingText.clickResizing();
 });
 
 Then(/^I ensure clicking the Resizing Text Link redirects to the respective page$/, async() => {
@@ -42,9 +42,9 @@ Then(/^I ensure clicking the Resizing Text Link redirects to the respective page
     await expect(resizingText).toEqual(data.HomePageLinks.ResizingInformation);
 });
 
-Given(/^I click the Certification Text Link in the Homepage Banner$/, () => {
+Given(/^I click the Certification Text Link in the Homepage Banner$/, async() => {
 	const certificationText= new Homepage;
-    certificationText.clickCertification();
+    await certificationText.clickCertification();
 });
 
 Then(/^I ensure clicking the Certification Text Link redirects to the respective page$/, async() => {
@@ -52,9 +52,9 @@ Then(/^I ensure clicking the Certification Text Link redirects to the respective
     await expect(resizingText).toEqual(data.HomePageLinks.CertificationInformation);
 });
 
-Given(/^I move to the Diamondere Logo is present$/, () => {
+Given(/^I move to the Diamondere Logo is present$/, async() => {
 	const diamondereLogo= new Homepage;
-    diamondereLogo.clickDiamondereLogo();
+    await diamondereLogo.clickDiamondereLogo();
 });
 
 Then(/^I ensure customer care, location, search box,login and shopping cart icons are present$/, async () => {
@@ -68,9 +68,9 @@ Then(/^I ensure customer care, location, search box,login and shopping cart icon
    
 });
 
-Given(/^I hover over the Customer care icon$/, () => {
+Given(/^I hover over the Customer care icon$/, async() => {
 	const customercare= new Homepage;
-    customercare.hoverCustomerCare();
+    await customercare.hoverCustomerCare();
 });
 
 
@@ -81,9 +81,9 @@ Then(/^I ensure the write to us, request call back and toll free number are pres
     await expect(customercare.cctollfree).toExist();
 });
 
-Given(/^I move to the login and signup icon$/, () => {
+Given(/^I move to the login and signup icon$/, async() => {
 	const loginIcon= new Homepage;
-    loginIcon.profileiconbeflogin();
+    await loginIcon.profileiconbeflogin();
 });
 
 Then(/^I hover over the login and signup icon$/, async() => {
@@ -101,9 +101,9 @@ Then(/^I ensure the track my order,order history and logout options are present 
 });
 
 
-Given(/^I hover over the Rings menu$/, () => {
+Given(/^I hover over the Rings menu$/, async() => {
 	const ringsmainmenu= new Homepage;
-    ringsmainmenu.ringsMainMenu();
+    await ringsmainmenu.ringsMainMenu();
 });
 
 Then(/^I Ensure that Rings submenu dropdown is visible$/, async() => {
@@ -122,9 +122,9 @@ Then(/^I ensure all the diamonds are present under shop by diamond submenu$/, as
 
 });
 
-When(/^I click the Black Diamond under the shop by diamond submenu$/, () => {
+When(/^I click the Black Diamond under the shop by diamond submenu$/, async() => {
 	const blackdia= new Homepage;
-    blackdia.shopByDiablackDiamondRing();
+    await blackdia.shopByDiablackDiamondRing();
 });
 
 Then(/^I ensure the Black Diamond redirects to the Black Diamond rings page$/, async() => {
@@ -146,9 +146,9 @@ Then(/^I ensure all the precious Gemstone are present under shop by precious Gem
 
 });
 
-When(/^I click the Ruby under the shop by precious Gemstone submenu$/, () => {
+When(/^I click the Ruby under the shop by precious Gemstone submenu$/, async() => {
 	const rubySemi= new Homepage;
-    rubySemi.rubySemiPrecious();
+    await rubySemi.rubySemiPrecious();
 });
 
 Then(/^I ensure the Ruby redirects to the Ruby rings page$/, async() => {
@@ -176,9 +176,9 @@ Then(/^I ensure all the semiprecious Gemstone are present under shop by semiprec
     await expect(semipreciousrings.rwhitetopaz).toExist();
 });
 
-When(/^I click the Aquamarine under the shop by semiprecious Gemstone submenu$/, () => {
+When(/^I click the Aquamarine under the shop by semiprecious Gemstone submenu$/, async() => {
 	const semipreAqua= new Homepage;
-    semipreAqua.aquaSemiPreRings();
+    await semipreAqua.aquaSemiPreRings();
 });
 
 Then(/^I ensure the Aquamarine redirects to the Aquamarine rings page$/, async() => {
@@ -194,9 +194,9 @@ Then(/^I ensure all the Lab created Gems are present under shop by Lab created G
 
 });
 
-When(/^I click the Alexandrite under the shop by Lab created Gems submenu$/, () => {
+When(/^I click the Alexandrite under the shop by Lab created Gems submenu$/, async() => {
 	const labcreatdrings= new Homepage;
-    labcreatdrings.labCreatedRings();
+    await labcreatdrings.labCreatedRings();
 });
 
 Then(/^I ensure the Alexandrite redirects to the Alexandrite rings page$/, async () => {
@@ -215,9 +215,9 @@ Then(/^I ensure all the metal rings are present under shop by Metal submenu$/, a
     await expect(metalrings.rsilver).toExist();
 });
 
-When(/^I click the Platinum under the shop by metal submenu$/, () => {
+When(/^I click the Platinum under the shop by metal submenu$/, async() => {
 	const metalrings= new Homepage;
-    metalrings.metalRings();
+    await metalrings.metalRings();
 });
 
 Then(/^I ensure the Platinum redirects to the Platinum rings page$/,async () => {
@@ -240,9 +240,9 @@ Then(/^I ensure all the styles are present under shop by Ring styles Gems submen
 
 });
 
-When(/^I click the Three stone rings under the Ring styles submenu$/, () => {
+When(/^I click the Three stone rings under the Ring styles submenu$/, async() => {
 	const shopringstyles= new Homepage;
-    shopringstyles.ringStyles();
+    await shopringstyles.ringStyles();
 });
 
 Then(/^I ensure the Three stone rings redirects to the Three stone rings page$/, async() => {
@@ -250,9 +250,9 @@ Then(/^I ensure the Three stone rings redirects to the Three stone rings page$/,
     await expect(shopringstyles).toEqual(data.HomePageLinks.ThreeStoneRings);
 });
 
-When(/^I click the Read more link under Style Guide To Ring Setting Options$/, () => {
+When(/^I click the Read more link under Style Guide To Ring Setting Options$/, async() => {
 	const ringstylesguide= new Homepage;
-    ringstylesguide.styleGuideRing();
+    await ringstylesguide.styleGuideRing();
 });
 
 Then(/^I ensure the Read more link under Style Guide redirects to the respective page$/,async () => {
@@ -260,9 +260,9 @@ Then(/^I ensure the Read more link under Style Guide redirects to the respective
     await expect(ringstylesguide).toEqual(data.HomePageLinks.RingStyleGuide);
 });
 
-When(/^I click the Read more link under Black Gold Guide Options$/, () => {
+When(/^I click the Read more link under Black Gold Guide Options$/, async() => {
 	const BGguide= new Homepage;
-    BGguide.blackGoldGuideRing();
+    await BGguide.blackGoldGuideRing();
 });
 
 Then(/^I ensure the Read more link under Black Gold Guide redirects to the respective page$/,async () => {
@@ -270,9 +270,9 @@ Then(/^I ensure the Read more link under Black Gold Guide redirects to the respe
     await expect(BGguide).toEqual(data.HomePageLinks.BlackGoldGuide);
 });
 
-Given(/^I hover over the Engagement menu$/, () => {
+Given(/^I hover over the Engagement menu$/, async() => {
 	const engageMenu= new Homepage;
-    engageMenu.engageMenu();
+    await engageMenu.engageMenu();
 });
 
 Then(/^I Ensure that Engagement submenu dropdown is visible$/, async() => {
@@ -291,9 +291,9 @@ Then(/^I ensure all the diamond are present under the shop by diamond submenu$/,
 
 });
 
-When(/^I click the Lab Diamond under the shop by diamond submenu under Engagement menu$/, () => {
+When(/^I click the Lab Diamond under the shop by diamond submenu under Engagement menu$/, async() => {
 	const labDiaengageMenu= new Homepage;
-    labDiaengageMenu.labdiamondEngagement();
+    await labDiaengageMenu.labdiamondEngagement();
 });
 
 Then(/^I ensure the Lab Diamond redirects to the make your Lab Diamond engagement rings page$/, async() => {
@@ -314,9 +314,9 @@ Then(/^I ensure all the precious Gemstone are present under shop by precious Gem
 
 });
 
-When(/^I click the Sapphire under the shop by precious Gemstone submenu under Engagement menu$/, () => {
+When(/^I click the Sapphire under the shop by precious Gemstone submenu under Engagement menu$/, async() => {
 	const gemDiaengageMenu= new Homepage;
-    gemDiaengageMenu.gemCreatedEngagement();
+    await gemDiaengageMenu.gemCreatedEngagement();
 });
 
 Then(/^I ensure the Sapphire redirects to the Sapphire engagement rings page$/, async() => {
@@ -347,9 +347,9 @@ Then(/^I Ensure that Engagement submenu dropdown is visible with all the semipre
 
 });
 
-When(/^I click the Amethyst under the shop by semiprecious Gemstone submenu$/, () => {
+When(/^I click the Amethyst under the shop by semiprecious Gemstone submenu$/, async() => {
 	const semipreengageMenu= new Homepage;
-    semipreengageMenu.semipreciousEngagementRings();
+    await semipreengageMenu.semipreciousEngagementRings();
 });
 
 Then(/^I ensure the Amethyst redirects to the Amethyst engagement rings page$/, async() => {
@@ -364,9 +364,9 @@ Then(/^I Ensure that Engagement submenu dropdown is visible with all the Lab cre
     await expect(labcreateengageMenu.engmoissanite).toExist();
 });
 
-When(/^I click the Alexandrite under the shop by Lab created Gems submenu under Engagement menu$/, () => {
+When(/^I click the Alexandrite under the shop by Lab created Gems submenu under Engagement menu$/, async() => {
 	const labcreateengageMenu= new Homepage;
-    labcreateengageMenu.labCreatedEngagementRings();
+    await labcreateengageMenu.labCreatedEngagementRings();
 });
 
 Then(/^I ensure the Alexandrite under Engagement menu redirects to the Alexandrite rings page$/, async() => {
@@ -384,9 +384,9 @@ Then(/^I Ensure that Engagement submenu dropdown is visible with all the metals 
     await expect(metalDiaengageMenu.engsilver).toExist();;
 });
 
-When(/^I click the White Gold under the shop by metal submenu$/, () => {
+When(/^I click the White Gold under the shop by metal submenu$/, async() => {
 	const metalDiaengageMenu = new Homepage();
-    metalDiaengageMenu.metalEngageMenu();
+    await metalDiaengageMenu.metalEngageMenu();
 });
 
 Then(/^I ensure the White Gold redirects to the 14K white gold engagement rings page$/,async () => {
@@ -407,9 +407,9 @@ Then(/^I Ensure that Engagement submenu dropdown is visible with all the Engagem
    
 });
 
-When(/^I click the Halo rings under the Engagement Ring styles submenu$/, () => {
+When(/^I click the Halo rings under the Engagement Ring styles submenu$/, async() => {
 	const shopengringstyles = new Homepage;
-    shopengringstyles.engagementRingStyle();
+    await shopengringstyles.engagementRingStyle();
 });
 
 Then(/^I ensure the Halo rings redirects to the Halo engagement rings page$/,async() => {
@@ -417,9 +417,9 @@ Then(/^I ensure the Halo rings redirects to the Halo engagement rings page$/,asy
     await expect(shopengringstyles).toEqual(data.HomePageLinks.HaloEngagementRings);
 });
 
-When(/^I click the Read more link under Engagement Ring Guide$/, () => {
+When(/^I click the Read more link under Engagement Ring Guide$/, async() => {
 	const shopengringguide = new Homepage;
-    shopengringguide.engageRingGuide();
+    await shopengringguide.engageRingGuide();
 });
 
 Then(/^I ensure the Read more link under Engagement Ring Guide redirects to the respective page$/,async () => {
@@ -427,9 +427,9 @@ Then(/^I ensure the Read more link under Engagement Ring Guide redirects to the 
     await expect(shopengringguide).toEqual(data.HomePageLinks.EngagementRingBuyingGuide);
 });
 
-When(/^I click the Read more link under 3 Engagement Ring Myths Options$/, () => {
+When(/^I click the Read more link under 3 Engagement Ring Myths Options$/, async() => {
 	const engringmyth = new Homepage;
-    engringmyth.engageRingMyth();
+    await engringmyth.engageRingMyth();
 });
 
 Then(/^I ensure the Read more link under 3 Engagement Ring Myths redirects to the respective page$/, async() => {
@@ -438,9 +438,9 @@ Then(/^I ensure the Read more link under 3 Engagement Ring Myths redirects to th
 });
 
 
-Given(/^I hover over the Wedding menu$/, () => {
+Given(/^I hover over the Wedding menu$/, async() => {
 	const wedmenu = new Homepage;
-    wedmenu.weddingMainMenu();
+    await wedmenu.weddingMainMenu();
 });
 
 Then(/^I Ensure that Wedding submenu dropdown is visible$/, async() => {
@@ -459,9 +459,9 @@ Then(/^I Ensure that Wedding submenu dropdown is visible with all the diamonds p
     await expect(wedmenu.sdbbrowndiamond).toExist();
 });
 
-When(/^I click the Diamond under the shop by diamond submenu under Wedding menu$/, () => {
+When(/^I click the Diamond under the shop by diamond submenu under Wedding menu$/, async() => {
 	const wedmenu = new Homepage;
-    wedmenu.diaWeddingMenu();
+    await wedmenu.diaWeddingMenu();
 });
 
 Then(/^I ensure the Diamond redirects to the make your Diamond wedding rings page$/,async () => {
@@ -483,9 +483,9 @@ Then(/^I Ensure that Wedding submenu dropdown is visible with all the shop by pr
 
 });
 
-When(/^I click the Emerald  under the shop by precious Gemstone submenu$/, () => {
+When(/^I click the Emerald  under the shop by precious Gemstone submenu$/, async() => {
 	const wedprecmenu = new Homepage;
-    wedprecmenu.emeraldWeddingMenu();
+    await wedprecmenu.emeraldWeddingMenu();
 });
 
 Then(/^I ensure the Emerald redirects to the Emerald wedding rings page$/,async () => {
@@ -504,9 +504,9 @@ Then(/^I Ensure that Wedding submenu dropdown is visible with all the Metal pres
     await expect(wedmetalmenu.wedsilver).toExist();
 });
 
-When(/^I click the Yellow Gold under the shop by Metal submenu$/, () => {
+When(/^I click the Yellow Gold under the shop by Metal submenu$/, async() => {
 	const wedmetalmenu = new Homepage;
-    wedmetalmenu.ygMetalwedding();
+    await wedmetalmenu.ygMetalwedding();
 });
 
 Then(/^I ensure the Yellow Gold redirects to the wedding ring in 14K Yellow Gold page$/,async () => {
@@ -524,9 +524,9 @@ Then(/^I Ensure that Wedding submenu dropdown is visible with all the Woman's We
 
 });
 
-When(/^I click the View All Link under the Woman's Wedding Band Styles submenu$/, () => {
+When(/^I click the View All Link under the Woman's Wedding Band Styles submenu$/, async() => {
 	const womenwedband= new Homepage;
-    womenwedband.viewAllWomenBand();
+    await womenwedband.viewAllWomenBand();
 });
 
 Then(/^I ensure the View All link redirects to the Men's rings page$/, async() => {
@@ -544,9 +544,9 @@ Then(/^I Ensure that Wedding submenu dropdown is visible with all Men's Wedding 
     
 });
 
-When(/^I click the View All link under the Men's Wedding Band Styles submenu$/, () => {
+When(/^I click the View All link under the Men's Wedding Band Styles submenu$/, async() => {
 	const menwedband= new Homepage;
-    menwedband.menWeddingviewall();
+    await menwedband.menWeddingviewall();
 });
 
 Then(/^I ensure the View All link redirects to the Men's Wedding Band Styles page$/, async() => {
@@ -560,9 +560,9 @@ Then(/^I Ensure that Wedding submenu dropdown is visible with all Couples Bands 
  
 });
 
-When(/^I click the Matching Band Sets under the Couples Bands submenu$/, () => {
+When(/^I click the Matching Band Sets under the Couples Bands submenu$/, async() => {
 	const coupleband= new Homepage;
-    coupleband.matchbandsCoupleWed();
+    await coupleband.matchbandsCoupleWed();
 });
 
 Then(/^I ensure the Matching Band Sets redirects to the couple bands page$/, async() => {
@@ -570,9 +570,9 @@ Then(/^I ensure the Matching Band Sets redirects to the couple bands page$/, asy
     await expect(coupleband).toEqual(data.HomePageLinks.MatchingBandSets);
 });
 
-When(/^I click the Read more link under Ultimate Wedding Rings Guide$/, () => {
+When(/^I click the Read more link under Ultimate Wedding Rings Guide$/, async() => {
 	const ultimatchbands= new Homepage;
-    ultimatchbands.readMoreWedRings();
+    await ultimatchbands.readMoreWedRings();
 });
 
 Then(/^I ensure the Read more link under Ultimate Wedding Rings Guide redirects to the respective page$/, async() => {
@@ -580,9 +580,9 @@ Then(/^I ensure the Read more link under Ultimate Wedding Rings Guide redirects 
     await expect(coupleband).toEqual(data.HomePageLinks.UltimateWeddingRingsGuide);
 });
 
-When(/^I click the Read more link under How To Choose Matching Wedding Bands options$/, () => {
+When(/^I click the Read more link under How To Choose Matching Wedding Bands options$/, async() => {
 	const matchwedbands= new Homepage;
-    matchwedbands.readMoreMatchWedBands();
+    await matchwedbands.readMoreMatchWedBands();
 });
 
 Then(/^I ensure the Read more link under How To Choose Matching Wedding Bands redirects to the respective page$/,async () => {
@@ -591,9 +591,9 @@ Then(/^I ensure the Read more link under How To Choose Matching Wedding Bands re
 });
 
 
-Given(/^I hover over the Bracelets menu$/, () => {
+Given(/^I hover over the Bracelets menu$/, async() => {
 	const braceletsmenu= new Homepage;
-    braceletsmenu.braceletsMainMenu();
+    await braceletsmenu.braceletsMainMenu();
 });
 
 Then(/^I Ensure that Bracelets submenu dropdown is visible with all diamonds present under shop by diamond$/, async() => {
@@ -607,9 +607,9 @@ Then(/^I Ensure that Bracelets submenu dropdown is visible with all diamonds pre
     await expect(shopbydiabrace.sdbbrowndiamond).toExist();  
 });
 
-When(/^I click the Blue Diamond under the shop by diamond submenu$/, () => {
+When(/^I click the Blue Diamond under the shop by diamond submenu$/, async() => {
 	const braceletsmenu= new Homepage;
-    braceletsmenu.blueDiabracelets();
+    await braceletsmenu.blueDiabracelets();
 });
 
 Then(/^I ensure the Blue Diamond redirects to the Blue Diamond Bracelets page$/, async() => {
@@ -630,9 +630,9 @@ Then(/^I Ensure that Bracelets submenu dropdown is visible with all precious Gem
     await expect(preciousbracelets.brainbowsapphire).toExist();
 });
 
-When(/^I click the Pink Sapphire under the shop by precious Gemstone submenu$/, () => {
+When(/^I click the Pink Sapphire under the shop by precious Gemstone submenu$/, async() => {
 	const preciousbracelets= new Homepage;
-    preciousbracelets.PinkSapPrecious();
+    await preciousbracelets.PinkSapPrecious();
 });
 
 Then(/^I ensure the Pink Sapphire redirects to the Pink Sapphire Bracelets page$/, async() => {
@@ -660,9 +660,9 @@ Then(/^I Ensure that Bracelets submenu dropdown is visible with all semiprecious
     await expect(semipreciousbracelets.bwhitetopaz).toExist();
 });
 
-When(/^I click the Garnet under the shop by semiprecious Gemstone submenu$/, () => {
+When(/^I click the Garnet under the shop by semiprecious Gemstone submenu$/, async() => {
 	const semipreciousbracelets= new Homepage;
-    semipreciousbracelets.garnetBraceletsSemi();
+    await semipreciousbracelets.garnetBraceletsSemi();
 });
 
 Then(/^I ensure the Garnet redirects to the Garnet Bracelets page$/,async() => {
@@ -677,9 +677,9 @@ Then(/^I Ensure that Bracelets submenu dropdown is visible with all lab created 
     await expect(labcreatdbrace.bmoissanite).toExist();
 });
 
-When(/^I click the Moissanite under the shop by lab created gems submenu$/, () => {
+When(/^I click the Moissanite under the shop by lab created gems submenu$/, async() => {
 	const labcreatdbrace= new Homepage;
-    labcreatdbrace.labCreatedBracelets();
+    await labcreatdbrace.labCreatedBracelets();
 });
 
 Then(/^I ensure the Moissanite link redirects to the Moissanite Bracelets page$/,async () => {
@@ -700,9 +700,9 @@ Then(/^I Ensure that Bracelets submenu dropdown is visible with all styles prese
 
 });
 
-When(/^I click the Bangles under the Bracelet Styles submenu$/, () => {
+When(/^I click the Bangles under the Bracelet Styles submenu$/, async() => {
 	const bracestyle= new Homepage;
-    bracestyle.banglesBracelets();
+    await bracestyle.banglesBracelets();
 });
 
 Then(/^I ensure the Bangles link redirects to the Bangles page$/, async() => {
@@ -710,9 +710,9 @@ Then(/^I ensure the Bangles link redirects to the Bangles page$/, async() => {
     await expect(bracestyle).toEqual(data.HomePageLinks.Bangles);
 });
 
-When(/^I click the Apple watch bands under the Bracelet Styles submenu$/, () => {
+When(/^I click the Apple watch bands under the Bracelet Styles submenu$/, async() => {
 	const bracestyle= new Homepage;
-    bracestyle.appleBandsBracelets();
+    await bracestyle.appleBandsBracelets();
 });
 
 Then(/^I ensure the Apple watch bands redirects to the Apple watch bands page$/,async() => {
@@ -720,9 +720,9 @@ Then(/^I ensure the Apple watch bands redirects to the Apple watch bands page$/,
     await expect(bracestyle).toEqual(data.HomePageLinks.AppleWatchBands);
 });
 
-When(/^I click the Charms under the Bracelet Styles submenu$/, () => {
+When(/^I click the Charms under the Bracelet Styles submenu$/, async() => {
 	const bracestyle= new Homepage;
-    bracestyle.charmsBracelets();
+    await bracestyle.charmsBracelets();
 });
 
 Then(/^I ensure the Charms redirects to the charms page$/,async () => {
@@ -730,9 +730,9 @@ Then(/^I ensure the Charms redirects to the charms page$/,async () => {
     await expect(bracestyle).toEqual(data.HomePageLinks.Charms);
 });
 
-When(/^I click the View All link under the Bracelet Styles submenu$/, () => {
+When(/^I click the View All link under the Bracelet Styles submenu$/, async() => {
 	const bracestyle= new Homepage;
-    bracestyle.viewAllBraceletsstyle();
+    await bracestyle.viewAllBraceletsstyle();
 });
 
 Then(/^I ensure the View All link redirects to the Bracelets page$/, async() => {
@@ -746,9 +746,9 @@ Then(/^I Ensure that Bracelets submenu dropdown is visible$/, async() => {
 
 });
 
-When(/^I click the Read more link under Light Up The Night With Brilliant Bracelets options$/, () => {
+When(/^I click the Read more link under Light Up The Night With Brilliant Bracelets options$/, async() => {
 	const bracestyle= new Homepage;
-    bracestyle.braceletsBrilliant();
+    await bracestyle.braceletsBrilliant();
 });
 
 Then(/^I ensure the Read more link under Light Up The Night With Brilliant Bracelets redirects to the respective page$/, async() => {
@@ -756,9 +756,9 @@ Then(/^I ensure the Read more link under Light Up The Night With Brilliant Brace
     await expect(bracestyle).toEqual(data.HomePageLinks.BrilliantBraceletsGuide);
 });
 
-When(/^I click the Read more link under Styles Of Men's Bracelets To Wear In 2023 options$/, () => {
+When(/^I click the Read more link under Styles Of Men's Bracelets To Wear In 2023 options$/, async() => {
 	const bracestyle= new Homepage;
-    bracestyle.styleOfMenBracelets();
+    await bracestyle.styleOfMenBracelets();
 });
 
 Then(/^I ensure the Read more link under Styles Of Men's Bracelets To Wear In 2023 redirects to the respective page$/,async () => {
@@ -766,9 +766,9 @@ Then(/^I ensure the Read more link under Styles Of Men's Bracelets To Wear In 20
     await expect(bracestyle).toEqual(data.HomePageLinks.MensBraceletsGuide);
 });
 
-Given(/^I hover over the Earrings menu$/, () => {
+Given(/^I hover over the Earrings menu$/, async() => {
 	const earringsmainmenu= new Homepage;
-    earringsmainmenu.earringsMainMenu();
+    await earringsmainmenu.earringsMainMenu();
 });
 
 Then(/^I Ensure that Earrings submenu dropdown is visible$/, async() => {
@@ -787,9 +787,9 @@ Then(/^I Ensure that Earrings submenu dropdown is visible with all diamonds pres
     await expect(shopbydiaearrings.sdebrowndiamond).toExist();
 });
 
-When(/^I click the Brown Diamond under the shop by diamond submenu$/, () => {
+When(/^I click the Brown Diamond under the shop by diamond submenu$/, async() => {
 	const browndiaear= new Homepage;
-    browndiaear.brownDiamondEarring();
+    await browndiaear.brownDiamondEarring();
 });
 
 Then(/^I ensure the Brown Diamond redirects to the Brown Diamond Earrings page$/,async () => {
@@ -810,9 +810,9 @@ Then(/^I Ensure that Earrings submenu dropdown is visible with all precious Gems
     await expect(preciousearrings.erainbowsapphire).toExist();
 });
 
-When(/^I click the Emerald  under the shop by precious Gemstone submenu under earrings menu$/, () => {
+When(/^I click the Emerald  under the shop by precious Gemstone submenu under earrings menu$/, async() => {
 	const preciousearrings = new Homepage;
-    preciousearrings.emeraldPrecErring();
+    await preciousearrings.emeraldPrecErring();
 });
 
 Then(/^I ensure the Emerald redirects to the Emerald Earrings page$/, async() => {
@@ -840,9 +840,9 @@ Then(/^I Ensure that Earrings submenu dropdown is visible with all semiprecious 
     await expect(semipreciousearrings.ewhitetopaz).toExist();
 });
 
-When(/^I click the Iolite under the shop by semiprecious Gemstone submenu$/, () => {
+When(/^I click the Iolite under the shop by semiprecious Gemstone submenu$/, async() => {
 	const semipreciousearrings = new Homepage;
-    semipreciousearrings.ioliteSemiEarring();
+    await semipreciousearrings.ioliteSemiEarring();
 });
 
 Then(/^I ensure the Iolite redirects to the Iolite Earrings page$/,async () => {
@@ -857,9 +857,9 @@ Then(/^I Ensure that Earrings submenu dropdown is visible with all lab created g
     await expect(labcreatdearrings.emoissanite).toExist();
 });
 
-When(/^I click the Moissanite under the lab created gems submenu$/, () => {
+When(/^I click the Moissanite under the lab created gems submenu$/, async() => {
 	const labcreatdearrings = new Homepage;
-    labcreatdearrings.moissEarrings();
+    await labcreatdearrings.moissEarrings();
 });
 
 Then(/^I ensure the Moissanite redirects to the Moissanite Earrings page$/,async () => {
@@ -879,9 +879,9 @@ Then(/^I Ensure that Earrings submenu dropdown is visible with all earring style
 
 });
 
-When(/^I click the Hoop earrings under the earring styles submenu$/, () => {
+When(/^I click the Hoop earrings under the earring styles submenu$/, async() => {
 	const shopearingstyles = new Homepage;
-    shopearingstyles.hoopEarringstyle();
+    await shopearingstyles.hoopEarringstyle();
 });
 
 Then(/^I ensure the Hoop earrings redirects to the Hoop earrings page$/, async() => {
@@ -889,9 +889,9 @@ Then(/^I ensure the Hoop earrings redirects to the Hoop earrings page$/, async()
     await expect(shopearingstyles).toEqual(data.HomePageLinks.HoopEarrings);
 });
 
-When(/^I click the Read more link under the Top Diamond Stud Earrings$/, () => {
+When(/^I click the Read more link under the Top Diamond Stud Earrings$/, async() => {
 	const topdia = new Homepage;
-    topdia.topDiaStud();
+    await topdia.topDiaStud();
 });
 
 Then(/^I ensure the Read more link underTop Diamond Stud Earrings redirects to the respective page$/,async () => {
@@ -899,9 +899,9 @@ Then(/^I ensure the Read more link underTop Diamond Stud Earrings redirects to t
     await expect(shopearingstyles).toEqual(data.HomePageLinks.TopStudEarringsGuide);
 });
 
-When(/^I click the Read more link under Earrings For Her options$/, () => {
+When(/^I click the Read more link under Earrings For Her options$/, async() => {
 	const shopearingsher = new Homepage;
-    shopearingsher.herEarrings();
+    await shopearingsher.herEarrings();
 });
 
 Then(/^I ensure the Read more link under Earrings For Her redirects to the respective page$/,async() => {
@@ -910,9 +910,9 @@ Then(/^I ensure the Read more link under Earrings For Her redirects to the respe
 });
 
 
-Given(/^I hover over the Necklaces menu$/, () => {
+Given(/^I hover over the Necklaces menu$/, async() => {
 	const necklacesmainmenu= new Homepage;
-    necklacesmainmenu.necklacesMainMenu();
+    await necklacesmainmenu.necklacesMainMenu();
 });
 
 Then(/^I Ensure that Necklaces submenu dropdown is visible$/, async() => {
@@ -930,9 +930,9 @@ Then(/^I Ensure that Necklaces submenu dropdown is visible with all shop by diam
     await expect(shopbydianeck.sdnbrowndiamond).toExist();  
 });
 
-When(/^I click the Diamond under the shop by diamond submenu$/, () => {
+When(/^I click the Diamond under the shop by diamond submenu$/, async() => {
 	const neckdia= new Homepage;
-    neckdia.shopByDiamondNeck();
+    await neckdia.shopByDiamondNeck();
 });
 
 Then(/^I ensure the Diamond redirects to the Diamond Necklaces and Pendants page$/, async() => {
@@ -952,9 +952,9 @@ Then(/^I Ensure that Necklaces submenu dropdown is visible with precious Gemston
     await expect(preciousnecklaces.nrainbowsapphire).toExist();
 });
 
-When(/^I click the White Sapphire under the shop by precious Gemstone submenu$/, () => {
+When(/^I click the White Sapphire under the shop by precious Gemstone submenu$/, async() => {
 	const sappNeckSemi= new Homepage;
-    sappNeckSemi.SappPrecious();
+    await sappNeckSemi.SappPrecious();
 });
 
 Then(/^I ensure the White Sapphire redirects to the White Sapphire Necklaces and Pendants page$/, async() => {
@@ -981,9 +981,9 @@ Then(/^I Ensure that Necklaces submenu dropdown is visible with semiprecious Gem
     await expect(semipreciousnecklaces.nwhitetopaz).toExist();
 });
 
-When(/^I click the Citrine under the shop by semiprecious Gemstone submenu$/, () => {
+When(/^I click the Citrine under the shop by semiprecious Gemstone submenu$/, async() => {
 	const semipreciousnecklaces = new Homepage;
-    semipreciousnecklaces.citrineSemiPre();
+    await semipreciousnecklaces.citrineSemiPre();
 });
 
 Then(/^I ensure the Citrine redirects to the Citrine Necklaces and Pendants page$/, async() => {
@@ -998,9 +998,9 @@ Then(/^I Ensure that Necklaces submenu dropdown is visible with lab created gems
     await expect(labcreatdnecklaces.nmoissanite).toExist();
 });
 
-When(/^I click the Moissanite under the lab created gems submenu under Necklaces menu$/, () => {
+When(/^I click the Moissanite under the lab created gems submenu under Necklaces menu$/, async() => {
 	const labcreatdnecklaces = new Homepage;
-    labcreatdnecklaces.moissNeck();
+    await labcreatdnecklaces.moissNeck();
 });
 
 Then(/^I ensure the Moissanite redirects to the Moissanite Necklaces and Pendants page$/,async () => {
@@ -1008,9 +1008,9 @@ Then(/^I ensure the Moissanite redirects to the Moissanite Necklaces and Pendant
     await expect(labcreatdnecklaces).toEqual(data.HomePageLinks.MoissaniteNecklaces);
 });
 
-When(/^I click the Cross necklaces under the Necklaces styles submenu$/, () => {
+When(/^I click the Cross necklaces under the Necklaces styles submenu$/, async() => {
 	const stylenecklaces = new Homepage;
-    stylenecklaces.CrossNeck();
+    await stylenecklaces.CrossNeck();
 });
 
 Then(/^I ensure the Cross necklaces redirects to the Cross necklaces and pendants page$/,async() => {
@@ -1018,9 +1018,9 @@ Then(/^I ensure the Cross necklaces redirects to the Cross necklaces and pendant
     await expect(stylenecklaces).toEqual(data.HomePageLinks.CrossNecklaces);
 });
 
-When(/^I click the Read more link under the Heart Necklace Guide options$/, () => {
+When(/^I click the Read more link under the Heart Necklace Guide options$/, async() => {
 	const necklacesguide = new Homepage;
-    necklacesguide.neckGuideOption();
+    await necklacesguide.neckGuideOption();
 });
 
 Then(/^I ensure the Read more link under Heart Necklace Guide redirects to the respective page$/, async() => {
@@ -1029,9 +1029,9 @@ Then(/^I ensure the Read more link under Heart Necklace Guide redirects to the r
 });
 
 
-Given(/^I hover over the Men's menu$/, () => {
+Given(/^I hover over the Men's menu$/, async() => {
 	const mensmainmenu= new Homepage;
-    mensmainmenu.mensMainMenu();
+    await mensmainmenu.mensMainMenu();
 });
 
 Then(/^I Ensure that Men's submenu dropdown is visible$/, async() => {
@@ -1044,9 +1044,9 @@ Then(/^I Ensure that Men's submenu dropdown is visible$/, async() => {
     await expect(mensmainmenu.sdmbrowndiamond).toExist();	
 });
 
-When(/^I click the Black Diamond under the shop by diamond submenu under Men's menu$/, () => {
+When(/^I click the Black Diamond under the shop by diamond submenu under Men's menu$/, async() => {
     const mensmainmenu = new Homepage;
-    mensmainmenu.mensBlackDia();
+    await mensmainmenu.mensBlackDia();
 });
 
 Then(/^I ensure the Black Diamond redirects to the Men's Black Diamond Ring page$/,async () => {
@@ -1066,9 +1066,9 @@ Then(/^I Ensure that Men's submenu dropdown is visible with all precious gemston
 
 });
 
-When(/^I click the white Sapphire under the shop by precious Gemstone submenu$/, () => {
+When(/^I click the white Sapphire under the shop by precious Gemstone submenu$/, async() => {
 	const preciousmensrings = new Homepage;
-    preciousmensrings.whiteSappMens();
+    await preciousmensrings.whiteSappMens();
 });
 
 Then(/^I ensure the White Sapphire redirects to the Men's white sapphire rings page$/,async () => {
@@ -1096,9 +1096,9 @@ Then(/^I Ensure that Men's submenu dropdown is visible with all semiprecious gem
     await expect(semipreciousmensrings.mwhitetopaz).toExist();
 });
 
-When(/^I click the Black Onyx under the shop by semiprecious Gemstone submenu$/, () => {
+When(/^I click the Black Onyx under the shop by semiprecious Gemstone submenu$/, async() => {
 	const semipreciousmensrings = new Homepage;
-    semipreciousmensrings.mensBlackOnyx();
+    await semipreciousmensrings.mensBlackOnyx();
 });
 
 Then(/^I ensure the Black Onyx redirects to the Men's Black Onyx rings page$/,async () => {
@@ -1113,9 +1113,9 @@ Then(/^I Ensure that Men's submenu dropdown is visible with all lab created gems
     await expect(labcreatdmensrings.mmoissanite).toExist();
 });
 
-When(/^I click the Moissanite under the lab created gems submenu under mens menu$/, () => {
+When(/^I click the Moissanite under the lab created gems submenu under mens menu$/, async() => {
 	const labcreatdmensrings = new Homepage;
-    labcreatdmensrings.moissMensRing();
+    await labcreatdmensrings.moissMensRing();
 });
 
 Then(/^I ensure the Moissanite redirects to the Men's Moissanite rings page$/, async() => {
@@ -1134,9 +1134,9 @@ Then(/^I Ensure that Men's submenu dropdown is visible with all metals present$/
     await expect(metalmensrings.msilver).toExist();
 });
 
-When(/^I click the Rose Gold under the metals submenu$/, () => {
+When(/^I click the Rose Gold under the metals submenu$/, async() => {
 	const metalmensrings = new Homepage;
-    metalmensrings.rgMensRing();
+    await metalmensrings.rgMensRing();
 });
 
 Then(/^I ensure the Rose Gold redirects to the 14K Men's Rose Gold rings page$/, async() => {
@@ -1156,9 +1156,9 @@ Then(/^I Ensure that Men's submenu dropdown is visible with all mens styles pres
 
 });
 
-When(/^I click the Signet rings under the shop by styles submenu$/, () => {
+When(/^I click the Signet rings under the shop by styles submenu$/, async() => {
 	const shopmensringstyles = new Homepage;
-    shopmensringstyles.mensSignetRings();
+    await shopmensringstyles.mensSignetRings();
 });
 
 Then(/^I ensure the Signet rings redirects to the Men's Signet rings page$/, async() => {
@@ -1166,9 +1166,9 @@ Then(/^I ensure the Signet rings redirects to the Men's Signet rings page$/, asy
     await expect(shopmensringsstyles).toEqual(data.HomePageLinks.SignetMensRings);
 });
 
-When(/^I click the Read more link under the How To Choose A Mens Birthday Ring options$/, () => {
+When(/^I click the Read more link under the How To Choose A Mens Birthday Ring options$/, async() => {
 	const mensbday = new Homepage;
-    mensbday.MensBirthring();
+    await mensbday.MensBirthring();
 });
 
 Then(/^I ensure the Read more link under How To Choose A Mens Birthday Ring redirects to the respective page$/, async() => {
@@ -1176,9 +1176,9 @@ Then(/^I ensure the Read more link under How To Choose A Mens Birthday Ring redi
     await expect(mensbday).toEqual(data.HomePageLinks.HowtoChooseMensBirthdayRingGuide);
 });
 
-When(/^I click the Read more link under the Men's Luxury Guide options$/, () => {
+When(/^I click the Read more link under the Men's Luxury Guide options$/, async() => {
 	const menslux = new Homepage;
-    menslux.MensLuxGuide();
+    await menslux.MensLuxGuide();
 });
 
 Then(/^I ensure the Read more link under Men's Luxury Guide redirects to the respective page$/,async () => {
@@ -1186,9 +1186,9 @@ Then(/^I ensure the Read more link under Men's Luxury Guide redirects to the res
     await expect(menslux).toEqual(data.HomePageLinks.MensLuxuryGuide);
 });
 
-Given(/^I Click Shop Rings button in the homepage$/, () => {
+Given(/^I Click Shop Rings button in the homepage$/, async() => {
 	const shoprings = new Homepage;
-    shoprings.shopRingsClick();
+    await shoprings.shopRingsClick();
 });
 
 Then(/^I ensure the Shop Rings button redirects to page 2 -rings$/,async () => {
@@ -1196,9 +1196,9 @@ Then(/^I ensure the Shop Rings button redirects to page 2 -rings$/,async () => {
     await expect(shoprings).toEqual(data.Gemstonerings.ShopRingsPage);
 });
 
-When(/^I click the Diamondere logo$/, () => {
+When(/^I click the Diamondere logo$/, async() => {
 	const dmdLogo = new Homepage;
-    dmdLogo.dmdLogoClick();
+    await dmdLogo.dmdLogoClick();
 });
 
 Then(/^I ensure clicking the Diamondere logo redirects to the Homepage of Diamondere$/,async () => {
@@ -1206,14 +1206,14 @@ Then(/^I ensure clicking the Diamondere logo redirects to the Homepage of Diamon
     await expect(dmdLogo).toEqual(data.HomePageLinks.HomePage);
 });
 
-Given(/^I move to the Shop Rings section$/, () => {
+Given(/^I move to the Shop Rings section$/, async() => {
 	const shopringssec= new Homepage;
-    shopringssec.shopRingsSection();
+    await shopringssec.shopRingsSection();
 });
 
-Given(/^I click the shop now link under Black Gold Men's Rings$/, () => {
+Given(/^I click the shop now link under Black Gold Men's Rings$/, async() => {
 	const blackgoldmen= new Homepage;
-    blackgoldmen.shopBlackGoldMen();
+    await blackgoldmen.shopBlackGoldMen();
 });
 
 Then(/^I ensure the shop now link under Black Gold Men's Rings redirects to the Black Gold Men's Rings page$/, async() => {
@@ -1221,21 +1221,21 @@ Then(/^I ensure the shop now link under Black Gold Men's Rings redirects to the 
     await expect(dmdLogo).toEqual(data.Gemstonerings.BlackGoldMensRing);
 });
 
-When(/^I click the shop now link under Toi et Moi Collection$/, () => {
+When(/^I click the shop now link under Toi et Moi Collection$/, async() => {
 	const toietmoi = new Homepage;
-    toietmoi.clickToiEtMoi();
+    await toietmoi.clickToiEtMoi();
 });
 
 Then(/^I ensure the shop now link under Toi et Moi Collection redirects to the Toi et Moi rings page$/,async () => {
 	const toietmoi = await browser.getUrl();
     await expect(toietmoi).toEqual(data.Gemstonerings.ToiEtMoiRings);
-    browser.back();
+    await browser.back();
 
 });
 
-When(/^I click the shop now link under Vintage rings$/, () => {
+When(/^I click the shop now link under Vintage rings$/, async() => {
 	const vintrings= new Homepage;
-    vintrings.clickVintageRings();
+    await vintrings.clickVintageRings();
 });
 
 Then(/^I ensure the shop now link under Vintage rings redirects to the Vintage rings page$/, async () => {
@@ -1243,14 +1243,14 @@ Then(/^I ensure the shop now link under Vintage rings redirects to the Vintage r
     await expect(vintrings).toEqual(data.Gemstonerings.VintageRings);
 });
 
-Given(/^I move to the shop by natural gemstone collections text is present$/, () => {
+Given(/^I move to the shop by natural gemstone collections text is present$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.moveNatGemstone();
+    await shopnatural.moveNatGemstone();
 });
 
-When(/^I click the shop now link under Black diamond rings$/, () => {
+When(/^I click the shop now link under Black diamond rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.blackDiaRings();
+    await shopnatural.blackDiaRings();
 });
 
 Then(/^I ensure the shop now link under Black diamond rings redirects to the Black diamond rings page$/, async() => {
@@ -1258,9 +1258,9 @@ Then(/^I ensure the shop now link under Black diamond rings redirects to the Bla
     await expect(shopnatural).toEqual(data.Gemstonerings.BLACKDIAMONDRINGS);
 });
 
-Given(/^I click the shop now link under Ruby rings$/, () => {
+Given(/^I click the shop now link under Ruby rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.rubyDiaRings();
+    await shopnatural.rubyDiaRings();
 });
 
 Then(/^I ensure the shop now link under Ruby rings redirects to the Ruby rings page$/, async() => {
@@ -1268,9 +1268,9 @@ Then(/^I ensure the shop now link under Ruby rings redirects to the Ruby rings p
     await expect(shopnatural).toEqual(data.Gemstonerings.RUBYRINGS);
 });
 
-Given(/^I click the shop now link under Sapphire rings$/, () => {
+Given(/^I click the shop now link under Sapphire rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.sappDiaRings();
+    await shopnatural.sappDiaRings();
 });
 
 Then(/^I ensure the shop now link under Sapphire rings redirects to the Sapphire rings page$/, async() => {
@@ -1278,9 +1278,9 @@ Then(/^I ensure the shop now link under Sapphire rings redirects to the Sapphire
     await expect(shopnatural).toEqual(data.Gemstonerings.SAPPHIRERINGS);
 });
 
-Given(/^I click the shop now link under Emerald rings$/, () => {
+Given(/^I click the shop now link under Emerald rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.emeraldDiaRings();
+    await shopnatural.emeraldDiaRings();
 });
 
 Then(/^I ensure the shop now link under Emerald rings redirects to the Emerald rings page$/, async() => {
@@ -1288,14 +1288,14 @@ Then(/^I ensure the shop now link under Emerald rings redirects to the Emerald r
     await expect(shopnatural).toEqual(data.Gemstonerings.EMERALDRINGS);
 });
 
-Given(/^I Click the right caret icon$/, () => {
+Given(/^I Click the right caret icon$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
 });
 
-When(/^I click the shop now link under Amethyst rings$/, () => {
+When(/^I click the shop now link under Amethyst rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.amethystDiaRings();
+    await shopnatural.amethystDiaRings();
 });
 
 Then(/^I ensure the shop now link under Amethyst rings redirects to the Amethyst rings page$/,async () => {
@@ -1303,15 +1303,15 @@ Then(/^I ensure the shop now link under Amethyst rings redirects to the Amethyst
     await expect(shopnatural).toEqual(data.Gemstonerings.AMETHYSTRINGS);
 });
 
-When(/^I Click the right caret icon two times$/, () => {
+When(/^I Click the right caret icon two times$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
 });
 
-When(/^I click the shop now link under Pink Tourmaline rings$/, () => {
+When(/^I click the shop now link under Pink Tourmaline rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.pinkTourDiaRings();
+    await shopnatural.pinkTourDiaRings();
 });
 
 Then(/^I ensure the shop now link under Pink Tourmaline rings redirects to the Pink Tourmaline rings page$/, async() => {
@@ -1319,16 +1319,16 @@ Then(/^I ensure the shop now link under Pink Tourmaline rings redirects to the P
     await expect(shopnatural).toEqual(data.Gemstonerings.PINKTOURMALINERINGS);
 });
 
-When(/^I Click the right caret icon three times$/, () => {
+When(/^I Click the right caret icon three times$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
 });
 
-When(/^I click the shop now link under Morganite rings$/, () => {
+When(/^I click the shop now link under Morganite rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.morganiteDiaRings();
+    await shopnatural.morganiteDiaRings();
 });
 
 Then(/^I ensure the shop now link under Morganite rings redirects to the Morganite rings page$/,async () => {
@@ -1336,37 +1336,37 @@ Then(/^I ensure the shop now link under Morganite rings redirects to the Morgani
     await expect(shopnatural).toEqual(data.Gemstonerings.MORGANITERINGS);
 });
 
-When(/^I Click the right caret icon four times$/, () => {
+When(/^I Click the right caret icon four times$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
 
 });
 
-When(/^I Click the right caret icon five times$/, () => {
+When(/^I Click the right caret icon five times$/, async() => {
     const shopnatural = new Homepage;
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
 });
 
-When(/^I Click the right caret icon six times$/, () => {
+When(/^I Click the right caret icon six times$/, async() => {
     const shopnatural = new Homepage;
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
-    shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
+    await shopnatural.rightCaretIcon();
 });
 
-When(/^I click the shop now link under Peridot rings$/, () => {
+When(/^I click the shop now link under Peridot rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.peridotDiaRings();
+    await shopnatural.peridotDiaRings();
 });
 
 Then(/^I ensure the shop now link under Peridot rings redirects to the Peridot rings page$/,async() => {
@@ -1374,9 +1374,9 @@ Then(/^I ensure the shop now link under Peridot rings redirects to the Peridot r
     await expect(shopnatural).toEqual(data.Gemstonerings.PERIDOTRINGS);
 });
 
-When(/^I click the shop now link under Alexandrite rings$/, () => {
+When(/^I click the shop now link under Alexandrite rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.pinkTourDiaRings();
+    await shopnatural.pinkTourDiaRings();
 });
 
 Then(/^I ensure the shop now link under Alexandrite rings redirects to the Alexandrite rings page$/, async() => {
@@ -1384,9 +1384,9 @@ Then(/^I ensure the shop now link under Alexandrite rings redirects to the Alexa
     await expect(shopnatural).toEqual(data.Gemstonerings.PINKTOURMALINERINGS);
 });
 
-When(/^I click the shop now link under Aquamarine rings$/, () => {
+When(/^I click the shop now link under Aquamarine rings$/, async() => {
 	const shopnatural = new Homepage;
-    shopnatural.aquamarineDiaRings();
+    await shopnatural.aquamarineDiaRings();
 });
 
 Then(/^I ensure the shop now link under Aquamarine rings redirects to the Aquamarine rings page$/,async () => {
@@ -1395,14 +1395,14 @@ Then(/^I ensure the shop now link under Aquamarine rings redirects to the Aquama
 });
 
 
-Given(/^I move to the Featured categories$/, () => {
+Given(/^I move to the Featured categories$/, async() => {
 	const featcateg = new Homepage;
-    featcateg.sectionFeatCateg();
+    await featcateg.sectionFeatCateg();
 });
 
-When(/^I Click the Rings link and image under Featured categories$/, () => {
+When(/^I Click the Rings link and image under Featured categories$/, async() => {
 	const featcateg = new Homepage;
-    featcateg.ringFeatured();
+    await featcateg.ringFeatured();
 });
 
 Then(/^I ensure clicking the Rings link and image redirects to the Rings page$/,async () => {
@@ -1410,9 +1410,9 @@ Then(/^I ensure clicking the Rings link and image redirects to the Rings page$/,
     await expect(featcateg).toEqual(data.Gemstonerings.FeaturedRINGS);
 });
 
-Given(/^I Click the Earrings link and image under Featured categories$/, () => {
+Given(/^I Click the Earrings link and image under Featured categories$/, async() => {
 	const featcateg = new Homepage;
-    featcateg.earringFeatured();
+    await featcateg.earringFeatured();
 });
 
 Then(/^I ensure clicking the Earrings link and image redirects to the Earrings page$/, async() => {
@@ -1420,9 +1420,9 @@ Then(/^I ensure clicking the Earrings link and image redirects to the Earrings p
     await expect(featcateg).toEqual(data.Gemstonerings.FeaturedEARRINGS);
 });
 
-Given(/^I Click the Bracelets link and image under Featured categories$/, () => {
+Given(/^I Click the Bracelets link and image under Featured categories$/, async() => {
 	const featcateg = new Homepage;
-    featcateg.braceletsFeatured();
+    await featcateg.braceletsFeatured();
 });
 
 Then(/^I ensure clicking the Bracelets link and image redirects to the Bracelets page$/, async() => {
@@ -1430,9 +1430,9 @@ Then(/^I ensure clicking the Bracelets link and image redirects to the Bracelets
     await expect(featcateg).toEqual(data.Gemstonerings.FeaturedBRACELETS);
 });
 
-Given(/^I Click the Necklaces link and image under Featured categories$/, () => {
+Given(/^I Click the Necklaces link and image under Featured categories$/, async() => {
 	const featcateg = new Homepage;
-    featcateg.necklacesFeatured();
+    await featcateg.necklacesFeatured();
 });
 
 Then(/^I ensure clicking the Necklaces link and image redirects to the Necklaces page$/, async() => {
@@ -1441,9 +1441,9 @@ Then(/^I ensure clicking the Necklaces link and image redirects to the Necklaces
 });
 
 
-Given(/^I Click the Men's rings link and image under Featured categories$/, () => {
+Given(/^I Click the Men's rings link and image under Featured categories$/, async() => {
 	const featcateg = new Homepage;
-    featcateg.mensRingFeatured();
+    await featcateg.mensRingFeatured();
 });
 
 Then(/^I ensure clicking the Men's link and image redirects to the Men's page$/,async () => {
@@ -1451,9 +1451,9 @@ Then(/^I ensure clicking the Men's link and image redirects to the Men's page$/,
     await expect(featcateg).toEqual(data.Gemstonerings.FeaturedMENsRINGS);
 });
 
-Given(/^I Click the Eternity bands link and image under Featured categories$/, () => {
+Given(/^I Click the Eternity bands link and image under Featured categories$/, async() => {
 	const featcateg = new Homepage;
-    featcateg.eternitybandsFeatured();
+    await featcateg.eternitybandsFeatured();
 });
 
 Then(/^I ensure clicking the Eternity bands link and image redirects to the Eternity bands page$/, async() => {
@@ -1461,14 +1461,14 @@ Then(/^I ensure clicking the Eternity bands link and image redirects to the Eter
     await expect(featcateg).toEqual(data.Gemstonerings.FeaturedETERNITYBANDS);
 });
 
-Given(/^I move to the Tell Her Its Forever section and text$/, () => {
+Given(/^I move to the Tell Her Its Forever section and text$/, async() => {
 	const tellher = new Homepage;
-    tellher.tellHerSection();
+    await tellher.tellHerSection();
 });
 
-When(/^I click the GIA Natural Diamonds link$/, () => {
+When(/^I click the GIA Natural Diamonds link$/, async() => {
 	const tellher = new Homepage;
-    tellher.tellHerGia();
+    await tellher.tellHerGia();
 });
 
 Then(/^I ensure clicking the GIA Natural Diamonds link redirects to the Make Your Diamond Engagement rings page$/,async () => {
@@ -1477,9 +1477,9 @@ Then(/^I ensure clicking the GIA Natural Diamonds link redirects to the Make You
 });
 
 
-Given(/^I Click the IGI Lab Diamonds link$/, () => {
+Given(/^I Click the IGI Lab Diamonds link$/, async() => {
     const tellher = new Homepage;
-    tellher.tellHerIgi();
+    await tellher.tellHerIgi();
 });
 
 Then(/^I ensure clicking the IGI Lab Diamonds link redirects to the Make Your lab Diamond Engagement rings page$/,async () => {
@@ -1487,9 +1487,9 @@ Then(/^I ensure clicking the IGI Lab Diamonds link redirects to the Make Your la
     await expect(tellher).toEqual(data.Gemstonerings.IGIlabdiamonds);
 });
 
-Given(/^I Click the Beautiful handcrafted link$/, () => {
+Given(/^I Click the Beautiful handcrafted link$/, async() => {
 	const tellher = new Homepage;
-    tellher.tellHerBeautiful();
+    await tellher.tellHerBeautiful();
 });
 
 Then(/^I ensure clicking the Beautiful handcrafted link redirects to the Make Your Diamond Engagement rings page$/,async () => {
@@ -1498,9 +1498,9 @@ Then(/^I ensure clicking the Beautiful handcrafted link redirects to the Make Yo
 });
 
 //Scenario - 72
-Given(/^I select the Shop Now link under Birthstone Collections$/, () => {
+Given(/^I select the Shop Now link under Birthstone Collections$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickbirthstoneCollection();
+    await birthStoneCollection.clickbirthstoneCollection();
 });
 
 
@@ -1522,9 +1522,9 @@ Then(/^I ensure the Birthstone Jewelry Guide text and the Birthstone text of mon
 });
 
 //Scenario - 73
-When(/^I click the Check Your Relationship gemstone link$/, () => {
+When(/^I click the Check Your Relationship gemstone link$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickCheckYourGemstone();
+    await birthStoneCollection.clickCheckYourGemstone();
 });
 
 
@@ -1536,27 +1536,27 @@ Then(/^I ensure it redirects to the expected page and the Discover your Relation
 });
 
 //Scenario - 74
-When(/^I select the Month from the Your birth month and day dropdown$/, () => {
+When(/^I select the Month from the Your birth month and day dropdown$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickYourBirthMonth();
+    await birthStoneCollection.clickYourBirthMonth();
 });
 
 
-When(/^I select the Day from the Your birth month and day dropdown$/, () => {
+When(/^I select the Day from the Your birth month and day dropdown$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickYourBirthDate();
+    await birthStoneCollection.clickYourBirthDate();
 });
 
 
-When(/^I select the Month from the Your Partner's birth month and day dropdown$/, () => {
+When(/^I select the Month from the Your Partner's birth month and day dropdown$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickYourPartnerBirthMonth();
+    await birthStoneCollection.clickYourPartnerBirthMonth();
 });
 
 
-When(/^I select the Day from the Your Partner's birth month and day dropdown$/, () => {
+When(/^I select the Day from the Your Partner's birth month and day dropdown$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickYourPartnerBirthDate();
+    await birthStoneCollection.clickYourPartnerBirthDate();
 });
 
 
@@ -1583,15 +1583,15 @@ Then(/^I ensure the Share Results section and Email to yourself or your partner 
 });
 
 
-When(/^I enter the respective mail in the Email to yourself or your partner$/, () => {
+When(/^I enter the respective mail in the Email to yourself or your partner$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.enterPartnersEmail();
+    await birthStoneCollection.enterPartnersEmail();
 });
 
 
-When(/^I click the send button in the Email field$/, () => {
+When(/^I click the send button in the Email field$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickSendButton();
+    await birthStoneCollection.clickSendButton();
 });
 
 
@@ -1609,55 +1609,55 @@ Then(/^I ensure the Shop Gemstone Rings,necklaces and earrings are present$/, as
 });
 
 
-When(/^I click the Shop Gemstone Rings$/, () => {
+When(/^I click the Shop Gemstone Rings$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickShopZodiacGemstoneRings();
+    await birthStoneCollection.clickShopZodiacGemstoneRings();
 });
 
 
 Then(/^I ensure clicking the Shop Gemstone Rings redirects to the respective page$/, async() => {
 	const birthStoneCollection = await browser.getUrl();
     await expect(birthStoneCollection).toEqual(data.SectionsHomepage.ZodiacGemstoneRings);
-    browser.back();
+    await browser.back();
 });
 
 
-When(/^I click the Shop Gemstone Necklaces$/, () => {
+When(/^I click the Shop Gemstone Necklaces$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickShopZodiacGemstoneNecklaces();
-    BrowserUtil.wait(5);
+    await birthStoneCollection.clickShopZodiacGemstoneNecklaces();
+    await BrowserUtil.wait(5);
 });
 
 
 Then(/^I ensure clicking the Shop Gemstone Necklaces redirects to the respective page$/, async() => {
 	const birthStoneCollection = await browser.getUrl();
     await expect(birthStoneCollection).toEqual(data.SectionsHomepage.ZodiacGemstoneNecklaces);
-    browser.back();
+    await browser.back();
 });
 
 
-When(/^I click the Shop Gemstone Earrings$/, () => {
+When(/^I click the Shop Gemstone Earrings$/, async() => {
 	const birthStoneCollection = new Homepage;
-    birthStoneCollection.clickShopZodiacGemstoneEarrings();
+    await birthStoneCollection.clickShopZodiacGemstoneEarrings();
 });
 
 
 Then(/^I ensure clicking the Shop Gemstone Earrings redirects to the respective page$/, async() => {
 	const birthStoneCollection = await browser.getUrl();
     await expect(birthStoneCollection).toEqual(data.SectionsHomepage.ZodiacGemstoneEarrings);
-    browser.back();
+    await browser.back();
 });
 
 
-Given(/^I move to the Diamond Shape section text$/, () => {
+Given(/^I move to the Diamond Shape section text$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.scrollToShopByShape();
+    await shopByShape.scrollToShopByShape();
 });
 
 
-When(/^I Click the Round cut Diamond shape$/, () => {
+When(/^I Click the Round cut Diamond shape$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.selectRoundCut();
+    await shopByShape.selectRoundCut();
 });
 
 
@@ -1667,9 +1667,9 @@ Then(/^I ensure clicking the Round cut Diamond shape redirects to the Make Your 
 });
 
 //Scenario - 99
-Given(/^I Click the Oval cut Diamond shape$/, () => {
+Given(/^I Click the Oval cut Diamond shape$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.selectOvalCut();
+    await shopByShape.selectOvalCut();
 });
 
 
@@ -1679,9 +1679,9 @@ Then(/^I ensure clicking the Oval cut Diamond shape redirects to the Make Your D
 });
 
 //Scenario - 100
-Given(/^I Click the Cushion cut Diamond shape$/, () => {
+Given(/^I Click the Cushion cut Diamond shape$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.selectCushionCut();
+    await shopByShape.selectCushionCut();
 });
 
 
@@ -1691,9 +1691,9 @@ Then(/^I ensure clicking the Cushion cut Diamond shape redirects to the Make You
 });
 
 //Scenario - 101
-Given(/^I Click the Princess cut Diamond shape$/, () => {
+Given(/^I Click the Princess cut Diamond shape$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.selectPrincessCut();
+    await shopByShape.selectPrincessCut();
 });
 
 
@@ -1703,9 +1703,9 @@ Then(/^I ensure clicking the Princess cut Diamond shape redirects to the Make Yo
 });
 
 //Scenario - 102
-Given(/^I Click the Emerald cut Diamond shape$/, () => {
+Given(/^I Click the Emerald cut Diamond shape$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.selectEmeraldCut();
+    await shopByShape.selectEmeraldCut();
 });
 
 
@@ -1715,9 +1715,9 @@ Then(/^I ensure clicking the Emerald cut Diamond shape redirects to the Make You
 });
 
 //Scenario - 103
-Given(/^I Click the Heart cut Diamond shape$/, () => {
+Given(/^I Click the Heart cut Diamond shape$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.selectHeartCut();
+    await shopByShape.selectHeartCut();
 });
 
 
@@ -1727,9 +1727,9 @@ Then(/^I ensure clicking the Heart cut Diamond shape redirects to the Make Your 
 });
 
 //Scenario - 104
-Given(/^I Click the Pear cut Diamond shape$/, () => {
+Given(/^I Click the Pear cut Diamond shape$/, async() => {
 	const shopByShape = new Homepage;
-    shopByShape.selectPearCut();
+    await shopByShape.selectPearCut();
 });
 
 
@@ -1739,15 +1739,15 @@ Then(/^I ensure clicking the Pear cut Diamond shape redirects to the Make Your D
 });
 
 //Scenario - 105
-Given(/^I move to the Men's Ring section$/, () => {
+Given(/^I move to the Men's Ring section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.scrollToMensRing();
+    await homepageSections.scrollToMensRing();
 });
 
 
-When(/^I Click the See Men's Ring button in the Homepage$/, () => {
+When(/^I Click the See Men's Ring button in the Homepage$/, async() => {
     const homepageSections = new Homepage;
-    homepageSections.clickSeeMensRing();
+    await homepageSections.clickSeeMensRing();
 });
 
 
@@ -1757,15 +1757,15 @@ Then(/^I ensure the See Men's Ring button redirects to the Men's rings page$/, a
 });
 
 //Scenario - 106
-Given(/^I move to the Gifts for her section$/, () => {
+Given(/^I move to the Gifts for her section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.scrollToSeeGiftsForHer();
+    await homepageSections.scrollToSeeGiftsForHer();
 });
 
 
-When(/^I Click the See Gifts for her button in the Homepage$/, () => {
+When(/^I Click the See Gifts for her button in the Homepage$/, async() => {
     const homepageSections = new Homepage;
-    homepageSections.clickSeeGiftsForHer();
+    await homepageSections.clickSeeGiftsForHer();
 });
 
 
@@ -1775,15 +1775,15 @@ Then(/^I ensure the See Gifts for her button redirects to the Ruby rings page$/,
 });
 
 //Scenario - 107
-Given(/^I move to the Discover Diamondere section$/, () => {
+Given(/^I move to the Discover Diamondere section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.scrollToDiscoverDiamondere();
+    await homepageSections.scrollToDiscoverDiamondere();
 });
 
 
-When(/^I Click the Our legacy button under the Discover Diamondere section$/, () => {
+When(/^I Click the Our legacy button under the Discover Diamondere section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickOurLegacy();
+    await homepageSections.clickOurLegacy();
 });
 
 
@@ -1793,15 +1793,15 @@ Then(/^I ensure the Our legacy button redirects to the respective page$/, async(
 });
 
 //Scenario - 108
-Given(/^I move to the Let us help guide you section$/, () => {
+Given(/^I move to the Let us help guide you section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.scrollToLetushelpguideyou();
+    await homepageSections.scrollToLetushelpguideyou();
 });
 
 
-Given(/^I Click the blog articles link under the the Let us help guide you section$/, () => {
+Given(/^I Click the blog articles link under the the Let us help guide you section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickBlogArticles();
+    await homepageSections.clickBlogArticles();
 });
 
 
@@ -1811,9 +1811,9 @@ Then(/^I Ensure blog articles link is redirecting to the Diamondere blog page$/,
 });
 
 //Scenario - 109
-When(/^I Click the learn more link under Lab Vs. Natural Diamond Guide present in the Let us help guide you section$/, () => {
+When(/^I Click the learn more link under Lab Vs. Natural Diamond Guide present in the Let us help guide you section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clicklabVsNaturalDiamondGuide();
+    await homepageSections.clicklabVsNaturalDiamondGuide();
 });
 
 
@@ -1823,9 +1823,9 @@ Then(/^I Ensure learn more link under Lab Vs. Natural Diamond Guide redirecting 
 });
 
 //Scenario - 110
-When(/^I Click the learn more link under the Toi et Moi Ring present in Let us help guide you section$/, () => {
+When(/^I Click the learn more link under the Toi et Moi Ring present in Let us help guide you section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickToiEtMoiGuide();
+    await homepageSections.clickToiEtMoiGuide();
 });
 
 
@@ -1836,9 +1836,9 @@ Then(/^I Ensure learn more link under the Toi et Moi Ring is redirecting to the 
 
 
 //Scenario - 111
-When(/^I Click the learn more link under the Engagement Ring Cost Guide present in Let us help guide you section$/, () => {
+When(/^I Click the learn more link under the Engagement Ring Cost Guide present in Let us help guide you section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickEngagementRingCostGuide();
+    await homepageSections.clickEngagementRingCostGuide();
 });
 
 
@@ -1848,15 +1848,15 @@ Then(/^I Ensure learn more link under Engagement Ring Cost Guide is redirecting 
 });
 
 //Scenario - 112
-Given(/^I move to Experience the Diamondere Difference section$/, () => {
+Given(/^I move to Experience the Diamondere Difference section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.scrollToDiamondereDifference();
+    await homepageSections.scrollToDiamondereDifference();
 });
 
 
-When(/^I click the Why Diamondere link$/, () => {
+When(/^I click the Why Diamondere link$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickWhyDiamondereLink();
+    await homepageSections.clickWhyDiamondereLink();
 });
 
 
@@ -1867,9 +1867,9 @@ Then(/^I Ensure selecting Why Diamondere link must redirect to the expected page
 
 
 //Scenario - 113
-When(/^I click the See our FAQs link$/, () => {
+When(/^I click the See our FAQs link$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickFAQsLink();
+    await homepageSections.clickFAQsLink();
 });
 
 
@@ -1879,9 +1879,9 @@ Then(/^I Ensure selecting See our FAQs link must redirect to the FAQ page$/, asy
 });
 
 //Scenario - 114
-When(/^I click the Sustainability link$/, () => {
+When(/^I click the Sustainability link$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickSustainabilityLink();
+    await homepageSections.clickSustainabilityLink();
 });
 
 
@@ -1891,9 +1891,9 @@ Then(/^I Ensure selecting Sustainability link must redirect to the expected page
 });
 
 //Scenario - 115
-Given(/^I click the Contact Us link$/, () => {
+Given(/^I click the Contact Us link$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickContactUsLink();
+    await homepageSections.clickContactUsLink();
 });
 
 
@@ -1903,9 +1903,9 @@ Then(/^I Ensure selecting Contact us link must redirect to the expected page$/, 
 });
 
 //Scenario - 116
-Given(/^I move to Find style that inspires you section$/, () => {
+Given(/^I move to Find style that inspires you section$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.scrollToFindStyle();
+    await homepageSections.scrollToFindStyle();
 });
 
 
@@ -1919,9 +1919,9 @@ Then(/^I ensure the five images are present$/, async() => {
 });
 
 
-When(/^I click an image under Find style that inspires you$/, () => {
+When(/^I click an image under Find style that inspires you$/, async() => {
 	const homepageSections = new Homepage;
-    homepageSections.clickRubyRingImage();
+    await homepageSections.clickRubyRingImage();
 });
 
 
@@ -1942,105 +1942,105 @@ Then(/^I ensure the About us, Education, Policies, Customer care and Join the Di
 });
 
 
-Given(/^I move to footer section$/, () => {
+Given(/^I move to footer section$/, async() => {
     const footer = new Homepage;
-    footer.movetofooter();
+    await footer.movetofooter();
 });
 
 
-When(/^I click the text link Our Legacy$/, () => {
+When(/^I click the text link Our Legacy$/, async() => {
     const footerourlegacy = new Homepage;
-    footerourlegacy.selectourlegacy();
+    await footerourlegacy.selectourlegacy();
 });
 
 
-When(/^I click the Why Diamondere link in footer$/, () => {
+When(/^I click the Why Diamondere link in footer$/, async() => {
     const footerwhydiamondere = new Homepage;
-    footerwhydiamondere.selectwhydiamondere();
+    await footerwhydiamondere.selectwhydiamondere();
 });
 
 
-When(/^I click the Sustainability link in footer$/, () => {
+When(/^I click the Sustainability link in footer$/, async() => {
     const footersustainability = new Homepage;
-    footersustainability.selectsustainability();
+    await footersustainability.selectsustainability();
 });
 
 
-When(/^I click the Ring Reviews text link$/, () => {
+When(/^I click the Ring Reviews text link$/, async() => {
     const footerringsreview = new Homepage;
-    footerringsreview.selectringsreview();
+    await footerringsreview.selectringsreview();
 });
 
 
-When(/^I click the Engagement Reviews text link$/, () => {
+When(/^I click the Engagement Reviews text link$/, async() => {
     const footerengagementreview = new Homepage;
-    footerengagementreview.selectengagementreview();
+    await footerengagementreview.selectengagementreview();
 });
 
 
-When(/^I click the Men's Ring Reviews text link$/, () => {
+When(/^I click the Men's Ring Reviews text link$/, async() => {
     const footermensringreview = new Homepage;
-    footermensringreview.selectmensringreview();
+    await footermensringreview.selectmensringreview();
 });
 
 
-When(/^I click the text link Diamond Guide$/, () => {
+When(/^I click the text link Diamond Guide$/, async() => {
     const footerdiamondguide = new Homepage;
-    footerdiamondguide.selectdiamondguide();
+    await footerdiamondguide.selectdiamondguide();
 });
 
 
-When(/^I click the text link Colored Gems Guide$/, () => {
+When(/^I click the text link Colored Gems Guide$/, async() => {
     const footercolorgemguide = new Homepage;
-    footercolorgemguide.selectcolorgemguide();
+    await footercolorgemguide.selectcolorgemguide();
 });
 
 
-When(/^I click the text link Birthstones Guide$/, () => {
+When(/^I click the text link Birthstones Guide$/, async() => {
     const footerbirthstoneguide = new Homepage;
-    footerbirthstoneguide.selectbirthstoneguide();
+    await footerbirthstoneguide.selectbirthstoneguide();
 });
 
 
-When(/^I click the text link Metal Guide$/, () => {
+When(/^I click the text link Metal Guide$/, async() => {
     const footermetalguide = new Homepage;
-    footermetalguide.selectmetalguide();
+    await footermetalguide.selectmetalguide();
 });
 
 
-When(/^I click the text link Size Guide$/, () => {
+When(/^I click the text link Size Guide$/, async() => {
     const footersizeguide = new Homepage;
-    footersizeguide.selectsizeguide();
+    await footersizeguide.selectsizeguide();
 });
 
 
-When(/^I click the text link Free Shipping$/, () => {
+When(/^I click the text link Free Shipping$/, async() => {
     const footerfreeshipping = new Homepage;
-    footerfreeshipping.selectfreeshipping();
+    await footerfreeshipping.selectfreeshipping();
 });
 
 
-When(/^I click the text link Free 100 Day Returns in footer$/, () => {
+When(/^I click the text link Free 100 Day Returns in footer$/, async() => {
     const footerfreereturn = new Homepage;
-    footerfreereturn.selectfreereturn();
+    await footerfreereturn.selectfreereturn();
 });
 
 
-When(/^I click the text link Free Warranty$/, () => {
+When(/^I click the text link Free Warranty$/, async() => {
     const footerfreewarranty = new Homepage;
-    footerfreewarranty.selectfreewarranty();
+    await footerfreewarranty.selectfreewarranty();
 });
 
 
-When(/^I click the text link Privacy Policy$/, () => {
+When(/^I click the text link Privacy Policy$/, async() => {
     const footerprivacypolicy = new Homepage;
-    footerprivacypolicy.selectprivacypolicy();
+    await footerprivacypolicy.selectprivacypolicy();
 });
 
 
-When(/^I click the text link Terms & Conditions$/, () => {
+When(/^I click the text link Terms & Conditions$/, async() => {
     const footertermsandcondition = new Homepage;
-    footertermsandcondition.selecttermsandcondition();
+    await footertermsandcondition.selecttermsandcondition();
 });
 
 
@@ -2140,7 +2140,7 @@ Then(/^I ensure clicking the text link Terms & Conditions redirects to the respe
 });
 
 
-Given(/^I click the text link Accessibility$/, () => {
+Given(/^I click the text link Accessibility$/, async() => {
 	const footer = new Homepage;
 	footer.selectAccessibility();
 });
@@ -2153,9 +2153,9 @@ Then(/^I ensure clicking the text link Accessibility redirects to the respective
 });
 
 
-Given(/^I click the Contact Us link in footer$/, () => {
+Given(/^I click the Contact Us link in footer$/, async() => {
 	const footer = new Homepage;
-	footer.selectContactUs();
+	await footer.selectContactUs();
 });
 
 
@@ -2165,9 +2165,9 @@ Then(/^I Ensure selecting Contact us link in footer must redirect to the expecte
 });
 
 
-Given(/^I click the See our FAQs link in footer$/, () => {
+Given(/^I click the See our FAQs link in footer$/, async() => {
 	const footer = new Homepage;
-	footer.selectFAQs();
+	await footer.selectFAQs();
 });
 
 
@@ -2177,9 +2177,9 @@ Then(/^I Ensure selecting See our FAQs link in footer must redirect to the FAQ p
 });
 
 
-Given(/^I click the text link Financing Options$/, () => {
+Given(/^I click the text link Financing Options$/, async() => {
 	const footer = new Homepage;
-	footer.selectFinancingoptions();
+	await footer.selectFinancingoptions();
 });
 
 
@@ -2189,9 +2189,9 @@ Then(/^I ensure clicking the text link Financing Options redirects to the respec
 });
 
 
-Given(/^I click the text link Free Re-Sizing$/, () => {
+Given(/^I click the text link Free Re-Sizing$/, async() => {
 	const footer = new Homepage;
-	footer.selectFreeresizing();
+	await footer.selectFreeresizing();
 });
 
 
@@ -2201,9 +2201,9 @@ Then(/^I ensure clicking the text link Free Re-Sizing redirects to the respectiv
 });
 
 
-Given(/^I click the text link Caring For Your Jewelry$/, () => {
+Given(/^I click the text link Caring For Your Jewelry$/, async() => {
 	const footer = new Homepage;
-	footer.selectCaringforjewelry();
+	await footer.selectCaringforjewelry();
 });
 
 
@@ -2213,15 +2213,15 @@ Then(/^I ensure clicking the text link Caring For Your Jewelry redirects to the 
 });
 
 
-Given(/^I move to the Join the Diamondere Community section$/, () => {
+Given(/^I move to the Join the Diamondere Community section$/, async() => {
 	const footer = new Homepage;
-	footer.jointheDiamondere();
+	await footer.jointheDiamondere();
 });
 
 
-When(/^I click the Email address TextBox$/, () => {
+When(/^I click the Email address TextBox$/, async() => {
 	const footer = new Homepage;
-	footer.selectemailaddress();
+	await footer.selectemailaddress();
 });
 
 
@@ -2231,9 +2231,9 @@ Then(/^I ensure clicking Email address TextBox redirects to the respective page$
 });
 
 
-Given(/^I click the text link Diamondere Blog$/, () => {
+Given(/^I click the text link Diamondere Blog$/, async() => {
 	const footer = new Homepage;
-	footer.selectdiamondereblog();
+	await footer.selectdiamondereblog();
 });
 
 
@@ -2243,9 +2243,9 @@ Then(/^I ensure clicking the text link Diamondere Blog redirects to the respecti
 });
 
 
-Given(/^I click the Instagram Icon$/, () => {
+Given(/^I click the Instagram Icon$/, async() => {
 	const footer = new Homepage;
-	footer.selectInstaicon();
+	await footer.selectInstaicon();
 });
 
 
@@ -2255,9 +2255,9 @@ Then(/^I ensure clicking the Instagram Icon redirects to the respective page$/, 
 });
 
 
-Given(/^I click the Facebook icon$/, () => {
+Given(/^I click the Facebook icon$/, async() => {
 	const footer = new Homepage;
-	footer.selectfbicon();
+	await footer.selectfbicon();
 });
 
 
@@ -2267,9 +2267,9 @@ Then(/^I ensure clicking the Facebook icon redirects to the respective page$/, a
 });
 
 
-Given(/^I click the Pinterest icon$/, () => {
+Given(/^I click the Pinterest icon$/, async() => {
 	const footer = new Homepage;
-	footer.selectPinteresticon();
+	await footer.selectPinteresticon();
 });
 
 
@@ -2292,9 +2292,9 @@ Then(/^I ensure all the payment options are present$/, async() => {
 
 });
 
-When(/^I click the Accredited icon in the payment section$/, () => {
+When(/^I click the Accredited icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickAccredited();
+	await footer.clickAccredited();
 });
 
 Then(/^I ensure clicking the Accredited icon redirects to the Accredited business page$/, async() => {
@@ -2302,9 +2302,9 @@ Then(/^I ensure clicking the Accredited icon redirects to the Accredited busines
 	await expect(footer).toEqual(data.Payments.AccreditedLinks);
 });
 
-When(/^I click the A plus icon in the payment section$/, () => {
+When(/^I click the A plus icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickAplus();
+	await footer.clickAplus();
 });
 
 Then(/^I ensure clicking the A plus icon redirects to the Accredited business page$/, async() => {
@@ -2312,9 +2312,9 @@ Then(/^I ensure clicking the A plus icon redirects to the Accredited business pa
 	await expect(footer).toEqual(data.Payments.AccreditedLinks);
 });
 
-When(/^I click the Norton icon in the payment section$/, () => {
+When(/^I click the Norton icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickNortonDigicert();
+	await footer.clickNortonDigicert();
 });
 
 Then(/^I ensure clicking the Norton icon redirects to the Norton page$/,async () => {
@@ -2322,9 +2322,9 @@ Then(/^I ensure clicking the Norton icon redirects to the Norton page$/,async ()
 	await expect(footer).toEqual(data.Payments.Norton);
 });
 
-When(/^I click the Stripe icon in the payment section$/, () => {
+When(/^I click the Stripe icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickStripe();
+	await footer.clickStripe();
 });
 
 Then(/^I ensure clicking the Stripe icon redirects to the stripe page$/, async() => {
@@ -2332,9 +2332,9 @@ Then(/^I ensure clicking the Stripe icon redirects to the stripe page$/, async()
 	await expect(footer).toEqual(data.Payments.Stripe);
 });
 
-When(/^I click the paypal icon in the payment section$/, () => {
+When(/^I click the paypal icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickPaypal();
+	await footer.clickPaypal();
 });
 
 Then(/^I ensure clicking the paypal icon redirects to the paypal page$/, async() => {
@@ -2342,9 +2342,9 @@ Then(/^I ensure clicking the paypal icon redirects to the paypal page$/, async()
 	await expect(footer).toEqual(data.Payments.paypal);
 });
 
-When(/^I click the American express icon in the payment section$/, () => {
+When(/^I click the American express icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickAmericanexp();
+	await footer.clickAmericanexp();
 });
 
 Then(/^I ensure clicking the American express icon redirects to the American express page$/, async() => {
@@ -2352,9 +2352,9 @@ Then(/^I ensure clicking the American express icon redirects to the American exp
 	await expect(footer).toEqual(data.Payments.AmericanExpress);
 });
 
-When(/^I click the Master card icon in the payment section$/, () => {
+When(/^I click the Master card icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickMastercard();
+	await footer.clickMastercard();
 });
 
 Then(/^I ensure clicking the Master card icon redirects to the Master card page$/,async () => {
@@ -2362,9 +2362,9 @@ Then(/^I ensure clicking the Master card icon redirects to the Master card page$
 	await expect(footer).toEqual(data.Payments.MasterCard);
 });
 
-When(/^I click the Diners club icon in the payment section$/, () => {
+When(/^I click the Diners club icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickDinersclub();
+	await footer.clickDinersclub();
 });
 
 Then(/^I ensure clicking the Diners club icon redirects to the Diners club page$/, async() => {
@@ -2372,9 +2372,9 @@ Then(/^I ensure clicking the Diners club icon redirects to the Diners club page$
 	await expect(footer).toEqual(data.Payments.DinersClucb);
 });
 
-When(/^I click the Affirm icon in the payment section$/, () => {
+When(/^I click the Affirm icon in the payment section$/, async() => {
 	const footer = new Homepage;
-	footer.clickAffirm();
+	await footer.clickAffirm();
 });
 
 Then(/^I ensure clicking the Affirm icon redirects to the Affirm page$/, async() => {
@@ -2390,7 +2390,7 @@ Then(/^I ensure the copyrights text is present$/, async() => {
 
 When(/^I click the Disclaimer link in the footer section$/, async() => {
 	const footer = new Homepage;
-	footer.clickDisclaimer();
+	await footer.clickDisclaimer();
 });
 
 Then(/^I ensure clicking the disclaimer link redirects to the disclaimer page of Diamondere$/, async() => {
