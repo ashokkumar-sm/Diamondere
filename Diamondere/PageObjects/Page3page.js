@@ -1422,378 +1422,376 @@ class productdetailspage {
         return $('//div[contains(text(),"Bracelet Length")]')
     }
 
-    selecthome() {
-        ElementUtil.waitForClickable(this.txtHOMEbreadcrumb, 25, "wait for page load")
-        ElementUtil.click(this.txtHOMEbreadcrumb, "Click Home")
-        BrowserUtil.wait(5);
+    async selecthome() {
+        await ElementUtil.waitForClickable(this.txtHOMEbreadcrumb, 25, "wait for page load")
+        await ElementUtil.click(this.txtHOMEbreadcrumb, "Click Home")
+        await BrowserUtil.wait(5);
     }
-    selectcategory() {
-        ElementUtil.waitForClickable(this.txtRINGSbreadcrumb, 25, "wait for page load")
-        ElementUtil.click(this.txtRINGSbreadcrumb, "Click Category")
-        BrowserUtil.wait(5);
-        ElementUtil.waitForDisplayed(this.sctnFilterTab, 50, "wait for page load")
+    async selectcategory() {
+        await ElementUtil.waitForClickable(this.txtRINGSbreadcrumb, 25, "wait for page load")
+        await ElementUtil.click(this.txtRINGSbreadcrumb, "Click Category")
+        await BrowserUtil.wait(5);
+        await ElementUtil.waitForDisplayed(this.sctnFilterTab, 50, "wait for page load")
     }
-    selectgemstone() {
-        ElementUtil.waitForClickable(this.txtRUBYRINGSbreadcrumb, 25, "wait for page load")
-        ElementUtil.click(this.txtRUBYRINGSbreadcrumb, "Click Gemstone")
-        BrowserUtil.wait(5);
-        ElementUtil.waitForDisplayed(this.sctnFilterTab, 50, "wait for page load")
+    async selectgemstone() {
+        await ElementUtil.waitForClickable(this.txtRUBYRINGSbreadcrumb, 25, "wait for page load")
+        await ElementUtil.click(this.txtRUBYRINGSbreadcrumb, "Click Gemstone")
+        await BrowserUtil.wait(5);
+        await ElementUtil.waitForDisplayed(this.sctnFilterTab, 50, "wait for page load")
     }
-    clickvideo() {
-        ElementUtil.click(this.lnkproductvideo, "click product video")
+    async clickvideo() {
+        await ElementUtil.click(this.lnkproductvideo, "click product video")
     }
-    clickcrossbutton() {
-        ElementUtil.click(this.crossbutton, "click cross button")
+    async clickcrossbutton() {
+        await ElementUtil.click(this.crossbutton, "click cross button")
     }
-    clickmailicon() {
-        ElementUtil.click(this.mailicon, "click mailicon")
+    async clickmailicon() {
+        await ElementUtil.click(this.mailicon, "click mailicon")
     }
-    clickpinteresticon() {
-        ElementUtil.click(this.pinteresticon, "click pinteresticon")
+    async clickpinteresticon() {
+        await ElementUtil.click(this.pinteresticon, "click pinteresticon")
     }
-    clickfacebookicon() {
-        ElementUtil.click(this.facebookicon, "click facebookicon")
+    async clickfacebookicon() {
+        await ElementUtil.click(this.facebookicon, "click facebookicon")
     }
-    clickchangecentrestone() {
-        ElementUtil.waitForClickable(this.lnkcentrestonedropdown, 50, "wait for page load")
-        ElementUtil.click(this.lnkcentrestonedropdown, "Click changecenterstonedropdown")
+    async clickchangecentrestone() {
+        await ElementUtil.waitForClickable(this.lnkcentrestonedropdown, 50, "wait for page load")
+        await ElementUtil.click(this.lnkcentrestonedropdown, "Click changecenterstonedropdown")
     }
-    clickchangeearringcentrestone() {
-        ElementUtil.waitForClickable(this.Elnkcentrestonedropdown, 15, "wait for page load")
-        ElementUtil.click(this.Elnkcentrestonedropdown, "Click changeearring centerstonedropdown")
+    async clickchangeearringcentrestone() {
+        await ElementUtil.waitForClickable(this.Elnkcentrestonedropdown, 15, "wait for page load")
+        await ElementUtil.click(this.Elnkcentrestonedropdown, "Click changeearring centerstonedropdown")
     }
-    clickchangemensearringcentrestone() {
-        ElementUtil.waitForClickable(this.MElnkcentrestonedropdown, 15, "wait for page load")
-        ElementUtil.click(this.MElnkcentrestonedropdown, "Click change mensearring centerstonedropdown")
+    async clickchangemensearringcentrestone() {
+        await ElementUtil.waitForClickable(this.MElnkcentrestonedropdown, 15, "wait for page load")
+        await ElementUtil.click(this.MElnkcentrestonedropdown, "Click change mensearring centerstonedropdown")
     }
-    clickcentrestonevideo() {
-        ElementUtil.waitForClickable(this.centrestonevideo, 15, "wait for page load")
-        ElementUtil.click(this.centrestonevideo, "click centrestonevideo")
+    async clickcentrestonevideo() {
+        await ElementUtil.waitForClickable(this.centrestonevideo, 15, "wait for page load")
+        await ElementUtil.click(this.centrestonevideo, "click centrestonevideo")
     }
-    clickchangeaccentstones() {
-        ElementUtil.waitForClickable(this.lnkchangeaccentstones, 15, "wait for page load")
-        ElementUtil.click(this.lnkchangeaccentstones, "click accentstonedropdown")
+    async clickchangeaccentstones() {
+        await ElementUtil.waitForClickable(this.lnkchangeaccentstones, 15, "wait for page load")
+        await ElementUtil.click(this.lnkchangeaccentstones, "click accentstonedropdown")
     }
-    clickchangecharmaccentstones() {
-        ElementUtil.waitForClickable(this.lnkchangecharmaccentstones, 15, "wait for page load")
-        ElementUtil.click(this.lnkchangecharmaccentstones, "click accentstonedropdown")
+    async clickchangecharmaccentstones() {
+        await ElementUtil.waitForClickable(this.lnkchangecharmaccentstones, 15, "wait for page load")
+        await ElementUtil.click(this.lnkchangecharmaccentstones, "click accentstonedropdown")
     }
-    clickchangeawaccentstones() {
-        ElementUtil.waitForClickable(this.lnkchangeawaccentstones, 15, "wait for page load")
-        ElementUtil.click(this.lnkchangeawaccentstones, "click accentstonedropdown")
+    async clickchangeawaccentstones() {
+        await ElementUtil.waitForClickable(this.lnkchangeawaccentstones, 15, "wait for page load")
+        await ElementUtil.click(this.lnkchangeawaccentstones, "click accentstonedropdown")
     }
-    clickchangeaccentstone1() {
-        ElementUtil.waitForClickable(this.lnkchangeaccentstone1, 15, "wait for page load")
-        ElementUtil.click(this.lnkchangeaccentstone1, "click accentstonedropdown")
-    }
-
-    clickchangenaccentstone1() {
-        ElementUtil.waitForClickable(this.lnkchangeNaccentstone1, 15, "wait for page load")
-        ElementUtil.click(this.lnkchangeNaccentstone1, "click accentstonedropdown")
+    async clickchangeaccentstone1() {
+        await ElementUtil.waitForClickable(this.lnkchangeaccentstone1, 15, "wait for page load")
+        await ElementUtil.click(this.lnkchangeaccentstone1, "click accentstonedropdown")
     }
 
-    clickchangeaccentstone2() {
-        ElementUtil.waitForClickable(this.lnkchangeaccentstone2, 15, "wait for page load")
-        ElementUtil.click(this.lnkchangeaccentstone2, "click accentstonedropdown")
+    async clickchangenaccentstone1() {
+        await ElementUtil.waitForClickable(this.lnkchangeNaccentstone1, 15, "wait for page load")
+        await ElementUtil.click(this.lnkchangeNaccentstone1, "click accentstonedropdown")
     }
-    clickaccentstonesvideo() {
-        ElementUtil.waitForClickable(this.accentstonesvideo, 15, "wait for page load")
-        ElementUtil.click(this.accentstonesvideo, "click accentstonesvideo")
+
+    async clickchangeaccentstone2() {
+        await ElementUtil.waitForClickable(this.lnkchangeaccentstone2, 15, "wait for page load")
+        await ElementUtil.click(this.lnkchangeaccentstone2, "click accentstonedropdown")
     }
-    clickaccentstone1video() {
-        ElementUtil.waitForClickable(this.accentstone1video, 15, "wait for page load")
-        ElementUtil.click(this.accentstone1video, "click accentstone1video")
+    async clickaccentstonesvideo() {
+        await ElementUtil.waitForClickable(this.accentstonesvideo, 15, "wait for page load")
+        await ElementUtil.click(this.accentstonesvideo, "click accentstonesvideo")
     }
-    clickaccentstone2video() {
-        ElementUtil.waitForClickable(this.accentstone2video, 15, "wait for page load")
-        ElementUtil.click(this.accentstone2video, "click accentstone2video")
+    async clickaccentstone1video() {
+        await ElementUtil.waitForClickable(this.accentstone1video, 15, "wait for page load")
+        await ElementUtil.click(this.accentstone1video, "click accentstone1video")
     }
-    clickchangemetal() {
-        ElementUtil.waitForClickable(this.lnkchangemetal, 15, "wait for page load")
-        ElementUtil.click(this.lnkchangemetal, "click changemetal")
+    async clickaccentstone2video() {
+        await ElementUtil.waitForClickable(this.accentstone2video, 15, "wait for page load")
+        await ElementUtil.click(this.accentstone2video, "click accentstone2video")
     }
-    clickringselect() {
-        ElementUtil.waitForClickable(this.lnkringselect, 50, "wait for page load")
-        ElementUtil.click(this.lnkringselect, "click ring size select")
+    async clickchangemetal() {
+        await ElementUtil.waitForClickable(this.lnkchangemetal, 15, "wait for page load")
+        await ElementUtil.click(this.lnkchangemetal, "click changemetal")
     }
-    clickhisringselect() {
-        ElementUtil.waitForClickable(this.lnkcouplebandhimselect, 15, "wait for page load")
-        ElementUtil.click(this.lnkcouplebandhimselect, "click his ring size select")
+    async clickringselect() {
+        await ElementUtil.waitForClickable(this.lnkringselect, 50, "wait for page load")
+        await ElementUtil.click(this.lnkringselect, "click ring size select")
     }
-    clickchooseringsize() {
-        ElementUtil.waitForClickable(this.boxchoosesize, 15, "wait for page load")
-        ElementUtil.click(this.boxchoosesize, "choose ringsize")
+    async clickhisringselect() {
+        await ElementUtil.waitForClickable(this.lnkcouplebandhimselect, 15, "wait for page load")
+        await ElementUtil.click(this.lnkcouplebandhimselect, "click his ring size select")
     }
-    selectRingSizeDropdown() {
-        ElementUtil.waitForClickable(this.boxchoosesize, 20, "wait for page load")
-        ElementUtil.forceClick(this.boxchoosesize, "choose ringsize")
-        BrowserUtil.wait(5)
+    async clickchooseringsize() {
+        await ElementUtil.waitForClickable(this.boxchoosesize, 15, "wait for page load")
+        await ElementUtil.click(this.boxchoosesize, "choose ringsize")
     }
-    clickchoosehimringsize() {
-        ElementUtil.waitForClickable(this.boxChooseHisringsize, 15, "wait for page load")
-        ElementUtil.click(this.boxChooseHisringsize, "choose him ringsize")
+    async selectRingSizeDropdown() {
+        await ElementUtil.waitForClickable(this.boxchoosesize, 20, "wait for page load")
+        await ElementUtil.forceClick(this.boxchoosesize, "choose ringsize")
+        await BrowserUtil.wait(5)
     }
-    clicklnkengrave() {
-        ElementUtil.waitForClickable(this.lnkEngrave, 50, "wait for page load")
-        ElementUtil.click(this.lnkEngrave, "click engrave dropdown")
+    async clickchoosehimringsize() {
+        await ElementUtil.waitForClickable(this.boxChooseHisringsize, 15, "wait for page load")
+        await ElementUtil.click(this.boxChooseHisringsize, "choose him ringsize")
     }
-    enterengrave() {
-        ElementUtil.sendText(this.specialmessagefield, data.specialmessagetext.text, "Enter special message")
+    async clicklnkengrave() {
+        await ElementUtil.waitForClickable(this.lnkEngrave, 50, "wait for page load")
+        await ElementUtil.click(this.lnkEngrave, "click engrave dropdown")
     }
-    clicklnkmatchingbands() {
-        ElementUtil.waitForClickable(this.lnkviewmatchingbands, 50, "wait for page load")
-        ElementUtil.click(this.lnkviewmatchingbands, "click matchingband link")
+    async enterengrave() {
+        await ElementUtil.sendText(this.specialmessagefield, data.specialmessagetext.text, "Enter special message")
     }
-    clickagaciamatchingbands() {
-        ElementUtil.waitForClickable(this.lnkAgaciaViewDetails, 50, "wait for page load")
-        ElementUtil.mouseHover(this.lnkAgaciaViewDetails, "Hover view details")
-        BrowserUtil.wait(2)
-        ElementUtil.click(this.lnkAgaciaViewDetails, "click matchingband link")
-        BrowserUtil.wait(2)
-        let bandPopup = ElementUtil.isVisible(this.popupMatchingBand, "Check dropdown")
+    async clicklnkmatchingbands() {
+        await ElementUtil.waitForClickable(this.lnkviewmatchingbands, 50, "wait for page load")
+        await ElementUtil.click(this.lnkviewmatchingbands, "click matchingband link")
+    }
+    async clickagaciamatchingbands() {
+        await ElementUtil.waitForClickable(this.lnkAgaciaViewDetails, 50, "wait for page load")
+        await ElementUtil.mouseHover(this.lnkAgaciaViewDetails, "Hover view details")
+        await BrowserUtil.wait(2)
+        await ElementUtil.click(this.lnkAgaciaViewDetails, "click matchingband link")
+        await BrowserUtil.wait(2)
+        let bandPopup = await ElementUtil.isVisible(this.popupMatchingBand, "Check dropdown")
         if (bandPopup != true) {
-            ElementUtil.forceClick(this.lnkAgaciaViewDetails, "Click Select")
+            await ElementUtil.forceClick(this.lnkAgaciaViewDetails, "Click Select")
         }
-        BrowserUtil.wait(2)
-        //ElementUtil.waitForDisplayed(this.popupMatchingBand, 40, "wait for page load")
+        await BrowserUtil.wait(2)
+        //await ElementUtil.waitForDisplayed(this.popupMatchingBand, 40, "wait for page load")
     }
-    movetoproductdetailsection() {
-        ElementUtil.scrollIntoView(this.productdetailssection, "move to productdetails section")
+    async movetoproductdetailsection() {
+        await ElementUtil.scrollIntoView(this.productdetailssection, "move to productdetails section")
     }
-    movetocenterstonesection() {
-        ElementUtil.scrollIntoView(this.sectioncenterstone, "move to centerstone section")
+    async movetocenterstonesection() {
+        await ElementUtil.scrollIntoView(this.sectioncenterstone, "move to centerstone section")
     }
-    clickcenteremarldprecious() {
+    async clickcenteremarldprecious() {
 
-        ElementUtil.click(this.lnkimgcentreemerald, "click emerald")
+        await ElementUtil.click(this.lnkimgcentreemerald, "click emerald")
     }
-    clickcenterheirloomquality() {
-        ElementUtil.waitForClickable(this.btnqualityHeirloom, 50, "wait for page load")
-        ElementUtil.mouseHover(this.btnqualityHeirloom, "hover heirloom button")
-        ElementUtil.click(this.btnqualityHeirloom, "click heirloom quality")
+    async clickcenterheirloomquality() {
+        await ElementUtil.waitForClickable(this.btnqualityHeirloom, 50, "wait for page load")
+        await ElementUtil.mouseHover(this.btnqualityHeirloom, "hover heirloom button")
+        await ElementUtil.click(this.btnqualityHeirloom, "click heirloom quality")
     }
-    clickcenter06ct() {
-        ElementUtil.click(this.btn06Cts, "click 0.6 cts")
+    async clickcenter06ct() {
+        await ElementUtil.click(this.btn06Cts, "click 0.6 cts")
     }
-    clickcenter075ct() {
-        ElementUtil.click(this.btn075Cts, "click 0.75 cts")
+    async clickcenter075ct() {
+        await ElementUtil.click(this.btn075Cts, "click 0.75 cts")
     }
-    clickcenter102ct() {
-        ElementUtil.click(this.btn102Cts, "click 1.02 cts")
-    }
-
-    movetoaccentstonessection() {
-        ElementUtil.scrollIntoView(this.sectionAccentstones, "move to accent stones")
-        BrowserUtil.wait(5)
-    }
-    movetoaccentstonesarea() {
-        ElementUtil.scrollIntoView(this.sectionaccentstones, "move to accent stones area")
-        BrowserUtil.wait(2)
+    async clickcenter102ct() {
+        await ElementUtil.click(this.btn102Cts, "click 1.02 cts")
     }
 
-    clickaccentemarldprecious() {
-        ElementUtil.click(this.lnkimgaccent1emerald, "click emerald")
+    async movetoaccentstonessection() {
+        await ElementUtil.scrollIntoView(this.sectionAccentstones, "move to accent stones")
+        await BrowserUtil.wait(5)
     }
-    clickaccentstonesheirloomquality() {
-        ElementUtil.click(this.asbtnqualityHeirloom, "click accent stone heirloom")
-    }
-    movetoaccentstone1section() {
-        ElementUtil.scrollIntoView(this.sectionAccentstone1, "click accent stone1")
-    }
-    movetoaccentstone2section() {
-        ElementUtil.scrollIntoView(this.sectionAccentstone2, "move to accentstone2")
-    }
-    clickchangeaccentstone2dropdown() {
-        ElementUtil.waitForClickable(this.lnkchangeaccentstone2, 50, "wait for page load")
-        ElementUtil.click(this.lnkchangeaccentstone2, "click change accent stone2 dropdown")
-    }
-    clickchangeNaccentstone2dropdown() {
-        ElementUtil.click(this.lnkchangeNaccentstone2, "click change accent stone2 dropdown")
-    }
-    clickaccent1emarldprecious() {
-        ElementUtil.click(this.lnkimgcentreemerald, "click accent stone1 emerald")
-    }
-    clickaccent1heirloom() {
-        ElementUtil.waitForClickable(this.btnqualityHeirloom, 10, "wait for clickable")
-        ElementUtil.click(this.btnqualityHeirloom, "click accent1 heirloom")
-    }
-    clickaccent2whitesapphireprecious() {
-        ElementUtil.click(this.lnkimagaccent2whitesapphire, "click accent stone2 white sapphire")
-    }
-    movetometalsection() {
-        ElementUtil.scrollIntoView(this.sectionmetal, "move to metal section")
-    }
-    click18kwhitegold() {
-        ElementUtil.click(this.Clnk18kWG, "click 18k white gold")
-    }
-    click14kyellowgold() {
-
-        ElementUtil.click(this.Clnk14kYG, "click 14k yellow gold")
-    }
-    movetoringsize() {
-
-        ElementUtil.click(this.sectionringsize, "move to ringsize")
-    }
-    clickboxchoosesize() {
-
-        ElementUtil.click(this.boxchoosesize, "move to ringsize")
-    }
-    select7UKringsize() {
-        ElementUtil.click(this.boxwith7UKringsize, "click 7UK ringsize")
-    }
-    movetoengravingsection() {
-        ElementUtil.scrollIntoView(this.sectionengraving, "move to engraving section")
-    }
-    clickhisringsize() {
-        BrowserUtil.wait(3)
-        ElementUtil.waitForClickable(this.lnkcouplebandhimselect, 50, "wait for page load")
-        ElementUtil.click(this.lnkcouplebandhimselect, "click couple band him")
-    }
-    clickhimringsize() {
-
-        ElementUtil.click(this.lnkmensselect, "click select him")
-    }
-    clickmensringsize() {
-
-        ElementUtil.click(this.lnkmensselect, "click select him")
-    }
-    clickhisbandwidthdropdown() {
-
-        ElementUtil.click(this.boxchoosebandwidth, "click his bandwidthdropdown")
-    }
-    clickselect7mmbandwidth() {
-        ElementUtil.click(this.select7mmbandwidth, "select 7mm")
-    }
-    select11UKringsize() {
-        ElementUtil.click(this.boxwith11UKringsize, "click 11UK ringsize")
-    }
-    select11UKhisringsize() {
-        ElementUtil.click(this.boxwithhis11UKringsize, "click 11UK hisringsize")
-    }
-    enternameinengraving() {
-        ElementUtil.sendText(this.specialmessagefield, data.specialmessagetext.text, "Enter special message")
-    }
-    clickaddtocart() {
-        ElementUtil.waitForClickable(this.btnaddtocart, 40, "wait for page load")
-        ElementUtil.click(this.btnaddtocart, "click add to cart button")
-    }
-    clickmatchingbandviewdetails() {
-        ElementUtil.waitForClickable(this.lnkMatchingBandViewDetails, 40, "wait for page load")
-        ElementUtil.click(this.lnkMatchingBandViewDetails, "click matching bands view details")
-    }
-    clickmatchingbandringsize() {
-        ElementUtil.waitForClickable(this.popupDrpRingSize, 40, "wait for page load")
-        ElementUtil.click(this.popupDrpRingSize, "click matching band ring size")
-    }
-    movetorecentlyview() {
-        ElementUtil.scrollIntoView(this.sctnRecentlyViewed, "move to recently viewed")
-    }
-    clickrecentlyviewedproduct() {
-        ElementUtil.waitForClickable(this.imgRecentlyViewedProduct, 40, "wait for page load")
-        ElementUtil.click(this.imgRecentlyViewedProduct, "click recently viewed product")
-    }
-    movetofreeshippingsection() {
-        ElementUtil.scrollIntoView(this.sctnShippingAndReturns, "move to free shipping section")
-    }
-    clicklnkmoneyguarantee() {
-        ElementUtil.waitForClickable(this.lnkMoneyBackGuarantee, 40, "wait for page load")
-        ElementUtil.forceClick(this.lnkMoneyBackGuarantee, "click money guarantee")
-    }
-    clicklnkwarranty() {
-        ElementUtil.waitForClickable(this.lnkWarranty, 40, "wait for page load")
-        ElementUtil.click(this.lnkWarranty, "click warranty link")
-    }
-    clickbraceletlengthdropdown() {
-        ElementUtil.waitForClickable(this.lnkddchangelength, 40, "wait for page load")
-        ElementUtil.click(this.lnkddchangelength, "click bracelet length")
-    }
-    clickboxbraceletlengthdropdown() {
-        ElementUtil.waitForClickable(this.boxddchoosebraceletlength, 40, "wait for page load")
-        ElementUtil.click(this.boxddchoosebraceletlength, "click boxbracelet length")
-    }
-    select6mmbraceletlength() {
-        //ElementUtil.waitForClickable(this.click6mmbraceletlength, 40, "wait for page load")
-        ElementUtil.click(this.click6mmbraceletlength, "click 6mm bracelet length")
-    }
-    select75mmbraceletlength() {
-        //ElementUtil.waitForClickable(this.click75mmbraceletlength, 40, "wait for page load")
-        ElementUtil.click(this.click75mmbraceletlength, "click 75mm bracelet length")
-    }
-    clickcustomizechainlength() {
-        ElementUtil.waitForClickable(this.lnkcustomize, 40, "wait for page load")
-        ElementUtil.click(this.lnkcustomize, "click customize chain length")
-    }
-    Select18KYG() {
-        ElementUtil.waitForClickable(this.lnk18kYG, 40, "wait for page load")
-        ElementUtil.click(this.lnk18kYG, "click 18kYG")
-    }
-    Select18inchbutton() {
-        ElementUtil.waitForClickable(this.btn18InchChain, 40, "wait for page load")
-        ElementUtil.click(this.btn18InchChain, "click 18 inch button")
+    async movetoaccentstonesarea() {
+        await ElementUtil.scrollIntoView(this.sectionaccentstones, "move to accent stones area")
+        await BrowserUtil.wait(2)
     }
 
+    async clickaccentemarldprecious() {
+        await ElementUtil.click(this.lnkimgaccent1emerald, "click emerald")
+    }
+    async clickaccentstonesheirloomquality() {
+        await ElementUtil.click(this.asbtnqualityHeirloom, "click accent stone heirloom")
+    }
+    async movetoaccentstone1section() {
+        await ElementUtil.scrollIntoView(this.sectionAccentstone1, "click accent stone1")
+    }
+    async movetoaccentstone2section() {
+        await ElementUtil.scrollIntoView(this.sectionAccentstone2, "move to accentstone2")
+    }
+    async clickchangeaccentstone2dropdown() {
+        await ElementUtil.waitForClickable(this.lnkchangeaccentstone2, 50, "wait for page load")
+        await ElementUtil.click(this.lnkchangeaccentstone2, "click change accent stone2 dropdown")
+    }
+    async clickchangeNaccentstone2dropdown() {
+        await ElementUtil.click(this.lnkchangeNaccentstone2, "click change accent stone2 dropdown")
+    }
+    async clickaccent1emarldprecious() {
+        await ElementUtil.click(this.lnkimgcentreemerald, "click accent stone1 emerald")
+    }
+    async clickaccent1heirloom() {
+        await ElementUtil.waitForClickable(this.btnqualityHeirloom, 10, "wait for clickable")
+        await ElementUtil.click(this.btnqualityHeirloom, "click accent1 heirloom")
+    }
+    async clickaccent2whitesapphireprecious() {
+        await ElementUtil.click(this.lnkimagaccent2whitesapphire, "click accent stone2 white sapphire")
+    }
+    async movetometalsection() {
+        await ElementUtil.scrollIntoView(this.sectionmetal, "move to metal section")
+    }
+    async click18kwhitegold() {
+        await ElementUtil.click(this.Clnk18kWG, "click 18k white gold")
+    }
+    async click14kyellowgold() {
 
+        await ElementUtil.click(this.Clnk14kYG, "click 14k yellow gold")
+    }
+    async movetoringsize() {
 
-    clickringcustomdiamond() {
-        ElementUtil.click(this.lnkimgcustomdiamond, "click custom diamond")
+        await ElementUtil.click(this.sectionringsize, "move to ringsize")
     }
-    clickringcustomlabdiamond() {
-        ElementUtil.click(this.ringcustomlabdiamond, "click custom lab diamond")
+    async clickboxchoosesize() {
+
+        await ElementUtil.click(this.boxchoosesize, "move to ringsize")
     }
-    clickmensringcategory() {
-        ElementUtil.waitForClickable(this.mensringcategorybreadcrumb, 50, "wait for page load")
-        ElementUtil.click(this.mensringcategorybreadcrumb, "click mensring category")
-        BrowserUtil.wait(5);
+    async select7UKringsize() {
+        await ElementUtil.click(this.boxwith7UKringsize, "click 7UK ringsize")
     }
-    clickearringdropdown() {
-        ElementUtil.click(this.lnkcustomize, "click customize earring dropdown lnk")
+    async movetoengravingsection() {
+        await ElementUtil.scrollIntoView(this.sectionengraving, "move to engraving section")
     }
-    click8usringsize() {
-        ElementUtil.click(this.boxwith8Ukringsize, "click 8us ringsize")
+    async clickhisringsize() {
+        await BrowserUtil.wait(3)
+        await ElementUtil.waitForClickable(this.lnkcouplebandhimselect, 50, "wait for page load")
+        await ElementUtil.click(this.lnkcouplebandhimselect, "click couple band him")
     }
-    click11usringsize() {
-        ElementUtil.click(this.boxwith11UKringsize, "click 11us ringsize")
+    async clickhimringsize() {
+
+        await ElementUtil.click(this.lnkmensselect, "click select him")
     }
-    click11ushisringsize() {
-        ElementUtil.click(this.boxwithhis11UKringsize, "click 11us ringsize")
+    async clickmensringsize() {
+
+        await ElementUtil.click(this.lnkmensselect, "click select him")
     }
-    clickcentrestonenaturalAAA() {
-        ElementUtil.waitForClickable(this.btnqualityAAA, 10, "wait for clickable")
-        ElementUtil.click(this.btnqualityAAA, "click centre stone Natural AAA")
+    async clickhisbandwidthdropdown() {
+
+        await ElementUtil.click(this.boxchoosebandwidth, "click his bandwidthdropdown")
     }
-    clickscrewback() {
-        ElementUtil.click(this.screwbackbutton, "click screw back")
+    async clickselect7mmbandwidth() {
+        await ElementUtil.click(this.select7mmbandwidth, "select 7mm")
     }
-    movetocouplecentrestone() {
-        ElementUtil.scrollIntoView(this.csectioncenterstone, "move to earring back")
+    async select11UKringsize() {
+        await ElementUtil.click(this.boxwith11UKringsize, "click 11UK ringsize")
     }
-    clickaddtocartbtn() {
-        ElementUtil.waitForClickable(this.btnaddtocart, 50, "wait for page load")
-        ElementUtil.click(this.btnaddtocart, "click add to cart button")
+    async select11UKhisringsize() {
+        await ElementUtil.click(this.boxwithhis11UKringsize, "click 11UK hisringsize")
     }
-    movetologo() {
-        ElementUtil.scrollIntoView(this.diamonderelogo, "move to diamondere logo")
+    async enternameinengraving() {
+        await ElementUtil.sendText(this.specialmessagefield, data.specialmessagetext.text, "Enter special message")
     }
-    selectRubyBand() {
-        ElementUtil.waitForClickable(this.popupbtnRuby, 40, "wait for page load")
-        ElementUtil.click(this.popupbtnRuby, "Select Ruby")
+    async clickaddtocart() {
+        await ElementUtil.waitForClickable(this.btnaddtocart, 40, "wait for page load")
+        await ElementUtil.click(this.btnaddtocart, "click add to cart button")
     }
-    selectHeirloomBand() {
-        ElementUtil.waitForClickable(this.popupbtnHeirloom, 40, "wait for page load")
-        ElementUtil.click(this.popupbtnHeirloom, "Select Heirloom Quality")
+    async clickmatchingbandviewdetails() {
+        await ElementUtil.waitForClickable(this.lnkMatchingBandViewDetails, 40, "wait for page load")
+        await ElementUtil.click(this.lnkMatchingBandViewDetails, "click matching bands view details")
     }
-    addRingAndBand() {
-        ElementUtil.waitForClickable(this.btnAddRingAndBand, 40, "wait for page load")
-        ElementUtil.click(this.btnAddRingAndBand, "Click button")
+    async clickmatchingbandringsize() {
+        await ElementUtil.waitForClickable(this.popupDrpRingSize, 40, "wait for page load")
+        await ElementUtil.click(this.popupDrpRingSize, "click matching band ring size")
     }
-    addBandSize() {
-        ElementUtil.waitForClickable(this.popupDrpRingSize, 40, "wait for page load")
-        ElementUtil.click(this.popupDrpRingSize, "Click ring size dropdown")
-        ElementUtil.click(this.popupOptnRingSize5, "Select US 5 option")
+    async movetorecentlyview() {
+        await ElementUtil.scrollIntoView(this.sctnRecentlyViewed, "move to recently viewed")
     }
-    clickBox() {
-        ElementUtil.waitForClickable(this.btnBox, 40, "wait for page load")
-        ElementUtil.click(this.btnBox, "Click Box design")
+    async clickrecentlyviewedproduct() {
+        await ElementUtil.waitForClickable(this.imgRecentlyViewedProduct, 40, "wait for page load")
+        await ElementUtil.click(this.imgRecentlyViewedProduct, "click recently viewed product")
+    }
+    async movetofreeshippingsection() {
+        await ElementUtil.scrollIntoView(this.sctnShippingAndReturns, "move to free shipping section")
+    }
+    async clicklnkmoneyguarantee() {
+        await ElementUtil.waitForClickable(this.lnkMoneyBackGuarantee, 40, "wait for page load")
+        await ElementUtil.forceClick(this.lnkMoneyBackGuarantee, "click money guarantee")
+    }
+    async clicklnkwarranty() {
+        await ElementUtil.waitForClickable(this.lnkWarranty, 40, "wait for page load")
+        await ElementUtil.click(this.lnkWarranty, "click warranty link")
+    }
+    async clickbraceletlengthdropdown() {
+        await ElementUtil.waitForClickable(this.lnkddchangelength, 40, "wait for page load")
+        await ElementUtil.click(this.lnkddchangelength, "click bracelet length")
+    }
+    async clickboxbraceletlengthdropdown() {
+        await ElementUtil.waitForClickable(this.boxddchoosebraceletlength, 40, "wait for page load")
+        await ElementUtil.click(this.boxddchoosebraceletlength, "click boxbracelet length")
+    }
+    async select6mmbraceletlength() {
+        //await ElementUtil.waitForClickable(this.click6mmbraceletlength, 40, "wait for page load")
+        await ElementUtil.click(this.click6mmbraceletlength, "click 6mm bracelet length")
+    }
+    async select75mmbraceletlength() {
+        //await ElementUtil.waitForClickable(this.click75mmbraceletlength, 40, "wait for page load")
+        await ElementUtil.click(this.click75mmbraceletlength, "click 75mm bracelet length")
+    }
+    async clickcustomizechainlength() {
+        await ElementUtil.waitForClickable(this.lnkcustomize, 40, "wait for page load")
+        await ElementUtil.click(this.lnkcustomize, "click customize chain length")
+    }
+    async Select18KYG() {
+        await ElementUtil.waitForClickable(this.lnk18kYG, 40, "wait for page load")
+        await ElementUtil.click(this.lnk18kYG, "click 18kYG")
+    }
+    async Select18inchbutton() {
+        await ElementUtil.waitForClickable(this.btn18InchChain, 40, "wait for page load")
+        await ElementUtil.click(this.btn18InchChain, "click 18 inch button")
+    }
+
+    async clickringcustomdiamond() {
+        await ElementUtil.click(this.lnkimgcustomdiamond, "click custom diamond")
+    }
+    async clickringcustomlabdiamond() {
+        await ElementUtil.click(this.ringcustomlabdiamond, "click custom lab diamond")
+    }
+    async clickmensringcategory() {
+        await ElementUtil.waitForClickable(this.mensringcategorybreadcrumb, 50, "wait for page load")
+        await ElementUtil.click(this.mensringcategorybreadcrumb, "click mensring category")
+        await BrowserUtil.wait(5);
+    }
+    async clickearringdropdown() {
+        await ElementUtil.click(this.lnkcustomize, "click customize earring dropdown lnk")
+    }
+    async click8usringsize() {
+        await ElementUtil.click(this.boxwith8Ukringsize, "click 8us ringsize")
+    }
+    async click11usringsize() {
+        await ElementUtil.click(this.boxwith11UKringsize, "click 11us ringsize")
+    }
+    async click11ushisringsize() {
+        await ElementUtil.click(this.boxwithhis11UKringsize, "click 11us ringsize")
+    }
+    async clickcentrestonenaturalAAA() {
+        await ElementUtil.waitForClickable(this.btnqualityAAA, 10, "wait for clickable")
+        await ElementUtil.click(this.btnqualityAAA, "click centre stone Natural AAA")
+    }
+    async clickscrewback() {
+        await ElementUtil.click(this.screwbackbutton, "click screw back")
+    }
+    async movetocouplecentrestone() {
+        await ElementUtil.scrollIntoView(this.csectioncenterstone, "move to earring back")
+    }
+    async clickaddtocartbtn() {
+        await ElementUtil.waitForClickable(this.btnaddtocart, 50, "wait for page load")
+        await ElementUtil.click(this.btnaddtocart, "click add to cart button")
+    }
+    async movetologo() {
+        await ElementUtil.scrollIntoView(this.diamonderelogo, "move to diamondere logo")
+    }
+    async selectRubyBand() {
+        await ElementUtil.waitForClickable(this.popupbtnRuby, 40, "wait for page load")
+        await ElementUtil.click(this.popupbtnRuby, "Select Ruby")
+    }
+    async selectHeirloomBand() {
+        await ElementUtil.waitForClickable(this.popupbtnHeirloom, 40, "wait for page load")
+        await ElementUtil.click(this.popupbtnHeirloom, "Select Heirloom Quality")
+    }
+    async addRingAndBand() {
+        await ElementUtil.waitForClickable(this.btnAddRingAndBand, 40, "wait for page load")
+        await ElementUtil.click(this.btnAddRingAndBand, "Click button")
+    }
+    async addBandSize() {
+        await ElementUtil.waitForClickable(this.popupDrpRingSize, 40, "wait for page load")
+        await ElementUtil.click(this.popupDrpRingSize, "Click ring size dropdown")
+        await ElementUtil.click(this.popupOptnRingSize5, "Select US 5 option")
+    }
+    async clickBox() {
+        await ElementUtil.waitForClickable(this.btnBox, 40, "wait for page load")
+        await ElementUtil.click(this.btnBox, "Click Box design")
     }
 
 }

@@ -7,263 +7,263 @@ const pdata = require('../TestData/Payment.json');
 
 //Given
 //When
-When(/^I enter Indian Phone in Shipping address$/, () => { 
+When(/^I enter Indian Phone in Shipping address$/, async() => { 
     const checkout = new Paymentoption; 
-    checkout.enterIndianPhoneShipping(); 
+    await checkout.enterIndianPhoneShipping(); 
 }); 
-When(/^I enter working visa credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter working visa credit or debit card with mm and yy, cvc$/, async() => {
     const payment = new Paymentoption;
-    BrowserUtil.wait(3);
-    payment.enterCardNumber();
+    await BrowserUtil.wait(3);
+    await payment.enterCardNumber();
 });
-When(/^I click pay with your card button$/, () => {
+When(/^I click pay with your card button$/, async() => {
     const payment = new Paymentoption;
-    BrowserUtil.wait(3);
-    payment.clickpaywithYourCard();
+    await BrowserUtil.wait(3);
+    await payment.clickpaywithYourCard();
 });
-When(/^I click paypal credit button$/, () => {
+When(/^I click paypal credit button$/, async() => {
     const paypalarea = new Paymentoption;
-    paypalarea.clickpaypalcreditbtn();
+    await paypalarea.clickpaypalcreditbtn();
 });
-When(/^I click pay with paypal credit button$/, () => {
+When(/^I click pay with paypal credit button$/, async() => {
     const paypalarea = new Paymentoption;
-    paypalarea.clickpaywithpaypalcreditbtn();
-    BrowserUtil.wait(7);
+    await paypalarea.clickpaywithpaypalcreditbtn();
+    await BrowserUtil.wait(7);
 });
-When(/^I click pay with credit or debit card$/, () => {
+When(/^I click pay with credit or debit card$/, async() => {
     const paypalpaymentarea = new Paymentoption;
     paypalpaymentarea.clickPayWithcredorDebtbtn();
-    BrowserUtil.wait(6);
+    await BrowserUtil.wait(6);
 });
-When(/^I enter usa mobile in mobile field$/, () => {
+When(/^I enter usa mobile in mobile field$/, async() => {
     const payment = new Paymentoption;
-    payment.enterUSAMobile();
+    await payment.enterUSAMobile();
 });
-When(/^I enter working visa credit or debit card with mm and yy, cvc in paypal credit$/, () => {
+When(/^I enter working visa credit or debit card with mm and yy, cvc in paypal credit$/, async() => {
     const payment = new Paymentoption;
-    payment.enterpaypalcreditCardNum();
+    await payment.enterpaypalcreditCardNum();
 });
-When(/^I click tickbox like shipping same as billing address$/, () => {
+When(/^I click tickbox like shipping same as billing address$/, async() => {
     const payment = new Paymentoption;
-    payment.clicktckboxasbillingaddress();
+    await payment.clicktckboxasbillingaddress();
 });
-When(/^I click create paypal account radio button$/, () => {
+When(/^I click create paypal account radio button$/, async() => {
     const payment = new Paymentoption;
-    payment.clickpaypalaccntradiobtn();
+    await payment.clickpaypalaccntradiobtn();
 });
-When(/^I click continue as guest in paypal$/, () => {
+When(/^I click continue as guest in paypal$/, async() => {
     const payment = new Paymentoption;
-    payment.clickcontinueasguest();
+    await payment.clickcontinueasguest();
 });
 
-When(/^I enter details in paypal checkout page and submit$/, () => {
+When(/^I enter details in paypal checkout page and submit$/, async() => {
 	const payment = new Paymentoption;
-    payment.paypalGuestCheckout();
+    await payment.paypalGuestCheckout();
 });
 
-When(/^I accept cookies if alert displayed$/, () => {
+When(/^I accept cookies if alert displayed$/, async() => {
     const payment = new Paymentoption;
-    payment.acceptCookies();
+    await payment.acceptCookies();
 });
 
-When(/^I click affirm radiobutton$/, () => {
+When(/^I click affirm radiobutton$/, async() => {
 	const affirmarea = new Paymentoption;
-    affirmarea.clickaffirmradiobutton();
+    await affirmarea.clickaffirmradiobutton();
 });
 
-When(/^I click pay with affirm button$/, () => {
+When(/^I click pay with affirm button$/, async() => {
 	const affirmarea = new Paymentoption;
-    affirmarea.clickpaywithaffirmbutton();
-    BrowserUtil.wait(15);
+    await affirmarea.clickpaywithaffirmbutton();
+    await BrowserUtil.wait(15);
 });
 
-When(/^I enter usa mobile and continue in affirm page$/, () => {
+When(/^I enter usa mobile and continue in affirm page$/, async() => {
 	const affirmarea = new Paymentoption;
-    affirmarea.enterUSAMobileAffirm();
-    affirmarea.clickcontinuewithaffirm();
+    await affirmarea.enterUSAMobileAffirm();
+    await affirmarea.clickcontinuewithaffirm();
 });
 
-When(/^I enter 4 digit pin$/, () => {
+When(/^I enter 4 digit pin$/, async() => {
 	const affirmarea = new Paymentoption;
-    affirmarea.enteraffirmpin();
+    await affirmarea.enteraffirmpin();
 });
 
-When(/^I click 3 months options and click choose this plan button$/, () => {
+When(/^I click 3 months options and click choose this plan button$/, async() => {
 	const affirmarea = new Paymentoption;
-    affirmarea.click3monthinstallmentoption();
-    BrowserUtil.wait(3);
-    affirmarea.clickcontinuethisplan();
-    BrowserUtil.wait(5);
+    await affirmarea.click3monthinstallmentoption();
+    await BrowserUtil.wait(3);
+    await affirmarea.clickcontinuethisplan();
+    await BrowserUtil.wait(5);
 });
 
-When(/^I click disclaimer and confirm button$/, () => {
+When(/^I click disclaimer and confirm button$/, async() => {
 	const affirmarea = new Paymentoption;
-    affirmarea.clickautopay();
-    BrowserUtil.wait(3);
-    affirmarea.clickaffirmdisclaimer();
-    BrowserUtil.wait(2);
-    affirmarea.clickaffirmcomplete();
-    BrowserUtil.wait(6);
+    await affirmarea.clickautopay();
+    await BrowserUtil.wait(3);
+    await affirmarea.clickaffirmdisclaimer();
+    await BrowserUtil.wait(2);
+    await affirmarea.clickaffirmcomplete();
+    await BrowserUtil.wait(6);
 });
 
-When(/^I click return to merchant$/, () => {
+When(/^I click return to merchant$/, async() => {
 	const affirmarea = new Paymentoption;
-    affirmarea.clickreturntomerchant();
+    await affirmarea.clickreturntomerchant();
 });
 
-When(/^I enter insuffient balance credit or debit card with mm and yy, cvc in paypal credit$/, () => {
+When(/^I enter insuffient balance credit or debit card with mm and yy, cvc in paypal credit$/, async() => {
 	const paypalcreditarea = new Paymentoption;
-    paypalcreditarea.enterinsuffientbalancecard();
+    await paypalcreditarea.enterinsuffientbalancecard();
 });
 
-When(/^I click cancel and return merchant link$/, () => {
+When(/^I click cancel and return merchant link$/, async() => {
 	const paypalcreditarea = new Paymentoption;
-    paypalcreditarea.clickcancelandreturnlink();
+    await paypalcreditarea.clickcancelandreturnlink();
 });
-When(/^I click paypal button$/, () => {
+When(/^I click paypal button$/, async() => {
     const paypalarea = new Paymentoption;
-    paypalarea.clickPaypalRadiobtn();
+    await paypalarea.clickPaypalRadiobtn();
 });
 
-When(/^I click pay with paypal button$/, () => {
+When(/^I click pay with paypal button$/, async() => {
 	const paypalarea = new Paymentoption;
-    paypalarea.clickpaywithpaypalbtn();
-    BrowserUtil.wait(10);
+    await paypalarea.clickpaywithpaypalbtn();
+    await BrowserUtil.wait(10);
 });
-When(/^I enter working visa credit or debit card with mm and yy, cvc in paypal$/, () => {
+When(/^I enter working visa credit or debit card with mm and yy, cvc in paypal$/, async() => {
     const paypalarea = new Paymentoption;
-    paypalarea.enterpaypalcreditCardNum();
+    await paypalarea.enterpaypalcreditCardNum();
 });
 
-When(/^I enter insuffient balance credit or debit card with mm and yy, cvc in paypal$/, () => {
+When(/^I enter insuffient balance credit or debit card with mm and yy, cvc in paypal$/, async() => {
 	const paypalarea = new Paymentoption;
-    paypalarea.enterinsuffientbalancecard();
+    await paypalarea.enterinsuffientbalancecard();
 });
 
-When(/^I click diamondere 3 month installment payment$/, () => {
+When(/^I click diamondere 3 month installment payment$/, async() => {
 	const installmentarea = new Paymentoption;
-    installmentarea.clickdiamondereinstallmentradiobtn();
-    BrowserUtil.wait(4);
+    await installmentarea.clickdiamondereinstallmentradiobtn();
+    await BrowserUtil.wait(4);
 });
 
-When(/^I click pay 1st installment button$/, () => {
+When(/^I click pay 1st installment button$/, async() => {
 	const installmentarea = new Paymentoption;
-    installmentarea.clickpay1stinstallmentbtn();
+    await installmentarea.clickpay1stinstallmentbtn();
 });
-When(/^I enter working visa credit or debit card with mm and yy, cvc in installment$/, () => {
+When(/^I enter working visa credit or debit card with mm and yy, cvc in installment$/, async() => {
     const installmentarea = new Paymentoption;
-    installmentarea.enterCardNumbervisainstallment();
+    await installmentarea.enterCardNumbervisainstallment();
 });
 
-When(/^I enter working mastercard credit or debit card with mm and yy, cvc in installment$/, () => {
+When(/^I enter working mastercard credit or debit card with mm and yy, cvc in installment$/, async() => {
 	const installmentarea = new Paymentoption;
-    installmentarea.enterCardNumbermasterinstallment();
+    await installmentarea.enterCardNumbermasterinstallment();
 });
 
 
-When(/^I enter working amex credit or debit card with mm and yy, cvc in installment$/, () => {
+When(/^I enter working amex credit or debit card with mm and yy, cvc in installment$/, async() => {
 	const installmentarea = new Paymentoption;
-    installmentarea.enterCardNumberamexinstallment();
+    await installmentarea.enterCardNumberamexinstallment();
 });
 
-When(/^I enter working dinerclub credit or debit card with mm and yy, cvc in installment$/, () => {
+When(/^I enter working dinerclub credit or debit card with mm and yy, cvc in installment$/, async() => {
 	const installmentarea = new Paymentoption;
-    installmentarea.enterCardNumberdinerinstallment();
+    await installmentarea.enterCardNumberdinerinstallment();
 });
 
-When(/^I enter invalid card number in installment$/, () => {
+When(/^I enter invalid card number in installment$/, async() => {
 	const invalidarea = new Paymentoption;
-    invalidarea.enterInvalidcardNumberinstallment();
+    await invalidarea.enterInvalidcardNumberinstallment();
 });
 
-When(/^I enter invalid cvv in installment$/, () => {
+When(/^I enter invalid cvv in installment$/, async() => {
 	const invalidarea = new Paymentoption;
-    invalidarea.enterInvalidcardcvvinstallment();
+    await invalidarea.enterInvalidcardcvvinstallment();
 });
 
-When(/^I enter invalid mm and yy in installment$/, () => {
+When(/^I enter invalid mm and yy in installment$/, async() => {
 	const invalidarea = new Paymentoption;
-    invalidarea.enterInvalidcardmmyyinstallment();
+    await invalidarea.enterInvalidcardmmyyinstallment();
 });
 
-When(/^I enter working mastercard credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter working mastercard credit or debit card with mm and yy, cvc$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterCardNumbermaster();
+    await dccardarea.enterCardNumbermaster();
 });
 
-When(/^I enter working amex credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter working amex credit or debit card with mm and yy, cvc$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterCardNumberamex();
+    await dccardarea.enterCardNumberamex();
 });
 
-When(/^I enter working dinerclub credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter working dinerclub credit or debit card with mm and yy, cvc$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterCardNumberdiner();
+    await dccardarea.enterCardNumberdiner();
 });
 
-When(/^I enter invalid card number$/, () => {
+When(/^I enter invalid card number$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterInvalidcardNumber();
+    await dccardarea.enterInvalidcardNumber();
 });
 
-When(/^I enter invalid mm and yy$/, () => {
+When(/^I enter invalid mm and yy$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterInvalidmonth();
+    await dccardarea.enterInvalidmonth();
 });
 
-When(/^I enter invalid cvv$/, () => {
+When(/^I enter invalid cvv$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterInvalidcvv();
+    await dccardarea.enterInvalidcvv();
 });
 
-When(/^I enter insuffient balance credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter insuffient balance credit or debit card with mm and yy, cvc$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterinsuffientcard();
+    await dccardarea.enterinsuffientcard();
 });
 
-When(/^I enter generic decline credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter generic decline credit or debit card with mm and yy, cvc$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.entergenericcard();
+    await dccardarea.entergenericcard();
 });
 
-When(/^I enter lost credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter lost credit or debit card with mm and yy, cvc$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.enterlostcard();
+    await dccardarea.enterlostcard();
 });
 
-When(/^I enter processing error credit or debit card with mm and yy, cvc$/, () => {
+When(/^I enter processing error credit or debit card with mm and yy, cvc$/, async() => {
     const dccardarea = new Paymentoption;
-    dccardarea.enterprocessingcard();
+    await dccardarea.enterprocessingcard();
 });
 
-When(/^I click cross button in error popup$/, () => {
+When(/^I click cross button in error popup$/, async() => {
 	const dccardarea = new Paymentoption;
-    dccardarea.clickcrossbtn();
+    await dccardarea.clickcrossbtn();
 });
 
-When(/^I select credit or debit no saving$/, () => {
+When(/^I select credit or debit no saving$/, async() => {
 	const creditnosaving = new Paymentoption;
-    creditnosaving.clicknosaving();
-    BrowserUtil.wait(3);
-    creditnosaving.clickwirepayment();
-    BrowserUtil.wait(3);
+    await creditnosaving.clicknosaving();
+    await BrowserUtil.wait(3);
+    await creditnosaving.clickwirepayment();
+    await BrowserUtil.wait(3);
 });
 
-When(/^I click pay with wirepayment button$/, () => {
+When(/^I click pay with wirepayment button$/, async() => {
 	const wirepaymentarea = new Paymentoption;
-    BrowserUtil.wait(2);
-    wirepaymentarea.clickpaywithwirepaymentbtn();
-    BrowserUtil.wait(5);
+    await BrowserUtil.wait(2);
+    await wirepaymentarea.clickpaywithwirepaymentbtn();
+    await BrowserUtil.wait(5);
 });
 
-When(/^I click go to payment link$/, () => {
+When(/^I click go to payment link$/, async() => {
 	const paymentarea = new Paymentoption;
-    paymentarea.clickgotopayment();
+    await paymentarea.clickgotopayment();
 });
 
-When(/^I want to clear local storage$/, () => {
+When(/^I want to clear local storage$/, async() => {
 	const paymentarea = new Paymentoption;
-    paymentarea.clearlocalstorage();
+    await paymentarea.clearlocalstorage();
 });
 
 //Then
@@ -344,8 +344,8 @@ Then(/^I ensure cancel and return merchant is displayed in paypal$/, async() => 
 Then(/^I ensure enter card details text will displayed$/, async() => {
 	const paymentarea = new Paymentoption;
     await expect(paymentarea.installmententerdetailerror).toExist();
-    //browser.reloadSession()
-    //browser.deleteAllCookies()
+    //await browser.reloadSession()
+    //await browser.deleteAllCookies()
     //await browser.deleteCookies() 
 });
 

@@ -40,8 +40,7 @@
         "EditedEmail": "automationtesting@gmail.com"
     },
     "CheckoutLoggedIn": {
-        "FirstName": "Automation Checkout",
-        "LastName": "Testing",
-        "Email": "testautomation2@gmail.com"
+        "FirstName": "Automation API",
+        "LastName": "Testing"
     }
 }

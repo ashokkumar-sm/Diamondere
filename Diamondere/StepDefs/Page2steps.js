@@ -8,14 +8,14 @@ const { start } = require('chromedriver');
 
 // Scenario 1
 
-Given(/^I select Rings category$/, () => {
+Given(/^I select Rings category$/, async() => {
 	const rings = new page2;
-	rings.selectRingscategory();
+	await rings.selectRingscategory();
 });
 
-When(/^I select Emerald from Shop By Gemstone$/, () => {
+When(/^I select Emerald from Shop By Gemstone$/, async() => {
 	const rings = new page2;
-	rings.selectEmeraldgemstonerings();
+	await rings.selectEmeraldgemstonerings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Emerald products$/, async() => {
@@ -72,9 +72,9 @@ Then(/^Ensure Danette product is displayed with product name, price and product 
 	await expect(rings.txtdescrpdanettePDEmeraldring).toExist();
 });
 
-When(/^I select Danette product$/, () => {
+When(/^I select Danette product$/, async() => {
 	const rings = new page2;
-	rings.selectDanetteemeraldring();
+	await rings.selectDanetteemeraldring();
 });
 
 Then(/^Ensure the user enters page 3 of Danette$/, async() => {
@@ -84,9 +84,9 @@ Then(/^Ensure the user enters page 3 of Danette$/, async() => {
 
 //Scenario 2
 
-When(/^I select View Emerald Video$/, () => {
+When(/^I select View Emerald Video$/, async() => {
 	const rings = new page2;
-	rings.selectViewEmeraldvideo();
+	await rings.selectViewEmeraldvideo();
 });
 
 Then(/^Ensure a popup video plays Emerald buying guide$/, async() => {
@@ -96,9 +96,9 @@ Then(/^Ensure a popup video plays Emerald buying guide$/, async() => {
 
 //Scenario 3
 
-When(/^I select rating star link in SEO section$/, () => {
+When(/^I select rating star link in SEO section$/, async() => {
 	const rings = new page2;
-	rings.selectStarSEOemeraldring();
+	await rings.selectStarSEOemeraldring();
 });
 
 Then(/^Ensure review for diamondere rings page is displayed$/, async() => {
@@ -113,9 +113,9 @@ Then(/^Ensure review for rings page is displayed$/, async() => {
 });
 
 
-When(/^I click on Vintage rings link in SEO description$/, () => {
+When(/^I click on Vintage rings link in SEO description$/, async() => {
 	const rings = new page2;
-	rings.selectSEOVintagering();
+	await rings.selectSEOVintagering();
 });
 
 Then(/^Ensure page 2 of vintage emerald rings is displayed$/, async() => {
@@ -123,9 +123,9 @@ Then(/^Ensure page 2 of vintage emerald rings is displayed$/, async() => {
 	await expect(rings).toEqual(data.Page2Links.VintageemeraldringsURL);
 });
 
-When(/^I click on Claddagh rings link in SEO description$/, () => {
+When(/^I click on Claddagh rings link in SEO description$/, async() => {
 	const rings = new page2;
-	rings.selectSEOCladdaghring();
+	await rings.selectSEOCladdaghring();
 });
 
 Then(/^Ensure page 2 of Claddagh emerald rings is displayed$/, async() => {
@@ -135,14 +135,14 @@ Then(/^Ensure page 2 of Claddagh emerald rings is displayed$/, async() => {
 
 // Scenario 4
 
-Given(/^I select Engagement category$/, () => {
+Given(/^I select Engagement category$/, async() => {
 	const engagement = new page2;
-	engagement.selectengagementcategory();
+	await engagement.selectengagementcategory();
 });
 
-When(/^I select Solitaire rings from Engagement Ring Styles$/, () => {
+When(/^I select Solitaire rings from Engagement Ring Styles$/, async() => {
 	const engagement = new page2;
-	engagement.selectsolitaireengagement();
+	await engagement.selectsolitaireengagement();
 });
 
 Then(/^Ensure Page2 is displayed with all the solitaire products$/, async() => {
@@ -192,9 +192,9 @@ Then(/^Ensure Miya product is displayed with product name, price and product des
 	await expect(engagement.txtsettingpriceMiyaPDSolitairering).toExist();
 });
 
-When(/^I select Miya product$/, () => {
+When(/^I select Miya product$/, async() => {
 	const engagement = new page2;
-	engagement.selectMiyaproduct();
+	await engagement.selectMiyaproduct();
 });
 
 Then(/^Ensure the user enters page 3 of Miya$/, async() => {
@@ -204,14 +204,14 @@ Then(/^Ensure the user enters page 3 of Miya$/, async() => {
 
 // Scenario 5
 
-Given(/^I select wedding category$/, () => {
+Given(/^I select wedding category$/, async() => {
 	const wedding = new page2;
-	wedding.selectweddingcategory();
+	await wedding.selectweddingcategory();
 });
 
-When(/^I select Eternity bands under Womans wedding band styles$/, () => {
+When(/^I select Eternity bands under Womans wedding band styles$/, async() => {
 	const wedding = new page2;
-	wedding.selectEternitybands();
+	await wedding.selectEternitybands();
 });
 
 Then(/^Ensure Page2 is displayed with all the Eternity band products$/, async() => {
@@ -252,9 +252,9 @@ Then(/^Ensure Jean product is displayed with product name, price and product des
 	await expect(wedding.txtdescrpJeanPDEternityBands).toExist();
 });
 
-When(/^I select Jean product$/, () => {
+When(/^I select Jean product$/, async() => {
 	const wedding = new page2;
-	wedding.selectJeanproduct();
+	await wedding.selectJeanproduct();
 });
 
 Then(/^Ensure the user enters page 3 of Jean$/, async() => {
@@ -264,14 +264,14 @@ Then(/^Ensure the user enters page 3 of Jean$/, async() => {
 
 // Scenario 6
 
-Given(/^I select Bracelet category$/, () => {
+Given(/^I select Bracelet category$/, async() => {
 	const bracelet = new page2;
-	bracelet.selectbraceletscategory();
+	await bracelet.selectbraceletscategory();
 });
 
-When(/^I select Tennis Bracelets from Bracelet styles$/, () => {
+When(/^I select Tennis Bracelets from Bracelet styles$/, async() => {
 	const bracelet = new page2;
-	bracelet.selectTennisbracelets();
+	await bracelet.selectTennisbracelets();
 });
 
 Then(/^Ensure Page2 is displayed with all the Tennis products$/, async() => {
@@ -320,9 +320,9 @@ Then(/^Ensure Zainab product is displayed with product name, price and product d
 	await expect(bracelet.txtdescrpZainabPDTennisBracelets).toExist();
 });
 
-When(/^I select Zainab product$/, () => {
+When(/^I select Zainab product$/, async() => {
 	const bracelet = new page2;
-	bracelet.selectZainabTennisbracelets();
+	await bracelet.selectZainabTennisbracelets();
 });
 
 Then(/^Ensure the user enters page 3 of Zainab$/, async() => {
@@ -332,9 +332,9 @@ Then(/^Ensure the user enters page 3 of Zainab$/, async() => {
 
 //  Scenario 7
 
-When(/^I select rating star link in SEO section for Tennis Bracelets$/, () => {
+When(/^I select rating star link in SEO section for Tennis Bracelets$/, async() => {
 	const bracelet = new page2;
-	bracelet.selectstarlnkTennisbracelets();
+	await bracelet.selectstarlnkTennisbracelets();
 });
 
 Then(/^Ensure review for diamondere bracelets page is displayed$/, async() => {
@@ -344,14 +344,14 @@ Then(/^Ensure review for diamondere bracelets page is displayed$/, async() => {
 
 // Scenario 8
 
-Given(/^I select Earrings category$/, () => {
+Given(/^I select Earrings category$/, async() => {
 	const earrings = new page2;
-	earrings.selectEarringscategory();
+	await earrings.selectEarringscategory();
 });
 
-When(/^I select Drop Earrings from Earring styles$/, () => {
+When(/^I select Drop Earrings from Earring styles$/, async() => {
 	const earrings = new page2;
-	earrings.selectDropEarrings();
+	await earrings.selectDropEarrings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Drop Earrings$/, async() => {
@@ -400,9 +400,9 @@ Then(/^Ensure Valonia product is displayed with product name, price and product 
 	await expect(earrings.txtdescrpValoniaPDDropearrings).toExist();
 });
 
-When(/^I select Valonia product$/, () => {
+When(/^I select Valonia product$/, async() => {
 	const earrings = new page2;
-	earrings.selectValoniaDropearrings();
+	await earrings.selectValoniaDropearrings();
 });
 
 Then(/^Ensure the user enters page 3 of Valonia$/, async() => {
@@ -412,9 +412,9 @@ Then(/^Ensure the user enters page 3 of Valonia$/, async() => {
 
 // Scenario 9
 
-When(/^I select rating star link in SEO section for Drop earrings$/, () => {
+When(/^I select rating star link in SEO section for Drop earrings$/, async() => {
 	const earrings = new page2;
-	earrings.selectstarlnkDropEarrings();
+	await earrings.selectstarlnkDropEarrings();
 });
 
 Then(/^Ensure review for diamondere earrings page is displayed$/, async() => {
@@ -424,14 +424,14 @@ Then(/^Ensure review for diamondere earrings page is displayed$/, async() => {
 
 // Scenario 10
 
-Given(/^I select Necklace category$/, () => {
+Given(/^I select Necklace category$/, async() => {
 	const necklace = new page2;
-	necklace.selectNecklacecategory();
+	await necklace.selectNecklacecategory();
 });
 
-When(/^I select Heart Necklaces from Necklace styles$/, () => {
+When(/^I select Heart Necklaces from Necklace styles$/, async() => {
 	const necklace = new page2;
-	necklace.selectHeartNecklace();
+	await necklace.selectHeartNecklace();
 });
 
 Then(/^Ensure Page2 is displayed with all the Heart Necklaces$/, async() => {
@@ -480,9 +480,9 @@ Then(/^Ensure Beleza product is displayed with product name, price and product d
 	await expect(necklace.txtdescrpBelezaPDHeartNecklace).toExist();
 });
 
-When(/^I select Beleza product$/, () => {
+When(/^I select Beleza product$/, async() => {
 	const necklace = new page2;
-	necklace.selectBelezaHeartNecklace();
+	await necklace.selectBelezaHeartNecklace();
 });
 
 Then(/^Ensure the user enters page 3 of Beleza$/, async() => {
@@ -494,7 +494,7 @@ Then(/^Ensure the user enters page 3 of Beleza$/, async() => {
 
 When(/^I select rating star link in SEO section for Heart necklaces$/, async() => {
 	const necklace = new page2;
-	necklace.selectstarlinkHeartNecklace();
+	await necklace.selectstarlinkHeartNecklace();
 });
 
 Then(/^Ensure review for diamondere necklaces page is displayed$/, async() => {
@@ -504,14 +504,14 @@ Then(/^Ensure review for diamondere necklaces page is displayed$/, async() => {
 
 //  Scenario 12: 
 
-Given(/^I select Mens category$/, () => {
+Given(/^I select Mens category$/, async() => {
 	const mens = new page2;
-	mens.selectMenscategory();
+	await mens.selectMenscategory();
 });
 
-When(/^I select Mens earrings from Shop By Style$/, () => {
+When(/^I select Mens earrings from Shop By Style$/, async() => {
 	const mens = new page2;
-	mens.selectMensearrings();
+	await mens.selectMensearrings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Mens earrings$/, async() => {
@@ -552,9 +552,9 @@ Then(/^Ensure Samuel product is displayed with product name, price and product d
 	await expect(mens.txtdescrpSamuelPDMensearrings).toExist();
 });
 
-When(/^I select Samuel product$/, () => {
+When(/^I select Samuel product$/, async() => {
 	const mens = new page2;
-	mens.selectSamuelMensearrings();
+	await mens.selectSamuelMensearrings();
 });
 
 Then(/^Ensure the user enters page 3 of Samuel$/, async() => {
@@ -564,9 +564,9 @@ Then(/^Ensure the user enters page 3 of Samuel$/, async() => {
 
 //  Scenario 13:
 
-When(/^I select View All from Rings$/, () => {
+When(/^I select View All from Rings$/, async() => {
 	const style = new page2;
-	style.selectViewallRings();
+	await style.selectViewallRings();
 });
 
 Then(/^Ensure Page2 is displayed with all the ring products$/, async() => {
@@ -574,9 +574,9 @@ Then(/^Ensure Page2 is displayed with all the ring products$/, async() => {
 	await expect(style).toEqual(data.Page2Links.ViewAllRingspage2URL);
 });
 
-When(/^I select Style filter from filter tab$/, () => {
+When(/^I select Style filter from filter tab$/, async() => {
 	const style = new page2;
-	style.selectStylefilter();
+	await style.selectStylefilter();
 });
 
 Then(/^Ensure the Style dropdown is displayed$/, async() => {
@@ -584,9 +584,9 @@ Then(/^Ensure the Style dropdown is displayed$/, async() => {
 	await expect(style.ddStylefilter).toExist();
 });
 
-When(/^I select Sidestone under Style fiter$/, () => {
+When(/^I select Sidestone under Style fiter$/, async() => {
 	const style = new page2;
-	style.selectSidestoneoption();
+	await style.selectSidestoneoption();
 });
 
 Then(/^Ensure the Banner and link changes with Sidestone style filter$/, async() => {
@@ -622,9 +622,9 @@ Then(/^Ensure Xylos product is displayed with product name, price and product de
 	await expect(style.txtdescrpXylosPDSidestonerings).toExist();
 });
 
-When(/^I select Xylos product$/, () => {
+When(/^I select Xylos product$/, async() => {
 	const style = new page2;
-	style.selectXylosSidestonerings();
+	await style.selectXylosSidestonerings();
 });
 
 Then(/^Ensure the user enters page 3 of Xylos$/, async() => {
@@ -634,9 +634,9 @@ Then(/^Ensure the user enters page 3 of Xylos$/, async() => {
 
 //  Scenario 14:
 
-When(/^I select Stone filter from filter tab$/, () => {
+When(/^I select Stone filter from filter tab$/, async() => {
 	const stone = new page2;
-	stone.selectStonefilter();
+	await stone.selectStonefilter();
 });
 
 Then(/^Ensure the Stone dropdown is displayed$/, async() => {
@@ -644,9 +644,9 @@ Then(/^Ensure the Stone dropdown is displayed$/, async() => {
 	await expect(stone.ddStonefilter).toExist();
 });
 
-When(/^I select Pink Sapphire under Stone fiter$/, () => {
+When(/^I select Pink Sapphire under Stone fiter$/, async() => {
 	const stone = new page2;
-	stone.selectPinksapphireoption();
+	await stone.selectPinksapphireoption();
 });
 
 Then(/^Ensure the Banner and link changes with Pink Sapphire stone filter$/, async() => {
@@ -684,9 +684,9 @@ Then(/^Ensure Eugene product is displayed with product name, price and product d
 	await expect(stone.txtdescrpEugenePDPinkSapphire).toExist();
 });
 
-When(/^I select Eugene product$/, () => {
+When(/^I select Eugene product$/, async() => {
 	const stone = new page2;
-	stone.selectEugenePinkSapphireRings();
+	await stone.selectEugenePinkSapphireRings();
 });
 
 Then(/^Ensure the user enters page 3 of Eugene$/, async() => {
@@ -696,9 +696,9 @@ Then(/^Ensure the user enters page 3 of Eugene$/, async() => {
 
 // Scenario 15:
 
-When(/^I select Shape filter from filter tab$/, () => {
+When(/^I select Shape filter from filter tab$/, async() => {
 	const shape = new page2;
-	shape.selectShapefilter();
+	await shape.selectShapefilter();
 });
 
 Then(/^Ensure the Shape dropdown is displayed$/, async() => {
@@ -706,9 +706,9 @@ Then(/^Ensure the Shape dropdown is displayed$/, async() => {
 	await expect(shape.ddShapefilter).toExist();
 });
 
-When(/^I select Pear under Shape fiter$/, () => {
+When(/^I select Pear under Shape fiter$/, async() => {
 	const shape = new page2;
-	shape.selectPearoption();
+	await shape.selectPearoption();
 });
 
 Then(/^Ensure the Banner and link changes with Pear Shape filter$/, async() => {
@@ -741,9 +741,9 @@ Then(/^Ensure Dezi product is displayed with product name, price and product des
 	await expect(shape.txtdescrpDeziPDPearcut).toExist();
 });
 
-When(/^I select Dezi product$/, () => {
+When(/^I select Dezi product$/, async() => {
 	const shape = new page2;
-	shape.selectDeziPearcut();
+	await shape.selectDeziPearcut();
 });
 
 Then(/^Ensure the user enters page 3 of Dezi$/, async() => {
@@ -753,9 +753,9 @@ Then(/^Ensure the user enters page 3 of Dezi$/, async() => {
 
 // Scenario 16:
 
-When(/^I select carat range filter from filter tab$/, () => {
+When(/^I select carat range filter from filter tab$/, async() => {
 	const carat = new page2;
-	carat.selectCaratrangefilter();
+	await carat.selectCaratrangefilter();
 });
 
 Then(/^Ensure the carat range dropdown is displayed$/, async() => {
@@ -763,20 +763,21 @@ Then(/^Ensure the carat range dropdown is displayed$/, async() => {
 	await expect(carat.ddCaratRangeFilter).toExist();
 });
 
-When(/^I select 1 to 2 carat under carat range fiter$/, () => {
+When(/^I select 1 to 2 carat under carat range fiter$/, async() => {
 	const carat = new page2;
-	carat.selectoption1to2Caratrange();
+	await carat.selectoption1to2Caratrange();
 });
 
-Then(/^Ensure products are updated as per selected carat option$/, () => {
-	return true;
+Then(/^Ensure products are updated as per selected carat option$/, async() => {
+	const carat = new page2;
+	await expect(carat.tag1to2Carat).toExist();
 });
 
 // Scenario 17:
 
-When(/^I select metal filter from filter tab$/, () => {
+When(/^I select metal filter from filter tab$/, async() => {
 	const metal = new page2;
-	metal.selectMetalfilter();
+	await metal.selectMetalfilter();
 });
 
 Then(/^Ensure the metal dropdown is displayed$/, async() => {
@@ -784,9 +785,9 @@ Then(/^Ensure the metal dropdown is displayed$/, async() => {
 	await expect(metal.ddMetalFilter).toExist();
 });
 
-When(/^I select 14kYG under metal fiter$/, () => {
+When(/^I select 14kYG under metal fiter$/, async() => {
 	const metal = new page2;
-	metal.select14YGMetal();
+	await metal.select14YGMetal();
 });
 
 Then(/^Ensure the Banner and link changes with 14kYG metal filter$/, async() => {
@@ -819,9 +820,9 @@ Then(/^Ensure Solace product is displayed with product name, price and product d
 	await expect(metal.txtdescrpSolacePD14YG).toExist();
 });
 
-When(/^I select Solace product$/, () => {
+When(/^I select Solace product$/, async() => {
 	const metal = new page2;
-	metal.selectSolace14YG();
+	await metal.selectSolace14YG();
 });
 
 Then(/^Ensure the user enters page 3 of Solace$/, async() => {
@@ -831,9 +832,9 @@ Then(/^Ensure the user enters page 3 of Solace$/, async() => {
 
 // Scenario 18
 
-When(/^I select Sort By filter from filter tab$/, () => {
+When(/^I select Sort By filter from filter tab$/, async() => {
 	const sortby = new page2;
-	sortby.selectSortByFilter();
+	await sortby.selectSortByFilter();
 });
 
 Then(/^Ensure the Sortby dropdown is displayed$/, async() => {
@@ -848,9 +849,9 @@ Then(/^Ensure the Most popular is selected by default$/, async() => {
 
 // Scenario 19:
 
-When(/^I select New Arrival under Sortby fiter$/, () => {
+When(/^I select New Arrival under Sortby fiter$/, async() => {
 	const sortby = new page2;
-	sortby.selectNewArrival();
+	await sortby.selectNewArrival();
 });
 
 Then(/^Ensure the New Arrival products are displayed from top to bottom$/, async() => {
@@ -860,9 +861,9 @@ Then(/^Ensure the New Arrival products are displayed from top to bottom$/, async
 
 // Scenario 20:
 
-When(/^I select Price low to high under Sortby fiter$/, () => {
+When(/^I select Price low to high under Sortby fiter$/, async() => {
 	const sortby = new page2;
-	sortby.selectPricelowtohigh();
+	await sortby.selectPricelowtohigh();
 });
 
 Then(/^Ensure the products are displayed from lowest to highest price$/, async() => {
@@ -872,9 +873,9 @@ Then(/^Ensure the products are displayed from lowest to highest price$/, async()
 
 // Scenario 21:
 
-When(/^I select Price high to low under Sortby fiter$/, () => {
+When(/^I select Price high to low under Sortby fiter$/, async() => {
 	const sortby = new page2;
-	sortby.selectPricehightolow();
+	await sortby.selectPricehightolow();
 });
 
 Then(/^Ensure the products are displayed from highest to lowest price$/, async() => {
@@ -889,9 +890,9 @@ Then(/^Ensure May we assist you button is displayed$/, async() => {
 	await expect(static.btnmayweassistyou).toExist();
 });
 
-When(/^I scrolldown to the SEO section$/, () => {
+When(/^I scrolldown to the SEO section$/, async() => {
 	const static = new page2;
-	static.movetoSEOsection();
+	await static.movetoSEOsection();
 });
 
 Then(/^ensure top button is displayed and the filter tab section and search box remain static and displayed at the top$/, async() => {
@@ -900,9 +901,9 @@ Then(/^ensure top button is displayed and the filter tab section and search box 
 	await expect(static.sctnstaticFiltertabandsearchbox).toExist;
 });
 
-When(/^I select Top button$/, () => {
+When(/^I select Top button$/, async() => {
 	const static = new page2;
-	static.selectTopbutton();
+	await static.selectTopbutton();
 });
 
 Then(/^ensure the top of the page is displayed$/, async() => {
@@ -910,9 +911,9 @@ Then(/^ensure the top of the page is displayed$/, async() => {
 	await expect(static.boxbannerViewAllRings).toExist;
 });
 
-When(/^I select May we assist you button$/, () => {
+When(/^I select May we assist you button$/, async() => {
 	const static = new page2;
-	static.selectMayweassistbutton();
+	await static.selectMayweassistbutton();
 });
 
 Then(/^Ensure the customer care form is displayed$/, async() => {
@@ -920,9 +921,9 @@ Then(/^Ensure the customer care form is displayed$/, async() => {
 	await expect(static.formcustomercaremaywe).toExist;
 });
 
-When(/^I select close button in customer care form$/, () => {
+When(/^I select close button in customer care form$/, async() => {
 	const static = new page2;
-	static.selectclosebuttoncustomercare();
+	await static.selectclosebuttoncustomercare();
 });
 
 //Scenario 23:
@@ -930,12 +931,12 @@ When(/^I select close button in customer care form$/, () => {
 Then(/^Ensure the Rings dropdown is displayed$/, async() => {
 	const diamondguide = new page2;
 	await expect(diamondguide.ddringsshopbycategory).toExist;
-	BrowserUtil.wait(10);
+	await BrowserUtil.wait(10);
 });
 
-When(/^I select Diamond rings from Shop By Diamond$/, () => {
+When(/^I select Diamond rings from Shop By Diamond$/, async() => {
 	const diamondguide = new page2;
-	diamondguide.selectDiamondrings();
+	await diamondguide.selectDiamondrings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Diamond ring products$/, async() => {
@@ -949,9 +950,9 @@ Then(/^Ensure the Banner and link is displayed with Explore Diamond guide link$/
 	await expect(diamondguide.lnkexplorediamondguide).toExist;
 });
 
-When(/^I select Explore Diamond guide link$/, () => {
+When(/^I select Explore Diamond guide link$/, async() => {
 	const diamondguide = new page2;
-	diamondguide.selectExplorediamondguide();
+	await diamondguide.selectExplorediamondguide();
 });
 
 Then(/^Ensure it redirects to the Buying your first diamond blog page$/, async() => {
@@ -961,9 +962,9 @@ Then(/^Ensure it redirects to the Buying your first diamond blog page$/, async()
 
 // Scenario 24:
 
-When(/^I select Brown Diamond from Shop By Diamond$/, () => {
+When(/^I select Brown Diamond from Shop By Diamond$/, async() => {
 	const gemstoneguide = new page2;
-	gemstoneguide.selectBrownDiamondrings();
+	await gemstoneguide.selectBrownDiamondrings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Brown Diamond ring products$/, async() => {
@@ -977,9 +978,9 @@ Then(/^Ensure the Banner and link is displayed with Explore Gemstone guide link$
 	await expect(gemstoneguide.lnkexploregemstoneguide).toExist;
 });
 
-When(/^I select Explore Gemstone guide link$/, () => {
+When(/^I select Explore Gemstone guide link$/, async() => {
 	const gemstoneguide = new page2;
-	gemstoneguide.selectExploregemstoneguide();
+	await gemstoneguide.selectExploregemstoneguide();
 });
 
 Then(/^Ensure the Gemstone guide page is displayed in new link$/, async() => {
@@ -995,9 +996,9 @@ Then(/^Ensure the Banner and link is displayed with Explore Emerald guide link$/
 	await expect(emeraldguide.lnkexploreemeraldguide).toExist;
 });
 
-When(/^I select Explore Emerald guide link$/, () => {
+When(/^I select Explore Emerald guide link$/, async() => {
 	const emeraldguide = new page2;
-	emeraldguide.selectExploreemeraldguide();
+	await emeraldguide.selectExploreemeraldguide();
 });
 
 Then(/^Ensure it redirects to the Emerald Guide Diamondere blog page$/, async() => {
@@ -1007,9 +1008,9 @@ Then(/^Ensure it redirects to the Emerald Guide Diamondere blog page$/, async() 
 
 //Scenario 26:
 
-When(/^I select Yellow Gold from Shop By Metal$/, () => {
+When(/^I select Yellow Gold from Shop By Metal$/, async() => {
 	const metalguide = new page2;
-	metalguide.selectYellowGoldrings();
+	await metalguide.selectYellowGoldrings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Yellow Gold ring products$/, async() => {
@@ -1023,9 +1024,9 @@ Then(/^Ensure the Banner and link is displayed with Explore Metal guide link$/, 
 	await expect(metalguide.lnkexploremetalguide).toExist;
 });
 
-When(/^I select Explore Metal guide link$/, () => {
+When(/^I select Explore Metal guide link$/, async() => {
 	const metalguide = new page2;
-	metalguide.selectExploremetalguide();
+	await metalguide.selectExploremetalguide();
 });
 
 Then(/^Ensure Metal guide page of Diamondere is displayed in new link$/, async() => {
@@ -1039,9 +1040,9 @@ Then(/^Ensure the Bracelets dropdown is displayed$/, async() => {
 	await expect(rubyguide.ddbraceletscategory).toExist;
 });
 
-When(/^I select Ruby from Shop By Gemstone$/, () => {
+When(/^I select Ruby from Shop By Gemstone$/, async() => {
 	const rubyguide = new page2;
-	rubyguide.selectRubybracelets();
+	await rubyguide.selectRubybracelets();
 });
 
 Then(/^Ensure Page2 is displayed with all the Ruby Bracelet products$/, async() => {
@@ -1055,9 +1056,9 @@ Then(/^Ensure the Banner and link is displayed with Explore Ruby guide link$/, a
 	await expect(rubyguide.lnkexplorerubyguide).toExist;
 });
 
-When(/^I select Explore Ruby guide link$/, () => {
+When(/^I select Explore Ruby guide link$/, async() => {
 	const rubyguide = new page2;
-	rubyguide.selectExplorerubyguide();
+	await rubyguide.selectExplorerubyguide();
 });
 
 Then(/^Ensure it redirects to the Explore Ruby Guide Diamondere blog page$/, async() => {
@@ -1067,9 +1068,9 @@ Then(/^Ensure it redirects to the Explore Ruby Guide Diamondere blog page$/, asy
 
 // Scenario 28
 
-When(/^I select Explore Jewelry Buying guide link$/, () => {
+When(/^I select Explore Jewelry Buying guide link$/, async() => {
 	const jewelryguide = new page2;
-	jewelryguide.selectExploreJewelryBuyingguide();
+	await jewelryguide.selectExploreJewelryBuyingguide();
 });
 
 Then(/^Ensure it redirects to the Jewelry Buying Guide Diamondere blog page$/, async() => {
@@ -1084,9 +1085,9 @@ Then(/^Ensure the Earrings dropdown is displayed$/, async() => {
 	await expect(sapphireguide.ddearringscategory).toExist;
 });
 
-When(/^I select Sapphire from Shop By Gemstone$/, () => {
+When(/^I select Sapphire from Shop By Gemstone$/, async() => {
 	const sapphireguide = new page2;
-	sapphireguide.selectSapphireearrings();
+	await sapphireguide.selectSapphireearrings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Sapphire Earring products$/, async() => {
@@ -1100,9 +1101,9 @@ Then(/^Ensure the Banner and link is displayed with Read more link and Explore S
 	await expect(sapphireguide.lnkexploresapphireguide).toExist;
 });
 
-When(/^I select Read more link$/, () => {
+When(/^I select Read more link$/, async() => {
 	const sapphireguide = new page2;
-	sapphireguide.selectReadmoreSapphireearrings();
+	await sapphireguide.selectReadmoreSapphireearrings();
 });
 
 Then(/^Ensure it moves down to the SEO section$/, async() => {
@@ -1110,9 +1111,9 @@ Then(/^Ensure it moves down to the SEO section$/, async() => {
 	await expect(sapphireguide.boxSEO).toExist;
 });
 
-When(/^I select Explore Sapphire guide link$/, () => {
+When(/^I select Explore Sapphire guide link$/, async() => {
 	const sapphireguide = new page2;
-	sapphireguide.selectExploresapphireguide();
+	await sapphireguide.selectExploresapphireguide();
 });
 
 Then(/^Ensure it redirects to the Sapphire Guide Diamondere blog page$/, async() => {
@@ -1122,9 +1123,9 @@ Then(/^Ensure it redirects to the Sapphire Guide Diamondere blog page$/, async()
 
 // Scenario 30:
 
-When(/^I select View All under Bracelets$/, () => {
+When(/^I select View All under Bracelets$/, async() => {
 	const gemstoneshape = new page2;
-	gemstoneshape.selectViewAllBracelets();
+	await gemstoneshape.selectViewAllBracelets();
 });
 
 Then(/^Ensure Page2 is displayed with all the Bracelets products$/, async() => {
@@ -1132,9 +1133,9 @@ Then(/^Ensure Page2 is displayed with all the Bracelets products$/, async() => {
 	await expect(gemstoneshape).toEqual(data.Page2Links.ViewAllBraceletsPage2URL);
 });
 
-When(/^I select Marquise-cut option$/, () => {
+When(/^I select Marquise-cut option$/, async() => {
 	const gemstoneshape = new page2;
-	gemstoneshape.selectMarquisecutbracelet();
+	await gemstoneshape.selectMarquisecutbracelet();
 });
 
 Then(/^Ensure the Banner and link is displayed with Explore Gemstone Shape Preference link$/, async() => {
@@ -1143,9 +1144,9 @@ Then(/^Ensure the Banner and link is displayed with Explore Gemstone Shape Prefe
 	await expect(gemstoneshape.lnkexploreGemstoneshapereference).toExist;
 });
 
-When(/^I select Explore Gemstone Shape Preference link$/, () => {
+When(/^I select Explore Gemstone Shape Preference link$/, async() => {
 	const gemstoneshape = new page2;
-	gemstoneshape.selectGemstoneshapereference();
+	await gemstoneshape.selectGemstoneshapereference();
 });
 
 Then(/^Ensure it redirects to the Gemstone shape Diamondere blog page$/, async() => {
@@ -1155,9 +1156,9 @@ Then(/^Ensure it redirects to the Gemstone shape Diamondere blog page$/, async()
 
 // Scenario 31:
 
-When(/^I select Peridot from Shop By Gemstone$/, () => {
+When(/^I select Peridot from Shop By Gemstone$/, async() => {
 	const breadcrumb =  new page2;
-	breadcrumb.selectPeridotNecklace();
+	await breadcrumb.selectPeridotNecklace();
 });
 
 Then(/^Ensure Page2 is displayed with all the Peridot Necklaces$/, async() => {
@@ -1178,9 +1179,9 @@ Then(/^Ensure Home link, necklaces link, Peridot text and number of designs are 
 	await expect(breadcrumb.txtnoofdesignsbreadcrumbperidotneck).toExist;
 });
 
-When(/^I select Home link in breadcrumb$/, () => {
+When(/^I select Home link in breadcrumb$/, async() => {
 	const breadcrumb =  new page2;
-	breadcrumb.selectHomebreadcrumbperidotneck();
+	await breadcrumb.selectHomebreadcrumbperidotneck();
 });
 
 Then(/^Ensure it redirects to the home page$/, async() => {
@@ -1188,9 +1189,9 @@ Then(/^Ensure it redirects to the home page$/, async() => {
 	await expect(breadcrumb).toEqual(dmd.config.url);
 });
 
-When(/^I select Necklaces in breadcrumb$/, () => {
+When(/^I select Necklaces in breadcrumb$/, async() => {
 	const breadcrumb =  new page2;
-	breadcrumb.selectnecklacesbreadcrumbperidotneck();
+	await breadcrumb.selectnecklacesbreadcrumbperidotneck();
 });
 
 Then(/^Ensure it redirects to Page 2 - All necklaces$/, async() => {
@@ -1200,9 +1201,9 @@ Then(/^Ensure it redirects to Page 2 - All necklaces$/, async() => {
 
 // Scenario 32:
 
-When(/^I select Bangles from Bracelet styles$/, () => {
+When(/^I select Bangles from Bracelet styles$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectBangles();
+	await filtertag.selectBangles();
 });
 
 Then(/^Ensure Page2 is displayed with all the Love Bangles$/, async() => {
@@ -1215,9 +1216,9 @@ Then(/^Ensure Love Bangles filter tag is displayed below filter tab$/, async() =
 	await expect(filtertag.lnkfiltertaglovebangles).toExist;
 });
 
-When(/^I select Heart shape$/, () => {
+When(/^I select Heart shape$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectHeartcutoption();
+	await filtertag.selectHeartcutoption();
 });
 
 Then(/^Ensure the Banner and link is updated for Heart shaped Bangles$/, async() => {
@@ -1232,9 +1233,9 @@ Then(/^Ensure the Heart shape is added to the filter tag$/, async() => {
 	await expect(filtertag.lnkheartfiltertag).toExist;
 });
 
-When(/^I select remove icon near Heart shape in filter tag$/, () => {
+When(/^I select remove icon near Heart shape in filter tag$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectbtnremoveheartshapedfiltertag();
+	await filtertag.selectbtnremoveheartshapedfiltertag();
 });
 
 Then(/^Ensure Heart shape is removed from filter tag$/, async() => {
@@ -1247,9 +1248,9 @@ Then(/^Ensure the Banner is updated for only Love Bangles$/, async() => {
 	await expect(filtertag.txtheadinglovebangles).toExist;
 });
 
-When(/^I select remove icon near Love Bangles in filter tag$/, () => {
+When(/^I select remove icon near Love Bangles in filter tag$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectbtnremovelovebanglesfiltertag();
+	await filtertag.selectbtnremovelovebanglesfiltertag();
 });
 
 Then(/^Ensure the page 2 is updated with all the Bangles design$/, async() => {
@@ -1263,14 +1264,14 @@ Then(/^Ensure the Banner is updated accordingly for All Bangles$/, async() => {
 	await expect(filtertag.txtheadingbangles).toExist;
 });
 
-When(/^I select stone filter$/, () => {
+When(/^I select stone filter$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectStonefilter();
+	await filtertag.selectStonefilter();
 });
 
-When(/^I select Emerald$/, () => {
+When(/^I select Emerald$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectemeraldstonefilter();
+	await filtertag.selectemeraldstonefilter();
 });
 
 Then(/^Ensure the Banner is updated for Emerald Bangles$/, async() => {
@@ -1297,9 +1298,9 @@ Then(/^Ensure the SEO section is updated for Emerald Bangles$/, async() => {
 	await expect(filtertag.lnkstarSEOEmeraldBangles).toExist();
 });
 
-When(/^I select Cushion-cut option$/, () => {
+When(/^I select Cushion-cut option$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectcushioncutshape();
+	await filtertag.selectcushioncutshape();
 });
 
 Then(/^Ensure the Banner is updated for Emerald and Cushion cut Bangles$/, async() => {
@@ -1325,9 +1326,9 @@ Then(/^Ensure the SEO section is updated for Emerald and Cushion cut Bangles$/, 
 	await expect(filtertag.lnkstarSEOEmeraldBangles).toExist();
 });
 
-When(/^I select remove icon near Emerald filter tag$/, () => {
+When(/^I select remove icon near Emerald filter tag$/, async() => {
 	const filtertag =  new page2;
-	filtertag.selectRemovenearemeraldfiltertag();
+	await filtertag.selectRemovenearemeraldfiltertag();
 });
 
 Then(/^Ensure the Banner is updated for only Cushion cut Bangles$/, async() => {
@@ -1351,14 +1352,14 @@ Then(/^Ensure the SEO section is updated for only Cushion cut Bangles$/, async()
 
 // Scenario 33:
 
-Given(/^I select search box in header$/, () => {
+Given(/^I select search box in header$/, async() => {
 	const search1 = new page2;
-	search1.clicksearchbox();
+	await search1.clicksearchbox();
 });
 
-When(/^I enter rings in search box$/, () => {
+When(/^I enter rings in search box$/, async() => {
 	const search1 = new page2;
-	search1.enterringsinsearchbox();
+	await search1.enterringsinsearchbox();
 });
 
 Then(/^Ensure search dropdown is displayed$/, async() => {
@@ -1366,9 +1367,9 @@ Then(/^Ensure search dropdown is displayed$/, async() => {
 	await expect(search1.ddringssearch).toExist();
 });
 
-When(/^I select rings from dropdown$/, () => {
+When(/^I select rings from dropdown$/, async() => {
 	const search1 = new page2;
-	search1.selectringsinddsearchbox();
+	await search1.selectringsinddsearchbox();
 });
 
 Then(/^Ensure all ring products are displayed$/, async() => {
@@ -1430,9 +1431,9 @@ Then(/^Ensure Danette product in rings search is displayed with product name ,pr
 	await expect(search1.txtdescrpdanettePDringsearch).toExist();
 });
 
-When(/^I select Danette product in rings search$/, () => {
+When(/^I select Danette product in rings search$/, async() => {
 	const search1 = new page2;
-	search1.selectDanetteringsearch();
+	await search1.selectDanetteringsearch();
 });
 
 Then(/^Ensure it redirects to page 3 - Danette rings search$/, async() => {
@@ -1442,9 +1443,9 @@ Then(/^Ensure it redirects to page 3 - Danette rings search$/, async() => {
 
 // Scenario 34:
 
-When(/^I select content option$/, () => {
+When(/^I select content option$/, async() => {
 	const search2 = new page2;
-	search2.selectcontentoption();
+	await search2.selectcontentoption();
 });
 
 Then(/^Ensure the Videos and Guides text heading is displayed$/, async() => {
@@ -1473,14 +1474,14 @@ Then(/^Ensure Bloglinks text heading and section are displayed$/, async() => {
 	await expect(search2.SctnBloglinks).toExist();
 });
 
-When(/^I select the Rings Review heading$/, () => {
+When(/^I select the Rings Review heading$/, async() => {
 	const search2 = new page2;
-	search2.selectRingsreview();
+	await search2.selectRingsreview();
 });
 
-When(/^I select the Mens rings review heading$/, () => {
+When(/^I select the Mens rings review heading$/, async() => {
 	const search2 = new page2;
-	search2.selectMensRingsreview();
+	await search2.selectMensRingsreview();
 });
 
 Then(/^Ensure review for diamondere mens rings page is displayed$/, async() => {
@@ -1488,9 +1489,9 @@ Then(/^Ensure review for diamondere mens rings page is displayed$/, async() => {
 	await expect(search2).toEqual(data.Page2Links.ReviewspageforMensringsURL);
 });
 
-When(/^I select the Engagement review heading$/, () => {
+When(/^I select the Engagement review heading$/, async() => {
 	const search2 = new page2;
-	search2.selectEngagementRingsreview();
+	await search2.selectEngagementRingsreview();
 });
 
 Then(/^Ensure review for diamondere engagement rings page is displayed$/, async() => {
@@ -1498,9 +1499,9 @@ Then(/^Ensure review for diamondere engagement rings page is displayed$/, async(
 	await expect(search2).toEqual(data.Page2Links.ReviewspageforEngagementringsURL);
 });
 
-When(/^I select the section under Bloglinks$/, () => {
+When(/^I select the section under Bloglinks$/, async() => {
 	const search2 = new page2;
-	search2.selectSectionunderbloglink();
+	await search2.selectSectionunderbloglink();
 });
 
 Then(/^Ensure it redirects to the respective blog page$/, async() => {
@@ -1522,9 +1523,9 @@ Then(/^Ensure a message and Write to us link is displayed$/, async() => {
 	await expect(search3.lnkwritetousinnersearch).toExist();
 });
 
-When(/^I enter any name say miya in new search box inside$/, () => {
+When(/^I enter any name say miya in new search box inside$/, async() => {
 	const search3 = new page2;
-	search3.entermiyainnersearchbox();
+	await search3.entermiyainnersearchbox();
 });
 
 Then(/^Ensure a new search dropdown is displayed$/, async() => {
@@ -1532,9 +1533,9 @@ Then(/^Ensure a new search dropdown is displayed$/, async() => {
 	await expect(search3.ddinnersearch).toExist();
 });
 
-When(/^I select Miya from new dropdown$/, () => {
+When(/^I select Miya from new dropdown$/, async() => {
 	const search3 = new page2;
-	search3.selectmiyaddinnersearch();
+	await search3.selectmiyaddinnersearch();
 });
 
 Then(/^Ensure the product Miya is displayed overwriting the previous results$/, async() => {
@@ -1560,9 +1561,9 @@ Then(/^Ensure the relevant filter tabs for miya rings are displayed$/, async() =
 	await expect(search3.lnkFilterMetal).toExist();
 });
 
-When(/^I select write to us link above new search box$/, () => {
+When(/^I select write to us link above new search box$/, async() => {
 	const search3 = new page2;
-	search3.selectwritetousinnersearch();
+	await search3.selectwritetousinnersearch();
 });
 
 Then(/^Ensure it redirects us to the contact form page in new tab$/, async() => {
@@ -1572,14 +1573,14 @@ Then(/^Ensure it redirects us to the contact form page in new tab$/, async() => 
 
 //Scenario 36:
 
-When(/^I enter emerald in search box$/, () => {
+When(/^I enter emerald in search box$/, async() => {
 	const search4 = new page2;
-	search4.enteremeraldinsearchbox();
+	await search4.enteremeraldinsearchbox();
 });
 
-When(/^I select emerald from dropdown$/, () => {
+When(/^I select emerald from dropdown$/, async() => {
 	const search4 = new page2;
-	search4.selectemeraldinddsearchbox();
+	await search4.selectemeraldinddsearchbox();
 });
 
 Then(/^Ensure emerald products is displayed with product name , price and product description$/, async() => {
@@ -1593,9 +1594,9 @@ Then(/^Ensure the relevant filter tabs for Emerald is displayed$/, async() => {
 	await expect(search4.sctnFilterTab).toExist();
 });
 
-When(/^I select stone filter for Emerald search$/, () => {
+When(/^I select stone filter for Emerald search$/, async() => {
 	const search4 = new page2;
-	search4.selectStonefilter();
+	await search4.selectStonefilter();
 });
 
 Then(/^Ensure stone dropdown is displayed for Emerald search$/, async() => {
@@ -1603,14 +1604,14 @@ Then(/^Ensure stone dropdown is displayed for Emerald search$/, async() => {
 	await expect(search4.ddStonefilter).toExist();
 });
 
-When(/^I select Morganite from stone dropdown$/, () => {
+When(/^I select Morganite from stone dropdown$/, async() => {
 	const search4 = new page2;
-	search4.selectMorganiteoption();
+	await search4.selectMorganiteoption();
 });
 
-When(/^I select shape filter for Emerald search$/, () => {
+When(/^I select shape filter for Emerald search$/, async() => {
 	const search4 = new page2;
-	search4.selectShapefilter();
+	await search4.selectShapefilter();
 });
 
 Then(/^Ensure shape dropdown is displayed for Emerald search$/, async() => {
@@ -1618,16 +1619,16 @@ Then(/^Ensure shape dropdown is displayed for Emerald search$/, async() => {
 	await expect(search4.ddShapefilter).toExist();
 });
 
-When(/^I select Marquise cut from shape dropdown$/, () => {
+When(/^I select Marquise cut from shape dropdown$/, async() => {
 	const search4 = new page2;
-	search4.selectMarquisecutoption();
+	await search4.selectMarquisecutoption();
 });
 
 
-When(/^I select Above 3 carat$/, () => {
+When(/^I select Above 3 carat$/, async() => {
 	const search4 = new page2;
-	search4.selectCaratrangefilter()
-	search4.selectAbove3Caratoption();
+	await search4.selectCaratrangefilter()
+	await search4.selectAbove3Caratoption();
 });
 
 
@@ -1637,9 +1638,9 @@ Then(/^Ensure a message and Reach out to us link is displayed$/, async() => {
 	await expect(search4.lnkreachouttousinsearch).toExist();
 });
  
-When(/^I select Reach out to us link$/, () => {
+When(/^I select Reach out to us link$/, async() => {
 	const search4 = new page2;
-	search4.selectReachouttoussearch();
+	await search4.selectReachouttoussearch();
 });
 
 Then(/^Ensure it redirects to the contact us form$/, async() => {
@@ -1649,9 +1650,9 @@ Then(/^Ensure it redirects to the contact us form$/, async() => {
 
 //Scenario 37:
 
-When(/^I select Promise rings catalogue from Ring styles$/, () => {
+When(/^I select Promise rings catalogue from Ring styles$/, async() => {
 	const search5 = new page2;
-	search5.selectPromiserings();
+	await search5.selectPromiserings();
 });
 
 Then(/^Ensure Page2 is displayed with all the Promise rings catalogue products$/, async() => {
@@ -1664,9 +1665,9 @@ Then(/^Ensure Types filter tag is present$/, async() => {
 	await expect(search5.lnkFilterTypes).toExist();
 });
 
-When(/^I select Types filter$/, () => {
+When(/^I select Types filter$/, async() => {
 	const search5 = new page2;
-	search5.selecttypefilter();
+	await search5.selecttypefilter();
 });
 
 Then(/^Ensure the Types dropdown is displayed$/, async() => {
@@ -1674,9 +1675,9 @@ Then(/^Ensure the Types dropdown is displayed$/, async() => {
 	await expect(search5.ddTypesfilter).toExist();
 });
 
-When(/^I select Couples band from Types filters$/, () => {
+When(/^I select Couples band from Types filters$/, async() => {
 	const search5 = new page2;
-	search5.selectCouplesband();
+	await search5.selectCouplesband();
 });
 
 Then(/^Ensure the Couple band products are displayed in page 2$/, async() => {
@@ -1692,15 +1693,15 @@ Then(/^Ensure there is no change in banner and SEO section$/, async() => {
 
 //Scenario 38
 
-When(/^I select Hoop Earrings from Earring styles$/, () => {
+When(/^I select Hoop Earrings from Earring styles$/, async() => {
 	const noproduct = new page2;
-	noproduct.selectHoopsearrings();
+	await noproduct.selectHoopsearrings();
 });
 
 
-Given(/^I browse Hoop Earrings page$/, () => {
-	browser.url(dmd.config.hoopEarringsUrl);
-	BrowserUtil.wait(5)
+Given(/^I browse Hoop Earrings page$/, async() => {
+	await browser.url(dmd.config.hoopEarringsUrl);
+	await BrowserUtil.wait(5)
 });
 
 
@@ -1710,9 +1711,9 @@ Then(/^Ensure Page2 is displayed with all the Hoop Earrings$/, async() => {
 });
 
 
-When(/^I select Shape filter$/, () => {
+When(/^I select Shape filter$/, async() => {
 	const noproduct = new page2;
-	noproduct.selectShapefilterSearch();
+	await noproduct.selectShapefilterSearch();
 });
 
 
@@ -1723,9 +1724,9 @@ Then(/^Ensure the shape dropdown is displayed for Hoop earrings$/, async() => {
 
 //Scenario 39
 
-When(/^I hover on caret icon near Style filter tab$/, () => {
+When(/^I hover on caret icon near Style filter tab$/, async() => {
 	const hoverstyle = new page2;
-	hoverstyle.hoveronStylefilter();
+	await hoverstyle.hoveronStylefilter();
 });
 
 Then(/^Ensure the dropdown is displayed for Style filter$/, async() => {
@@ -1733,9 +1734,9 @@ Then(/^Ensure the dropdown is displayed for Style filter$/, async() => {
 	await expect(hoverstyle.ddStylefilter).toExist();
 });
 
-When(/^I scroll down to the footer section$/, () => {
+When(/^I scroll down to the footer section$/, async() => {
 	const hoverstyle = new page2;
-	hoverstyle.scrolltofooter();
+	await hoverstyle.scrolltofooter();
 });
 
 Then(/^Ensure the style dropdown is closed$/, async() => {
@@ -1743,10 +1744,10 @@ Then(/^Ensure the style dropdown is closed$/, async() => {
 	await expect(hoverstyle.ddStylefilter).not.toBeDisplayed();
 });
 
-When(/^I click on caret icon near Style filter tab$/, () => {
+When(/^I click on caret icon near Style filter tab$/, async() => {
 	const hoverstyle = new page2;
-	hoverstyle.selectStylefilter();
-	hoverstyle.hovermayweassistyou();
+	await hoverstyle.selectStylefilter();
+	await hoverstyle.hovermayweassistyou();
 });
 
 Then(/^Ensure the style dropdown is not closed and remains static$/, async() => {
@@ -1756,9 +1757,9 @@ Then(/^Ensure the style dropdown is not closed and remains static$/, async() => 
 
 //Scenario 40
 
-When(/^I hover on caret icon near Stone filter tab$/, () => {
+When(/^I hover on caret icon near Stone filter tab$/, async() => {
 	const hoverstone = new page2;
-	hoverstone.hoveronStonefilter();
+	await hoverstone.hoveronStonefilter();
 });
 
 Then(/^Ensure the dropdown is displayed for Stone filter$/, async() => {
@@ -1771,10 +1772,10 @@ Then(/^Ensure the Stone dropdown is closed$/, async() => {
 	await expect(hoverstone.ddStonefilter).not.toBeDisplayed();
 });
 
-When(/^I click on caret icon near Stone filter tab$/, () => {
+When(/^I click on caret icon near Stone filter tab$/, async() => {
 	const hoverstone = new page2;
-	hoverstone.selectStonefilter();
-	hoverstone.hovermayweassistyou();
+	await hoverstone.selectStonefilter();
+	await hoverstone.hovermayweassistyou();
 });
 
 Then(/^Ensure the Stone dropdown is not closed and remains static$/, async() => {
@@ -1784,9 +1785,9 @@ Then(/^Ensure the Stone dropdown is not closed and remains static$/, async() => 
 
 //Scenario 41:
 
-When(/^I hover on caret icon near Shape filter tab$/, () => {
+When(/^I hover on caret icon near Shape filter tab$/, async() => {
 	const hovershape = new page2;
-	hovershape.hoveronShapefilter();
+	await hovershape.hoveronShapefilter();
 });
 
 Then(/^Ensure the dropdown is displayed for Shape filter$/, async() => {
@@ -1799,10 +1800,10 @@ Then(/^Ensure the Shape dropdown is closed$/, async() => {
 	await expect(hovershape.ddShapefilter).not.toBeDisplayed();
 });
 
-When(/^I click on caret icon near Shape filter tab$/, () => {
+When(/^I click on caret icon near Shape filter tab$/, async() => {
 	const hovershape = new page2;
-	hovershape.selectShapefilter();
-	hovershape.hovermayweassistyou();
+	await hovershape.selectShapefilter();
+	await hovershape.hovermayweassistyou();
 });
 
 Then(/^Ensure the Shape dropdown is not closed and remains static$/, async() => {
@@ -1812,9 +1813,9 @@ Then(/^Ensure the Shape dropdown is not closed and remains static$/, async() => 
 
 //Scenario 42
 
-When(/^I hover on caret icon near Carat range filter tab$/, () => {
+When(/^I hover on caret icon near Carat range filter tab$/, async() => {
 	const hovercarat = new page2;
-	hovercarat.hoveronCaratfilter();
+	await hovercarat.hoveronCaratfilter();
 });
 
 Then(/^Ensure the dropdown is displayed for Carat Range filter$/, async() => {
@@ -1827,10 +1828,10 @@ Then(/^Ensure the Carat range dropdown is closed$/, async() => {
 	await expect(hovercarat.ddCaratRangeFilter).not.toBeDisplayed();
 });
 
-When(/^I click on caret icon near Carat range filter tab$/, () => {
+When(/^I click on caret icon near Carat range filter tab$/, async() => {
 	const hovercarat = new page2;
-	hovercarat.selectCaratrangefilter();
-	hovercarat.hovermayweassistyou();
+	await hovercarat.selectCaratrangefilter();
+	await hovercarat.hovermayweassistyou();
 });
 
 Then(/^Ensure the Carat range dropdown is not closed and remains static$/, async() => {
@@ -1840,9 +1841,9 @@ Then(/^Ensure the Carat range dropdown is not closed and remains static$/, async
 
 //Scenario 43
 
-When(/^I hover on caret icon near Metal filter tab$/, () => {
+When(/^I hover on caret icon near Metal filter tab$/, async() => {
 	const hovermetal = new page2;
-	hovermetal.hoveronMetalfilter();
+	await hovermetal.hoveronMetalfilter();
 });
 
 Then(/^Ensure the dropdown is displayed for Metal filter$/, async() => {
@@ -1855,10 +1856,10 @@ Then(/^Ensure the Metal dropdown is closed$/, async() => {
 	await expect(hovermetal.ddMetalFilter).not.toBeDisplayed();
 });
 
-When(/^I click on caret icon near Metal filter tab$/, () => {
+When(/^I click on caret icon near Metal filter tab$/, async() => {
 	const hovermetal = new page2;
-	hovermetal.selectMetalfilter();
-	hovermetal.hovermayweassistyou();
+	await hovermetal.selectMetalfilter();
+	await hovermetal.hovermayweassistyou();
 });
 
 Then(/^Ensure the Metal dropdown is not closed and remains static$/, async() => {

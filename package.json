@@ -1,31 +1,32 @@
 {
-  "name": "automation",
+  "name": "diamondere",
   "version": "1.0.0",
   "description": "",
-  "main": "wdio.conf.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js"
   },
-  "author": "Ashok",
+  "author": "Litefury",
   "license": "ISC",
   "dependencies": {
-    "@wdio/cucumber-framework": "7.16.14",
-    "@wdio/local-runner": "7.16.16",
-    "@wdio/spec-reporter": "^8.10.1",
-    "@wdio/sync": "7.16.16",
-    "chalk": "^3.0.0",
-    "colors": "1.4.0",
-    "cucumber-html-reporter": "^6.0.0",
-    "fs": "0.0.1-security",
-    "moment": "2.29.1",
-    "wdio-cucumber-parallel-execution": "3.6.14",
-    "wdio-cucumberjs-json-reporter": "4.4.0",
-    "wdio-intercept-service": "^4.3.1",
-    "xlsx": "0.16.9"
+    "@wdio/cli": "^8.21.0",
+    "@wdio/cucumber-framework": "^8.21.0",
+    "@wdio/local-runner": "^8.21.0",
+    "@wdio/spec-reporter": "^8.21.0",
+    "chalk": "^5.3.0",
+    "colors": "^1.4.0",
+    "cucumber-html-reporter": "^7.1.1",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "wdio-cucumber-parallel-execution": "^3.6.15",
+    "wdio-cucumberjs-json-reporter": "^4.4.0",
+    "wdio-intercept-service": "^4.4.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "@wdio/cli": "^7.16.16",
-    "chromedriver": "^118.0.0",
+    "chromedriver": "^119.0.0",
+    "node-fetch": "^3.3.2",
     "wdio-chromedriver-service": "^8.1.1"
   }
 }

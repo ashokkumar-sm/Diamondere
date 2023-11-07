@@ -125,40 +125,40 @@ class TOM {
         return $('//button[@class="delete"]')
     }
 
-    selectdrptrackmyorder() {
-        ElementUtil.click(this.titleTrackMyOrder, "click track my order")
-        BrowserUtil.wait(5)
+    async selectdrptrackmyorder() {
+        await ElementUtil.click(this.titleTrackMyOrder, "click track my order")
+        await BrowserUtil.wait(5)
     }
 
-    enterlastname(){
-        ElementUtil.sendText(this.boxlastname,data.Trackorder.Lastname,"Enter last name in Last name field")
+    async enterlastname(){
+        await ElementUtil.sendText(this.boxlastname,data.Trackorder.Lastname,"Enter last name in Last name field")
     }
 
-    selectsearchbutton(){
-        ElementUtil.click(this.btnsearch,"Select search button")
-        BrowserUtil.wait(3)
+    async selectsearchbutton(){
+        await ElementUtil.click(this.btnsearch,"Select search button")
+        await BrowserUtil.wait(3)
     }
 
-    enterOrderId(){
-        ElementUtil.sendText(this.boxordernumber,data.Trackorder.OrderId,"Enter OrderId in OrderId field")
+    async enterOrderId(){
+        await ElementUtil.sendText(this.boxordernumber,data.Trackorder.OrderId,"Enter OrderId in OrderId field")
     }
 
-    enterincorrectOrderId(){
-        ElementUtil.sendText(this.boxordernumber,data.Trackorder.IncorrectOrderId,"Enter Incorrect OrderId in OrderId field");
-        ElementUtil.sendText(this.boxlastname,data.Trackorder.Lastname,"Send valid last name in the field")
+    async enterincorrectOrderId(){
+        await ElementUtil.sendText(this.boxordernumber,data.Trackorder.IncorrectOrderId,"Enter Incorrect OrderId in OrderId field");
+        await ElementUtil.sendText(this.boxlastname,data.Trackorder.Lastname,"Send valid last name in the field")
     }
 
-    selectclosebuttonTOM(){
-        ElementUtil.click(this.btnclose,"Select close button in error popup")
+    async selectclosebuttonTOM(){
+        await ElementUtil.click(this.btnclose,"Select close button in error popup")
     }
 
-    enterincorrectLastname(){
-        ElementUtil.click(this.boxordernumber, "Click on orderId field");
-        ElementUtil.clearText(this.boxordernumber, "Clearing the text");
-        ElementUtil.sendText(this.boxordernumber,data.Trackorder.OrderId,"Enter correct OrderId in OrderId field");
-        ElementUtil.click(this.boxlastname, "Click on Lastname field");
-        ElementUtil.clearText(this.boxlastname, "Clearing the text");
-        ElementUtil.sendText(this.boxlastname,data.Trackorder.IncorrectLastName,"Send incorrect last name in the field")
+    async enterincorrectLastname(){
+        await ElementUtil.click(this.boxordernumber, "Click on orderId field");
+        await ElementUtil.clearText(this.boxordernumber, "Clearing the text");
+        await ElementUtil.sendText(this.boxordernumber,data.Trackorder.OrderId,"Enter correct OrderId in OrderId field");
+        await ElementUtil.click(this.boxlastname, "Click on Lastname field");
+        await ElementUtil.clearText(this.boxlastname, "Clearing the text");
+        await ElementUtil.sendText(this.boxlastname,data.Trackorder.IncorrectLastName,"Send incorrect last name in the field")
     }
     
 

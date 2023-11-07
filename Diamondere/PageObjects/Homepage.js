@@ -1840,866 +1840,862 @@ class Homepage {
 
     /////////////////////////////////////////////////
 
-    scrollHeader() {
-        ElementUtil.mouseHover(this.freeshipping, "hover to header")
+    async scrollHeader() {
+        await ElementUtil.mouseHover(this.freeshipping, "hover to header")
     }
-    clickFreeShip() {
-        ElementUtil.click(this.freeshipping, "click free shipping")
-        BrowserUtil.wait(8);
+    async clickFreeShip() {
+        await ElementUtil.click(this.freeshipping, "click free shipping")
+        await BrowserUtil.wait(8);
         
     }
-    clickReturns() {
-        ElementUtil.waitForClickable(this.returnsBnnr, 20, "wait for page load")
-        ElementUtil.click(this.returnsBnnr, "click returns")
-        BrowserUtil.wait(8);
+    async clickReturns() {
+        await ElementUtil.waitForClickable(this.returnsBnnr, 20, "wait for page load")
+        await ElementUtil.click(this.returnsBnnr, "click returns")
+        await BrowserUtil.wait(8);
     }
-    clickResizing() {
-        ElementUtil.waitForClickable(this.resizing, 20, "wait for page load")
-        ElementUtil.click(this.resizing, "click resizing")
-        BrowserUtil.wait(8);
+    async clickResizing() {
+        await ElementUtil.waitForClickable(this.resizing, 20, "wait for page load")
+        await ElementUtil.click(this.resizing, "click resizing")
+        await BrowserUtil.wait(8);
     }
-    clickCertification(){
-        ElementUtil.click(this.certification, "click certification")
-        BrowserUtil.wait(8);
+    async clickCertification(){
+        await ElementUtil.click(this.certification, "click certification")
+        await BrowserUtil.wait(8);
     }
-    clickDiamondereLogo() {
-        ElementUtil.click(this.mainLogo, "hover over Diamondere logo")
-        BrowserUtil.wait(5);
+    async clickDiamondereLogo() {
+        await ElementUtil.click(this.mainLogo, "hover over Diamondere logo")
+        await BrowserUtil.wait(5);
     }
-    hoverCustomerCare() {
-        ElementUtil.mouseHover(this.customercare, "hover over customercare")
-        //BrowserUtil.wait(5);
+    async hoverCustomerCare() {
+        await ElementUtil.mouseHover(this.customercare, "hover over customercare")
+        //await BrowserUtil.wait(5);
     }
-    profileiconbeflogin() {
-        ElementUtil.mouseHover(this.profilebeforelogin, "hover over login icon")
-        //BrowserUtil.wait(5);
+    async profileiconbeflogin() {
+        await ElementUtil.mouseHover(this.profilebeforelogin, "hover over login icon")
+        //await BrowserUtil.wait(5);
     }
-    ringsMainMenu() {
-        ElementUtil.mouseHover(this.ringsmenu, "hover over rings menu")
-        BrowserUtil.wait(5);
+    async ringsMainMenu() {
+        await ElementUtil.mouseHover(this.ringsmenu, "hover over rings menu")
+        await BrowserUtil.wait(5);
     }
-    shopByDiablackDiamondRing() {
-        ElementUtil.click(this.sdrblackdiamond, "click black diamond rings")
-        BrowserUtil.wait(5);
+    async shopByDiablackDiamondRing() {
+        await ElementUtil.click(this.sdrblackdiamond, "click black diamond rings")
+        await BrowserUtil.wait(5);
     }
-    rubySemiPrecious() {
-        ElementUtil.click(this.rruby, " click ruby rings")
-        BrowserUtil.wait(5);
+    async rubySemiPrecious() {
+        await ElementUtil.click(this.rruby, " click ruby rings")
+        await BrowserUtil.wait(5);
     }
-    aquaSemiPreRings() {
-        ElementUtil.click(this.raquamarine, " click aquamarine rings")
-        BrowserUtil.wait(5);
+    async aquaSemiPreRings() {
+        await ElementUtil.click(this.raquamarine, " click aquamarine rings")
+        await BrowserUtil.wait(5);
     }
-    labCreatedRings() {
-        ElementUtil.click(this.ralexanderite, " click alexandrite rings")
-        BrowserUtil.wait(5);
+    async labCreatedRings() {
+        await ElementUtil.click(this.ralexanderite, " click alexandrite rings")
+        await BrowserUtil.wait(5);
     }
-    metalRings() {
-        ElementUtil.click(this.rplatinum, " click platinum rings")
-        BrowserUtil.wait(5);
+    async metalRings() {
+        await ElementUtil.click(this.rplatinum, " click platinum rings")
+        await BrowserUtil.wait(5);
     }
-    ringStyles() {
-        ElementUtil.click(this.rs3stonerings, " click 3 stone rings")
-        BrowserUtil.wait(5);
+    async ringStyles() {
+        await ElementUtil.click(this.rs3stonerings, " click 3 stone rings")
+        await BrowserUtil.wait(5);
     }
-    styleGuideRing() {
-        ElementUtil.click(this.styleguide, " click style guide")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/style-guide-ring-setting-options/");
+    async styleGuideRing() {
+        await ElementUtil.click(this.styleguide, " click style guide")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/style-guide-ring-setting-options/");
     }
-    blackGoldGuideRing() {
-        ElementUtil.click(this.blackgoldguide, " click BG guide")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/your-ultimate-guide-to-buying-black-diamond-jewelry/");
+    async blackGoldGuideRing() {
+        await ElementUtil.click(this.blackgoldguide, " click BG guide")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/your-ultimate-guide-to-buying-black-diamond-jewelry/");
 
     }
-    engageMenu() {
-        ElementUtil.mouseHover(this.engagementmenu, "Hover over engagament menu")
-        BrowserUtil.wait(5);
+    async engageMenu() {
+        await ElementUtil.mouseHover(this.engagementmenu, "Hover over engagament menu")
+        await BrowserUtil.wait(5);
     }
-    labdiamondEngagement() {
-        ElementUtil.click(this.sdenglabdiamond, "click lab engage diamond")
-        BrowserUtil.wait(5);
+    async labdiamondEngagement() {
+        await ElementUtil.click(this.sdenglabdiamond, "click lab engage diamond")
+        await BrowserUtil.wait(5);
     }
-    gemCreatedEngagement() {
-        ElementUtil.click(this.engsapphire, "click sapphire gem")
-        BrowserUtil.wait(5);
+    async gemCreatedEngagement() {
+        await ElementUtil.click(this.engsapphire, "click sapphire gem")
+        await BrowserUtil.wait(5);
     }
-    semipreciousEngagementRings() {
-        ElementUtil.click(this.engamethyst, "click amethyst gem")
-        BrowserUtil.wait(5); 
+    async semipreciousEngagementRings() {
+        await ElementUtil.click(this.engamethyst, "click amethyst gem")
+        await BrowserUtil.wait(5); 
     }
-    labCreatedEngagementRings() {
-        ElementUtil.click(this.engalexanderite, "click alexandrite ")
-        BrowserUtil.wait(5);
+    async labCreatedEngagementRings() {
+        await ElementUtil.click(this.engalexanderite, "click alexandrite ")
+        await BrowserUtil.wait(5);
     }
-    metalEngageMenu() {
-        ElementUtil.click(this.engwhitegold, "click WG ")
-        BrowserUtil.wait(5);
+    async metalEngageMenu() {
+        await ElementUtil.click(this.engwhitegold, "click WG ")
+        await BrowserUtil.wait(5);
     }
-    engagementRingStyle() {
-        ElementUtil.click(this.ershalorings, "click halo rings ")
-        BrowserUtil.wait(5);
+    async engagementRingStyle() {
+        await ElementUtil.click(this.ershalorings, "click halo rings ")
+        await BrowserUtil.wait(5);
     }
-    engageRingGuide() {
-        ElementUtil.click(this.engagementguide, "click engage ring guide ")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/complete-engagement-ring-buying-guide/")
+    async engageRingGuide() {
+        await ElementUtil.click(this.engagementguide, "click engage ring guide ")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/complete-engagement-ring-buying-guide/")
     }
-    engageRingMyth() {
-        ElementUtil.click(this.engagementmyth, "click engage myth ")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/3-engagement-ring-myths-completely-false/")
+    async engageRingMyth() {
+        await ElementUtil.click(this.engagementmyth, "click engage myth ")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/3-engagement-ring-myths-completely-false/")
     }
-    weddingMainMenu() {
-        ElementUtil.mouseHover(this.weddingmenu, "click weddding menu")
-        BrowserUtil.wait(5);
+    async weddingMainMenu() {
+        await ElementUtil.mouseHover(this.weddingmenu, "click weddding menu")
+        await BrowserUtil.wait(5);
     }
-    diaWeddingMenu() {
-        ElementUtil.click(this.sdweddiamond, "click weddding diamond")
-        BrowserUtil.wait(5);
+    async diaWeddingMenu() {
+        await ElementUtil.click(this.sdweddiamond, "click weddding diamond")
+        await BrowserUtil.wait(5);
     }
-    emeraldWeddingMenu() {
-        ElementUtil.mouseHover(this.weddingmenu, "click weddding menu")
-        ElementUtil.click(this.wedemerald, "click emerald")
-        BrowserUtil.wait(5);
+    async emeraldWeddingMenu() {
+        await ElementUtil.mouseHover(this.weddingmenu, "click weddding menu")
+        await ElementUtil.click(this.wedemerald, "click emerald")
+        await BrowserUtil.wait(5);
     }
-    ygMetalwedding() {
-        ElementUtil.click(this.wedyellowgold, "click YG")
-        BrowserUtil.wait(5);
+    async ygMetalwedding() {
+        await ElementUtil.click(this.wedyellowgold, "click YG")
+        await BrowserUtil.wait(5);
     }
-    viewAllWomenBand() {
-        ElementUtil.click(this.wwbsviewall, "click view all WB")
-        BrowserUtil.wait(5);
+    async viewAllWomenBand() {
+        await ElementUtil.click(this.wwbsviewall, "click view all WB")
+        await BrowserUtil.wait(5);
     }
-    menWeddingviewall() {
-        ElementUtil.click(this.mwbsviewall, "click view all MB")
-        BrowserUtil.wait(5);
+    async menWeddingviewall() {
+        await ElementUtil.click(this.mwbsviewall, "click view all MB")
+        await BrowserUtil.wait(5);
     }
-    matchbandsCoupleWed() {
-        ElementUtil.click(this.matchingbandsets, "click couple wed")
-        BrowserUtil.wait(5);
+    async matchbandsCoupleWed() {
+        await ElementUtil.click(this.matchingbandsets, "click couple wed")
+        await BrowserUtil.wait(5);
     }
-    readMoreWedRings() {
-        ElementUtil.click(this.weddingguide, "click readmore ")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/the-ultimate-wedding-rings-guide/")
+    async readMoreWedRings() {
+        await ElementUtil.click(this.weddingguide, "click readmore ")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/the-ultimate-wedding-rings-guide/")
     }
-    readMoreMatchWedBands() {
-        ElementUtil.click(this.matchingwedding, "click match wed bands")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/choose-matching-wedding-bands/")
+    async readMoreMatchWedBands() {
+        await ElementUtil.click(this.matchingwedding, "click match wed bands")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/choose-matching-wedding-bands/")
     }
-    braceletsMainMenu() {
-        ElementUtil.mouseHover(this.braceletsmenu, "Hover over bracelets MainMenu")
-        BrowserUtil.wait(5);
+    async braceletsMainMenu() {
+        await ElementUtil.mouseHover(this.braceletsmenu, "Hover over bracelets MainMenu")
+        await BrowserUtil.wait(5);
     }
-    blueDiabracelets() {
-        ElementUtil.click(this.sdbbluediamond, "click blue dia bracelets")
-        BrowserUtil.wait(5);
+    async blueDiabracelets() {
+        await ElementUtil.click(this.sdbbluediamond, "click blue dia bracelets")
+        await BrowserUtil.wait(5);
     }
-    PinkSapPrecious() {
-        ElementUtil.click(this.bpinksapphire, "click match wed bands")
-        BrowserUtil.wait(5);
+    async PinkSapPrecious() {
+        await ElementUtil.click(this.bpinksapphire, "click match wed bands")
+        await BrowserUtil.wait(5);
     }
-    garnetBraceletsSemi() {
-        ElementUtil.click(this.bgarnet, "click match wed bands")
-        BrowserUtil.wait(5);
+    async garnetBraceletsSemi() {
+        await ElementUtil.click(this.bgarnet, "click match wed bands")
+        await BrowserUtil.wait(5);
     }
-    labCreatedBracelets() {
-        ElementUtil.click(this.bmoissanite, "click match wed bands")
-        BrowserUtil.wait(5);
+    async labCreatedBracelets() {
+        await ElementUtil.click(this.bmoissanite, "click match wed bands")
+        await BrowserUtil.wait(5);
     }
-    banglesBracelets() {
-        ElementUtil.click(this.bsbangles, "click bangles")
-        BrowserUtil.wait(5);
+    async banglesBracelets() {
+        await ElementUtil.click(this.bsbangles, "click bangles")
+        await BrowserUtil.wait(5);
     }
-    appleBandsBracelets() {
-        ElementUtil.mouseHover(this.braceletsmenu, "Hover over bracelets MainMenu")
-        ElementUtil.waitForClickable(this.bsapplewatchbands, 20, "wait for page load")
-        ElementUtil.click(this.bsapplewatchbands, "click apple bands")
-        BrowserUtil.wait(5);
+    async appleBandsBracelets() {
+        await ElementUtil.mouseHover(this.braceletsmenu, "Hover over bracelets MainMenu")
+        await ElementUtil.waitForClickable(this.bsapplewatchbands, 20, "wait for page load")
+        await ElementUtil.click(this.bsapplewatchbands, "click apple bands")
+        await BrowserUtil.wait(5);
     }
-    charmsBracelets() {
-        ElementUtil.click(this.bscharms, "click charms")
-        BrowserUtil.wait(5);
+    async charmsBracelets() {
+        await ElementUtil.click(this.bscharms, "click charms")
+        await BrowserUtil.wait(5);
     }
-    viewAllBraceletsstyle() {
-        ElementUtil.click(this.bsviewall, "click view all bracelets")
-        BrowserUtil.wait(5);
+    async viewAllBraceletsstyle() {
+        await ElementUtil.click(this.bsviewall, "click view all bracelets")
+        await BrowserUtil.wait(5);
     }
-    braceletsBrilliant() {
-        ElementUtil.click(this.brilliantbracelets, "click match wed bands")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/light-up-the-night-with-brilliant-diamond-and-gemstone-bracelets/")
+    async braceletsBrilliant() {
+        await ElementUtil.click(this.brilliantbracelets, "click match wed bands")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/light-up-the-night-with-brilliant-diamond-and-gemstone-bracelets/")
     }
-    styleOfMenBracelets() {
-        ElementUtil.click(this.mensbracelets, "click match wed bands")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/different-styles-of-mens-bracelets-to-wear-in-2022/")
+    async styleOfMenBracelets() {
+        await ElementUtil.click(this.mensbracelets, "click match wed bands")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/different-styles-of-mens-bracelets-to-wear-in-2022/")
     }
-    earringsMainMenu() {
-        ElementUtil.mouseHover(this.earringsmenu, "Hover over earrings menu")
-        BrowserUtil.wait(5);
+    async earringsMainMenu() {
+        await ElementUtil.mouseHover(this.earringsmenu, "Hover over earrings menu")
+        await BrowserUtil.wait(5);
     }
-    brownDiamondEarring() {
-        ElementUtil.click(this.sdebrowndiamond, "click over brown dia earrings")
-        BrowserUtil.wait(5);
+    async brownDiamondEarring() {
+        await ElementUtil.click(this.sdebrowndiamond, "click over brown dia earrings")
+        await BrowserUtil.wait(5);
     }
-    emeraldPrecErring() {
-        ElementUtil.click(this.eemerald, "click over emerald earrings")
-        BrowserUtil.wait(5);
+    async emeraldPrecErring() {
+        await ElementUtil.click(this.eemerald, "click over emerald earrings")
+        await BrowserUtil.wait(5);
     }
-    ioliteSemiEarring() {
-        ElementUtil.click(this.eiolite, "click over iolite earrings")
-        BrowserUtil.wait(5);
+    async ioliteSemiEarring() {
+        await ElementUtil.click(this.eiolite, "click over iolite earrings")
+        await BrowserUtil.wait(5);
     }
-    moissEarrings() {
-        ElementUtil.click(this.emoissanite, "click over moissanite earrings")
-        BrowserUtil.wait(5);
+    async moissEarrings() {
+        await ElementUtil.click(this.emoissanite, "click over moissanite earrings")
+        await BrowserUtil.wait(5);
     }
-    hoopEarringstyle() {
-        ElementUtil.click(this.eshoopearring, "click over hoop earrings")
-        BrowserUtil.wait(5);
+    async hoopEarringstyle() {
+        await ElementUtil.click(this.eshoopearring, "click over hoop earrings")
+        await BrowserUtil.wait(5);
     }
-    topDiaStud() {
-        ElementUtil.click(this.studEarrings, "click over stud earrings")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/top-diamond-stud-earrings-for-him-and-her-in-2022/");
+    async topDiaStud() {
+        await ElementUtil.click(this.studEarrings, "click over stud earrings")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/top-diamond-stud-earrings-for-him-and-her-in-2022/");
     }
-    herEarrings() {
-        ElementUtil.click(this.Earringsher, "click over earrings her")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/top-diamond-stud-earrings-for-him-and-her-in-2022/")
+    async herEarrings() {
+        await ElementUtil.click(this.Earringsher, "click over earrings her")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/top-diamond-stud-earrings-for-him-and-her-in-2022/")
     }
-    necklacesMainMenu() {
-        ElementUtil.mouseHover(this.necklacesmenu, "hover over necklaces")
-        BrowserUtil.wait(5);
+    async necklacesMainMenu() {
+        await ElementUtil.mouseHover(this.necklacesmenu, "hover over necklaces")
+        await BrowserUtil.wait(5);
     }
-    shopByDiamondNeck() {
-        ElementUtil.click(this.sdndiamond, "click diamond necklaces")
-        BrowserUtil.wait(5);
+    async shopByDiamondNeck() {
+        await ElementUtil.click(this.sdndiamond, "click diamond necklaces")
+        await BrowserUtil.wait(5);
     }
-    SappPrecious() {
-        ElementUtil.click(this.nwhitesapphire, "click diamond necklaces")
-        BrowserUtil.wait(5);
+    async SappPrecious() {
+        await ElementUtil.click(this.nwhitesapphire, "click diamond necklaces")
+        await BrowserUtil.wait(5);
     }
-    citrineSemiPre() {
-        ElementUtil.click(this.ncitrine, "click citrine necklaces")
-        BrowserUtil.wait(5);
+    async citrineSemiPre() {
+        await ElementUtil.click(this.ncitrine, "click citrine necklaces")
+        await BrowserUtil.wait(5);
     }
-    moissNeck() {
-        ElementUtil.click(this.nmoissanite, "click citrine necklaces")
-        BrowserUtil.wait(5);
+    async moissNeck() {
+        await ElementUtil.click(this.nmoissanite, "click citrine necklaces")
+        await BrowserUtil.wait(5);
     }
-    CrossNeck() {
-        ElementUtil.click(this.nscrossnecklace, "click crossnecklaces")
-        BrowserUtil.wait(5);
+    async CrossNeck() {
+        await ElementUtil.click(this.nscrossnecklace, "click crossnecklaces")
+        await BrowserUtil.wait(5);
     }
-    neckGuideOption() {
-        ElementUtil.click(this.Necklaceguide, "click crossnecklaces")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/best-diamond-heart-necklaces-to-celebrate-your-anniversary/")
+    async neckGuideOption() {
+        await ElementUtil.click(this.Necklaceguide, "click crossnecklaces")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/best-diamond-heart-necklaces-to-celebrate-your-anniversary/")
     }
-    mensMainMenu() {
-        ElementUtil.mouseHover(this.mensmenu, "Hover over mens menu")
-        BrowserUtil.wait(5);
+    async mensMainMenu() {
+        await ElementUtil.mouseHover(this.mensmenu, "Hover over mens menu")
+        await BrowserUtil.wait(5);
     }
-    mensBlackDia() {
-        ElementUtil.click(this.sdmblackdiamond, "click mens blak dia")
-        BrowserUtil.wait(5);
+    async mensBlackDia() {
+        await ElementUtil.click(this.sdmblackdiamond, "click mens blak dia")
+        await BrowserUtil.wait(5);
     }
-    whiteSappMens() {
-        ElementUtil.click(this.mwhitesapphire, "click mens white sapphire")
-        BrowserUtil.wait(5);
+    async whiteSappMens() {
+        await ElementUtil.click(this.mwhitesapphire, "click mens white sapphire")
+        await BrowserUtil.wait(5);
     }
-    mensBlackOnyx() {
-        ElementUtil.click(this.mblackonyx, "click mens black onyx")
-        BrowserUtil.wait(5);
+    async mensBlackOnyx() {
+        await ElementUtil.click(this.mblackonyx, "click mens black onyx")
+        await BrowserUtil.wait(5);
         
     }
-    moissMensRing() {
-        ElementUtil.click(this.mmoissanite, "click mens moissanite")
-        BrowserUtil.wait(5);
+    async moissMensRing() {
+        await ElementUtil.click(this.mmoissanite, "click mens moissanite")
+        await BrowserUtil.wait(5);
     }
-    rgMensRing() {
-        ElementUtil.click(this.mrosegold, "click mens rose gold")
-        BrowserUtil.wait(5);
+    async rgMensRing() {
+        await ElementUtil.click(this.mrosegold, "click mens rose gold")
+        await BrowserUtil.wait(5);
     }
-    mensSignetRings() {
-        ElementUtil.click(this.sssignetrings, "click mens signet rings")
-        BrowserUtil.wait(5);
+    async mensSignetRings() {
+        await ElementUtil.click(this.sssignetrings, "click mens signet rings")
+        await BrowserUtil.wait(5);
     }
-    MensBirthring() {
-        ElementUtil.click(this.MensBirthdayring, "click mens birth rings")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/how-to-choose-a-mens-birthday-ring-hes-proud-to-wear/")
+    async MensBirthring() {
+        await ElementUtil.click(this.MensBirthdayring, "click mens birth rings")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/how-to-choose-a-mens-birthday-ring-hes-proud-to-wear/")
     }
     
-    MensLuxGuide() {
-        ElementUtil.click(this.Menluxury, "click mens signet rings")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.diamondere.com/blog/new-to-fine-jewelry-the-mens-guide-to-luxury-wear/")
+    async MensLuxGuide() {
+        await ElementUtil.click(this.Menluxury, "click mens signet rings")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.diamondere.com/blog/new-to-fine-jewelry-the-mens-guide-to-luxury-wear/")
     }
-    shopRingsClick() {
-        ElementUtil.click(this.optnShopRings, "Move to shop rings section")
-        BrowserUtil.wait(5);
+    async shopRingsClick() {
+        await ElementUtil.click(this.optnShopRings, "Move to shop rings section")
+        await BrowserUtil.wait(5);
     }
-    dmdLogoClick() {
-        ElementUtil.click(this.mainLogo, "click diamondere logo")
-        BrowserUtil.wait(5);
+    async dmdLogoClick() {
+        await ElementUtil.click(this.mainLogo, "click diamondere logo")
+        await BrowserUtil.wait(5);
     }
-    shopRingsSection() {
-        ElementUtil.click(this.optnShopRings, "click shop rings")
-        BrowserUtil.wait(5);
+    async shopRingsSection() {
+        await ElementUtil.click(this.optnShopRings, "click shop rings")
+        await BrowserUtil.wait(5);
     }
-    shopBlackGoldMen() {
-        ElementUtil.scrollIntoView(this.optnBlackGoldMenRings, "scroll to BG men rings")
-        ElementUtil.click(this.optnBlackGoldMenRings, "click BG men rings")
-        BrowserUtil.wait(5);
+    async shopBlackGoldMen() {
+        await ElementUtil.scrollIntoView(this.optnBlackGoldMenRings, "scroll to BG men rings")
+        await ElementUtil.click(this.optnBlackGoldMenRings, "click BG men rings")
+        await BrowserUtil.wait(5);
         
     }
-    clickToiEtMoi() {
-        browser.back();
-        // ElementUtil.scrollIntoView(this.optnToiEtMoiRings, "Scroll to toi et moi rings")
-        ElementUtil.click(this.optnToiEtMoiRings, "click Toi etMoi rings")
-        BrowserUtil.wait(5);
+    async clickToiEtMoi() {
+        await browser.back();
+        // await ElementUtil.scrollIntoView(this.optnToiEtMoiRings, "Scroll to toi et moi rings")
+        await ElementUtil.click(this.optnToiEtMoiRings, "click Toi etMoi rings")
+        await BrowserUtil.wait(5);
         
     }
-    clickVintageRings() {
-        // ElementUtil.scrollIntoView(this.optnVintageRings, "Scroll to vintage rings")
-        ElementUtil.click(this.optnVintageRings, "click vintage rings")
-        BrowserUtil.wait(5);
+    async clickVintageRings() {
+        // await ElementUtil.scrollIntoView(this.optnVintageRings, "Scroll to vintage rings")
+        await ElementUtil.click(this.optnVintageRings, "click vintage rings")
+        await BrowserUtil.wait(5);
     }
-    moveNatGemstone() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to natural gemstone")
-        BrowserUtil.wait(5);
+    async moveNatGemstone() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to natural gemstone")
+        await BrowserUtil.wait(5);
     }
-    blackDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to black diamond rings")
-        ElementUtil.waitForClickable(this.blackDiamondRings, 20, "wait for page load")
-        ElementUtil.click(this.blackDiamondRings, "click black diamond rings")
-        BrowserUtil.wait(10);
+    async blackDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to black diamond rings")
+        await ElementUtil.waitForClickable(this.blackDiamondRings, 20, "wait for page load")
+        await ElementUtil.click(this.blackDiamondRings, "click black diamond rings")
+        await BrowserUtil.wait(10);
        
     }
-    rubyDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to ruby rings")
-        ElementUtil.waitForClickable(this.rubyRings, 20, "wait for page load")
-        ElementUtil.click(this.rubyRings, "click black diamond rings")
-        BrowserUtil.wait(10);
+    async rubyDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to ruby rings")
+        await ElementUtil.waitForClickable(this.rubyRings, 20, "wait for page load")
+        await ElementUtil.click(this.rubyRings, "click black diamond rings")
+        await BrowserUtil.wait(10);
     }
-    sappDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to sapphire rings")
-        ElementUtil.waitForClickable(this.sapphireRings, 20, "wait for page load")
-        ElementUtil.click(this.sapphireRings, "click sapphire rings")
-        BrowserUtil.wait(10);
+    async sappDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to sapphire rings")
+        await ElementUtil.waitForClickable(this.sapphireRings, 20, "wait for page load")
+        await ElementUtil.click(this.sapphireRings, "click sapphire rings")
+        await BrowserUtil.wait(10);
     }
-    emeraldDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to emerald rings")
-        ElementUtil.waitForClickable(this.emeraldRings, 20, "wait for page load")
-        ElementUtil.click(this.emeraldRings, "click emerald rings")
-        BrowserUtil.wait(10);
+    async emeraldDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to emerald rings")
+        await ElementUtil.waitForClickable(this.emeraldRings, 20, "wait for page load")
+        await ElementUtil.click(this.emeraldRings, "click emerald rings")
+        await BrowserUtil.wait(10);
     }
-    rightCaretIcon() {
-        ElementUtil.click(this.rightArrow, "click right arrow")
+    async rightCaretIcon() {
+        await ElementUtil.click(this.rightArrow, "click right arrow")
     }
-    amethystDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to amethyst rings")
-        ElementUtil.waitForClickable(this.amethystRings, 20, "wait for page load")
-        ElementUtil.click(this.amethystRings, "click amethyst rings")
-        BrowserUtil.wait(10);
+    async amethystDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to amethyst rings")
+        await ElementUtil.waitForClickable(this.amethystRings, 20, "wait for page load")
+        await ElementUtil.click(this.amethystRings, "click amethyst rings")
+        await BrowserUtil.wait(10);
     }
-    pinkTourDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to pink Tourmaline rings")
-        ElementUtil.waitForClickable(this.pinkTourmalineRings, 20, "wait for page load")
-        ElementUtil.click(this.pinkTourmalineRings, "click pink tourmaline rings")
-        BrowserUtil.wait(5);
+    async pinkTourDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to pink Tourmaline rings")
+        await ElementUtil.waitForClickable(this.pinkTourmalineRings, 20, "wait for page load")
+        await ElementUtil.click(this.pinkTourmalineRings, "click pink tourmaline rings")
+        await BrowserUtil.wait(5);
     }
-    morganiteDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to morganite rings")
-        ElementUtil.waitForClickable(this.morganiteRings, 20, "wait for page load")
-        ElementUtil.click(this.morganiteRings, "click morganite rings")
-        BrowserUtil.wait(10);
+    async morganiteDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to morganite rings")
+        await ElementUtil.waitForClickable(this.morganiteRings, 20, "wait for page load")
+        await ElementUtil.click(this.morganiteRings, "click morganite rings")
+        await BrowserUtil.wait(10);
     }
-    peridotDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to peridot rings")
-        ElementUtil.waitForClickable(this.peridotRings, 20, "wait for page load")
-        ElementUtil.click(this.peridotRings, "click peridot rings")
-        BrowserUtil.wait(10);
+    async peridotDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to peridot rings")
+        await ElementUtil.waitForClickable(this.peridotRings, 20, "wait for page load")
+        await ElementUtil.click(this.peridotRings, "click peridot rings")
+        await BrowserUtil.wait(10);
     }
-    aquamarineDiaRings() {
-        ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to aquamarine rings")
-        ElementUtil.waitForClickable(this.aquamarineRings, 20, "wait for page load")
-        ElementUtil.click(this.aquamarineRings, "click aquamarine rings")
-        BrowserUtil.wait(10);
+    async aquamarineDiaRings() {
+        await ElementUtil.scrollIntoView(this.shopByNaturalGemstone, "scroll to aquamarine rings")
+        await ElementUtil.waitForClickable(this.aquamarineRings, 20, "wait for page load")
+        await ElementUtil.click(this.aquamarineRings, "click aquamarine rings")
+        await BrowserUtil.wait(10);
     }
-    sectionFeatCateg() {
-        ElementUtil.scrollIntoView(this.featuredCategories, "hover to featured categories")
-        BrowserUtil.wait(5);
+    async sectionFeatCateg() {
+        await ElementUtil.scrollIntoView(this.featuredCategories, "hover to featured categories")
+        await BrowserUtil.wait(5);
     }
-    ringFeatured() {
-        ElementUtil.waitForClickable(this.featuredCategoriesRings, 20, "wait for page load")
-        ElementUtil.click(this.featuredCategoriesRings, "click featured rings")
-        BrowserUtil.wait(5);
+    async ringFeatured() {
+        await ElementUtil.waitForClickable(this.featuredCategoriesRings, 20, "wait for page load")
+        await ElementUtil.click(this.featuredCategoriesRings, "click featured rings")
+        await BrowserUtil.wait(5);
     }
-    earringFeatured() {
-        ElementUtil.waitForClickable(this.featuredCategoriesEarrings, 20, "wait for page load")
-        ElementUtil.click(this.featuredCategoriesEarrings, "click featured earrings")
-        BrowserUtil.wait(5);
+    async earringFeatured() {
+        await ElementUtil.waitForClickable(this.featuredCategoriesEarrings, 20, "wait for page load")
+        await ElementUtil.click(this.featuredCategoriesEarrings, "click featured earrings")
+        await BrowserUtil.wait(5);
     }
-    necklacesFeatured() {
-        ElementUtil.waitForClickable(this.featuredCategoriesNecklaces, 20, "wait for page load")
-        ElementUtil.click(this.featuredCategoriesNecklaces, "click featured necklaces")
-        BrowserUtil.wait(5);
+    async necklacesFeatured() {
+        await ElementUtil.waitForClickable(this.featuredCategoriesNecklaces, 20, "wait for page load")
+        await ElementUtil.click(this.featuredCategoriesNecklaces, "click featured necklaces")
+        await BrowserUtil.wait(5);
     }
-    braceletsFeatured(){
-        ElementUtil.waitForClickable(this.featuredCategoriesBracelets, 20, "wait for page load")
-        ElementUtil.click(this.featuredCategoriesBracelets, "click featured bracelets")
-        BrowserUtil.wait(5);
+    async braceletsFeatured(){
+        await ElementUtil.waitForClickable(this.featuredCategoriesBracelets, 20, "wait for page load")
+        await ElementUtil.click(this.featuredCategoriesBracelets, "click featured bracelets")
+        await BrowserUtil.wait(5);
     }
-    mensRingFeatured() {
-        ElementUtil.waitForClickable(this.featuredCategoriesMenRings, 20, "wait for page load")
-        ElementUtil.click(this.featuredCategoriesMenRings, "click featured mens rings")
-        BrowserUtil.wait(5);
+    async mensRingFeatured() {
+        await ElementUtil.waitForClickable(this.featuredCategoriesMenRings, 20, "wait for page load")
+        await ElementUtil.click(this.featuredCategoriesMenRings, "click featured mens rings")
+        await BrowserUtil.wait(5);
     }
-    eternitybandsFeatured() {
-        ElementUtil.waitForClickable(this.featuredCategoriesEternityBands, 20, "wait for page load")
-        ElementUtil.click(this.featuredCategoriesEternityBands, "click featured mens rings")
-        BrowserUtil.wait(5);
+    async eternitybandsFeatured() {
+        await ElementUtil.waitForClickable(this.featuredCategoriesEternityBands, 20, "wait for page load")
+        await ElementUtil.click(this.featuredCategoriesEternityBands, "click featured mens rings")
+        await BrowserUtil.wait(5);
     }
-    tellHerSection() {
-        ElementUtil.scrollIntoView(this.tellHerItsForever, "move to tell her section")
-        BrowserUtil.wait(5);
+    async tellHerSection() {
+        await ElementUtil.scrollIntoView(this.tellHerItsForever, "move to tell her section")
+        await BrowserUtil.wait(5);
     }
-    tellHerGia() {
-        ElementUtil.waitForClickable(this.giaNaturalDiamonds,60,"wait for pageload")
-        ElementUtil.click(this.giaNaturalDiamonds, "click gia Natural Diamonds")
-        BrowserUtil.wait(8);
+    async tellHerGia() {
+        await ElementUtil.waitForClickable(this.giaNaturalDiamonds,60,"wait for pageload")
+        await ElementUtil.click(this.giaNaturalDiamonds, "click gia Natural Diamonds")
+        await BrowserUtil.wait(8);
     }
-    tellHerIgi() {
-        ElementUtil.waitForClickable(this.igiLabDiamonds,60,"wait for pageload")
-        ElementUtil.click(this.igiLabDiamonds, "click IGI lab Diamonds")
-        BrowserUtil.wait(8);
+    async tellHerIgi() {
+        await ElementUtil.waitForClickable(this.igiLabDiamonds,60,"wait for pageload")
+        await ElementUtil.click(this.igiLabDiamonds, "click IGI lab Diamonds")
+        await BrowserUtil.wait(8);
     }
-    tellHerBeautiful() {
-        ElementUtil.waitForClickable(this.beautifulHandcraftesRing, 20, "wait for page load")
-        ElementUtil.click(this.beautifulHandcraftesRing, "click beautiful Handcrafted Ring ")
-        BrowserUtil.wait(5);
+    async tellHerBeautiful() {
+        await ElementUtil.waitForClickable(this.beautifulHandcraftesRing, 20, "wait for page load")
+        await ElementUtil.click(this.beautifulHandcraftesRing, "click beautiful Handcrafted Ring ")
+        await BrowserUtil.wait(5);
     }
-
-
-
-
 
     //Birthstone collection///////////////
-    clickbirthstoneCollection() {
-        ElementUtil.waitForClickable(this.optnBirthStoneCollection, 60, "wait for page load")
-        ElementUtil.click(this.optnBirthStoneCollection, "Clicking Birthstone Collection");
-        BrowserUtil.wait(5);
+    async clickbirthstoneCollection() {
+        await ElementUtil.waitForClickable(this.optnBirthStoneCollection, 60, "wait for page load")
+        await ElementUtil.click(this.optnBirthStoneCollection, "Clicking Birthstone Collection");
+        await BrowserUtil.wait(5);
     }
 
-    clickCheckYourGemstone() {
-        ElementUtil.scrollIntoView(this.headingBirthstoneGuide, "Scroll to top")
-        ElementUtil.click(this.relationshipGemstone, "Clicking link of checking relationship gemstone");
-        ElementUtil.waitForDisplayed(this.sectionRelationshipGemstone, 50, "wait for page load")
+    async clickCheckYourGemstone() {
+        await ElementUtil.scrollIntoView(this.headingBirthstoneGuide, "Scroll to top")
+        await ElementUtil.click(this.relationshipGemstone, "Clicking link of checking relationship gemstone");
+        await ElementUtil.waitForDisplayed(this.sectionRelationshipGemstone, 50, "wait for page load")
     }
 
-    clickYourBirthMonth() {
-        //ElementUtil.scrollIntoView(this.drpYourBirthMonth, "Scroll to dropdown")
-        ElementUtil.click(this.drpYourBirthMonth, "Clicking the Your Birth Month Dropdown")
-        ElementUtil.click(this.yourBirthMonth, "Clicking March")
+    async clickYourBirthMonth() {
+        //await ElementUtil.scrollIntoView(this.drpYourBirthMonth, "Scroll to dropdown")
+        await ElementUtil.click(this.drpYourBirthMonth, "Clicking the Your Birth Month Dropdown")
+        await ElementUtil.click(this.yourBirthMonth, "Clicking March")
     }
 
-    clickYourBirthDate() {
-        ElementUtil.click(this.drpYourBirthDate, "Clicking the Your Birth Date Dropdown")
-        ElementUtil.click(this.yourBirthDay, "Clicking 10")
+    async clickYourBirthDate() {
+        await ElementUtil.click(this.drpYourBirthDate, "Clicking the Your Birth Date Dropdown")
+        await ElementUtil.click(this.yourBirthDay, "Clicking 10")
     }
 
-    clickYourPartnerBirthMonth() {
-        ElementUtil.click(this.drpYourPartnerBirthMonth, "Clicking the Your Partner Birth Month Dropdown")
-        ElementUtil.click(this.yourPartnerBirthMonth, "Clicking December")
+    async clickYourPartnerBirthMonth() {
+        await ElementUtil.click(this.drpYourPartnerBirthMonth, "Clicking the Your Partner Birth Month Dropdown")
+        await ElementUtil.click(this.yourPartnerBirthMonth, "Clicking December")
     }
 
-    clickYourPartnerBirthDate() {
-        ElementUtil.click(this.drpYourPartnerBirthDate, "Clicking the Your Partner Birth Date Dropdown")
-        ElementUtil.click(this.yourPartnerBirthday, "Clicking 23")
-        ElementUtil.waitForDisplayed(this.imgDiamond, 10, "wait for page load")
-        ElementUtil.click(this.yourZodiac, "Clicking Pisces")
+    async clickYourPartnerBirthDate() {
+        await ElementUtil.click(this.drpYourPartnerBirthDate, "Clicking the Your Partner Birth Date Dropdown")
+        await ElementUtil.click(this.yourPartnerBirthday, "Clicking 23")
+        await ElementUtil.waitForDisplayed(this.imgDiamond, 10, "wait for page load")
+        await ElementUtil.click(this.yourZodiac, "Clicking Pisces")
     }
 
-    enterPartnersEmail() {
-        ElementUtil.sendText(this.partnersEmailID, data.HomePageData.PartnersEmailID,"Entering email ID");
-        }
-
-    clickSendButton() {
-        ElementUtil.click(this.btnSendEmail, "Clicking send button")
+    async enterPartnersEmail() {
+        await ElementUtil.sendText(this.partnersEmailID, data.HomePageData.PartnersEmailID,"Entering email ID");
     }
 
-    clickShopZodiacGemstoneRings() {
-        ElementUtil.click(this.shopZodiacDiamondRings, "Clicking Shop Zodiac Diamond Rings")
-        BrowserUtil.wait(5);
+    async clickSendButton() {
+        await ElementUtil.click(this.btnSendEmail, "Clicking send button")
     }
 
-    clickShopZodiacGemstoneNecklaces() {
-        ElementUtil.click(this.shopzodiacDiamondNecklaces, "Clicking Shop Zodiac Diamond Necklaces")
-        BrowserUtil.wait(5);
+    async clickShopZodiacGemstoneRings() {
+        await ElementUtil.click(this.shopZodiacDiamondRings, "Clicking Shop Zodiac Diamond Rings")
+        await BrowserUtil.wait(5);
     }
 
-    clickShopZodiacGemstoneEarrings() {
-        ElementUtil.click(this.shopZodiacDiamondEarrings, "Clicking Shop Zodiac Diamond Earrings")
-        BrowserUtil.wait(5);
+    async clickShopZodiacGemstoneNecklaces() {
+        await ElementUtil.click(this.shopzodiacDiamondNecklaces, "Clicking Shop Zodiac Diamond Necklaces")
+        await BrowserUtil.wait(5);
     }
 
-    scrollToShopByShape() {
-        ElementUtil.scrollIntoView(this.selectshape, "Scroll to Shop by Shape section")
+    async clickShopZodiacGemstoneEarrings() {
+        await ElementUtil.click(this.shopZodiacDiamondEarrings, "Clicking Shop Zodiac Diamond Earrings")
+        await BrowserUtil.wait(5);
     }
 
-    selectRoundCut() {
-        ElementUtil.waitForClickable(this.roundCut, 20, "wait for page load")
-        ElementUtil.click(this.roundCut, "Click round cut")
-        BrowserUtil.wait(5);
+    async scrollToShopByShape() {
+        await ElementUtil.scrollIntoView(this.selectshape, "Scroll to Shop by Shape section")
     }
 
-    selectOvalCut() {
-        ElementUtil.waitForClickable(this.ovalCut, 20, "wait for page load")
-        ElementUtil.click(this.ovalCut, "Click oval cut")
-        BrowserUtil.wait(5);
+    async selectRoundCut() {
+        await ElementUtil.waitForClickable(this.roundCut, 20, "wait for page load")
+        await ElementUtil.click(this.roundCut, "Click round cut")
+        await BrowserUtil.wait(5);
     }
 
-    selectCushionCut() {
-        ElementUtil.waitForClickable(this.cushionCut, 20, "wait for page load")
-        ElementUtil.click(this.cushionCut, "Click cushion cut")
-        BrowserUtil.wait(5);
+    async selectOvalCut() {
+        await ElementUtil.waitForClickable(this.ovalCut, 20, "wait for page load")
+        await ElementUtil.click(this.ovalCut, "Click oval cut")
+        await BrowserUtil.wait(5);
     }
 
-    selectPrincessCut() {
-        ElementUtil.waitForClickable(this.princessCut, 20, "wait for page load")
-        ElementUtil.click(this.princessCut, "Click princess cut")
-        BrowserUtil.wait(5);
+    async selectCushionCut() {
+        await ElementUtil.waitForClickable(this.cushionCut, 20, "wait for page load")
+        await ElementUtil.click(this.cushionCut, "Click cushion cut")
+        await BrowserUtil.wait(5);
     }
 
-    selectEmeraldCut() {
-        ElementUtil.waitForClickable(this.emeraldCut, 20, "wait for page load")
-        ElementUtil.click(this.emeraldCut, "Click emerald cut")
-        BrowserUtil.wait(5);
+    async selectPrincessCut() {
+        await ElementUtil.waitForClickable(this.princessCut, 20, "wait for page load")
+        await ElementUtil.click(this.princessCut, "Click princess cut")
+        await BrowserUtil.wait(5);
     }
 
-    selectHeartCut() {
-        ElementUtil.waitForClickable(this.heartCut, 20, "wait for page load")
-        ElementUtil.click(this.heartCut, "Click heart cut")
-        BrowserUtil.wait(5);
+    async selectEmeraldCut() {
+        await ElementUtil.waitForClickable(this.emeraldCut, 20, "wait for page load")
+        await ElementUtil.click(this.emeraldCut, "Click emerald cut")
+        await BrowserUtil.wait(5);
     }
 
-    selectPearCut() {
-        ElementUtil.waitForClickable(this.pearCut, 20, "wait for page load")
-        ElementUtil.click(this.pearCut, "Click pear cut")
-        BrowserUtil.wait(5);
+    async selectHeartCut() {
+        await ElementUtil.waitForClickable(this.heartCut, 20, "wait for page load")
+        await ElementUtil.click(this.heartCut, "Click heart cut")
+        await BrowserUtil.wait(5);
     }
 
-    scrollToMensRing() {
-        ElementUtil.scrollIntoView(this.mensRingImage, "Scroll to Men's ring section")
+    async selectPearCut() {
+        await ElementUtil.waitForClickable(this.pearCut, 20, "wait for page load")
+        await ElementUtil.click(this.pearCut, "Click pear cut")
+        await BrowserUtil.wait(5);
     }
 
-    clickSeeMensRing() {
-        ElementUtil.click(this.seeMensRing, "Click see men's ring")
-        BrowserUtil.wait(5);
+    async scrollToMensRing() {
+        await ElementUtil.scrollIntoView(this.mensRingImage, "Scroll to Men's ring section")
     }
 
-    scrollToSeeGiftsForHer() {
-        ElementUtil.scrollIntoView(this.giftsForHer, "Scroll to gifts for her section")
+    async clickSeeMensRing() {
+        await ElementUtil.click(this.seeMensRing, "Click see men's ring")
+        await BrowserUtil.wait(5);
     }
 
-    clickSeeGiftsForHer() {
-        ElementUtil.scrollIntoView(this.giftsForHer, "Scroll to gifts for her section")
-        BrowserUtil.wait(5);
-        ElementUtil.click(this.seeGiftsForHer, "Click see gifts for her")
-        BrowserUtil.wait(10);
+    async scrollToSeeGiftsForHer() {
+        await ElementUtil.scrollIntoView(this.giftsForHer, "Scroll to gifts for her section")
     }
 
-    scrollToDiscoverDiamondere() {
-        ElementUtil.scrollIntoView(this.discoverDiamondere, "scroll to discover diamondere")
+    async clickSeeGiftsForHer() {
+        await ElementUtil.scrollIntoView(this.giftsForHer, "Scroll to gifts for her section")
+        await BrowserUtil.wait(5);
+        await ElementUtil.click(this.seeGiftsForHer, "Click see gifts for her")
+        await BrowserUtil.wait(10);
     }
 
-    clickOurLegacy() {
-        ElementUtil.click(this.ourLegacy, "Click our legacy")
-        BrowserUtil.wait(5);
+    async scrollToDiscoverDiamondere() {
+        await ElementUtil.scrollIntoView(this.discoverDiamondere, "scroll to discover diamondere")
     }
 
-    scrollToLetushelpguideyou() {
-        ElementUtil.scrollIntoView(this.letUsHelp, "scroll to let us help")
+    async clickOurLegacy() {
+        await ElementUtil.click(this.ourLegacy, "Click our legacy")
+        await BrowserUtil.wait(5);
     }
 
-    clickBlogArticles() {
-        ElementUtil.click(this.blogArticles, "Click blog articles")
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://www.diamondere.com/blog/')
+    async scrollToLetushelpguideyou() {
+        await ElementUtil.scrollIntoView(this.letUsHelp, "scroll to let us help")
     }
 
-    clicklabVsNaturalDiamondGuide() {
-        ElementUtil.waitForDisplayed(this.labVsNaturalDiamondGuideText, 10, "Verifying the text")
-        ElementUtil.click(this.labVsNaturalDiamondGuideLink, "Click Learn More")
-        BrowserUtil.wait(5);
+    async clickBlogArticles() {
+        await ElementUtil.click(this.blogArticles, "Click blog articles")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://www.diamondere.com/blog/')
     }
 
-    clickToiEtMoiGuide() {
-        ElementUtil.waitForDisplayed(this.toiEtMoiRingsText, 10, "Verifying the text")
-        ElementUtil.click(this.toiEtMoiRingsLink, "Click Learn More")
-        BrowserUtil.wait(5);
+    async clicklabVsNaturalDiamondGuide() {
+        await ElementUtil.waitForDisplayed(this.labVsNaturalDiamondGuideText, 10, "Verifying the text")
+        await ElementUtil.click(this.labVsNaturalDiamondGuideLink, "Click Learn More")
+        await BrowserUtil.wait(5);
     }
 
-    clickEngagementRingCostGuide() {
-        ElementUtil.waitForDisplayed(this.engagementRingText, 10, "Verifying the text")
-        ElementUtil.click(this.engagementRingLink, "Click Learn More")
-        BrowserUtil.wait(5);
+    async clickToiEtMoiGuide() {
+        await ElementUtil.waitForDisplayed(this.toiEtMoiRingsText, 10, "Verifying the text")
+        await ElementUtil.click(this.toiEtMoiRingsLink, "Click Learn More")
+        await BrowserUtil.wait(5);
     }
 
-    scrollToDiamondereDifference() {
-        ElementUtil.scrollIntoView(this.expTheDiamondereText, "scroll to Diamondere Difference section")
+    async clickEngagementRingCostGuide() {
+        await ElementUtil.waitForDisplayed(this.engagementRingText, 10, "Verifying the text")
+        await ElementUtil.click(this.engagementRingLink, "Click Learn More")
+        await BrowserUtil.wait(5);
     }
 
-    clickWhyDiamondereLink() {
-        ElementUtil.waitForDisplayed(this.qualityGuarenteedText, 10, "Verifying the text")
-        ElementUtil.click(this.whyDiamondereLink, "Click Why Diamondere")
-        BrowserUtil.wait(5);
+    async scrollToDiamondereDifference() {
+        await ElementUtil.scrollIntoView(this.expTheDiamondereText, "scroll to Diamondere Difference section")
     }
 
-    clickFAQsLink() {
-        ElementUtil.waitForDisplayed(this.complementaryCareText, 10, "Verifying the text")
-        ElementUtil.click(this.seeOurFAQs, "Click See our FAQs")
-        BrowserUtil.wait(5);
+    async clickWhyDiamondereLink() {
+        await ElementUtil.waitForDisplayed(this.qualityGuarenteedText, 10, "Verifying the text")
+        await ElementUtil.click(this.whyDiamondereLink, "Click Why Diamondere")
+        await BrowserUtil.wait(5);
     }
 
-    clickSustainabilityLink() {
-        ElementUtil.waitForDisplayed(this.sustainabilityText, 10, "Verifying the text")
-        ElementUtil.click(this.sustainabilityLink, "Click Sustainability")
-        BrowserUtil.wait(5);
+    async clickFAQsLink() {
+        await ElementUtil.waitForDisplayed(this.complementaryCareText, 10, "Verifying the text")
+        await ElementUtil.click(this.seeOurFAQs, "Click See our FAQs")
+        await BrowserUtil.wait(5);
     }
 
-    clickContactUsLink() {
-        ElementUtil.waitForDisplayed(this.customerCareFirstText, 10, "Verifying the text")
-        ElementUtil.click(this.contactUsLink, "Click Contact Us")
-        BrowserUtil.wait(5);
+    async clickSustainabilityLink() {
+        await ElementUtil.waitForDisplayed(this.sustainabilityText, 10, "Verifying the text")
+        await ElementUtil.click(this.sustainabilityLink, "Click Sustainability")
+        await BrowserUtil.wait(5);
     }
 
-    scrollToFindStyle() {
-        ElementUtil.scrollIntoView(this.myDiamondereLoveStory, "Scroll to find style that inspires you section")
+    async clickContactUsLink() {
+        await ElementUtil.waitForDisplayed(this.customerCareFirstText, 10, "Verifying the text")
+        await ElementUtil.click(this.contactUsLink, "Click Contact Us")
+        await BrowserUtil.wait(5);
     }
 
-    clickRubyRingImage() {
-        ElementUtil.click(this.rubyRingImage, "Click ruby ring image")
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://www.instagram.com/diamondere/')
+    async scrollToFindStyle() {
+        await ElementUtil.scrollIntoView(this.myDiamondereLoveStory, "Scroll to find style that inspires you section")
     }
 
-    movetofooter() {
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to footer")
-    }
-    selectourlegacy() {
-        ElementUtil.click(this.lnkOurLegacy, "click ourlegacy")
-        BrowserUtil.wait(5);
-    }
-    selectwhydiamondere() {
-        ElementUtil.click(this.lnkWhyDiamondere, "click whydiamondere")
-        BrowserUtil.wait(5);
-    }
-    selectsustainability() {
-        ElementUtil.click(this.lnkSustainability, "click sustainability")
-        BrowserUtil.wait(5);
-    }
-    selectringsreview() {
-        ElementUtil.click(this.lnkRingReviews, "click ringsreview")
-        BrowserUtil.wait(8);
-    }
-    selectengagementreview() {
-        ElementUtil.click(this.lnkEngagementReviews, "click engagementreview")
-        BrowserUtil.wait(5);
-    }
-    selectmensringreview() {
-        ElementUtil.click(this.lnkMensRingReviews, "click mensringreview")
-        BrowserUtil.wait(5);
-    }
-    selectdiamondguide() {
-        ElementUtil.click(this.lnkDiamondGuide, "click diamondguide")
-        BrowserUtil.wait(5);
-    }
-    selectcolorgemguide() {
-        ElementUtil.click(this.lnkColoredGemsGuide, "click colorgemguide")
-        BrowserUtil.wait(5);
-    }
-    selectbirthstoneguide() {
-        ElementUtil.click(this.lnkBirthstonesGuide, "click birthstonguide")
-        BrowserUtil.wait(5);
-    }
-    selectmetalguide() {
-        ElementUtil.click(this.lnkMetalGuide, "click metalguide")
-        BrowserUtil.wait(5);
-    }
-    selectsizeguide() {
-        ElementUtil.click(this.lnkSizeGuide, "click sizeguide")
-        BrowserUtil.wait(5);
-    }
-    selectfreeshipping() {
-        ElementUtil.click(this.lnkFreeShipping, "click freeshipping")
-        BrowserUtil.wait(5);
-    }
-    selectfreereturn() {
-        ElementUtil.click(this.lnkFree100DayReturns, "click freereturn")
-        BrowserUtil.wait(5);
-    }
-    selectfreewarranty() {
-        ElementUtil.click(this.lnkFreeWarranty, "click freewarranty")
-        BrowserUtil.wait(5);
-    }
-    selectprivacypolicy() {
-        ElementUtil.click(this.lnkPrivacyPolicy, "click privacypolicy")
-        BrowserUtil.wait(5);
-    }
-    selecttermsandcondition() {
-        ElementUtil.click(this.lnkTermsAndConditions, "click termsandcondition")
-        BrowserUtil.wait(5);
+    async clickRubyRingImage() {
+        await ElementUtil.click(this.rubyRingImage, "Click ruby ring image")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://www.instagram.com/diamondere/')
     }
 
-    selectAccessibility() {
-        ElementUtil.click(this.lnkAccessibility, "Select Accessibility link")
-        BrowserUtil.wait(5);
+    async movetofooter() {
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to footer")
+    }
+    async selectourlegacy() {
+        await ElementUtil.click(this.lnkOurLegacy, "click ourlegacy")
+        await BrowserUtil.wait(5);
+    }
+    async selectwhydiamondere() {
+        await ElementUtil.click(this.lnkWhyDiamondere, "click whydiamondere")
+        await BrowserUtil.wait(5);
+    }
+    async selectsustainability() {
+        await ElementUtil.click(this.lnkSustainability, "click sustainability")
+        await BrowserUtil.wait(5);
+    }
+    async selectringsreview() {
+        await ElementUtil.click(this.lnkRingReviews, "click ringsreview")
+        await BrowserUtil.wait(8);
+    }
+    async selectengagementreview() {
+        await ElementUtil.click(this.lnkEngagementReviews, "click engagementreview")
+        await BrowserUtil.wait(5);
+    }
+    async selectmensringreview() {
+        await ElementUtil.click(this.lnkMensRingReviews, "click mensringreview")
+        await BrowserUtil.wait(5);
+    }
+    async selectdiamondguide() {
+        await ElementUtil.click(this.lnkDiamondGuide, "click diamondguide")
+        await BrowserUtil.wait(5);
+    }
+    async selectcolorgemguide() {
+        await ElementUtil.click(this.lnkColoredGemsGuide, "click colorgemguide")
+        await BrowserUtil.wait(5);
+    }
+    async selectbirthstoneguide() {
+        await ElementUtil.click(this.lnkBirthstonesGuide, "click birthstonguide")
+        await BrowserUtil.wait(5);
+    }
+    async selectmetalguide() {
+        await ElementUtil.click(this.lnkMetalGuide, "click metalguide")
+        await BrowserUtil.wait(5);
+    }
+    async selectsizeguide() {
+        await ElementUtil.click(this.lnkSizeGuide, "click sizeguide")
+        await BrowserUtil.wait(5);
+    }
+    async selectfreeshipping() {
+        await ElementUtil.click(this.lnkFreeShipping, "click freeshipping")
+        await BrowserUtil.wait(5);
+    }
+    async selectfreereturn() {
+        await ElementUtil.click(this.lnkFree100DayReturns, "click freereturn")
+        await BrowserUtil.wait(5);
+    }
+    async selectfreewarranty() {
+        await ElementUtil.click(this.lnkFreeWarranty, "click freewarranty")
+        await BrowserUtil.wait(5);
+    }
+    async selectprivacypolicy() {
+        await ElementUtil.click(this.lnkPrivacyPolicy, "click privacypolicy")
+        await BrowserUtil.wait(5);
+    }
+    async selecttermsandcondition() {
+        await ElementUtil.click(this.lnkTermsAndConditions, "click termsandcondition")
+        await BrowserUtil.wait(5);
     }
 
-    selectContactUs() {
-        ElementUtil.click(this.lnkContactUs, "Select Contact Us link")
-        BrowserUtil.wait(5);
+    async selectAccessibility() {
+        await ElementUtil.click(this.lnkAccessibility, "Select Accessibility link")
+        await BrowserUtil.wait(5);
     }
 
-    selectFAQs() {
-        ElementUtil.click(this.lnkFAQs, "Select FAQs link")
-        BrowserUtil.wait(5);
+    async selectContactUs() {
+        await ElementUtil.click(this.lnkContactUs, "Select Contact Us link")
+        await BrowserUtil.wait(5);
     }
 
-    selectFinancingoptions() {
-        ElementUtil.click(this.lnkFinancingOptions, "Select Financing options link")
-        BrowserUtil.wait(5);
+    async selectFAQs() {
+        await ElementUtil.click(this.lnkFAQs, "Select FAQs link")
+        await BrowserUtil.wait(5);
     }
 
-    selectFreeresizing() {
-        ElementUtil.click(this.lnkFreeResizing, "Select Financing options link")
-        BrowserUtil.wait(5);
+    async selectFinancingoptions() {
+        await ElementUtil.click(this.lnkFinancingOptions, "Select Financing options link")
+        await BrowserUtil.wait(5);
     }
 
-    selectCaringforjewelry() {
-        ElementUtil.click(this.lnkCaringForYourJewelry, "Select Caring for your jewelry")
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://www.diamondere.com/blog/tricks-to-keep-your-fine-jewelry-shining-forever/')
+    async selectFreeresizing() {
+        await ElementUtil.click(this.lnkFreeResizing, "Select Financing options link")
+        await BrowserUtil.wait(5);
     }
 
-    jointheDiamondere() {
-        ElementUtil.scrollIntoView(this.sctnJoinDiamondereCommunity, "Scroll to Join the Diamondere community")
-        BrowserUtil.wait(5);
+    async selectCaringforjewelry() {
+        await ElementUtil.click(this.lnkCaringForYourJewelry, "Select Caring for your jewelry")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://www.diamondere.com/blog/tricks-to-keep-your-fine-jewelry-shining-forever/')
     }
 
-    selectemailaddress() {
-        ElementUtil.click(this.boxemailaddress, "Select email address field");
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://mailchi.mp/diamondere/subscriptions?newsLetterMail=')
+    async jointheDiamondere() {
+        await ElementUtil.scrollIntoView(this.sctnJoinDiamondereCommunity, "Scroll to Join the Diamondere community")
+        await BrowserUtil.wait(5);
     }
 
-    selectdiamondereblog() {
-        ElementUtil.scrollIntoView(this.lnkDiamondereBlog, "Scroll to Diamondere Blog link")
-        ElementUtil.click(this.lnkDiamondereBlog, "Select the Diamondere Blog link")
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://www.diamondere.com/blog/')
+    async selectemailaddress() {
+        await ElementUtil.click(this.boxemailaddress, "Select email address field");
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://mailchi.mp/diamondere/subscriptions?newsLetterMail=')
     }
 
-    selectInstaicon() {
-        ElementUtil.scrollIntoView(this.lnkInstgram, "Scroll to Instagram link")
-        ElementUtil.click(this.lnkInstgram, "Select the Instagram link")
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://www.instagram.com/diamondere/')
+    async selectdiamondereblog() {
+        await ElementUtil.scrollIntoView(this.lnkDiamondereBlog, "Scroll to Diamondere Blog link")
+        await ElementUtil.click(this.lnkDiamondereBlog, "Select the Diamondere Blog link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://www.diamondere.com/blog/')
     }
 
-    selectfbicon() {
-        ElementUtil.scrollIntoView(this.lnkFacebook, "Scroll to faceboom link")
-        ElementUtil.click(this.lnkFacebook, "Select the facebook link")
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://www.facebook.com/Diamondere/')
+    async selectInstaicon() {
+        await ElementUtil.scrollIntoView(this.lnkInstgram, "Scroll to Instagram link")
+        await ElementUtil.click(this.lnkInstgram, "Select the Instagram link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://www.instagram.com/diamondere/')
     }
 
-    selectPinteresticon() {
-        ElementUtil.scrollIntoView(this.lnkPinterest, "Scroll to pinterest link")
-        ElementUtil.click(this.lnkPinterest, "Select the Pinterest link")
-        BrowserUtil.wait(5);
-        browser.switchWindow('https://www.pinterest.com/Diamondere/')
-        browser.back();
+    async selectfbicon() {
+        await ElementUtil.scrollIntoView(this.lnkFacebook, "Scroll to faceboom link")
+        await ElementUtil.click(this.lnkFacebook, "Select the facebook link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://www.facebook.com/Diamondere/')
     }
-    clickAccredited(){
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkDiamondereBBB, "Select the accredited link")
-        BrowserUtil.wait(8);
-        browser.switchWindow("https://www.bbb.org/us/ca/redwood-city/profile/jewelry-stores/diamondere-inc-1116-873976")
+
+    async selectPinteresticon() {
+        await ElementUtil.scrollIntoView(this.lnkPinterest, "Scroll to pinterest link")
+        await ElementUtil.click(this.lnkPinterest, "Select the Pinterest link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow('https://www.pinterest.com/Diamondere/')
+        await browser.back();
+    }
+    async clickAccredited(){
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkDiamondereBBB, "Select the accredited link")
+        await BrowserUtil.wait(8);
+        await browser.switchWindow("https://www.bbb.org/us/ca/redwood-city/profile/jewelry-stores/diamondere-inc-1116-873976")
        
     }
-    clickNortonDigicert(){
-        browser.switchWindow("https://staging.diamondere.com/")
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkDigicert, "Select the norton link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://seal.digicert.com/seals/popup/?tag=bbpkGMsC&referer=www.diamondere.com&lang=en")
+    async clickNortonDigicert(){
+        await browser.switchWindow("https://staging.diamondere.com/")
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkDigicert, "Select the norton link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://seal.digicert.com/seals/popup/?tag=bbpkGMsC&referer=www.diamondere.com&lang=en")
        
     }
 
-    clickStripe(){
-        browser.switchWindow("https://staging.diamondere.com/")
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkStripe, "Select the stripe link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://stripe.com/en-in")
+    async clickStripe(){
+        await browser.switchWindow("https://staging.diamondere.com/")
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkStripe, "Select the stripe link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://stripe.com/en-in")
         
     }
 
-    clickPaypal(){
-        browser.switchWindow("https://staging.diamondere.com/")
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkPayPal, "Select the paypal link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.paypal.com/in/home")
+    async clickPaypal(){
+        await browser.switchWindow("https://staging.diamondere.com/")
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkPayPal, "Select the paypal link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.paypal.com/in/home")
       
     }
-    clickAmericanexp(){
-        browser.switchWindow("https://staging.diamondere.com/")
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkAmericanExpress, "Select the American express link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.americanexpress.com/en-in/")
+    async clickAmericanexp(){
+        await browser.switchWindow("https://staging.diamondere.com/")
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkAmericanExpress, "Select the American express link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.americanexpress.com/en-in/")
         
     }
-    clickMastercard(){
-        browser.switchWindow("https://staging.diamondere.com/")
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkMasterCard, "Select the master card link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.mastercard.co.in/en-in.html")
+    async clickMastercard(){
+        await browser.switchWindow("https://staging.diamondere.com/")
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkMasterCard, "Select the master card link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.mastercard.co.in/en-in.html")
        
     }
-    clickDinersclub(){
-        browser.switchWindow("https://staging.diamondere.com/")
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkDinersClub, "Select the diners club link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.dinersclub.com/")
+    async clickDinersclub(){
+        await browser.switchWindow("https://staging.diamondere.com/")
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkDinersClub, "Select the diners club link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.dinersclub.com/")
        
     }
-    clickAffirm(){
-        browser.switchWindow("https://staging.diamondere.com/")
-        ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
-        ElementUtil.click(this.lnkAffirm, "Select the affirm link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://www.affirm.com/")
+    async clickAffirm(){
+        await browser.switchWindow("https://staging.diamondere.com/")
+        await ElementUtil.scrollIntoView(this.sctnFooter, "Scroll to payment option")
+        await ElementUtil.click(this.lnkAffirm, "Select the affirm link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://www.affirm.com/")
        
     }
 
-    clickDisclaimer(){
-        ElementUtil.scrollIntoView(this.sctnCopyright, "Scroll to disclaimer")
-        ElementUtil.click(this.lnkDisclaimer, "Select the disclaimer link")
-        BrowserUtil.wait(5);
-        browser.switchWindow("https://staging.diamondere.com/information/disclaimer")
+    async clickDisclaimer(){
+        await ElementUtil.scrollIntoView(this.sctnCopyright, "Scroll to disclaimer")
+        await ElementUtil.click(this.lnkDisclaimer, "Select the disclaimer link")
+        await BrowserUtil.wait(5);
+        await browser.switchWindow("https://staging.diamondere.com/information/disclaimer")
     }
 
 

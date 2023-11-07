@@ -3302,1764 +3302,1766 @@ class MYOJ {
         return $('//a[@title="Login / Sign Up"]')
     }
 
-    hoverLogin() {
-        ElementUtil.mouseHover(this.loginIconHome, "Hover the login icon")
-    }
 
     //METHODS
-    selectRingsSwad() {
-        ElementUtil.click(this.oRingstartwithdiamond, "Click Start with a Diamond - Rings")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.ringStartWithDiamondBanner, 20, "Wait for page load")
+    async hoverLogin() {
+        await ElementUtil.mouseHover(this.loginIconHome, "Hover the login icon")
     }
 
-    selectEngagementSwad() {
-        ElementUtil.click(this.ownEngstartwithdiamond, "Click Start with a Diamond - Engagement")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.engagementSWADBanner, 20, "Wait for page load")
+    async selectRingsSwad() {
+        await ElementUtil.click(this.oRingstartwithdiamond, "Click Start with a Diamond - Rings")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.ringStartWithDiamondBanner, 20, "Wait for page load")
     }
 
-    selectEarringsSwad() {
-        ElementUtil.click(this.ownEarstartwithdiamond, "Click Start with a Diamond - Earrings")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.earringsSWADBanner, 20, "Wait for page load")
+    async selectEngagementSwad() {
+        await ElementUtil.click(this.ownEngstartwithdiamond, "Click Start with a Diamond - Engagement")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.engagementSWADBanner, 20, "Wait for page load")
     }
 
-    selectNecklacesSwald() {
-        ElementUtil.click(this.oNeckstartwithlabdiamond, "Click Start with a Lab Diamond - Necklaces")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.necklacesSWLDBanner, 20, "Wait for page load")
+    async selectEarringsSwad() {
+        await ElementUtil.click(this.ownEarstartwithdiamond, "Click Start with a Diamond - Earrings")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.earringsSWADBanner, 20, "Wait for page load")
     }
 
-    selectMensSwald() {
-        ElementUtil.click(this.oMenstartwithlabdiamond, "Click Start with a Lab Diamond - Men's")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.mensSWLDBanner, 20, "Wait for page load")
+    async selectNecklacesSwald() {
+        await ElementUtil.click(this.oNeckstartwithlabdiamond, "Click Start with a Lab Diamond - Necklaces")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.necklacesSWLDBanner, 20, "Wait for page load")
     }
 
-    selectLinkHome() {
-        ElementUtil.click(this.lnkHomeBreadcrumb, "Click Home in Breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.handcraftedSection, "Check for the homepage")
-        browser.back();
+    async selectMensSwald() {
+        await ElementUtil.click(this.oMenstartwithlabdiamond, "Click Start with a Lab Diamond - Men's")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.mensSWLDBanner, 20, "Wait for page load")
     }
 
-    selectLinkLooseDiamonds() {
-        ElementUtil.waitForClickable(this.lnkLooseDiamondsBreadcrumb, 50, "wait for page load")
-        ElementUtil.click(this.lnkLooseDiamondsBreadcrumb, "Click Loose Diamonds in Breadcrumb")
-        BrowserUtil.wait(5)
+    async selectLinkHome() {
+        await ElementUtil.click(this.lnkHomeBreadcrumb, "Click Home in Breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.handcraftedSection, "Check for the homepage")
+        await browser.back();
     }
 
-    selectLinkLooseLabDiamonds() {
-        ElementUtil.waitForClickable(this.lnkLooseLabDiamondsBreadcrumb, 50, "wait for page load")
-        ElementUtil.click(this.lnkLooseLabDiamondsBreadcrumb, "Click Loose Lab Diamonds in Breadcrumb")
-        BrowserUtil.wait(5)
+    async selectLinkLooseDiamonds() {
+        await ElementUtil.waitForClickable(this.lnkLooseDiamondsBreadcrumb, 50, "wait for page load")
+        await ElementUtil.click(this.lnkLooseDiamondsBreadcrumb, "Click Loose Diamonds in Breadcrumb")
+        await BrowserUtil.wait(5)
     }
 
-    hoverWaysToSaveMore() {
-        ElementUtil.mouseHover(this.lnkWaysToSaveMore, "Hover over Ways to Save More")
+    async selectLinkLooseLabDiamonds() {
+        await ElementUtil.waitForClickable(this.lnkLooseLabDiamondsBreadcrumb, 50, "wait for page load")
+        await ElementUtil.click(this.lnkLooseLabDiamondsBreadcrumb, "Click Loose Lab Diamonds in Breadcrumb")
+        await BrowserUtil.wait(5)
     }
 
-    hoverBandsSelection() {
-        ElementUtil.mouseHover(this.drpBandDefault, "Hover over Bands Selection Dropdown")
+    async hoverWaysToSaveMore() {
+        await ElementUtil.mouseHover(this.lnkWaysToSaveMore, "Hover over Ways to Save More")
     }
 
-    hoverMensBandSelection() {
-        ElementUtil.mouseHover(this.drpMensBand, "Hover over Bands Selection Dropdown")
+    async hoverBandsSelection() {
+        await ElementUtil.mouseHover(this.drpBandDefault, "Hover over Bands Selection Dropdown")
     }
 
-    selectEasyDelivery() {
-        ElementUtil.mouseHover(this.drpDeliveryDefault, "Hover over Delivery Type Selection Dropdown")
-        ElementUtil.forceClick(this.optnEasyDelivery, "Click Easy Delivery")
-        BrowserUtil.wait(5)
+    async hoverMensBandSelection() {
+        await ElementUtil.mouseHover(this.drpMensBand, "Hover over Bands Selection Dropdown")
     }
 
-    selectBothBands() {
-        ElementUtil.forceClick(this.optnBothBands, "Click Both Bands")
-        BrowserUtil.wait(3)
+    async selectEasyDelivery() {
+        await ElementUtil.mouseHover(this.drpDeliveryDefault, "Hover over Delivery Type Selection Dropdown")
+        await ElementUtil.forceClick(this.optnEasyDelivery, "Click Easy Delivery")
+        await BrowserUtil.wait(5)
     }
 
-    selectMensBands() {
-        ElementUtil.forceClick(this.optnMensBand, "Click Men's Bands")
-        BrowserUtil.wait(3)
+    async selectBothBands() {
+        await ElementUtil.forceClick(this.optnBothBands, "Click Both Bands")
+        await BrowserUtil.wait(3)
     }
 
-    selectWomensBands() {
-        ElementUtil.forceClick(this.optnWomensBand, "Click Women's Bands")
-        BrowserUtil.wait(3)
+    async selectMensBands() {
+        await ElementUtil.forceClick(this.optnMensBand, "Click Men's Bands")
+        await BrowserUtil.wait(3)
     }
 
-    selectOvalShape() {
-        BrowserUtil.wait(5)
-        ElementUtil.forceClick(this.imglnkOval, "Click Oval Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        BrowserUtil.wait(5)
+    async selectWomensBands() {
+        await ElementUtil.forceClick(this.optnWomensBand, "Click Women's Bands")
+        await BrowserUtil.wait(3)
     }
 
-    selectMoreFilters() {
-        //ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to More Filters button")
-        ElementUtil.waitForClickable(this.morefilterbutton, 50, "wait for page load")
-        ElementUtil.forceClick(this.morefilterbutton, "Click More Filters")
-        //BrowserUtil.wait(2)
+    async selectOvalShape() {
+        await BrowserUtil.wait(5)
+        await ElementUtil.forceClick(this.imglnkOval, "Click Oval Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await BrowserUtil.wait(5)
     }
 
-    scrollToGemsFilter() {
-        ElementUtil.scrollIntoView(this.gemstext, "Scroll to Gems filter")
+    async selectMoreFilters() {
+        //await ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to More Filters button")
+        await ElementUtil.waitForClickable(this.morefilterbutton, 50, "wait for page load")
+        await ElementUtil.forceClick(this.morefilterbutton, "Click More Filters")
+        //await BrowserUtil.wait(2)
     }
 
-    hoveringFilters() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to top of the page")
-        ElementUtil.mouseHover(this.gemstext, "Hover over Gems")
-        ElementUtil.isVisible(this.gemspopup, "Checking the popup")
-        ElementUtil.mouseHover(this.shapestext, "Hover over Shapes")
-        ElementUtil.isVisible(this.shapespopup, "Checking the popup")
-        ElementUtil.mouseHover(this.pricetext, "Hover over Price")
-        ElementUtil.isVisible(this.pricepopup, "Checking the popup")
-        ElementUtil.mouseHover(this.carattext, "Hover over Carat")
-        ElementUtil.isVisible(this.caratpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.claritytext, "Hover over Clarity")
-        ElementUtil.isVisible(this.claritypopup, "Checking the popup")
-        ElementUtil.mouseHover(this.colortext, "Hover over Color")
-        ElementUtil.isVisible(this.colorpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.symmetrytext, "Hover over Symmetry")
-        ElementUtil.isVisible(this.symmetrypopup, "Checking the popup")
-        ElementUtil.mouseHover(this.fluorescencetext, "Hover over Fluorescence")
-        ElementUtil.isVisible(this.fluorescencepopup, "Checking the popup")
-        ElementUtil.mouseHover(this.lengthtext, "Hover over Length")
-        ElementUtil.isVisible(this.lengthpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.breadthtext, "Hover over Breadth")
-        ElementUtil.isVisible(this.breadthpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.tabletext, "Hover over Table%")
-        ElementUtil.isVisible(this.tablepopup, "Checking the popup")
-        ElementUtil.mouseHover(this.depthtext, "Hover over Depth%")
-        ElementUtil.isVisible(this.depthpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.cuttext, "Hover over Cut")
-        ElementUtil.isVisible(this.cutpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.polishtext, "Hover over Polish")
-        ElementUtil.isVisible(this.polishpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.certificatetext, "Hover over Cetificate")
+    async scrollToGemsFilter() {
+        await ElementUtil.scrollIntoView(this.gemstext, "Scroll to Gems filter")
     }
 
-    hoveringClarityFilter() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to top of the page")
-        ElementUtil.mouseHover(this.claritytext, "Hover over Clarity")
+    async hoveringFilters() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to top of the page")
+        await ElementUtil.mouseHover(this.gemstext, "Hover over Gems")
+        await ElementUtil.isVisible(this.gemspopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.shapestext, "Hover over Shapes")
+        await ElementUtil.isVisible(this.shapespopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.pricetext, "Hover over Price")
+        await ElementUtil.isVisible(this.pricepopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.carattext, "Hover over Carat")
+        await ElementUtil.isVisible(this.caratpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.claritytext, "Hover over Clarity")
+        await ElementUtil.isVisible(this.claritypopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.colortext, "Hover over Color")
+        await ElementUtil.isVisible(this.colorpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.symmetrytext, "Hover over Symmetry")
+        await ElementUtil.isVisible(this.symmetrypopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.fluorescencetext, "Hover over Fluorescence")
+        await ElementUtil.isVisible(this.fluorescencepopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.lengthtext, "Hover over Length")
+        await ElementUtil.isVisible(this.lengthpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.breadthtext, "Hover over Breadth")
+        await ElementUtil.isVisible(this.breadthpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.tabletext, "Hover over Table%")
+        await ElementUtil.isVisible(this.tablepopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.depthtext, "Hover over Depth%")
+        await ElementUtil.isVisible(this.depthpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.cuttext, "Hover over Cut")
+        await ElementUtil.isVisible(this.cutpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.polishtext, "Hover over Polish")
+        await ElementUtil.isVisible(this.polishpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.certificatetext, "Hover over Cetificate")
     }
 
-    clickClarityPopup() {
-        ElementUtil.click(this.claritypopupdetails, "Click View Details")
+    async hoveringClarityFilter() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to top of the page")
+        await ElementUtil.mouseHover(this.claritytext, "Hover over Clarity")
     }
 
-    clickXPopup() {
-        ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
+    async clickClarityPopup() {
+        await ElementUtil.click(this.claritypopupdetails, "Click View Details")
     }
 
-    hoveringColorFilter() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to top of the page")
-        ElementUtil.mouseHover(this.colortext, "Hover over Color")
+    async clickXPopup() {
+        await ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
     }
 
-    clickColorPopup() {
-        ElementUtil.click(this.colorpopupdetails, "Click View Details")
+    async hoveringColorFilter() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to top of the page")
+        await ElementUtil.mouseHover(this.colortext, "Hover over Color")
     }
 
-    hoveringSymmetryFilter() {
-        ElementUtil.scrollIntoView(this.pricetext, "Scroll to top of the page")
-        ElementUtil.mouseHover(this.symmetrytext, "Hover over Color")
+    async clickColorPopup() {
+        await ElementUtil.click(this.colorpopupdetails, "Click View Details")
     }
 
-    clickSymmetryPopup() {
-        ElementUtil.click(this.symmetrypopupdetails, "Click View Details")
+    async hoveringSymmetryFilter() {
+        await ElementUtil.scrollIntoView(this.pricetext, "Scroll to top of the page")
+        await ElementUtil.mouseHover(this.symmetrytext, "Hover over Color")
     }
 
-    hoveringCutFilter() {
-        ElementUtil.scrollIntoView(this.lengthtext, "Scroll to top of the page")
-        ElementUtil.mouseHover(this.cuttext, "Hover over Color")
+    async clickSymmetryPopup() {
+        await ElementUtil.click(this.symmetrypopupdetails, "Click View Details")
     }
 
-    clickCutPopup() {
-        ElementUtil.click(this.cutpopupdetails, "Click View Details")
+    async hoveringCutFilter() {
+        await ElementUtil.scrollIntoView(this.lengthtext, "Scroll to top of the page")
+        await ElementUtil.mouseHover(this.cuttext, "Hover over Color")
     }
 
-    selectGColor() {
-        ElementUtil.click(this.colorGtext, "Click G Color")
-        BrowserUtil.wait(5)
+    async clickCutPopup() {
+        await ElementUtil.click(this.cutpopupdetails, "Click View Details")
     }
 
-    selectResetFilters() {
-        ElementUtil.waitForClickable(this.resetfilterbutton, 60, "wait for page load")
-        BrowserUtil.wait(5)
-        ElementUtil.scrollIntoView(this.carattext, "Scroll to Reset Filters button")
-        ElementUtil.click(this.resetfilterbutton, "Click Reset Filters")
-        BrowserUtil.wait(8)
+    async selectGColor() {
+        await ElementUtil.click(this.colorGtext, "Click G Color")
+        await BrowserUtil.wait(5)
     }
 
-    getNoOfDiamonds() {
-        let noOfDiamonds = ElementUtil.getText(this.txtNoOfDesigns, "Get Number of Diamonds")
+    async selectResetFilters() {
+        await ElementUtil.waitForClickable(this.resetfilterbutton, 60, "wait for page load")
+        await BrowserUtil.wait(5)
+        await ElementUtil.scrollIntoView(this.carattext, "Scroll to Reset Filters button")
+        await ElementUtil.click(this.resetfilterbutton, "Click Reset Filters")
+        await BrowserUtil.wait(8)
+    }
+
+    async getNoOfDiamonds() {
+        let noOfDiamonds = await ElementUtil.getText(this.txtNoOfDesigns, "Get Number of Diamonds")
         context.setValue('DiamondsCount', noOfDiamonds)
     }
 
-    selectNaturalDiamond() {
-        ElementUtil.click(this.naturaldiamondbutton, "Click Natural Diamond")
-        BrowserUtil.wait(15)
-        ElementUtil.waitForDisplayed(this.earringsSWADBanner, 60, "wait for page load")
+    async selectNaturalDiamond() {
+        await ElementUtil.click(this.naturaldiamondbutton, "Click Natural Diamond")
+        await BrowserUtil.wait(15)
+        await ElementUtil.waitForDisplayed(this.earringsSWADBanner, 60, "wait for page load")
     }
 
-    selectLabDiamond() {
-        ElementUtil.click(this.labdiamondbutton, "Click Lab Diamond")
-        BrowserUtil.wait(15)
-        ElementUtil.waitForDisplayed(this.necklacesSWLDBanner, 60, "wait for page load")
+    async selectLabDiamond() {
+        await ElementUtil.click(this.labdiamondbutton, "Click Lab Diamond")
+        await BrowserUtil.wait(15)
+        await ElementUtil.waitForDisplayed(this.necklacesSWLDBanner, 60, "wait for page load")
     }
     
-    ringsLengthAndBreadth() {
-        ElementUtil.isVisible(this.defRingsRoundLength, "Check the default length")
-        ElementUtil.isVisible(this.defRingsRoundBreadth, "Check the default breadth")
-        ElementUtil.forceClick(this.imglnkOval, "Click Oval Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defRingsOvalLength, "Check the default length")
-        ElementUtil.isVisible(this.defRingsOvalBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defRingsPrincessLength, "Check the default length")
-        ElementUtil.isVisible(this.defRingsPrincessBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defRingsEmeraldLength, "Check the default length")
-        ElementUtil.isVisible(this.defRingsEmeraldBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkHeart, "Click Heart Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defRingsHeartLength, "Check the default length")
-        ElementUtil.isVisible(this.defRingsHeartBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defRingsCushionLength, "Check the default length")
-        ElementUtil.isVisible(this.defRingsCushionBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPear, "Click Pear Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defRingsPearLength, "Check the default length")
-        ElementUtil.isVisible(this.defRingsPearBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkMarquise, "Click Marquise Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    earringsLengthAndBreadth() {
-        ElementUtil.isVisible(this.defEarringsRoundLength, "Check the default length")
-        ElementUtil.isVisible(this.defEarringsRoundBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkOval, "Click Oval Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defEarringsOvalLength, "Check the default length")
-        ElementUtil.isVisible(this.defEarringsOvalBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defEarringsPrincessLength, "Check the default length")
-        ElementUtil.isVisible(this.defEarringsPrincessBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defEarringsEmeraldLength, "Check the default length")
-        ElementUtil.isVisible(this.defEarringsEmeraldBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkHeart, "Click Heart Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defEarringsHeartLength, "Check the default length")
-        ElementUtil.isVisible(this.defEarringsHeartBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defEarringsCushionLength, "Check the default length")
-        ElementUtil.isVisible(this.defEarringsCushionBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPear, "Click Pear Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defEarringsPearLength, "Check the default length")
-        ElementUtil.isVisible(this.defEarringsPearBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkTriangle, "Click Triangle Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    necklacesLengthAndBreadth() {
-        ElementUtil.isVisible(this.defNecklacesRoundLength, "Check the default length")
-        ElementUtil.isVisible(this.defNecklacesRoundBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkOval, "Click Oval Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defNecklacesOvalLength, "Check the default length")
-        ElementUtil.isVisible(this.defNecklacesOvalBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defNecklacesPrincessLength, "Check the default length")
-        ElementUtil.isVisible(this.defNecklacesPrincessBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defNecklacesEmeraldLength, "Check the default length")
-        ElementUtil.isVisible(this.defNecklacesEmeraldBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkHeart, "Click Heart Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defNecklacesHeartLength, "Check the default length")
-        ElementUtil.isVisible(this.defNecklacesHeartBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defNecklacesCushionLength, "Check the default length")
-        ElementUtil.isVisible(this.defNecklacesCushionBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPear, "Click Pear Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defNecklacesPearLength, "Check the default length")
-        ElementUtil.isVisible(this.defNecklacesPearBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkTriangle, "Click Triangle Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    mensRingsLengthAndBreadth() {
-        ElementUtil.isVisible(this.defMensRingsRoundLength, "Check the default length")
-        ElementUtil.isVisible(this.defMensRingsRoundBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkOval, "Click Oval Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defMensRingsOvalLength, "Check the default length")
-        ElementUtil.isVisible(this.defMensRingsOvalBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defMensRingsPrincessLength, "Check the default length")
-        ElementUtil.isVisible(this.defMensRingsPrincessBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.isVisible(this.defMensRingsEmeraldLength, "Check the default length")
-        ElementUtil.isVisible(this.defMensRingsEmeraldBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    dragPriceSlider() {
-        ElementUtil.dragAndDrop(this.pricedragleftbutton, "Dragging left thumb", this.dropPriceLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.pricedragrightbutton, "Dragging right thumb", this.dropPriceRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    enterPriceRange() {
-        ElementUtil.clearText(this.priceleftbox, "Clearing min price")
-        ElementUtil.sendText(this.priceleftbox, data.Filters.MinPrice, "Entering min price")
-        ElementUtil.click(this.pricerightbox, "Clicking max price box")
-        BrowserUtil.wait(10)
-        ElementUtil.clearText(this.pricerightbox, "Clearing max price")
-        ElementUtil.sendText(this.pricerightbox, data.Filters.MaxPrice, "Entering max price")
-        ElementUtil.click(this.priceleftbox, "Clicking min price box")
-        BrowserUtil.wait(5)
-    }
-
-    enterInvalidMinPrice() {
-        ElementUtil.clearText(this.priceleftbox, "Clearing min price")
-        ElementUtil.sendText(this.priceleftbox, data.Filters.InvalidMinPrice, "Entering invalid min price")
-        ElementUtil.click(this.pricerightbox, "Clicking max price box")
-    }
-
-    enterInvalidMaxPrice() {
-        ElementUtil.clearText(this.pricerightbox, "Clearing max price")
-        ElementUtil.sendText(this.pricerightbox, data.Filters.InvalidMaxPrice, "Entering invalid max price")
-        ElementUtil.click(this.priceleftbox, "Clicking min price box")
-    }
-
-    enterInvalidCharPrice() {
-        ElementUtil.clearText(this.priceleftbox, "Clearing min price")
-        ElementUtil.sendText(this.priceleftbox, data.Filters.InvalidCharMinPrice, "Entering invalid char min price")
-        ElementUtil.click(this.pricerightbox, "Clicking max price box")
-        ElementUtil.clearText(this.pricerightbox, "Clearing max price")
-        ElementUtil.sendText(this.pricerightbox, data.Filters.InvalidCharMaxPrice, "Entering invalid char max price")
-        ElementUtil.click(this.priceleftbox, "Clicking min price box")
-    }
-
-    enterDecimalPrice() {
-        ElementUtil.clearText(this.priceleftbox, "Clearing min price")
-        ElementUtil.sendText(this.priceleftbox, data.Filters.DecimalMinPrice, "Entering decimal min price")
-        ElementUtil.click(this.pricerightbox, "Clicking max price box")
-        BrowserUtil.wait(8)
-        ElementUtil.clearText(this.pricerightbox, "Clearing max price")
-        ElementUtil.sendText(this.pricerightbox, data.Filters.DecimalMaxPrice, "Entering decimal max price")
-        ElementUtil.click(this.priceleftbox, "Clicking min price box")
-        BrowserUtil.wait(8)
-        ElementUtil.click(this.pricerightbox, "Clicking max price box")
-    }
-
-    selectIncrementPrice() {
-        ElementUtil.click(this.priceleftbox, "Clicking min price box")
-        browser.keys(['ArrowUp'])
-        BrowserUtil.wait(8)
-    }
-
-    selectDecrementPrice() {
-        ElementUtil.click(this.pricerightbox, "Clicking max price box")
-        browser.keys(['ArrowDown'])
-        BrowserUtil.wait(8)
-    }
-
-    dragCaratSlider() {
-        ElementUtil.dragAndDrop(this.caratdragleftbutton, "Dragging left thumb", this.dropCaratLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.caratdragrightbutton, "Dragging right thumb", this.dropCaratRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    enterCaratRange() {
-        ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
-        ElementUtil.sendText(this.caratleftbox, data.Filters.MinCarat, "Entering min carat")
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-        BrowserUtil.wait(8)
-        ElementUtil.waitForClickable(this.caratrightbox, 50, "wait for page load")
-        ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
-        ElementUtil.sendText(this.caratrightbox, data.Filters.MaxCarat, "Entering max carat")
-        ElementUtil.click(this.caratleftbox, "Clicking min carat box")
-        BrowserUtil.wait(8)
-    }
-
-    enterInvalidMinCarat() {
-        ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
-        ElementUtil.sendText(this.caratleftbox, data.Filters.InvalidMinCarat, "Entering invalid min carat")
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-    }
-
-    enterInvalidMaxCarat() {
-        ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
-        ElementUtil.sendText(this.caratrightbox, data.Filters.InvalidMaxCarat, "Entering invalid max carat")
-        ElementUtil.click(this.caratleftbox, "Clicking min carat box")
-    }
-
-    enterInvalidCharCarat() {
-        ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
-        ElementUtil.sendText(this.caratleftbox, data.Filters.InvalidCharMinCarat, "Entering invalid char min carat")
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-        ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
-        ElementUtil.sendText(this.caratrightbox, data.Filters.InvalidCharMaxCarat, "Entering invalid char max carat")
-        ElementUtil.click(this.caratleftbox, "Clicking min carat box")
-    }
-
-    enterDecimalCarat() {
-        ElementUtil.waitForClickable(this.caratleftbox, 50, "wait for page load")
-        ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
-        ElementUtil.sendText(this.caratleftbox, data.Filters.DecimalMinCarat, "Entering decimal min carat")
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-        BrowserUtil.wait(8)
-        ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.caratrightbox, data.Filters.DecimalMaxCarat, "Entering decimal max carat")
-        ElementUtil.click(this.caratleftbox, "Clicking min carat box")
-    }
-
-    enterInvalidDecimalCarat() {
-        ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
-        ElementUtil.sendText(this.caratleftbox, data.Filters.InvalidDecimalMinCarat, "Entering decimal min carat")
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-        BrowserUtil.wait(8)
-        ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
-        ElementUtil.sendText(this.caratrightbox, data.Filters.InvalidDecimalMaxCarat, "Entering decimal max carat")
-        ElementUtil.click(this.caratleftbox, "Clicking min carat box")
-        BrowserUtil.wait(5)
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-    }
-
-    selectIncrementCarat() {
-        ElementUtil.click(this.caratleftbox, "Clicking min carat box")
-        browser.keys(['ArrowUp'])
-        BrowserUtil.wait(8)
-    }
-
-    selectDecrementCarat() {
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-        browser.keys(['ArrowDown'])
-        BrowserUtil.wait(8)
-    }
-
-    dragToLeftEnd() {
-        ElementUtil.dragAndDrop(this.claritydragrightbutton, "Dragging right thumb", this.dropEndClarityRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.colordragrightbutton, "Dragging right thumb", this.dropEndColorRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.symmetrydragrightbutton, "Dragging right thumb", this.dropEndSymmetryRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.fluorescencedragrightbutton, "Dragging right thumb", this.dropEndFluorescenceRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.cutdragrightbutton, "Dragging right thumb", this.dropEndCutRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.polishdragrightbutton, "Dragging right thumb", this.dropEndPolishRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    dragToRightEnd() {
-        ElementUtil.dragAndDrop(this.claritydragleftbutton, "Dragging left thumb", this.dropEndClarityLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.colordragleftbutton, "Dragging left thumb", this.dropEndColorLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.symmetrydragleftbutton, "Dragging left thumb", this.dropEndSymmetryLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.fluorescencedragleftbutton, "Dragging left thumb", this.dropEndFluorescenceLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.cutdragleftbutton, "Dragging left thumb", this.dropEndCutLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.polishdragleftbutton, "Dragging left thumb", this.dropEndPolishLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    scrollToClarityFilter() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to clarity filter")
-    }
-
-    dragClaritySlider() {
-        //ElementUtil.dragAndDrop(this.claritydragleftbutton, "Dragging left thumb", this.dropClarityLeftButton, "Dropping left thumb")
-        ElementUtil.click(this.clarityVS1text, "Click VS1")
-        BrowserUtil.wait(5)
-        //ElementUtil.dragAndDrop(this.claritydragrightbutton, "Dragging right thumb", this.dropClarityRightButton, "Dropping right thumb")
-        ElementUtil.click(this.claritySI3text, "Click SI3")
-        BrowserUtil.wait(5)
-    }
-
-    checkText() {
-        expect(this.fluorescencemediumtext).toExist();
-    }
-
-    dragColorSlider() {
-        //ElementUtil.dragAndDrop(this.colordragleftbutton, "Dragging left thumb", this.dropColorLeftButton, "Dropping left thumb")
-        ElementUtil.waitForClickable(this.colorFtext, 50, "wait for page load")
-        ElementUtil.click(this.colorFtext, "Click F")
-        BrowserUtil.wait(8)
-        ElementUtil.waitForClickable(this.colorKtext, 50, "wait for page load")
-        //ElementUtil.dragAndDrop(this.colordragrightbutton, "Dragging right thumb", this.dropColorRightButton, "Dropping right thumb")
-        ElementUtil.click(this.colorKtext, "Click K")
-        BrowserUtil.wait(8)
-    }
-
-    scrollToSymmetryFilter() {
-        ElementUtil.scrollIntoView(this.pricetext, "Scroll to symmetry filter")
-    }
-
-    dragSymmetrySlider() {
-        //ElementUtil.dragAndDrop(this.symmetrydragleftbutton, "Dragging left thumb", this.dropSymmetryLeftButton, "Dropping left thumb")
-        ElementUtil.click(this.symmetryverygoodtext, "Click Very Good")
-        BrowserUtil.wait(8)
-        //ElementUtil.dragAndDrop(this.symmetrydragrightbutton, "Dragging right thumb", this.dropSymmetryRightButton, "Dropping right thumb")
-        ElementUtil.click(this.symmetryidealtext, "Click Ideal")
-        BrowserUtil.wait(8)
-    }
-
-    dragFluorescenceSlider() {
-        //ElementUtil.dragAndDrop(this.fluorescencedragleftbutton, "Dragging left thumb", this.dropFluorescenceLeftButton, "Dropping left thumb")
-        ElementUtil.click(this.fluorescencefainttext, "Click Faint")
-        BrowserUtil.wait(5)
-        //ElementUtil.dragAndDrop(this.fluorescencedragrightbutton, "Dragging right thumb", this.dropFluorescenceRightButton, "Dropping right thumb")
-        ElementUtil.click(this.fluorescencestrongtext, "Click Strong")
-        BrowserUtil.wait(5)
-    }
-
-    scrollToLengthFilter() {
-        ElementUtil.scrollIntoView(this.claritytext, "Scroll to length filter")
-    }
-
-    dragLengthSlider() {
-        ElementUtil.dragAndDrop(this.lengthdragleftbutton, "Dragging left thumb", this.dropLengthLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.lengthdragrightbutton, "Dragging right thumb", this.dropLengthRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    enterLengthRange() {
-        ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.lengthleftbox, data.Filters.MinLength, "Entering min length")
-        // ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-        // BrowserUtil.wait(10)
-        ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.lengthrightbox, data.Filters.MaxLength, "Entering max length")
-        ElementUtil.click(this.lengthleftbox, "Clicking min length box")
-        BrowserUtil.wait(8)
-    }
-
-    reEnterLengthRange() {
-        ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.lengthleftbox, data.Filters.MinLength, "Entering min length")
-        // ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-        // BrowserUtil.wait(10)
-        ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.lengthrightbox, data.Filters.MaxLength, "Entering max length")
-        //ElementUtil.click(this.lengthleftbox, "Clicking min length box")
-        BrowserUtil.wait(8)
-    }
-
-    enterInvalidMinLength() {
-        ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
-        BrowserUtil.wait(10)
-        ElementUtil.waitForClickable(this.lengthleftbox, 20, "wait for page load")
-        ElementUtil.sendText(this.lengthleftbox, data.Filters.InvalidMinLength, "Entering invalid min length")
-        ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-        //BrowserUtil.wait(8)
-    }
-
-    enterInvalidMaxLength() {
-        ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.lengthrightbox, data.Filters.InvalidMaxLength, "Entering invalid max length")
-        ElementUtil.click(this.lengthleftbox, "Clicking min length box")
-        BrowserUtil.wait(8)
-    }
-
-    enterInvalidCharLength() {
-        ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.lengthleftbox, data.Filters.InvalidCharMinLength, "Entering invalid char min length")
-        //ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-        ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.lengthrightbox, data.Filters.InvalidCharMaxLength, "Entering invalid char max length")
-        ElementUtil.click(this.lengthleftbox, "Clicking min length box")
-    }
-
-    enterDecimalLength() {
-        ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.lengthleftbox, data.Filters.DecimalMinLength, "Entering decimal min length")
-        // ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.lengthrightbox, data.Filters.DecimalMaxLength, "Entering decimal max length")
-        ElementUtil.click(this.lengthleftbox, "Clicking min length box")
-        BrowserUtil.wait(5)
-    }
-
-    enterInvalidDecimalLength() {
-        ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.lengthleftbox, data.Filters.InvalidDecimalMinLength, "Entering decimal min length")
-        // ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.lengthrightbox, data.Filters.InvalidDecimalMaxLength, "Entering decimal max length")
-        ElementUtil.click(this.lengthleftbox, "Clicking min length box")
-        BrowserUtil.wait(8)
-        ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-    }
-
-    selectIncrementLength() {
-        ElementUtil.click(this.lengthleftbox, "Clicking min length box")
-        browser.keys(['ArrowUp'])
-        BrowserUtil.wait(8)
-    }
-
-    selectDecrementLength() {
-        ElementUtil.waitForClickable(this.lengthrightbox, 50, "wait for page load")
-        ElementUtil.click(this.lengthrightbox, "Clicking max length box")
-        browser.keys(['ArrowDown'])
-        BrowserUtil.wait(5)
-    }
-
-    dragBreadthSlider() {
-        ElementUtil.dragAndDrop(this.breadthdragleftbutton, "Dragging left thumb", this.dropBreadthLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.breadthdragrightbutton, "Dragging right thumb", this.dropBreadthRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    enterBreadthRange() {
-        ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.breadthleftbox, data.Filters.MinBreadth, "Entering min breadth")
-        // ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-        // BrowserUtil.wait(8)
-        ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.waitForClickable(this.breadthrightbox, 20, "wait for page load")
-        ElementUtil.sendText(this.breadthrightbox, data.Filters.MaxBreadth, "Entering max breadth")
-        ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
-        BrowserUtil.wait(5)
-    }
-
-    reEnterBreadthRange() {
-        ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.breadthleftbox, data.Filters.MinBreadth, "Entering min breadth")
-        // ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-        // BrowserUtil.wait(10)
-        ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.breadthrightbox, data.Filters.MaxBreadthReEnter, "Entering max breadth")
-        //ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
-        BrowserUtil.wait(8)
-    }
-
-    enterInvalidMinBreadth() {
-        ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
-        ElementUtil.sendText(this.breadthleftbox, data.Filters.InvalidMinBreadth, "Entering invalid min breadth")
-        ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-    }
-
-    enterInvalidMaxBreadth() {
-        ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
-        ElementUtil.sendText(this.breadthrightbox, data.Filters.InvalidMaxBreadth, "Entering invalid max breadth")
-        ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
-    }
-
-    enterInvalidCharBreadth() {
-        ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.breadthleftbox, data.Filters.InvalidCharMinBreadth, "Entering invalid char min breadth")
-        //ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-        ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.breadthrightbox, data.Filters.InvalidCharMaxBreadth, "Entering invalid char max breadth")
-        ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
-    }
-
-    enterDecimalBreadth() {
-        ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.breadthleftbox, data.Filters.DecimalMinBreadth, "Entering decimal min breadth")
-        // ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.breadthrightbox, data.Filters.DecimalMaxBreadth, "Entering decimal max breadth")
-        ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
-        BrowserUtil.wait(5)
-    }
-
-    enterInvalidDecimalBreadth() {
-        ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.breadthleftbox, data.Filters.InvalidDecimalMinBreadth, "Entering decimal min breadth")
-        // ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
-        BrowserUtil.wait(8)
-        ElementUtil.sendText(this.breadthrightbox, data.Filters.InvalidDecimalMaxBreadth, "Entering decimal max breadth")
-        ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
-        BrowserUtil.wait(8)
-        ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-    }
-
-    selectIncrementBreadth() {
-        ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
-        browser.keys(['ArrowUp'])
-        BrowserUtil.wait(8)
-    }
-
-    selectDecrementBreadth() {
-        ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
-        browser.keys(['ArrowDown'])
-        BrowserUtil.wait(8)
-    }
-
-    dragTableSlider() {
-        ElementUtil.dragAndDrop(this.tabledragleftbutton, "Dragging left thumb", this.dropTableLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.tabledragrightbutton, "Dragging right thumb", this.dropTableRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    enterTableRange() {
-        ElementUtil.clearText(this.tableleftbox, "Clearing min table")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.tableleftbox, data.Filters.MinTable, "Entering min table")
-        // ElementUtil.click(this.tablerightbox, "Clicking max table box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.tablerightbox, "Clearing max table")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.tablerightbox, data.Filters.MaxTable, "Entering max table")
-        ElementUtil.click(this.tableleftbox, "Clicking min table box")
-        BrowserUtil.wait(8)
-    }
-
-    reEnterTableRange() {
-        ElementUtil.clearText(this.tableleftbox, "Clearing min table")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.tableleftbox, data.Filters.MinTable, "Entering min table")
-        // ElementUtil.click(this.tablerightbox, "Clicking max table box")
-        // BrowserUtil.wait(10)
-        ElementUtil.clearText(this.tablerightbox, "Clearing max table")
-        BrowserUtil.wait(10)
-        ElementUtil.waitForClickable(this.tablerightbox, 50, "wait for page load")
-        ElementUtil.sendText(this.tablerightbox, data.Filters.MaxTable, "Entering max table")
-        ElementUtil.click(this.tableleftbox, "Clicking min table box")
-        BrowserUtil.wait(8)
-    }
-
-    enterInvalidMinTable() {
-        ElementUtil.clearText(this.tableleftbox, "Clearing min table")
-        ElementUtil.sendText(this.tableleftbox, data.Filters.InvalidMinTable, "Entering invalid min table")
-        ElementUtil.click(this.tablerightbox, "Clicking max table box")
-    }
-
-    enterInvalidMaxTable() {
-        ElementUtil.clearText(this.tablerightbox, "Clearing max table")
-        ElementUtil.sendText(this.tablerightbox, data.Filters.InvalidMaxTable, "Entering invalid max table")
-        ElementUtil.click(this.tableleftbox, "Clicking min table box")
-    }
-
-    enterInvalidCharTable() {
-        ElementUtil.clearText(this.tableleftbox, "Clearing min table")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.tableleftbox, data.Filters.InvalidCharMinTable, "Entering invalid char min table")
-        //ElementUtil.click(this.tablerightbox, "Clicking max table box")
-        ElementUtil.clearText(this.tablerightbox, "Clearing max table")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.tablerightbox, data.Filters.InvalidCharMaxTable, "Entering invalid char max table")
-        ElementUtil.click(this.tableleftbox, "Clicking min table box")
-    }
-
-    enterDecimalTable() {
-        ElementUtil.clearText(this.tableleftbox, "Clearing min table")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.tableleftbox, data.Filters.DecimalMinTable, "Entering decimal min table")
-        // ElementUtil.click(this.tablerightbox, "Clicking max table box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.tablerightbox, "Clearing max table")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForClickable(this.tablerightbox, 20, "wait for page load")
-        ElementUtil.sendText(this.tablerightbox, data.Filters.DecimalMaxTable, "Entering decimal max table")
-        ElementUtil.click(this.tableleftbox, "Clicking min table box")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForClickable(this.tablerightbox, 5, "wait for page load")
-        ElementUtil.click(this.tablerightbox, "Clicking max table box")
-    }
-
-    selectIncrementTable() {
-        ElementUtil.click(this.tableleftbox, "Clicking min table box")
-        browser.keys(['ArrowUp'])
-        BrowserUtil.wait(8)
-    }
-
-    selectDecrementTable() {
-        ElementUtil.waitForEnabled(this.tablerightbox, 50, "wait for page load")
-        ElementUtil.click(this.tablerightbox, "Clicking max table box")
-        browser.keys(['ArrowDown'])
-        BrowserUtil.wait(5)
-    }
-
-    dragDepthSlider() {
-        ElementUtil.dragAndDrop(this.depthdragleftbutton, "Dragging left thumb", this.dropDepthLeftButton, "Dropping left thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-        ElementUtil.dragAndDrop(this.depthdragrightbutton, "Dragging right thumb", this.dropDepthRightButton, "Dropping right thumb")
-        ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
-    }
-
-    enterDepthRange() {
-        ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.depthleftbox, data.Filters.MinDepth, "Entering min depth")
-        // ElementUtil.click(this.depthrightbox, "Clicking max depth box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.depthrightbox, data.Filters.MaxDepth, "Entering max depth")
-        ElementUtil.click(this.depthleftbox, "Clicking min depth box")
-        BrowserUtil.wait(5)
-    }
-
-    reEnterDepthRange() {
-        ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
-        BrowserUtil.wait(10)
-        ElementUtil.sendText(this.depthleftbox, data.Filters.MinDepth, "Entering min depth")
-        // ElementUtil.click(this.depthrightbox, "Clicking max depth box")
-        // BrowserUtil.wait(10)
-        ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
-        BrowserUtil.wait(10)
-        ElementUtil.waitForClickable(this.depthrightbox, 50, "wait for page load")
-        ElementUtil.sendText(this.depthrightbox, data.Filters.MaxDepth, "Entering max depth")
-        ElementUtil.click(this.depthleftbox, "Clicking min depth box")
-        BrowserUtil.wait(8)
-    }
-
-    enterInvalidMinDepth() {
-        ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
-        ElementUtil.sendText(this.depthleftbox, data.Filters.InvalidMinDepth, "Entering invalid min depth")
-        ElementUtil.click(this.depthrightbox, "Clicking max depth box")
-    }
-
-    enterInvalidMaxDepth() {
-        ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
-        ElementUtil.sendText(this.depthrightbox, data.Filters.InvalidMaxDepth, "Entering invalid max depth")
-        ElementUtil.click(this.depthleftbox, "Clicking min depth box")
-    }
-
-    enterInvalidCharDepth() {
-        ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.depthleftbox, data.Filters.InvalidCharMinDepth, "Entering invalid char min depth")
-        //ElementUtil.click(this.depthrightbox, "Clicking max depth box")
-        ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.depthrightbox, data.Filters.InvalidCharMaxDepth, "Entering invalid char max depth")
-        ElementUtil.click(this.depthleftbox, "Clicking min depth box")
-    }
-
-    enterDecimalDepth() {
-        ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.depthleftbox, data.Filters.DecimalMinDepth, "Entering decimal min depth")
-        // ElementUtil.click(this.depthrightbox, "Clicking max depth box")
-        // BrowserUtil.wait(5)
-        ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
-        BrowserUtil.wait(5)
-        ElementUtil.sendText(this.depthrightbox, data.Filters.DecimalMaxDepth, "Entering decimal max depth")
-        ElementUtil.click(this.depthleftbox, "Clicking min depth box")
-        BrowserUtil.wait(5)
-        ElementUtil.click(this.depthrightbox, "Clicking max depth box")
-    }
-
-    selectIncrementDepth() {
-        ElementUtil.click(this.depthleftbox, "Clicking min depth box")
-        browser.keys(['ArrowUp'])
-        BrowserUtil.wait(8)
-    }
-
-    selectDecrementDepth() {
-        ElementUtil.waitForEnabled(this.depthrightbox, 50, "wait for page load")
-        ElementUtil.click(this.depthrightbox, "Clicking max depth box")
-        browser.keys(['ArrowDown'])
-        BrowserUtil.wait(5)
-    }
-
-    dragCutSlider() {
-        //ElementUtil.dragAndDrop(this.cutdragleftbutton, "Dragging left thumb", this.dropCutLeftButton, "Dropping left thumb")
-        ElementUtil.click(this.cutverygoodtext, "Click Very Good")
-        BrowserUtil.wait(5)
-        //ElementUtil.dragAndDrop(this.cutdragrightbutton, "Dragging right thumb", this.dropCutRightButton, "Dropping right thumb")
-        ElementUtil.click(this.cutexcellenttext, "Click Excellent")
-        BrowserUtil.wait(5)
-    }
-
-    disabledCutFilter() {
-        ElementUtil.isVisible(this.cutslidertrack, "Check the enabled cut filter with round shape")
-        ElementUtil.isVisible(this.tablecutcolumn, "Check the cut column in diamond listing table")
-        ElementUtil.click(this.imglnkAsscher, "Click Asscher shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with asscher shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkBaguette, "Click Baguette shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with baguette shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkCushion, "Click Cushion shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutslidertrack, "Check the enabled cut filter with cushion shape")
-        ElementUtil.isVisible(this.tablecutcolumn, "Check the cut column in diamond listing table")
-        ElementUtil.click(this.imglnkEmerald, "Click Emerald shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with emerald shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkHeart, "Click Heart shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with heart shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkHexagonal, "Click Hexagonal shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with hexagonal shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkMarquise, "Click Marquise shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with marquise shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkOval, "Click Oval shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with oval shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkPear, "Click Pear shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with pear shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkPrincess, "Click Princess shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutslidertrack, "Check the enabled cut filter with princess shape")
-        ElementUtil.isVisible(this.tablecutcolumn, "Check the cut column in diamond listing table")
-        ElementUtil.click(this.imglnkRadiant, "Click Radiant shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with radiant shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkRosecut, "Click Rose Cut shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with rose cut shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkTriangle, "Click Triangle shape")
-        BrowserUtil.wait(8)
-        ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with triangle shape")
-        //ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
-        ElementUtil.click(this.imglnkSquare, "Click Square shape")
-        BrowserUtil.wait(8)
-    }
-
-    dragPolishSlider() {
-        //ElementUtil.dragAndDrop(this.polishdragleftbutton, "Dragging left thumb", this.dropPolishLeftButton, "Dropping left thumb")
-        ElementUtil.click(this.polishverygoodtext, "Click Very Good")
-        BrowserUtil.wait(5)
-        //ElementUtil.dragAndDrop(this.polishdragrightbutton, "Dragging right thumb", this.dropPolishRightButton, "Dropping right thumb")
-        ElementUtil.click(this.polishexcellenttext, "Click Excellent")
-        BrowserUtil.wait(5)
-    }
-
-    uncheckGIA() {
-        ElementUtil.waitForClickable(this.btnGIACheckbox, 20, "wait for page load")
-        ElementUtil.click(this.btnGIACheckbox, "Uncheck GIA certificate")
-        BrowserUtil.wait(5)
-    }
-
-    uncheckIGI() {
-        ElementUtil.waitForClickable(this.btnIGICheckbox, 20, "wait for page load")
-        ElementUtil.click(this.btnIGICheckbox, "Uncheck IGI certificate")
-        BrowserUtil.wait(5)
-    }
-
-    selectQuickView() {
-        BrowserUtil.wait(5)
-        //ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to diamond listing table");
-        ElementUtil.waitForClickable(this.tableexpandfirstrowicon, 60, "wait for page load")
-        ElementUtil.click(this.tableexpandfirstrowicon, "Click Quick View of First Row")
-    }
-
-    selectQuickViewEarrings() {
-        BrowserUtil.wait(5);
-        //ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to diamond listing table");
-        ElementUtil.waitForClickable(this.tableearringQuickView, 30, "wait for page load")
-        ElementUtil.click(this.tableearringQuickView, "Click Quick View of First Row")
-    }
-
-    selectViewLabDiamond() {
-        ElementUtil.waitForClickable(this.viewlabdiamondbutton, 60, "wait for page load")
-        ElementUtil.forceClick(this.viewlabdiamondbutton, "Click View Lab Diamond Button")
-        BrowserUtil.wait(8);
-    }
-
-    scrollEarringDDP() {
-        ElementUtil.scrollIntoView(this.btnSelectEarring, "Scroll to diamond details");
-    }
-
-    enterCarat30() {
-        ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
-        ElementUtil.sendText(this.caratleftbox, data.Filters.Carat30, "Entering min carat")
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-        BrowserUtil.wait(8);
-    }
-
-    looseDiamondsLengthAndBreadth() {
-        ElementUtil.isVisible(this.txtFixedMinLength, "Check the default length")
-        ElementUtil.isVisible(this.txtFixedMinBreadth, "Check the default breadth")
-        ElementUtil.isVisible(this.txtFixedMaxLength, "Check the default length")
-        ElementUtil.isVisible(this.txtFixedMaxBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkOval, "Click Oval Shape")
-        BrowserUtil.wait(5);
-        ElementUtil.isVisible(this.txtFixedMinLength, "Check the default length")
-        ElementUtil.isVisible(this.txtFixedMinBreadth, "Check the default breadth")
-        ElementUtil.isVisible(this.txtFixedMaxLength, "Check the default length")
-        ElementUtil.isVisible(this.txtFixedMaxBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
-        BrowserUtil.wait(5);
-        ElementUtil.isVisible(this.txtFixedMinLength, "Check the default length")
-        ElementUtil.isVisible(this.txtFixedMinBreadth, "Check the default breadth")
-        ElementUtil.isVisible(this.txtFixedMaxLength, "Check the default length")
-        ElementUtil.isVisible(this.txtFixedMaxBreadth, "Check the default breadth")
-        ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
-        BrowserUtil.wait(5);
-    }
-
-    enterPrice1500() {
-        ElementUtil.clearText(this.priceleftbox, "Clearing min price")
-        ElementUtil.sendText(this.priceleftbox, data.Filters.Price1500, "Entering min price")
-        ElementUtil.click(this.pricerightbox, "Clicking max price box")
-        BrowserUtil.wait(8);
-        ElementUtil.clearText(this.pricerightbox, "Clearing max price")
-        ElementUtil.sendText(this.pricerightbox, data.Filters.Price1500, "Entering max price")
-        ElementUtil.click(this.priceleftbox, "Clicking min price box")
-        BrowserUtil.wait(8);
-    }
-
-    enterDifferentCaratRange() {
-        ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
-        ElementUtil.sendText(this.caratleftbox, data.Filters.MaxCarat, "Entering min carat")
-        ElementUtil.click(this.caratrightbox, "Clicking max carat box")
-        BrowserUtil.wait(5);
-        ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
-        ElementUtil.sendText(this.caratrightbox, data.Filters.MinCarat, "Entering max carat")
-        ElementUtil.click(this.caratleftbox, "Clicking min carat box")
-        BrowserUtil.wait(8);
-    }
-
-    scrollToBanner() {
-        ElementUtil.scrollIntoView(this.LooseDiamondsBanner, "Scroll to banner")
-    }
-
-    scrollToListingNoFilters() {
-        ElementUtil.scrollIntoView(this.claritytext, "scroll to listing")
-    }
-
-    selectRecentlyViewed() {
-        ElementUtil.click(this.Recentlyviewedtab, "Click Recently Viewed")
-    }
-
-    selectForCompare() {
-        ElementUtil.click(this.compareRow1radiobutton, "Click Compare Row 1")
-        ElementUtil.click(this.compareRow2radiobutton, "Click Compare Row 2")
-        ElementUtil.click(this.compareRow3radiobutton, "Click Compare Row 3")
-        ElementUtil.click(this.compareRow4radiobutton, "Click Compare Row 4")
-        ElementUtil.click(this.compareRow5radiobutton, "Click Compare Row 5")
-    }
-
-    selectCompareTab() {
-        ElementUtil.click(this.Comparetab, "Click Compare Tab")
-    }
-
-    selectCaretCompare() {
-        ElementUtil.click(this.btnCompareRightArrow, "Click Compare Right Arrow")
-        ElementUtil.click(this.btnCompareLeftArrow, "Click Compare Left Arrow")
-    }
-
-    selectTwoForCompare() {
-        ElementUtil.click(this.compareearringRow1radiobutton, "Click Compare Row 1")
-        ElementUtil.click(this.compareearringRow2radiobutton, "Click Compare Row 2") 
-    }
-
-    removeFirstDiamond() {
-        ElementUtil.click(this.btnCompareRemoveColumn1, "Click Remove Compare Column 1")
-    }
-
-    selectViewCompare() {
-        ElementUtil.scrollIntoView(this.txtCompareClarity, "Scroll to table")
-        ElementUtil.click(this.lnkViewStone, "Click View")
-    }
-
-    hoverSortBy() {
-        ElementUtil.mouseHover(this.sortbybutton, "Hover over sort by")
-    }
-
-    selectSortByOption() {
-        ElementUtil.waitForClickable(this.sortbybutton, 50, "wait for page load")
-        ElementUtil.click(this.sortbybutton, "Click sort by")
-        ElementUtil.click(this.sortbycaratlowtohightext, "Select Low to High Carat")
-        BrowserUtil.wait(5)
-    }
-
-    selectGalleryView() {
-        ElementUtil.click(this.galleryview, "Click Gallery View")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.imgFirstRowGridView, 50, "wait for page load")
-    }
-
-    closeQuickView() {
-        ElementUtil.click(this.tablefirstrowXbutton, "Click X button")
-    }
-
-    selectViewDiamond() {
-        ElementUtil.waitForClickable(this.viewdiamondbutton, 60, "wait for page load")
-        ElementUtil.click(this.viewdiamondbutton, "Click View Diamond Button")
-        BrowserUtil.wait(5);
-    }
-
-    selectPlayVideo() {
-        ElementUtil.click(this.iconPlayVideo, "Click Pay Video")
-    }
-
-    selectIconGIA() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
-        ElementUtil.click(this.iconGIACertificate, "Click GIA icon")
-    }
-
-    selectIconIGI() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
-        ElementUtil.click(this.iconIGICertificate, "Click IGI icon")
-    }
-
-    selectIconTopView() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
-        ElementUtil.click(this.iconTopView, "Click Top View")
-    }
-
-    selectIconSideView() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
-        ElementUtil.click(this.iconSideView, "Click Side View")
-    }
-
-    hoveringDiamondFeatures() {
-        ElementUtil.scrollIntoView(this.btnSelectNecklace, "Scroll to Diamond Details")
-        ElementUtil.isVisible(this.txtdiamondDDP, "Checking the text")
-        ElementUtil.isVisible(this.txtReportDDP, "Checking the text")
-        ElementUtil.isVisible(this.linkViewReportDDP, "Checking the text")
-        ElementUtil.mouseHover(this.txtColorDDP, "Hover over Color")
-        ElementUtil.isVisible(this.popupColorDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtPriceDDP, "Hover over Price")
-        ElementUtil.isVisible(this.PriceTooltipDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtYourprice, "Hover over Your Price")
-        ElementUtil.isVisible(this.yourPriceTooltipDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtcaratWeightDDP, "Hover over Carat")
-        ElementUtil.isVisible(this.caratWeightTooltipDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtShapeDDP, "Hover over Shape")
-        ElementUtil.isVisible(this.shapeTooltipDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtCutDDP, "Hover over Cut")
-        ElementUtil.isVisible(this.popupCutDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtMeasurementDDP, "Hover over Measurement")
-        ElementUtil.isVisible(this.popupMeasurementDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtOriginDDP, "Hover over Origin")
-        //ElementUtil.waitForDisplayed(this.originTooltipDDP, 10, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtClarityDDP, "Hover over Clarity")
-        ElementUtil.isVisible(this.popupClarityDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtTableDDP, "Hover over Table%")
-        //ElementUtil.isVisible(this.tableTooltipDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtDepthDDP, "Hover over Depth%")
-        ElementUtil.isVisible(this.depthTooltipDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtSymmetryDDP, "Hover over Symmetry")
-        ElementUtil.isVisible(this.popupSymmetryDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtPolishDDP, "Hover over Polish")
-        ElementUtil.isVisible(this.polishTooltipDDP, "Checking the tooltip")
-        ElementUtil.mouseHover(this.txtFluorescenceDDP, "Hover over fluorescence")
-    }
-
-    hoverViewDetailsDiamondFeatures() {
-        ElementUtil.scrollIntoView(this.iconPlayVideo, "Scroll to Diamond Details")
-        ElementUtil.mouseHover(this.txtColorDDP, "Hover over Color")
-        ElementUtil.click(this.popupColorViewDetails, "Click View Details")
-        ElementUtil.isVisible(this.txtPopupColorViewDetailsDDP, "Check Popup")
-        ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
-        ElementUtil.mouseHover(this.txtCutDDP, "Hover over Cut")
-        ElementUtil.forceClick(this.cutViewDetailsDDP, "Click View Details")
-        ElementUtil.isVisible(this.txtPopupCutViewDetailsDDP, "Check Popup")
-        ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
-        // ElementUtil.mouseHover(this.txtMeasurementDDP, "Hover over Measurement")
-        // ElementUtil.click(this.measurementViewDetailsDDP, "Click View Details")
-        // ElementUtil.isVisible(this.popupMeasurementViewDetailsDDP, "Check Popup")
-        // ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
-        ElementUtil.mouseHover(this.txtClarityDDP, "Hover over Clarity")
-        ElementUtil.click(this.clarityViewDetailsDDP, "Click View Details")
-        ElementUtil.isVisible(this.popupclarityViewDetailsDDP, "Check Popup")
-        ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
-        ElementUtil.mouseHover(this.txtSymmetryDDP, "Hover over Symmetry")
-        ElementUtil.click(this.SymmetryViewDetailsDDP, "Click View Details")
-    }
-
-    selectDiamondDetails2() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
-        ElementUtil.click(this.txtEarringdiamondDetails2, "Click Diamond Details 2")
-    }
-
-    selectLinksBreadcrumb() {
-        ElementUtil.click(this.lnkViewDetails, "Click View Details in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.createYourOwnEarring, "Check heading")
-        ElementUtil.click(this.lnkDiamondEarringBreadcrumb, "Click breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    selectPage3Button() {
-        //ElementUtil.scrollIntoView(this.paginationarea, "Scroll to pagination")
-        ElementUtil.click(this.btnPage3Table, "Click 3")
-        BrowserUtil.wait(5)
-    }
-
-    enterPageNumber() {
-        ElementUtil.scrollIntoView(this.paginationarea, "Scroll to pagination")
-        ElementUtil.clearText(this.pagenumberfield, "Clear page number")
-        ElementUtil.sendText(this.pagenumberfield, data.DiamondDetailsPage.PageNumber, "Enter 3")
-        browser.keys('Enter')
-        BrowserUtil.wait(5)
-    }
-
-    selectPage2Button() {
-        //ElementUtil.scrollIntoView(this.paginationarea, "Scroll to pagination")
-        ElementUtil.click(this.btnPage2Table, "Click 2")
-        BrowserUtil.wait(10)
-    }
-
-    selectRightCaretPage() {
-        ElementUtil.forceClick(this.pagerighticon, "Click right caret icon")
-        BrowserUtil.wait(5)
-    }
-
-    selectLeftCaretPage() {
-        ElementUtil.forceClick(this.pagelefticon, "Click left caret icon")
-        BrowserUtil.wait(5)
-    }
-
-    selectEarringDDP() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
-        ElementUtil.click(this.btnSelectEarring, "Click button")
-        BrowserUtil.wait(5)
-    }
-
-    selectNecklaceDDP() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
-        ElementUtil.click(this.btnSelectNecklace, "Click button")
-        BrowserUtil.wait(5)
-    }
-
-    selectMensRingDDP() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
-        ElementUtil.click(this.btnSelectMensRing, "Click button")
-        BrowserUtil.wait(5)
-    }
-
-    selectRingDDP() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
-        ElementUtil.click(this.btnSelectRing, "Click button")
-        BrowserUtil.wait(5)
-    }
-
-    selectRingsBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourDiamondEngagementRingBreadcrumb, "Click Make Your Diamond Engagement Ring in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.ringStartWithDiamondBanner, "Check the banner")
-        ElementUtil.click(this.lnkEngagementRingBreadcrumb, "Click Engagement Ring in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    browseBack() {
-        browser.back();
-        BrowserUtil.wait(5)
-    }
-
-    selectEarringsBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourDiamondEarringBreadcrumb, "Click Make Your Diamond Earring in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.earringsSWADBanner, "Check the banner")
-        ElementUtil.click(this.lnkEarringsBreadcrumb, "Click Earrings in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    selectNecklacesBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourDiamondNecklaceBreadcrumb, "Click Make Your Diamond Necklace in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.necklacesSWADBanner, "Check the banner")
-        ElementUtil.click(this.lnkNecklacesBreadcrumb, "Click Necklaces in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    selectMensRingsBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourDiamondMensRingBreadcrumb, "Click Make Your Diamond Men's Ring in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.mensSWADBanner, "Check the banner")
-        ElementUtil.click(this.lnkMensRingBreadcrumb, "Click Men's Ring in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    scrollToProduct() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to product")
-    }
-
-    selectLabRingsBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourLabDiamondEngagementRingBreadcrumb, "Click Make Your Diamond Engagement Ring in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.ringStartLabDiamondBanner, "Check the banner")
-        ElementUtil.click(this.lnkEngagementRingBreadcrumb, "Click Engagement Ring in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    selectLabEarringsBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourLabDiamondEarringBreadcrumb, "Click Make Your Diamond Earring in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.earringsSWLDBanner, "Check the banner")
-        ElementUtil.click(this.lnkEarringsBreadcrumb, "Click Earrings in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    selectLabNecklacesBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourLabDiamondNecklaceBreadcrumb, "Click Make Your Diamond Necklace in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.necklacesSWLDBanner, "Check the banner")
-        ElementUtil.click(this.lnkNecklacesBreadcrumb, "Click Necklaces in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    selectLabMensRingsBreadcrumb() {
-        ElementUtil.click(this.lnkMakeYourLabDiamondMensRingBreadcrumb, "Click Make Your Diamond Men's Ring in breadcrumb")
-        BrowserUtil.wait(5)
-        ElementUtil.isVisible(this.mensSWLDBanner, "Check the banner")
-        ElementUtil.click(this.lnkMensRingBreadcrumb, "Click Men's Ring in breadcrumb")
-        BrowserUtil.wait(5)
-    }
-
-    selectChangeDiamond() {
-        ElementUtil.waitForClickable(this.tabDiamondChange, 25, "wait for page load")
-        ElementUtil.click(this.tabDiamondChange, "Click Change Diamond")
-        BrowserUtil.wait(5)
-    }
-
-    selectChangeLabDiamond() {
-        ElementUtil.waitForClickable(this.tabLabDiamondChange, 25, "wait for page load")
-        ElementUtil.click(this.tabLabDiamondChange, "Click Change Lab Diamond")
-        BrowserUtil.wait(5)
-    }
-
-    selectWirePayment() {
-        ElementUtil.waitForDisplayed(this.drpPaymentDefault, 60, "wait for page load")
-        ElementUtil.mouseHover(this.drpPaymentDefault, "Hover over Payment Selection Dropdown")
-        ElementUtil.forceClick(this.optnWirePayment, "Click Wire Payment")
-        BrowserUtil.wait(5)
-    }
-
-    selectStarRating() {
-        //ElementUtil.scrollIntoView(this.sctnAboutOurCustomProducts, "Scroll to SEO section")
-        ElementUtil.click(this.lnkRating, "Click Rating")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.headingRating, 50, "wait for page load")
-    }
-
-    selectProductPage2() {
-        ElementUtil.waitForDisplayed(this.sctnFilterTab, 60, "wait for page load")
-        ElementUtil.scrollIntoView(this.sctnFilterTab, "Scroll to product display")
-        ElementUtil.waitForClickable(this.imgProduct, 60, "wait for page load")
-        ElementUtil.click(this.imgProduct, "Click a product")
-        BrowserUtil.wait(5)
-    }
-
-    selectAddToCart() {
-        ElementUtil.waitForClickable(this.btnAddToCart, 60, "wait for page load")
-        ElementUtil.click(this.btnAddToCart, "Click Add to Cart")
-        BrowserUtil.wait(5)
-    }
-
-    selectCheckOut() {
-        ElementUtil.waitForClickable(this.btnCheckOut, 60, "wait for page load")
-        ElementUtil.click(this.btnCheckOut, "Click checkout")
-        BrowserUtil.wait(5)
-    }
-
-    selectRingSize() {
-        //ElementUtil.scrollIntoView(this.btnAddToCart, "Scroll to ring size")
-        BrowserUtil.wait(6)
-        ElementUtil.waitForClickable(this.lnkSelectRingSize, 60, "wait for page load")
-        ElementUtil.forceClick(this.lnkSelectRingSize, "Click Select")
-        // let ringSizeLink = ElementUtil.isVisible(this.drpRingSize, "Check dropdown")
+    async ringsLengthAndBreadth() {
+        await ElementUtil.isVisible(this.defRingsRoundLength, "Check the default length")
+        await ElementUtil.isVisible(this.defRingsRoundBreadth, "Check the default breadth")
+        await ElementUtil.forceClick(this.imglnkOval, "Click Oval Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defRingsOvalLength, "Check the default length")
+        await ElementUtil.isVisible(this.defRingsOvalBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defRingsPrincessLength, "Check the default length")
+        await ElementUtil.isVisible(this.defRingsPrincessBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defRingsEmeraldLength, "Check the default length")
+        await ElementUtil.isVisible(this.defRingsEmeraldBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkHeart, "Click Heart Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defRingsHeartLength, "Check the default length")
+        await ElementUtil.isVisible(this.defRingsHeartBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defRingsCushionLength, "Check the default length")
+        await ElementUtil.isVisible(this.defRingsCushionBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPear, "Click Pear Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defRingsPearLength, "Check the default length")
+        await ElementUtil.isVisible(this.defRingsPearBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkMarquise, "Click Marquise Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async earringsLengthAndBreadth() {
+        await ElementUtil.isVisible(this.defEarringsRoundLength, "Check the default length")
+        await ElementUtil.isVisible(this.defEarringsRoundBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkOval, "Click Oval Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defEarringsOvalLength, "Check the default length")
+        await ElementUtil.isVisible(this.defEarringsOvalBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defEarringsPrincessLength, "Check the default length")
+        await ElementUtil.isVisible(this.defEarringsPrincessBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defEarringsEmeraldLength, "Check the default length")
+        await ElementUtil.isVisible(this.defEarringsEmeraldBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkHeart, "Click Heart Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defEarringsHeartLength, "Check the default length")
+        await ElementUtil.isVisible(this.defEarringsHeartBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defEarringsCushionLength, "Check the default length")
+        await ElementUtil.isVisible(this.defEarringsCushionBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPear, "Click Pear Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defEarringsPearLength, "Check the default length")
+        await ElementUtil.isVisible(this.defEarringsPearBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkTriangle, "Click Triangle Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async necklacesLengthAndBreadth() {
+        await ElementUtil.isVisible(this.defNecklacesRoundLength, "Check the default length")
+        await ElementUtil.isVisible(this.defNecklacesRoundBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkOval, "Click Oval Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defNecklacesOvalLength, "Check the default length")
+        await ElementUtil.isVisible(this.defNecklacesOvalBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defNecklacesPrincessLength, "Check the default length")
+        await ElementUtil.isVisible(this.defNecklacesPrincessBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defNecklacesEmeraldLength, "Check the default length")
+        await ElementUtil.isVisible(this.defNecklacesEmeraldBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkHeart, "Click Heart Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defNecklacesHeartLength, "Check the default length")
+        await ElementUtil.isVisible(this.defNecklacesHeartBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defNecklacesCushionLength, "Check the default length")
+        await ElementUtil.isVisible(this.defNecklacesCushionBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPear, "Click Pear Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defNecklacesPearLength, "Check the default length")
+        await ElementUtil.isVisible(this.defNecklacesPearBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkTriangle, "Click Triangle Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async mensRingsLengthAndBreadth() {
+        await ElementUtil.isVisible(this.defMensRingsRoundLength, "Check the default length")
+        await ElementUtil.isVisible(this.defMensRingsRoundBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkOval, "Click Oval Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defMensRingsOvalLength, "Check the default length")
+        await ElementUtil.isVisible(this.defMensRingsOvalBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defMensRingsPrincessLength, "Check the default length")
+        await ElementUtil.isVisible(this.defMensRingsPrincessBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.isVisible(this.defMensRingsEmeraldLength, "Check the default length")
+        await ElementUtil.isVisible(this.defMensRingsEmeraldBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkCushion, "Click Cushion Shape")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async dragPriceSlider() {
+        await ElementUtil.dragAndDrop(this.pricedragleftbutton, "Dragging left thumb", this.dropPriceLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.pricedragrightbutton, "Dragging right thumb", this.dropPriceRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async enterPriceRange() {
+        await ElementUtil.clearText(this.priceleftbox, "Clearing min price")
+        await ElementUtil.sendText(this.priceleftbox, data.Filters.MinPrice, "Entering min price")
+        await ElementUtil.click(this.pricerightbox, "Clicking max price box")
+        await BrowserUtil.wait(10)
+        await ElementUtil.clearText(this.pricerightbox, "Clearing max price")
+        await ElementUtil.sendText(this.pricerightbox, data.Filters.MaxPrice, "Entering max price")
+        await ElementUtil.click(this.priceleftbox, "Clicking min price box")
+        await BrowserUtil.wait(5)
+    }
+
+    async enterInvalidMinPrice() {
+        await ElementUtil.clearText(this.priceleftbox, "Clearing min price")
+        await ElementUtil.sendText(this.priceleftbox, data.Filters.InvalidMinPrice, "Entering invalid min price")
+        await ElementUtil.click(this.pricerightbox, "Clicking max price box")
+    }
+
+    async enterInvalidMaxPrice() {
+        await ElementUtil.clearText(this.pricerightbox, "Clearing max price")
+        await ElementUtil.sendText(this.pricerightbox, data.Filters.InvalidMaxPrice, "Entering invalid max price")
+        await ElementUtil.click(this.priceleftbox, "Clicking min price box")
+    }
+
+    async enterInvalidCharPrice() {
+        await ElementUtil.clearText(this.priceleftbox, "Clearing min price")
+        await ElementUtil.sendText(this.priceleftbox, data.Filters.InvalidCharMinPrice, "Entering invalid char min price")
+        await ElementUtil.click(this.pricerightbox, "Clicking max price box")
+        await ElementUtil.clearText(this.pricerightbox, "Clearing max price")
+        await ElementUtil.sendText(this.pricerightbox, data.Filters.InvalidCharMaxPrice, "Entering invalid char max price")
+        await ElementUtil.click(this.priceleftbox, "Clicking min price box")
+    }
+
+    async enterDecimalPrice() {
+        await ElementUtil.clearText(this.priceleftbox, "Clearing min price")
+        await ElementUtil.sendText(this.priceleftbox, data.Filters.DecimalMinPrice, "Entering decimal min price")
+        await ElementUtil.click(this.pricerightbox, "Clicking max price box")
+        await BrowserUtil.wait(8)
+        await ElementUtil.clearText(this.pricerightbox, "Clearing max price")
+        await ElementUtil.sendText(this.pricerightbox, data.Filters.DecimalMaxPrice, "Entering decimal max price")
+        await ElementUtil.click(this.priceleftbox, "Clicking min price box")
+        await BrowserUtil.wait(8)
+        await ElementUtil.click(this.pricerightbox, "Clicking max price box")
+    }
+
+    async selectIncrementPrice() {
+        await ElementUtil.click(this.priceleftbox, "Clicking min price box")
+        await browser.keys(['ArrowUp'])
+        await BrowserUtil.wait(8)
+    }
+
+    async selectDecrementPrice() {
+        await ElementUtil.click(this.pricerightbox, "Clicking max price box")
+        await browser.keys(['ArrowDown'])
+        await BrowserUtil.wait(8)
+    }
+
+    async dragCaratSlider() {
+        await ElementUtil.dragAndDrop(this.caratdragleftbutton, "Dragging left thumb", this.dropCaratLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.caratdragrightbutton, "Dragging right thumb", this.dropCaratRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async enterCaratRange() {
+        await ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
+        await ElementUtil.sendText(this.caratleftbox, data.Filters.MinCarat, "Entering min carat")
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+        await BrowserUtil.wait(8)
+        await ElementUtil.waitForClickable(this.caratrightbox, 50, "wait for page load")
+        await ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
+        await ElementUtil.sendText(this.caratrightbox, data.Filters.MaxCarat, "Entering max carat")
+        await ElementUtil.click(this.caratleftbox, "Clicking min carat box")
+        await BrowserUtil.wait(8)
+    }
+
+    async enterInvalidMinCarat() {
+        await ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
+        await ElementUtil.sendText(this.caratleftbox, data.Filters.InvalidMinCarat, "Entering invalid min carat")
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+    }
+
+    async enterInvalidMaxCarat() {
+        await ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
+        await ElementUtil.sendText(this.caratrightbox, data.Filters.InvalidMaxCarat, "Entering invalid max carat")
+        await ElementUtil.click(this.caratleftbox, "Clicking min carat box")
+    }
+
+    async enterInvalidCharCarat() {
+        await ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
+        await ElementUtil.sendText(this.caratleftbox, data.Filters.InvalidCharMinCarat, "Entering invalid char min carat")
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+        await ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
+        await ElementUtil.sendText(this.caratrightbox, data.Filters.InvalidCharMaxCarat, "Entering invalid char max carat")
+        await ElementUtil.click(this.caratleftbox, "Clicking min carat box")
+    }
+
+    async enterDecimalCarat() {
+        await ElementUtil.waitForClickable(this.caratleftbox, 50, "wait for page load")
+        await ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
+        await ElementUtil.sendText(this.caratleftbox, data.Filters.DecimalMinCarat, "Entering decimal min carat")
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+        await BrowserUtil.wait(8)
+        await ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.caratrightbox, data.Filters.DecimalMaxCarat, "Entering decimal max carat")
+        await ElementUtil.click(this.caratleftbox, "Clicking min carat box")
+    }
+
+    async enterInvalidDecimalCarat() {
+        await ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
+        await ElementUtil.sendText(this.caratleftbox, data.Filters.InvalidDecimalMinCarat, "Entering decimal min carat")
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+        await BrowserUtil.wait(8)
+        await ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
+        await ElementUtil.sendText(this.caratrightbox, data.Filters.InvalidDecimalMaxCarat, "Entering decimal max carat")
+        await ElementUtil.click(this.caratleftbox, "Clicking min carat box")
+        await BrowserUtil.wait(5)
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+    }
+
+    async selectIncrementCarat() {
+        await ElementUtil.click(this.caratleftbox, "Clicking min carat box")
+        await browser.keys(['ArrowUp'])
+        await BrowserUtil.wait(8)
+    }
+
+    async selectDecrementCarat() {
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+        await browser.keys(['ArrowDown'])
+        await BrowserUtil.wait(8)
+    }
+
+    async dragToLeftEnd() {
+        await ElementUtil.dragAndDrop(this.claritydragrightbutton, "Dragging right thumb", this.dropEndClarityRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.colordragrightbutton, "Dragging right thumb", this.dropEndColorRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.symmetrydragrightbutton, "Dragging right thumb", this.dropEndSymmetryRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.fluorescencedragrightbutton, "Dragging right thumb", this.dropEndFluorescenceRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.cutdragrightbutton, "Dragging right thumb", this.dropEndCutRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.polishdragrightbutton, "Dragging right thumb", this.dropEndPolishRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async dragToRightEnd() {
+        await ElementUtil.dragAndDrop(this.claritydragleftbutton, "Dragging left thumb", this.dropEndClarityLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.colordragleftbutton, "Dragging left thumb", this.dropEndColorLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.symmetrydragleftbutton, "Dragging left thumb", this.dropEndSymmetryLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.fluorescencedragleftbutton, "Dragging left thumb", this.dropEndFluorescenceLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.cutdragleftbutton, "Dragging left thumb", this.dropEndCutLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.polishdragleftbutton, "Dragging left thumb", this.dropEndPolishLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async scrollToClarityFilter() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to clarity filter")
+    }
+
+    async dragClaritySlider() {
+        //await ElementUtil.dragAndDrop(this.claritydragleftbutton, "Dragging left thumb", this.dropClarityLeftButton, "Dropping left thumb")
+        await ElementUtil.click(this.clarityVS1text, "Click VS1")
+        await BrowserUtil.wait(5)
+        //await ElementUtil.dragAndDrop(this.claritydragrightbutton, "Dragging right thumb", this.dropClarityRightButton, "Dropping right thumb")
+        await ElementUtil.click(this.claritySI3text, "Click SI3")
+        await BrowserUtil.wait(5)
+    }
+
+    async checkText() {
+        await expect(this.fluorescencemediumtext).toExist();
+    }
+
+    async dragColorSlider() {
+        //await ElementUtil.dragAndDrop(this.colordragleftbutton, "Dragging left thumb", this.dropColorLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForClickable(this.colorFtext, 50, "wait for page load")
+        await ElementUtil.click(this.colorFtext, "Click F")
+        await BrowserUtil.wait(8)
+        await ElementUtil.waitForClickable(this.colorKtext, 50, "wait for page load")
+        //await ElementUtil.dragAndDrop(this.colordragrightbutton, "Dragging right thumb", this.dropColorRightButton, "Dropping right thumb")
+        await ElementUtil.click(this.colorKtext, "Click K")
+        await BrowserUtil.wait(8)
+    }
+
+    async scrollToSymmetryFilter() {
+        await ElementUtil.scrollIntoView(this.pricetext, "Scroll to symmetry filter")
+    }
+
+    async dragSymmetrySlider() {
+        //await ElementUtil.dragAndDrop(this.symmetrydragleftbutton, "Dragging left thumb", this.dropSymmetryLeftButton, "Dropping left thumb")
+        await ElementUtil.click(this.symmetryverygoodtext, "Click Very Good")
+        await BrowserUtil.wait(8)
+        //await ElementUtil.dragAndDrop(this.symmetrydragrightbutton, "Dragging right thumb", this.dropSymmetryRightButton, "Dropping right thumb")
+        await ElementUtil.click(this.symmetryidealtext, "Click Ideal")
+        await BrowserUtil.wait(8)
+    }
+
+    async dragFluorescenceSlider() {
+        //await ElementUtil.dragAndDrop(this.fluorescencedragleftbutton, "Dragging left thumb", this.dropFluorescenceLeftButton, "Dropping left thumb")
+        await ElementUtil.click(this.fluorescencefainttext, "Click Faint")
+        await BrowserUtil.wait(5)
+        //await ElementUtil.dragAndDrop(this.fluorescencedragrightbutton, "Dragging right thumb", this.dropFluorescenceRightButton, "Dropping right thumb")
+        await ElementUtil.click(this.fluorescencestrongtext, "Click Strong")
+        await BrowserUtil.wait(5)
+    }
+
+    async scrollToLengthFilter() {
+        await ElementUtil.scrollIntoView(this.claritytext, "Scroll to length filter")
+    }
+
+    async dragLengthSlider() {
+        await ElementUtil.dragAndDrop(this.lengthdragleftbutton, "Dragging left thumb", this.dropLengthLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.lengthdragrightbutton, "Dragging right thumb", this.dropLengthRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async enterLengthRange() {
+        await ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.lengthleftbox, data.Filters.MinLength, "Entering min length")
+        // await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+        // await BrowserUtil.wait(10)
+        await ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.lengthrightbox, data.Filters.MaxLength, "Entering max length")
+        await ElementUtil.click(this.lengthleftbox, "Clicking min length box")
+        await BrowserUtil.wait(8)
+    }
+
+    async reEnterLengthRange() {
+        await ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.lengthleftbox, data.Filters.MinLength, "Entering min length")
+        // await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+        // await BrowserUtil.wait(10)
+        await ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.lengthrightbox, data.Filters.MaxLength, "Entering max length")
+        //await ElementUtil.click(this.lengthleftbox, "Clicking min length box")
+        await BrowserUtil.wait(8)
+    }
+
+    async enterInvalidMinLength() {
+        await ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
+        await BrowserUtil.wait(10)
+        await ElementUtil.waitForClickable(this.lengthleftbox, 20, "wait for page load")
+        await ElementUtil.sendText(this.lengthleftbox, data.Filters.InvalidMinLength, "Entering invalid min length")
+        await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+        //await BrowserUtil.wait(8)
+    }
+
+    async enterInvalidMaxLength() {
+        await ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.lengthrightbox, data.Filters.InvalidMaxLength, "Entering invalid max length")
+        await ElementUtil.click(this.lengthleftbox, "Clicking min length box")
+        await BrowserUtil.wait(8)
+    }
+
+    async enterInvalidCharLength() {
+        await ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.lengthleftbox, data.Filters.InvalidCharMinLength, "Entering invalid char min length")
+        //await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+        await ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.lengthrightbox, data.Filters.InvalidCharMaxLength, "Entering invalid char max length")
+        await ElementUtil.click(this.lengthleftbox, "Clicking min length box")
+    }
+
+    async enterDecimalLength() {
+        await ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.lengthleftbox, data.Filters.DecimalMinLength, "Entering decimal min length")
+        // await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.lengthrightbox, data.Filters.DecimalMaxLength, "Entering decimal max length")
+        await ElementUtil.click(this.lengthleftbox, "Clicking min length box")
+        await BrowserUtil.wait(5)
+    }
+
+    async enterInvalidDecimalLength() {
+        await ElementUtil.clearText(this.lengthleftbox, "Clearing min length")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.lengthleftbox, data.Filters.InvalidDecimalMinLength, "Entering decimal min length")
+        // await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.lengthrightbox, "Clearing max length")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.lengthrightbox, data.Filters.InvalidDecimalMaxLength, "Entering decimal max length")
+        await ElementUtil.click(this.lengthleftbox, "Clicking min length box")
+        await BrowserUtil.wait(8)
+        await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+    }
+
+    async selectIncrementLength() {
+        await ElementUtil.click(this.lengthleftbox, "Clicking min length box")
+        await browser.keys(['ArrowUp'])
+        await BrowserUtil.wait(8)
+    }
+
+    async selectDecrementLength() {
+        await ElementUtil.waitForClickable(this.lengthrightbox, 50, "wait for page load")
+        await ElementUtil.click(this.lengthrightbox, "Clicking max length box")
+        await browser.keys(['ArrowDown'])
+        await BrowserUtil.wait(5)
+    }
+
+    async dragBreadthSlider() {
+        await ElementUtil.dragAndDrop(this.breadthdragleftbutton, "Dragging left thumb", this.dropBreadthLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.breadthdragrightbutton, "Dragging right thumb", this.dropBreadthRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async enterBreadthRange() {
+        await ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.breadthleftbox, data.Filters.MinBreadth, "Entering min breadth")
+        // await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+        // await BrowserUtil.wait(8)
+        await ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.waitForClickable(this.breadthrightbox, 20, "wait for page load")
+        await ElementUtil.sendText(this.breadthrightbox, data.Filters.MaxBreadth, "Entering max breadth")
+        await ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
+        await BrowserUtil.wait(5)
+    }
+
+    async reEnterBreadthRange() {
+        await ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.breadthleftbox, data.Filters.MinBreadth, "Entering min breadth")
+        // await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+        // await BrowserUtil.wait(10)
+        await ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.breadthrightbox, data.Filters.MaxBreadthReEnter, "Entering max breadth")
+        //await ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
+        await BrowserUtil.wait(8)
+    }
+
+    async enterInvalidMinBreadth() {
+        await ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
+        await ElementUtil.sendText(this.breadthleftbox, data.Filters.InvalidMinBreadth, "Entering invalid min breadth")
+        await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+    }
+
+    async enterInvalidMaxBreadth() {
+        await ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
+        await ElementUtil.sendText(this.breadthrightbox, data.Filters.InvalidMaxBreadth, "Entering invalid max breadth")
+        await ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
+    }
+
+    async enterInvalidCharBreadth() {
+        await ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.breadthleftbox, data.Filters.InvalidCharMinBreadth, "Entering invalid char min breadth")
+        //await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+        await ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.breadthrightbox, data.Filters.InvalidCharMaxBreadth, "Entering invalid char max breadth")
+        await ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
+    }
+
+    async enterDecimalBreadth() {
+        await ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.breadthleftbox, data.Filters.DecimalMinBreadth, "Entering decimal min breadth")
+        // await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.breadthrightbox, data.Filters.DecimalMaxBreadth, "Entering decimal max breadth")
+        await ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
+        await BrowserUtil.wait(5)
+    }
+
+    async enterInvalidDecimalBreadth() {
+        await ElementUtil.clearText(this.breadthleftbox, "Clearing min breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.breadthleftbox, data.Filters.InvalidDecimalMinBreadth, "Entering decimal min breadth")
+        // await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.breadthrightbox, "Clearing max breadth")
+        await BrowserUtil.wait(8)
+        await ElementUtil.sendText(this.breadthrightbox, data.Filters.InvalidDecimalMaxBreadth, "Entering decimal max breadth")
+        await ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
+        await BrowserUtil.wait(8)
+        await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+    }
+
+    async selectIncrementBreadth() {
+        await ElementUtil.click(this.breadthleftbox, "Clicking min breadth box")
+        await browser.keys(['ArrowUp'])
+        await BrowserUtil.wait(8)
+    }
+
+    async selectDecrementBreadth() {
+        await ElementUtil.click(this.breadthrightbox, "Clicking max breadth box")
+        await browser.keys(['ArrowDown'])
+        await BrowserUtil.wait(8)
+    }
+
+    async dragTableSlider() {
+        await ElementUtil.dragAndDrop(this.tabledragleftbutton, "Dragging left thumb", this.dropTableLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.tabledragrightbutton, "Dragging right thumb", this.dropTableRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async enterTableRange() {
+        await ElementUtil.clearText(this.tableleftbox, "Clearing min table")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.tableleftbox, data.Filters.MinTable, "Entering min table")
+        // await ElementUtil.click(this.tablerightbox, "Clicking max table box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.tablerightbox, "Clearing max table")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.tablerightbox, data.Filters.MaxTable, "Entering max table")
+        await ElementUtil.click(this.tableleftbox, "Clicking min table box")
+        await BrowserUtil.wait(8)
+    }
+
+    async reEnterTableRange() {
+        await ElementUtil.clearText(this.tableleftbox, "Clearing min table")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.tableleftbox, data.Filters.MinTable, "Entering min table")
+        // await ElementUtil.click(this.tablerightbox, "Clicking max table box")
+        // await BrowserUtil.wait(10)
+        await ElementUtil.clearText(this.tablerightbox, "Clearing max table")
+        await BrowserUtil.wait(10)
+        await ElementUtil.waitForClickable(this.tablerightbox, 50, "wait for page load")
+        await ElementUtil.sendText(this.tablerightbox, data.Filters.MaxTable, "Entering max table")
+        await ElementUtil.click(this.tableleftbox, "Clicking min table box")
+        await BrowserUtil.wait(8)
+    }
+
+    async enterInvalidMinTable() {
+        await ElementUtil.clearText(this.tableleftbox, "Clearing min table")
+        await ElementUtil.sendText(this.tableleftbox, data.Filters.InvalidMinTable, "Entering invalid min table")
+        await ElementUtil.click(this.tablerightbox, "Clicking max table box")
+    }
+
+    async enterInvalidMaxTable() {
+        await ElementUtil.clearText(this.tablerightbox, "Clearing max table")
+        await ElementUtil.sendText(this.tablerightbox, data.Filters.InvalidMaxTable, "Entering invalid max table")
+        await ElementUtil.click(this.tableleftbox, "Clicking min table box")
+    }
+
+    async enterInvalidCharTable() {
+        await ElementUtil.clearText(this.tableleftbox, "Clearing min table")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.tableleftbox, data.Filters.InvalidCharMinTable, "Entering invalid char min table")
+        //await ElementUtil.click(this.tablerightbox, "Clicking max table box")
+        await ElementUtil.clearText(this.tablerightbox, "Clearing max table")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.tablerightbox, data.Filters.InvalidCharMaxTable, "Entering invalid char max table")
+        await ElementUtil.click(this.tableleftbox, "Clicking min table box")
+    }
+
+    async enterDecimalTable() {
+        await ElementUtil.clearText(this.tableleftbox, "Clearing min table")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.tableleftbox, data.Filters.DecimalMinTable, "Entering decimal min table")
+        // await ElementUtil.click(this.tablerightbox, "Clicking max table box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.tablerightbox, "Clearing max table")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForClickable(this.tablerightbox, 20, "wait for page load")
+        await ElementUtil.sendText(this.tablerightbox, data.Filters.DecimalMaxTable, "Entering decimal max table")
+        await ElementUtil.click(this.tableleftbox, "Clicking min table box")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForClickable(this.tablerightbox, 5, "wait for page load")
+        await ElementUtil.click(this.tablerightbox, "Clicking max table box")
+    }
+
+    async selectIncrementTable() {
+        await ElementUtil.click(this.tableleftbox, "Clicking min table box")
+        await browser.keys(['ArrowUp'])
+        await BrowserUtil.wait(8)
+    }
+
+    async selectDecrementTable() {
+        await ElementUtil.waitForEnabled(this.tablerightbox, 50, "wait for page load")
+        await ElementUtil.click(this.tablerightbox, "Clicking max table box")
+        await browser.keys(['ArrowDown'])
+        await BrowserUtil.wait(5)
+    }
+
+    async dragDepthSlider() {
+        await ElementUtil.dragAndDrop(this.depthdragleftbutton, "Dragging left thumb", this.dropDepthLeftButton, "Dropping left thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+        await ElementUtil.dragAndDrop(this.depthdragrightbutton, "Dragging right thumb", this.dropDepthRightButton, "Dropping right thumb")
+        await ElementUtil.waitForDisplayed(this.sctnFilters, 50, "wait for page load")
+    }
+
+    async enterDepthRange() {
+        await ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.depthleftbox, data.Filters.MinDepth, "Entering min depth")
+        // await ElementUtil.click(this.depthrightbox, "Clicking max depth box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.depthrightbox, data.Filters.MaxDepth, "Entering max depth")
+        await ElementUtil.click(this.depthleftbox, "Clicking min depth box")
+        await BrowserUtil.wait(5)
+    }
+
+    async reEnterDepthRange() {
+        await ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
+        await BrowserUtil.wait(10)
+        await ElementUtil.sendText(this.depthleftbox, data.Filters.MinDepth, "Entering min depth")
+        // await ElementUtil.click(this.depthrightbox, "Clicking max depth box")
+        // await BrowserUtil.wait(10)
+        await ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
+        await BrowserUtil.wait(10)
+        await ElementUtil.waitForClickable(this.depthrightbox, 50, "wait for page load")
+        await ElementUtil.sendText(this.depthrightbox, data.Filters.MaxDepth, "Entering max depth")
+        await ElementUtil.click(this.depthleftbox, "Clicking min depth box")
+        await BrowserUtil.wait(8)
+    }
+
+    async enterInvalidMinDepth() {
+        await ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
+        await ElementUtil.sendText(this.depthleftbox, data.Filters.InvalidMinDepth, "Entering invalid min depth")
+        await ElementUtil.click(this.depthrightbox, "Clicking max depth box")
+    }
+
+    async enterInvalidMaxDepth() {
+        await ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
+        await ElementUtil.sendText(this.depthrightbox, data.Filters.InvalidMaxDepth, "Entering invalid max depth")
+        await ElementUtil.click(this.depthleftbox, "Clicking min depth box")
+    }
+
+    async enterInvalidCharDepth() {
+        await ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.depthleftbox, data.Filters.InvalidCharMinDepth, "Entering invalid char min depth")
+        //await ElementUtil.click(this.depthrightbox, "Clicking max depth box")
+        await ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.depthrightbox, data.Filters.InvalidCharMaxDepth, "Entering invalid char max depth")
+        await ElementUtil.click(this.depthleftbox, "Clicking min depth box")
+    }
+
+    async enterDecimalDepth() {
+        await ElementUtil.clearText(this.depthleftbox, "Clearing min depth")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.depthleftbox, data.Filters.DecimalMinDepth, "Entering decimal min depth")
+        // await ElementUtil.click(this.depthrightbox, "Clicking max depth box")
+        // await BrowserUtil.wait(5)
+        await ElementUtil.clearText(this.depthrightbox, "Clearing max depth")
+        await BrowserUtil.wait(5)
+        await ElementUtil.sendText(this.depthrightbox, data.Filters.DecimalMaxDepth, "Entering decimal max depth")
+        await ElementUtil.click(this.depthleftbox, "Clicking min depth box")
+        await BrowserUtil.wait(5)
+        await ElementUtil.click(this.depthrightbox, "Clicking max depth box")
+    }
+
+    async selectIncrementDepth() {
+        await ElementUtil.click(this.depthleftbox, "Clicking min depth box")
+        await browser.keys(['ArrowUp'])
+        await BrowserUtil.wait(8)
+    }
+
+    async selectDecrementDepth() {
+        await ElementUtil.waitForEnabled(this.depthrightbox, 50, "wait for page load")
+        await ElementUtil.click(this.depthrightbox, "Clicking max depth box")
+        await browser.keys(['ArrowDown'])
+        await BrowserUtil.wait(5)
+    }
+
+    async dragCutSlider() {
+        //await ElementUtil.dragAndDrop(this.cutdragleftbutton, "Dragging left thumb", this.dropCutLeftButton, "Dropping left thumb")
+        await ElementUtil.click(this.cutverygoodtext, "Click Very Good")
+        await BrowserUtil.wait(5)
+        //await ElementUtil.dragAndDrop(this.cutdragrightbutton, "Dragging right thumb", this.dropCutRightButton, "Dropping right thumb")
+        await ElementUtil.click(this.cutexcellenttext, "Click Excellent")
+        await BrowserUtil.wait(5)
+    }
+
+    async disabledCutFilter() {
+        await ElementUtil.isVisible(this.cutslidertrack, "Check the enabled cut filter with round shape")
+        await ElementUtil.isVisible(this.tablecutcolumn, "Check the cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkAsscher, "Click Asscher shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with asscher shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkBaguette, "Click Baguette shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with baguette shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkCushion, "Click Cushion shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutslidertrack, "Check the enabled cut filter with cushion shape")
+        await ElementUtil.isVisible(this.tablecutcolumn, "Check the cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkEmerald, "Click Emerald shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with emerald shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkHeart, "Click Heart shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with heart shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkHexagonal, "Click Hexagonal shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with hexagonal shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkMarquise, "Click Marquise shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with marquise shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkOval, "Click Oval shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with oval shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkPear, "Click Pear shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with pear shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkPrincess, "Click Princess shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutslidertrack, "Check the enabled cut filter with princess shape")
+        await ElementUtil.isVisible(this.tablecutcolumn, "Check the cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkRadiant, "Click Radiant shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with radiant shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkRosecut, "Click Rose Cut shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with rose cut shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkTriangle, "Click Triangle shape")
+        await BrowserUtil.wait(8)
+        await ElementUtil.isVisible(this.cutdisabledslider, "Check the disabled cut filter with triangle shape")
+        //await ElementUtil.not.isVisible(this.tablecutcolumn, "Check the absence of cut column in diamond listing table")
+        await ElementUtil.click(this.imglnkSquare, "Click Square shape")
+        await BrowserUtil.wait(8)
+    }
+
+    async dragPolishSlider() {
+        //await ElementUtil.dragAndDrop(this.polishdragleftbutton, "Dragging left thumb", this.dropPolishLeftButton, "Dropping left thumb")
+        await ElementUtil.click(this.polishverygoodtext, "Click Very Good")
+        await BrowserUtil.wait(5)
+        //await ElementUtil.dragAndDrop(this.polishdragrightbutton, "Dragging right thumb", this.dropPolishRightButton, "Dropping right thumb")
+        await ElementUtil.click(this.polishexcellenttext, "Click Excellent")
+        await BrowserUtil.wait(5)
+    }
+
+    async uncheckGIA() {
+        await ElementUtil.waitForClickable(this.btnGIACheckbox, 20, "wait for page load")
+        await ElementUtil.click(this.btnGIACheckbox, "Uncheck GIA certificate")
+        await BrowserUtil.wait(5)
+    }
+
+    async uncheckIGI() {
+        await ElementUtil.waitForClickable(this.btnIGICheckbox, 20, "wait for page load")
+        await ElementUtil.click(this.btnIGICheckbox, "Uncheck IGI certificate")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectQuickView() {
+        await BrowserUtil.wait(5)
+        //await ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to diamond listing table");
+        await ElementUtil.waitForClickable(this.tableexpandfirstrowicon, 60, "wait for page load")
+        await ElementUtil.click(this.tableexpandfirstrowicon, "Click Quick View of First Row")
+    }
+
+    async selectQuickViewEarrings() {
+        await BrowserUtil.wait(5);
+        //await ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to diamond listing table");
+        await ElementUtil.waitForClickable(this.tableearringQuickView, 30, "wait for page load")
+        await ElementUtil.click(this.tableearringQuickView, "Click Quick View of First Row")
+    }
+
+    async selectViewLabDiamond() {
+        await ElementUtil.waitForClickable(this.viewlabdiamondbutton, 60, "wait for page load")
+        await ElementUtil.forceClick(this.viewlabdiamondbutton, "Click View Lab Diamond Button")
+        await BrowserUtil.wait(8);
+    }
+
+    async scrollEarringDDP() {
+        await ElementUtil.scrollIntoView(this.btnSelectEarring, "Scroll to diamond details");
+    }
+
+    async enterCarat30() {
+        await ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
+        await ElementUtil.sendText(this.caratleftbox, data.Filters.Carat30, "Entering min carat")
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+        await BrowserUtil.wait(8);
+    }
+
+    async looseDiamondsLengthAndBreadth() {
+        await ElementUtil.isVisible(this.txtFixedMinLength, "Check the default length")
+        await ElementUtil.isVisible(this.txtFixedMinBreadth, "Check the default breadth")
+        await ElementUtil.isVisible(this.txtFixedMaxLength, "Check the default length")
+        await ElementUtil.isVisible(this.txtFixedMaxBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkOval, "Click Oval Shape")
+        await BrowserUtil.wait(5);
+        await ElementUtil.isVisible(this.txtFixedMinLength, "Check the default length")
+        await ElementUtil.isVisible(this.txtFixedMinBreadth, "Check the default breadth")
+        await ElementUtil.isVisible(this.txtFixedMaxLength, "Check the default length")
+        await ElementUtil.isVisible(this.txtFixedMaxBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkPrincess, "Click Princess Shape")
+        await BrowserUtil.wait(5);
+        await ElementUtil.isVisible(this.txtFixedMinLength, "Check the default length")
+        await ElementUtil.isVisible(this.txtFixedMinBreadth, "Check the default breadth")
+        await ElementUtil.isVisible(this.txtFixedMaxLength, "Check the default length")
+        await ElementUtil.isVisible(this.txtFixedMaxBreadth, "Check the default breadth")
+        await ElementUtil.click(this.imglnkEmerald, "Click Emerald Shape")
+        await BrowserUtil.wait(5);
+    }
+
+    async enterPrice1500() {
+        await ElementUtil.clearText(this.priceleftbox, "Clearing min price")
+        await ElementUtil.sendText(this.priceleftbox, data.Filters.Price1500, "Entering min price")
+        await ElementUtil.click(this.pricerightbox, "Clicking max price box")
+        await BrowserUtil.wait(8);
+        await ElementUtil.clearText(this.pricerightbox, "Clearing max price")
+        await ElementUtil.sendText(this.pricerightbox, data.Filters.Price1500, "Entering max price")
+        await ElementUtil.click(this.priceleftbox, "Clicking min price box")
+        await BrowserUtil.wait(8);
+    }
+
+    async enterDifferentCaratRange() {
+        await ElementUtil.clearText(this.caratleftbox, "Clearing min carat")
+        await ElementUtil.sendText(this.caratleftbox, data.Filters.MaxCarat, "Entering min carat")
+        await ElementUtil.click(this.caratrightbox, "Clicking max carat box")
+        await BrowserUtil.wait(5);
+        await ElementUtil.clearText(this.caratrightbox, "Clearing max carat")
+        await ElementUtil.sendText(this.caratrightbox, data.Filters.MinCarat, "Entering max carat")
+        await ElementUtil.click(this.caratleftbox, "Clicking min carat box")
+        await BrowserUtil.wait(8);
+    }
+
+    async scrollToBanner() {
+        await ElementUtil.scrollIntoView(this.LooseDiamondsBanner, "Scroll to banner")
+    }
+
+    async scrollToListingNoFilters() {
+        await ElementUtil.scrollIntoView(this.claritytext, "scroll to listing")
+    }
+
+    async selectRecentlyViewed() {
+        await ElementUtil.click(this.Recentlyviewedtab, "Click Recently Viewed")
+    }
+
+    async selectForCompare() {
+        await ElementUtil.click(this.compareRow1radiobutton, "Click Compare Row 1")
+        await ElementUtil.click(this.compareRow2radiobutton, "Click Compare Row 2")
+        await ElementUtil.click(this.compareRow3radiobutton, "Click Compare Row 3")
+        await ElementUtil.click(this.compareRow4radiobutton, "Click Compare Row 4")
+        await ElementUtil.click(this.compareRow5radiobutton, "Click Compare Row 5")
+    }
+
+    async selectCompareTab() {
+        await ElementUtil.click(this.Comparetab, "Click Compare Tab")
+    }
+
+    async selectCaretCompare() {
+        await ElementUtil.click(this.btnCompareRightArrow, "Click Compare Right Arrow")
+        await ElementUtil.click(this.btnCompareLeftArrow, "Click Compare Left Arrow")
+    }
+
+    async selectTwoForCompare() {
+        await ElementUtil.click(this.compareearringRow1radiobutton, "Click Compare Row 1")
+        await ElementUtil.click(this.compareearringRow2radiobutton, "Click Compare Row 2") 
+    }
+
+    async removeFirstDiamond() {
+        await ElementUtil.click(this.btnCompareRemoveColumn1, "Click Remove Compare Column 1")
+    }
+
+    async selectViewCompare() {
+        await ElementUtil.scrollIntoView(this.txtCompareClarity, "Scroll to table")
+        await ElementUtil.click(this.lnkViewStone, "Click View")
+    }
+
+    async hoverSortBy() {
+        await ElementUtil.mouseHover(this.sortbybutton, "Hover over sort by")
+    }
+
+    async selectSortByOption() {
+        await ElementUtil.waitForClickable(this.sortbybutton, 50, "wait for page load")
+        await ElementUtil.click(this.sortbybutton, "Click sort by")
+        await ElementUtil.click(this.sortbycaratlowtohightext, "Select Low to High Carat")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectGalleryView() {
+        await ElementUtil.click(this.galleryview, "Click Gallery View")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.imgFirstRowGridView, 50, "wait for page load")
+    }
+
+    async closeQuickView() {
+        await ElementUtil.click(this.tablefirstrowXbutton, "Click X button")
+    }
+
+    async selectViewDiamond() {
+        await ElementUtil.waitForClickable(this.viewdiamondbutton, 60, "wait for page load")
+        await ElementUtil.click(this.viewdiamondbutton, "Click View Diamond Button")
+        await BrowserUtil.wait(5);
+    }
+
+    async selectPlayVideo() {
+        await ElementUtil.click(this.iconPlayVideo, "Click Pay Video")
+    }
+
+    async selectIconGIA() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
+        await ElementUtil.click(this.iconGIACertificate, "Click GIA icon")
+    }
+
+    async selectIconIGI() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
+        await ElementUtil.click(this.iconIGICertificate, "Click IGI icon")
+    }
+
+    async selectIconTopView() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
+        await ElementUtil.click(this.iconTopView, "Click Top View")
+    }
+
+    async selectIconSideView() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
+        await ElementUtil.click(this.iconSideView, "Click Side View")
+    }
+
+    async hoveringDiamondFeatures() {
+        await ElementUtil.scrollIntoView(this.btnSelectNecklace, "Scroll to Diamond Details")
+        await ElementUtil.isVisible(this.txtdiamondDDP, "Checking the text")
+        await ElementUtil.isVisible(this.txtReportDDP, "Checking the text")
+        await ElementUtil.isVisible(this.linkViewReportDDP, "Checking the text")
+        await ElementUtil.mouseHover(this.txtColorDDP, "Hover over Color")
+        await ElementUtil.isVisible(this.popupColorDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtPriceDDP, "Hover over Price")
+        await ElementUtil.isVisible(this.PriceTooltipDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtYourprice, "Hover over Your Price")
+        await ElementUtil.isVisible(this.yourPriceTooltipDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtcaratWeightDDP, "Hover over Carat")
+        await ElementUtil.isVisible(this.caratWeightTooltipDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtShapeDDP, "Hover over Shape")
+        await ElementUtil.isVisible(this.shapeTooltipDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtCutDDP, "Hover over Cut")
+        await ElementUtil.isVisible(this.popupCutDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtMeasurementDDP, "Hover over Measurement")
+        await ElementUtil.isVisible(this.popupMeasurementDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtOriginDDP, "Hover over Origin")
+        //await ElementUtil.waitForDisplayed(this.originTooltipDDP, 10, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtClarityDDP, "Hover over Clarity")
+        await ElementUtil.isVisible(this.popupClarityDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtTableDDP, "Hover over Table%")
+        //await ElementUtil.isVisible(this.tableTooltipDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtDepthDDP, "Hover over Depth%")
+        await ElementUtil.isVisible(this.depthTooltipDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtSymmetryDDP, "Hover over Symmetry")
+        await ElementUtil.isVisible(this.popupSymmetryDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtPolishDDP, "Hover over Polish")
+        await ElementUtil.isVisible(this.polishTooltipDDP, "Checking the tooltip")
+        await ElementUtil.mouseHover(this.txtFluorescenceDDP, "Hover over fluorescence")
+    }
+
+    async hoverViewDetailsDiamondFeatures() {
+        await ElementUtil.scrollIntoView(this.iconPlayVideo, "Scroll to Diamond Details")
+        await ElementUtil.mouseHover(this.txtColorDDP, "Hover over Color")
+        await ElementUtil.click(this.popupColorViewDetails, "Click View Details")
+        await ElementUtil.isVisible(this.txtPopupColorViewDetailsDDP, "Check Popup")
+        await ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
+        await ElementUtil.mouseHover(this.txtCutDDP, "Hover over Cut")
+        await ElementUtil.forceClick(this.cutViewDetailsDDP, "Click View Details")
+        await ElementUtil.isVisible(this.txtPopupCutViewDetailsDDP, "Check Popup")
+        await ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
+        // await ElementUtil.mouseHover(this.txtMeasurementDDP, "Hover over Measurement")
+        // await ElementUtil.click(this.measurementViewDetailsDDP, "Click View Details")
+        // await ElementUtil.isVisible(this.popupMeasurementViewDetailsDDP, "Check Popup")
+        // await ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
+        await ElementUtil.mouseHover(this.txtClarityDDP, "Hover over Clarity")
+        await ElementUtil.click(this.clarityViewDetailsDDP, "Click View Details")
+        await ElementUtil.isVisible(this.popupclarityViewDetailsDDP, "Check Popup")
+        await ElementUtil.click(this.popupBtnXDiamondDetail, "Click X button")
+        await ElementUtil.mouseHover(this.txtSymmetryDDP, "Hover over Symmetry")
+        await ElementUtil.click(this.SymmetryViewDetailsDDP, "Click View Details")
+    }
+
+    async selectDiamondDetails2() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to icons")
+        await ElementUtil.click(this.txtEarringdiamondDetails2, "Click Diamond Details 2")
+    }
+
+    async selectLinksBreadcrumb() {
+        await ElementUtil.click(this.lnkViewDetails, "Click View Details in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.createYourOwnEarring, "Check heading")
+        await ElementUtil.click(this.lnkDiamondEarringBreadcrumb, "Click breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectPage3Button() {
+        //await ElementUtil.scrollIntoView(this.paginationarea, "Scroll to pagination")
+        await ElementUtil.click(this.btnPage3Table, "Click 3")
+        await BrowserUtil.wait(5)
+    }
+
+    async enterPageNumber() {
+        await ElementUtil.scrollIntoView(this.paginationarea, "Scroll to pagination")
+        await ElementUtil.clearText(this.pagenumberfield, "Clear page number")
+        await ElementUtil.sendText(this.pagenumberfield, data.DiamondDetailsPage.PageNumber, "Enter 3")
+        await browser.keys('Enter')
+        await BrowserUtil.wait(5)
+    }
+
+    async selectPage2Button() {
+        //await ElementUtil.scrollIntoView(this.paginationarea, "Scroll to pagination")
+        await ElementUtil.click(this.btnPage2Table, "Click 2")
+        await BrowserUtil.wait(10)
+    }
+
+    async selectRightCaretPage() {
+        await ElementUtil.forceClick(this.pagerighticon, "Click right caret icon")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectLeftCaretPage() {
+        await ElementUtil.forceClick(this.pagelefticon, "Click left caret icon")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectEarringDDP() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
+        await ElementUtil.click(this.btnSelectEarring, "Click button")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectNecklaceDDP() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
+        await ElementUtil.click(this.btnSelectNecklace, "Click button")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectMensRingDDP() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
+        await ElementUtil.click(this.btnSelectMensRing, "Click button")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectRingDDP() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
+        await ElementUtil.click(this.btnSelectRing, "Click button")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectRingsBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourDiamondEngagementRingBreadcrumb, "Click Make Your Diamond Engagement Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.ringStartWithDiamondBanner, "Check the banner")
+        await ElementUtil.click(this.lnkEngagementRingBreadcrumb, "Click Engagement Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async browseBack() {
+        await browser.back();
+        await BrowserUtil.wait(5)
+    }
+
+    async selectEarringsBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourDiamondEarringBreadcrumb, "Click Make Your Diamond Earring in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.earringsSWADBanner, "Check the banner")
+        await ElementUtil.click(this.lnkEarringsBreadcrumb, "Click Earrings in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectNecklacesBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourDiamondNecklaceBreadcrumb, "Click Make Your Diamond Necklace in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.necklacesSWADBanner, "Check the banner")
+        await ElementUtil.click(this.lnkNecklacesBreadcrumb, "Click Necklaces in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectMensRingsBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourDiamondMensRingBreadcrumb, "Click Make Your Diamond Men's Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.mensSWADBanner, "Check the banner")
+        await ElementUtil.click(this.lnkMensRingBreadcrumb, "Click Men's Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async scrollToProduct() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to product")
+    }
+
+    async selectLabRingsBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourLabDiamondEngagementRingBreadcrumb, "Click Make Your Diamond Engagement Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.ringStartLabDiamondBanner, "Check the banner")
+        await ElementUtil.click(this.lnkEngagementRingBreadcrumb, "Click Engagement Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectLabEarringsBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourLabDiamondEarringBreadcrumb, "Click Make Your Diamond Earring in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.earringsSWLDBanner, "Check the banner")
+        await ElementUtil.click(this.lnkEarringsBreadcrumb, "Click Earrings in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectLabNecklacesBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourLabDiamondNecklaceBreadcrumb, "Click Make Your Diamond Necklace in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.necklacesSWLDBanner, "Check the banner")
+        await ElementUtil.click(this.lnkNecklacesBreadcrumb, "Click Necklaces in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectLabMensRingsBreadcrumb() {
+        await ElementUtil.click(this.lnkMakeYourLabDiamondMensRingBreadcrumb, "Click Make Your Diamond Men's Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+        await ElementUtil.isVisible(this.mensSWLDBanner, "Check the banner")
+        await ElementUtil.click(this.lnkMensRingBreadcrumb, "Click Men's Ring in breadcrumb")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectChangeDiamond() {
+        await ElementUtil.waitForClickable(this.tabDiamondChange, 25, "wait for page load")
+        await ElementUtil.click(this.tabDiamondChange, "Click Change Diamond")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectChangeLabDiamond() {
+        await ElementUtil.waitForClickable(this.tabLabDiamondChange, 25, "wait for page load")
+        await ElementUtil.click(this.tabLabDiamondChange, "Click Change Lab Diamond")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectWirePayment() {
+        await ElementUtil.waitForDisplayed(this.drpPaymentDefault, 60, "wait for page load")
+        await ElementUtil.mouseHover(this.drpPaymentDefault, "Hover over Payment Selection Dropdown")
+        await ElementUtil.forceClick(this.optnWirePayment, "Click Wire Payment")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectStarRating() {
+        //await ElementUtil.scrollIntoView(this.sctnAboutOurCustomProducts, "Scroll to SEO section")
+        await ElementUtil.click(this.lnkRating, "Click Rating")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.headingRating, 50, "wait for page load")
+    }
+
+    async selectProductPage2() {
+        await ElementUtil.waitForDisplayed(this.sctnFilterTab, 60, "wait for page load")
+        await ElementUtil.scrollIntoView(this.sctnFilterTab, "Scroll to product display")
+        await ElementUtil.waitForClickable(this.imgProduct, 60, "wait for page load")
+        await ElementUtil.click(this.imgProduct, "Click a product")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectAddToCart() {
+        await ElementUtil.waitForClickable(this.btnAddToCart, 60, "wait for page load")
+        await ElementUtil.click(this.btnAddToCart, "Click Add to Cart")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectCheckOut() {
+        await ElementUtil.waitForClickable(this.btnCheckOut, 60, "wait for page load")
+        await ElementUtil.click(this.btnCheckOut, "Click checkout")
+        await BrowserUtil.wait(5)
+    }
+
+    async selectRingSize() {
+        //await ElementUtil.scrollIntoView(this.btnAddToCart, "Scroll to ring size")
+        await BrowserUtil.wait(6)
+        await ElementUtil.waitForClickable(this.lnkSelectRingSize, 60, "wait for page load")
+        await ElementUtil.forceClick(this.lnkSelectRingSize, "Click Select")
+        // let ringSizeLink = await ElementUtil.isVisible(this.drpRingSize, "Check dropdown")
         // if (ringSizeLink == false) {
-        //     ElementUtil.forceClick(this.lnkSelectRingSize, "Click Select")
+        //     await ElementUtil.forceClick(this.lnkSelectRingSize, "Click Select")
         // }
-        ElementUtil.waitForClickable(this.drpRingSize, 10, "wait for page load")
-        ElementUtil.click(this.drpRingSize, "Select dropdown")
-        ElementUtil.click(this.optnUS3, "Click US3 size")
-        BrowserUtil.wait(3)
+        await ElementUtil.waitForClickable(this.drpRingSize, 10, "wait for page load")
+        await ElementUtil.click(this.drpRingSize, "Select dropdown")
+        await ElementUtil.click(this.optnUS3, "Click US3 size")
+        await BrowserUtil.wait(3)
     }
 
-    clickSelectWomensBand() {
-        ElementUtil.waitForClickable(this.btnSelectWomensBandPage3, 50, "wait for page load")
-        ElementUtil.click(this.btnSelectWomensBandPage3, "Click Select Women's Band")
-        BrowserUtil.wait(5)
+    async clickSelectWomensBand() {
+        await ElementUtil.waitForClickable(this.btnSelectWomensBandPage3, 50, "wait for page load")
+        await ElementUtil.click(this.btnSelectWomensBandPage3, "Click Select Women's Band")
+        await BrowserUtil.wait(5)
     }
 
-    selectChangeSettings() {
-        ElementUtil.waitForClickable(this.tabSettingsChange, 50, "wait for page load")
-        ElementUtil.click(this.tabSettingsChange, "Click Change Settings")
-        BrowserUtil.wait(5)
+    async selectChangeSettings() {
+        await ElementUtil.waitForClickable(this.tabSettingsChange, 50, "wait for page load")
+        await ElementUtil.click(this.tabSettingsChange, "Click Change Settings")
+        await BrowserUtil.wait(5)
     }
 
-    select10kBg() {
-        //ElementUtil.scrollIntoView(this.btnAddToCart, "Scroll to change metal")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForClickable(this.lnkChangeMetal, 50, "wait for page load")
-        ElementUtil.click(this.lnkChangeMetal, "Click change metal")
-        ElementUtil.waitForClickable(this.optn10kBg, 15, "wait for page load")
-        ElementUtil.click(this.optn10kBg, "Select 10K Black Gold")
-        BrowserUtil.wait(3)
+    async select10kBg() {
+        //await ElementUtil.scrollIntoView(this.btnAddToCart, "Scroll to change metal")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForClickable(this.lnkChangeMetal, 50, "wait for page load")
+        await ElementUtil.click(this.lnkChangeMetal, "Click change metal")
+        await ElementUtil.waitForClickable(this.optn10kBg, 15, "wait for page load")
+        await ElementUtil.click(this.optn10kBg, "Select 10K Black Gold")
+        await BrowserUtil.wait(3)
     }
 
-    scrollPage2() {
-        ElementUtil.scrollIntoView(this.sctnFilterTab, "Scroll down the page 2")
+    async scrollPage2() {
+        await ElementUtil.scrollIntoView(this.sctnFilterTab, "Scroll down the page 2")
     }
 
-    clickSelectMensBand() {
-        ElementUtil.waitForClickable(this.btnSelectMensBandPage3, 50, "wait for page load")
-        ElementUtil.click(this.btnSelectMensBandPage3, "Click Select Men's Band")
-        BrowserUtil.wait(5)
+    async clickSelectMensBand() {
+        await ElementUtil.waitForClickable(this.btnSelectMensBandPage3, 50, "wait for page load")
+        await ElementUtil.click(this.btnSelectMensBandPage3, "Click Select Men's Band")
+        await BrowserUtil.wait(5)
     }
 
-    selectChangeWomensBand() {
-        ElementUtil.waitForClickable(this.tabWomensBandChange, 50, "wait for page load")
-        ElementUtil.click(this.tabWomensBandChange, "Click Change Women's Band")
-        BrowserUtil.wait(5)
+    async selectChangeWomensBand() {
+        await ElementUtil.waitForClickable(this.tabWomensBandChange, 50, "wait for page load")
+        await ElementUtil.click(this.tabWomensBandChange, "Click Change Women's Band")
+        await BrowserUtil.wait(5)
     }
 
-    select10kWg() {
-        ElementUtil.waitForClickable(this.lnkChangeMetal, 50, "wait for page load")
-        //ElementUtil.scrollIntoView(this.btnAddToCart, "Scroll to change metal")
-        ElementUtil.click(this.lnkChangeMetal, "Click change metal")
-        ElementUtil.click(this.optn10kWg, "Select 10K White Gold")
-        BrowserUtil.wait(3)
+    async select10kWg() {
+        await ElementUtil.waitForClickable(this.lnkChangeMetal, 50, "wait for page load")
+        //await ElementUtil.scrollIntoView(this.btnAddToCart, "Scroll to change metal")
+        await ElementUtil.click(this.lnkChangeMetal, "Click change metal")
+        await ElementUtil.waitForClickable(this.optn10kWg, 15, "wait for page load")
+        await ElementUtil.click(this.optn10kWg, "Select 10K White Gold")
+        await BrowserUtil.wait(3)
     }
 
-    selectCart() {
-        ElementUtil.waitForClickable(this.lnkCartIcon, 50, "wait for page load")
-        ElementUtil.click(this.lnkCartIcon, "Click cart icon")
-        BrowserUtil.wait(5)
+    async selectCart() {
+        await ElementUtil.waitForClickable(this.lnkCartIcon, 50, "wait for page load")
+        await ElementUtil.click(this.lnkCartIcon, "Click cart icon")
+        await BrowserUtil.wait(10)
     }
 
-    selectFree100DayReturns() {
-        ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
-        ElementUtil.waitForClickable(this.linkFree100Days, 50, "wait for page load")
-        ElementUtil.click(this.linkFree100Days, "Click free 100 days returns")
-        BrowserUtil.wait(5)
+    async selectFree100DayReturns() {
+        await ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
+        await ElementUtil.waitForClickable(this.linkFree100Days, 50, "wait for page load")
+        await ElementUtil.click(this.linkFree100Days, "Click free 100 days returns")
+        await BrowserUtil.wait(5)
     }
 
-    selectFreeGlobalShipping() {
-        browser.back();
-        BrowserUtil.wait(5)
-        ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
-        ElementUtil.waitForClickable(this.linkfreeGlobalShipping, 50, "wait for page load")
-        ElementUtil.click(this.linkfreeGlobalShipping, "Click free global shipping")
-        BrowserUtil.wait(5)
+    async selectFreeGlobalShipping() {
+        await browser.back();
+        await BrowserUtil.wait(5)
+        await ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
+        await ElementUtil.waitForClickable(this.linkfreeGlobalShipping, 50, "wait for page load")
+        await ElementUtil.click(this.linkfreeGlobalShipping, "Click free global shipping")
+        await BrowserUtil.wait(5)
     }
 
-    selectLabCertification() {
-        browser.back();
-        BrowserUtil.wait(5)
-        ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
-        ElementUtil.waitForClickable(this.linklabCertification, 50, "wait for page load")
-        ElementUtil.click(this.linklabCertification, "Click lab certification")
-        BrowserUtil.wait(5)
+    async selectLabCertification() {
+        await browser.back();
+        await BrowserUtil.wait(5)
+        await ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
+        await ElementUtil.waitForClickable(this.linklabCertification, 50, "wait for page load")
+        await ElementUtil.click(this.linklabCertification, "Click lab certification")
+        await BrowserUtil.wait(5)
     }
 
-    selectFreeResizingAndWarranty() {
-        browser.back();
-        BrowserUtil.wait(5)
-        ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
-        ElementUtil.waitForClickable(this.linkFreeResizingwarranty, 50, "wait for page load")
-        ElementUtil.click(this.linkFreeResizingwarranty, "Click free resizing and warranty")
-        BrowserUtil.wait(5)
+    async selectFreeResizingAndWarranty() {
+        await browser.back();
+        await BrowserUtil.wait(5)
+        await ElementUtil.scrollIntoView(this.paginationlist, "Scroll to links")
+        await ElementUtil.waitForClickable(this.linkFreeResizingwarranty, 50, "wait for page load")
+        await ElementUtil.click(this.linkFreeResizingwarranty, "Click free resizing and warranty")
+        await BrowserUtil.wait(5)
     }
 
-    selectBlackDiamond() {
-        ElementUtil.mouseHover(this.lnkFilterStone, "Hover over stone filter")
-        ElementUtil.click(this.optnBlackDiamond, "Select Black Diamond")
-        BrowserUtil.wait(3)
+    async selectBlackDiamond() {
+        await ElementUtil.mouseHover(this.lnkFilterStone, "Hover over stone filter")
+        await ElementUtil.click(this.optnBlackDiamond, "Select Black Diamond")
+        await BrowserUtil.wait(3)
     }
 
-    reSelectVVSDiamond() {
-        ElementUtil.mouseHover(this.lnkFilterStone, "Hover over stone filter")
-        ElementUtil.click(this.optnVVSDiamond, "Select VVS Diamond")
-        BrowserUtil.wait(3)
+    async reSelectVVSDiamond() {
+        await ElementUtil.mouseHover(this.lnkFilterStone, "Hover over stone filter")
+        await ElementUtil.click(this.optnVVSDiamond, "Select VVS Diamond")
+        await BrowserUtil.wait(3)
     }
 
-    selectAdditionalMensRing() {
-        ElementUtil.mouseHover(this.drpBandDefault, "Hover over Band Selection Dropdown")
-        ElementUtil.forceClick(this.optnAdditionalMensRing, "Click Additional Mens RIng")
-        BrowserUtil.wait(5)
+    async selectAdditionalMensRing() {
+        await ElementUtil.mouseHover(this.drpBandDefault, "Hover over Band Selection Dropdown")
+        await ElementUtil.forceClick(this.optnAdditionalMensRing, "Click Additional Mens RIng")
+        await BrowserUtil.wait(5)
     }
 
-    clickAddAnotherMensRingBand() {
-        ElementUtil.waitForClickable(this.btnAddAnotherMensRingPage3, 60, "Wait for page load")
-        ElementUtil.click(this.btnAddAnotherMensRingPage3, "Click Add Another Men's Ring")
-        BrowserUtil.wait(5)
+    async clickAddAnotherMensRingBand() {
+        await ElementUtil.waitForClickable(this.btnAddAnotherMensRingPage3, 60, "Wait for page load")
+        await ElementUtil.click(this.btnAddAnotherMensRingPage3, "Click Add Another Men's Ring")
+        await BrowserUtil.wait(5)
     }
 
-    clickSelectDiamond() {
-        ElementUtil.waitForClickable(this.btnSelectDiamondPage3, 60, "Wait for page load")
-        ElementUtil.click(this.btnSelectDiamondPage3, "Click Select Diamond button")
-        BrowserUtil.wait(10)
-        ElementUtil.waitForClickable(this.diamondereLogo, 60, "wait for page load")
+    async clickSelectDiamond() {
+        await ElementUtil.waitForClickable(this.btnSelectDiamondPage3, 60, "Wait for page load")
+        await ElementUtil.click(this.btnSelectDiamondPage3, "Click Select Diamond button")
+        await BrowserUtil.wait(10)
+        await ElementUtil.waitForClickable(this.diamondereLogo, 60, "wait for page load")
     }
     
-    clickAddDiamondAndCheckout() {
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
-        ElementUtil.waitForClickable(this.btnAddDiamondAndCheckOut, 60, "Wait for page load")
-        ElementUtil.click(this.btnAddDiamondAndCheckOut, "Click button")
-        BrowserUtil.wait(5)
+    async clickAddDiamondAndCheckout() {
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
+        await ElementUtil.waitForClickable(this.btnAddDiamondAndCheckOut, 60, "Wait for page load")
+        await ElementUtil.click(this.btnAddDiamondAndCheckOut, "Click button")
+        await BrowserUtil.wait(5)
     }
 
-    hoveringFiltersLooseDiamonds() {
-        ElementUtil.scrollIntoView(this.bannerText, "Scroll to top of the page")
-        ElementUtil.mouseHover(this.gemstext, "Hover over Gems")
-        ElementUtil.isVisible(this.gemspopup, "Checking the popup")
-        ElementUtil.mouseHover(this.shapestext, "Hover over Shapes")
-        ElementUtil.isVisible(this.shapespopup, "Checking the popup")
-        ElementUtil.mouseHover(this.pricetext, "Hover over Price")
-        ElementUtil.isVisible(this.pricepopup, "Checking the popup")
-        ElementUtil.mouseHover(this.carattext, "Hover over Carat")
-        ElementUtil.isVisible(this.caratpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.claritytext, "Hover over Clarity")
-        ElementUtil.isVisible(this.claritypopup, "Checking the popup")
-        ElementUtil.mouseHover(this.colortext, "Hover over Color")
-        ElementUtil.isVisible(this.colorpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.symmetrytext, "Hover over Symmetry")
-        ElementUtil.isVisible(this.symmetrypopup, "Checking the popup")
-        ElementUtil.mouseHover(this.fluorescencetext, "Hover over Fluorescence")
-        ElementUtil.isVisible(this.fluorescencepopup, "Checking the popup")
-        ElementUtil.mouseHover(this.lengthtext, "Hover over Length")
-        ElementUtil.isVisible(this.lengthpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.breadthtext, "Hover over Breadth")
-        ElementUtil.isVisible(this.breadthpopup, "Checking the popup")
-        ElementUtil.scrollIntoView(this.pricetext, "Scroll down the page")
-        ElementUtil.mouseHover(this.tabletext, "Hover over Table%")
-        ElementUtil.isVisible(this.tablepopup, "Checking the popup")
-        ElementUtil.mouseHover(this.depthtext, "Hover over Depth%")
-        ElementUtil.isVisible(this.depthpopup, "Checking the popup")
-        ElementUtil.scrollIntoView(this.symmetrytext, "Scroll to cut filter")
-        ElementUtil.mouseHover(this.cuttext, "Hover over Cut")
-        ElementUtil.isVisible(this.cutpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.polishtext, "Hover over Polish")
-        ElementUtil.isVisible(this.polishpopup, "Checking the popup")
-        ElementUtil.mouseHover(this.certificatetext, "Hover over Cetificate")
+    async hoveringFiltersLooseDiamonds() {
+        await ElementUtil.scrollIntoView(this.bannerText, "Scroll to top of the page")
+        await ElementUtil.mouseHover(this.gemstext, "Hover over Gems")
+        await ElementUtil.isVisible(this.gemspopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.shapestext, "Hover over Shapes")
+        await ElementUtil.isVisible(this.shapespopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.pricetext, "Hover over Price")
+        await ElementUtil.isVisible(this.pricepopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.carattext, "Hover over Carat")
+        await ElementUtil.isVisible(this.caratpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.claritytext, "Hover over Clarity")
+        await ElementUtil.isVisible(this.claritypopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.colortext, "Hover over Color")
+        await ElementUtil.isVisible(this.colorpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.symmetrytext, "Hover over Symmetry")
+        await ElementUtil.isVisible(this.symmetrypopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.fluorescencetext, "Hover over Fluorescence")
+        await ElementUtil.isVisible(this.fluorescencepopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.lengthtext, "Hover over Length")
+        await ElementUtil.isVisible(this.lengthpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.breadthtext, "Hover over Breadth")
+        await ElementUtil.isVisible(this.breadthpopup, "Checking the popup")
+        await ElementUtil.scrollIntoView(this.pricetext, "Scroll down the page")
+        await ElementUtil.mouseHover(this.tabletext, "Hover over Table%")
+        await ElementUtil.isVisible(this.tablepopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.depthtext, "Hover over Depth%")
+        await ElementUtil.isVisible(this.depthpopup, "Checking the popup")
+        await ElementUtil.scrollIntoView(this.symmetrytext, "Scroll to cut filter")
+        await ElementUtil.mouseHover(this.cuttext, "Hover over Cut")
+        await ElementUtil.isVisible(this.cutpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.polishtext, "Hover over Polish")
+        await ElementUtil.isVisible(this.polishpopup, "Checking the popup")
+        await ElementUtil.mouseHover(this.certificatetext, "Hover over Cetificate")
     }
 
-    clickViewDiamondButton() {
-        ElementUtil.waitForClickable(this.viewdiamondbutton, 60, "wait for page load")
-        ElementUtil.forceClick(this.viewdiamondbutton, "Click View Diamond Button")
-        BrowserUtil.wait(5);
+    async clickViewDiamondButton() {
+        await ElementUtil.waitForClickable(this.viewdiamondbutton, 60, "wait for page load")
+        await ElementUtil.forceClick(this.viewdiamondbutton, "Click View Diamond Button")
+        await BrowserUtil.wait(5);
     }
 
-    selectRingsSwas() {
-        ElementUtil.click(this.oRingstartwithsetting, "Click Start with a Setting - Rings")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.ringsStartWithSetting, 10, "Wait for page load")
+    async selectRingsSwas() {
+        await ElementUtil.click(this.oRingstartwithsetting, "Click Start with a Setting - Rings")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.ringsStartWithSetting, 10, "Wait for page load")
     }
 
-    selectEngagementSwas() {
-        ElementUtil.click(this.ownEngstartwithsetting, "Click Start with a Setting - Engagement")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.engagementSWSBanner, 10, "Wait for page load")
+    async selectEngagementSwas() {
+        await ElementUtil.click(this.ownEngstartwithsetting, "Click Start with a Setting - Engagement")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.engagementSWSBanner, 10, "Wait for page load")
     }
 
-    selectEarringsSwas() {
-        ElementUtil.click(this.ownEarstartwithsetting, "Click Start with a Setting - Earrings")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.earringsSWSBanner, 10, "Wait for page load")
+    async selectEarringsSwas() {
+        await ElementUtil.click(this.ownEarstartwithsetting, "Click Start with a Setting - Earrings")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.earringsSWSBanner, 10, "Wait for page load")
     }
 
-    selectNecklacesSwas() {
-        ElementUtil.click(this.oNeckstartwithsetting, "Click Start with a Setting - Necklaces")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.necklacesSWSBanner, 10, "Wait for page load")
+    async selectNecklacesSwas() {
+        await ElementUtil.click(this.oNeckstartwithsetting, "Click Start with a Setting - Necklaces")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.necklacesSWSBanner, 10, "Wait for page load")
     }
 
-    selectMensRingsSwas() {
-        ElementUtil.click(this.oMenstartwithsetting, "Click Start with a Setting - Men's Rings")
-        BrowserUtil.wait(5)
-        ElementUtil.waitForDisplayed(this.mensSWSBanner, 10, "Wait for page load")
+    async selectMensRingsSwas() {
+        await ElementUtil.click(this.oMenstartwithsetting, "Click Start with a Setting - Men's Rings")
+        await BrowserUtil.wait(5)
+        await ElementUtil.waitForDisplayed(this.mensSWSBanner, 10, "Wait for page load")
     }
 
-    clickSelectMensBandDDP() {
-        BrowserUtil.wait(3)
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
-        ElementUtil.click(this.btnSelectMensBand, "Click button")
-        BrowserUtil.wait(5)
+    async clickSelectMensBandDDP() {
+        await BrowserUtil.wait(3)
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
+        await ElementUtil.click(this.btnSelectMensBand, "Click button")
+        await BrowserUtil.wait(5)
     }
 
-    selectUpdateMensBand() {
-        ElementUtil.click(this.btnUpdateMensBand, "Click Update Men's Band")
-        BrowserUtil.wait(5)
+    async selectUpdateMensBand() {
+        await ElementUtil.click(this.btnUpdateMensBand, "Click Update Men's Band")
+        await BrowserUtil.wait(5)
     }
 
-    clickSelectWomensBandDDP() {
-        BrowserUtil.wait(3)
-        ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
-        ElementUtil.click(this.btnSelectWomensBand, "Click button")
-        BrowserUtil.wait(5)
+    async clickSelectWomensBandDDP() {
+        await BrowserUtil.wait(3)
+        await ElementUtil.scrollIntoView(this.lnkWaysToSaveMore, "Scroll to button")
+        await ElementUtil.click(this.btnSelectWomensBand, "Click button")
+        await BrowserUtil.wait(5)
     }
 
-    selectUpdateWomensBand() {
-        ElementUtil.click(this.btnUpdateWomensBand, "Click Update Women's Band")
-        BrowserUtil.wait(5)
+    async selectUpdateWomensBand() {
+        await ElementUtil.click(this.btnUpdateWomensBand, "Click Update Women's Band")
+        await BrowserUtil.wait(5)
     }
 
-    selectAddToCartLooseDiamonds() {
-        ElementUtil.click(this.btnAddToCartLooseDiamonds, "Click Add to cart")
+    async selectAddToCartLooseDiamonds() {
+        await ElementUtil.click(this.btnAddToCartLooseDiamonds, "Click Add to cart")
     }
 
-    clickSelectWithRing() {
-        ElementUtil.click(this.btnSelectWithRing, "Click Select with ring")
-        BrowserUtil.wait(5)
+    async clickSelectWithRing() {
+        await ElementUtil.click(this.btnSelectWithRing, "Click Select with ring")
+        await BrowserUtil.wait(5)
     }
 
-    clickSelectWithNecklace() {
-        ElementUtil.click(this.btnSelectWithNecklace, "Click Select with necklace")
-        BrowserUtil.wait(5)
+    async clickSelectWithNecklace() {
+        await ElementUtil.click(this.btnSelectWithNecklace, "Click Select with necklace")
+        await BrowserUtil.wait(5)
     }
 
-    selectQuickViewRow2() {
-        BrowserUtil.wait(3)
-        ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to diamond listing table");
-        ElementUtil.click(this.tableexpandsecondrowicon, "Click Quick View of Second Row")
+    async selectQuickViewRow2() {
+        await BrowserUtil.wait(3)
+        await ElementUtil.scrollIntoView(this.morefilterbutton, "Scroll to diamond listing table");
+        await ElementUtil.click(this.tableexpandsecondrowicon, "Click Quick View of Second Row")
     }
 
-    scrollToCutSection() {
-        ElementUtil.scrollIntoView(this.caratYourDiamondSection, "Scroll to cut section");
+    async scrollToCutSection() {
+        await ElementUtil.scrollIntoView(this.caratYourDiamondSection, "Scroll to cut section");
     }
 
-    scrollToColorSection() {
-        ElementUtil.scrollIntoView(this.cutYourDiamondSection, "Scroll to color section");
+    async scrollToColorSection() {
+        await ElementUtil.scrollIntoView(this.cutYourDiamondSection, "Scroll to color section");
     }
 
-    scrollToClaritySection() {
-        ElementUtil.scrollIntoView(this.txtColorSection, "Scroll to clarity section");
+    async scrollToClaritySection() {
+        await ElementUtil.scrollIntoView(this.txtColorSection, "Scroll to clarity section");
     }
 
-    clickReqCustomBtn() {
-        ElementUtil.click(this.btnReqCusOrder, "click the request custom order button")
-        BrowserUtil.wait(5);
+    async clickReqCustomBtn() {
+        await ElementUtil.click(this.btnReqCusOrder, "click the request custom order button")
+        await BrowserUtil.wait(5);
     }
 
-    clickReqCustomLnk() {
-        ElementUtil.click(this.lnkReqCusOrder, "click the request custom order link")
-        BrowserUtil.wait(5);
+    async clickReqCustomLnk() {
+        await ElementUtil.click(this.lnkReqCusOrder, "click the request custom order link")
+        await BrowserUtil.wait(5);
 
     }
-    enterName() {
-        ElementUtil.scrollIntoView(this.boxnamefieldcustom, data.RequestCustomOrder.CutomerNameReqCustom, "enter customer name")
-        ElementUtil.sendText(this.boxnamefieldcustom, data.RequestCustomOrder.CutomerNameReqCustom, "enter customer name")
+    async enterName() {
+        await ElementUtil.scrollIntoView(this.boxnamefieldcustom, data.RequestCustomOrder.CutomerNameReqCustom, "enter customer name")
+        await ElementUtil.sendText(this.boxnamefieldcustom, data.RequestCustomOrder.CutomerNameReqCustom, "enter customer name")
     }
-    clearenteredName() {
-        ElementUtil.click(this.boxnamefieldcustom, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        //ElementUtil.clearText(this.boxnamefieldcustom, "clear the customer name")
+    async clearenteredName() {
+        await ElementUtil.click(this.boxnamefieldcustom, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        //await ElementUtil.clearText(this.boxnamefieldcustom, "clear the customer name")
     }
-    enterSpecName() {
-        ElementUtil.sendText(this.boxnamefieldcustom, data.RequestCustomOrder.SpecialCharcterName, "enter special characters in customer name")
+    async enterSpecName() {
+        await ElementUtil.sendText(this.boxnamefieldcustom, data.RequestCustomOrder.SpecialCharcterName, "enter special characters in customer name")
     }
-    enterEmail() {
-        ElementUtil.sendText(this.boxemailfieldcustom, data.RequestCustomOrder.CustomerEmail, "enter customer email")
+    async enterEmail() {
+        await ElementUtil.sendText(this.boxemailfieldcustom, data.RequestCustomOrder.CustomerEmail, "enter customer email")
     }
-    clearenteredEmail() {
-        ElementUtil.click(this.boxemailfieldcustom, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        //ElementUtil.clearText(this.boxemailfieldcustom, "clear the customer email")
+    async clearenteredEmail() {
+        await ElementUtil.click(this.boxemailfieldcustom, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        //await ElementUtil.clearText(this.boxemailfieldcustom, "clear the customer email")
     }
-    enterSpecEmail() {
-        ElementUtil.click(this.boxemailfieldcustom, "Click Email field")
-        ElementUtil.sendText(this.boxemailfieldcustom, data.RequestCustomOrder.SpecialCharcterName, "enter special characters in customer email")
+    async enterSpecEmail() {
+        await ElementUtil.click(this.boxemailfieldcustom, "Click Email field")
+        await ElementUtil.sendText(this.boxemailfieldcustom, data.RequestCustomOrder.SpecialCharcterName, "enter special characters in customer email")
     }
-    enterphoneNumber() {
-        ElementUtil.sendText(this.boxphonefieldcustom, data.RequestCustomOrder.CustomerPhoneNumber, "enter customer phone")
+    async enterphoneNumber() {
+        await ElementUtil.sendText(this.boxphonefieldcustom, data.RequestCustomOrder.CustomerPhoneNumber, "enter customer phone")
     }
-    clearenteredphoneNumber() {
-        ElementUtil.click(this.boxphonefieldcustom, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        //ElementUtil.clearText(this.boxphonefieldcustom, "clear the customer phone")
+    async clearenteredphoneNumber() {
+        await ElementUtil.click(this.boxphonefieldcustom, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        //await ElementUtil.clearText(this.boxphonefieldcustom, "clear the customer phone")
     }
-    enterSpecphoneNumber() {
-        ElementUtil.sendText(this.boxphonefieldcustom, data.RequestCustomOrder.SpecialCharcterName, "enter special characters in customer phone]")
+    async enterSpecphoneNumber() {
+        await ElementUtil.sendText(this.boxphonefieldcustom, data.RequestCustomOrder.SpecialCharcterName, "enter special characters in customer phone]")
     }
-    enterCustomReq() {
-        ElementUtil.sendText(this.boxcustomrequestdescrip, data.RequestCustomOrder.CustomizationRequest, "enter customization request]")
+    async enterCustomReq() {
+        await ElementUtil.sendText(this.boxcustomrequestdescrip, data.RequestCustomOrder.CustomizationRequest, "enter customization request]")
     }
-    clearenteredCustomReq() {
-        ElementUtil.click(this.boxcustomrequestdescrip, "Click text box")
-        browser.keys(['Control', 'a']);
-        browser.keys('Backspace');
-        //ElementUtil.clearText(this.boxcustomrequestdescrip, "clear the Customization Request")
+    async clearenteredCustomReq() {
+        await ElementUtil.click(this.boxcustomrequestdescrip, "Click text box")
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Backspace');
+        //await ElementUtil.clearText(this.boxcustomrequestdescrip, "clear the Customization Request")
     }
-    clicksubmitCustom() {
-        ElementUtil.forceClick(this.btnsubmitrequestcustom, "click submit request")
+    async clicksubmitCustom() {
+        await ElementUtil.forceClick(this.btnsubmitrequestcustom, "click submit request")
     }
-    uploadImageCustom() {
-        ElementUtil.uploadFile(this.inputFile, this.btnuploadimagecustom,dmd.config.imageJpg, "Uploading image")
+    async uploadImageCustom() {
+        await ElementUtil.uploadFile(this.inputFile, this.btnuploadimagecustom,dmd.config.imageJpg, "Uploading image")
     }
-    uploadWrongImageCustom() {
-        ElementUtil.uploadFile(this.inputFile, this.btnuploadimagecustom,dmd.config.imagePng, "Uploading wrong image")
+    async uploadWrongImageCustom() {
+        await ElementUtil.uploadFile(this.inputFile, this.btnuploadimagecustom,dmd.config.imagePng, "Uploading wrong image")
     }
 
-    removeDesignInCart() {
-        ElementUtil.click(this.lnkCartIcon, "click on shopping cart link");
-        BrowserUtil.wait(5)
-        if (ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
-            while (ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
-                let removeLink = ElementUtil.isVisible(this.btnFirstRemove, "Check for remove button");
+    async removeDesignInCart() {
+        await ElementUtil.click(this.lnkCartIcon, "click on shopping cart link");
+        await BrowserUtil.wait(5)
+        if (await ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
+            while (await ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
+                let removeLink = await ElementUtil.isVisible(this.btnFirstRemove, "Check for remove button");
                 
                 if (removeLink) {
-                    ElementUtil.waitForClickable(this.btnFirstRemove, 20, "wait for page load")
-                    ElementUtil.click(this.btnFirstRemove, "select remove");
-                    BrowserUtil.wait(5);
+                    await ElementUtil.waitForClickable(this.btnFirstRemove, 20, "wait for page load")
+                    await ElementUtil.click(this.btnFirstRemove, "select remove");
+                    await BrowserUtil.wait(5);
                 }
             }
         } else {
-            ElementUtil.click(this.diamondereLogo, "Click logo"); 
-            BrowserUtil.wait(3);
+            await ElementUtil.click(this.diamondereLogo, "Click logo"); 
+            await BrowserUtil.wait(3);
         }
     }
     

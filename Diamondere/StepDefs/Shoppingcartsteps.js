@@ -9,198 +9,187 @@ const sdata = require('../TestData/shoppingcartdata.json');
 
 //Given
 
-Given(/^I browse shopping cart page$/, () => {
+Given(/^I browse shopping cart page$/, async() => {
 	const shoppingcartarea = new shoppingcartpage;
-	browser.url(dmd.config.shoppingcarturl);
+	await browser.url(dmd.config.shoppingcarturl);
 });
 
 //When
 
-When(/^I click checkout button$/, () => {
+When(/^I click checkout button$/, async() => {
 	const productpoparea = new shoppingcartpage;
-    productpoparea.clickcheckout();
-	BrowserUtil.wait(5);
+    await productpoparea.clickcheckout();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click continue shopping button$/, () => {
+When(/^I click continue shopping button$/, async() => {
 	const productpoparea = new shoppingcartpage;
-    productpoparea.clickcontinueshopping();
-	BrowserUtil.wait(5);
+    await productpoparea.clickcontinueshopping();
+	await BrowserUtil.wait(5);
 });
 
 
-When(/^I click emailus link$/, () => {
+When(/^I click emailus link$/, async() => {
 	const needassistancearea = new shoppingcartpage;
-    needassistancearea.clickemailus();
-	BrowserUtil.wait(5);
+    await needassistancearea.clickemailus();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click request call back link$/, () => {
+When(/^I click request call back link$/, async() => {
 	const needassistancearea = new shoppingcartpage;
-    needassistancearea.clickrequestcallback();
-	BrowserUtil.wait(5);
+    await needassistancearea.clickrequestcallback();
+	await BrowserUtil.wait(5);
 });
 
 
-When(/^I move to matchingband link$/, () => {
+When(/^I move to matchingband link$/, async() => {
 	const matchingbandarea = new shoppingcartpage;
-    matchingbandarea.movetomatchingbandlink();
-	BrowserUtil.wait(3);
+    await matchingbandarea.movetomatchingbandlink();
+	await BrowserUtil.wait(3);
 });
 
-When(/^I click remove button$/, () => {
+When(/^I click remove button$/, async() => {
 	const xylosproductarea = new shoppingcartpage;
-    xylosproductarea.selectremovebutton();
+    await xylosproductarea.selectremovebutton();
 });
 
-When(/^I click matching band product view details link in shopping cart$/, () => {
+When(/^I click matching band product view details link in shopping cart$/, async() => {
 	const matchingbandarea = new shoppingcartpage;
-    matchingbandarea.clickviewdetails();
+    await matchingbandarea.clickviewdetails();
 });
 
-When(/^I select ring size and select 8UK option of matching band popup$/, () => {
+When(/^I select ring size and select 8UK option of matching band popup$/, async() => {
 	const ringsizearea = new shoppingcartpage;
-    ringsizearea.clickringsizedropdown();
-	ringsizearea.click8ukringsize();
+    await ringsizearea.clickringsizedropdown();
+	await ringsizearea.click8ukringsize();
 });
 
-When(/^I enter special message in special message field$/, () => {
+When(/^I enter special message in special message field$/, async() => {
 	const specialmessagearea = new shoppingcartpage;
-    specialmessagearea.entermessage();
+    await specialmessagearea.entermessage();
 });
 
-When(/^I select add to cart button$/, () => {
+When(/^I select add to cart button$/, async() => {
 	const matchingbandarea = new shoppingcartpage;
-    matchingbandarea.clickmbaddtocart();
-	BrowserUtil.wait(5);
+    await matchingbandarea.clickmbaddtocart();
+	await BrowserUtil.wait(5);
 });
-
-
-
-
-
-
-
-
-
-
-
 
 When(/^I click paypal image$/, async() => {
 	const paymentsarea = new shoppingcartpage;
-	paymentsarea.clickpaypalimage(); 
-	BrowserUtil.wait(5);
+	await paymentsarea.clickpaypalimage(); 
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click cross button in popup$/, () => {
+When(/^I click cross button in popup$/, async() => {
 	const paymentsarea = new shoppingcartpage;
-	paymentsarea.clickpopupcrossbutton(); 
+	await paymentsarea.clickpopupcrossbutton(); 
 });
 
-When(/^I click paypalcredit image$/, () => {
+When(/^I click paypalcredit image$/, async() => {
 	const paymentsarea = new shoppingcartpage;
-	paymentsarea.clickpaypalcreditimage();
-	BrowserUtil.wait(5);  
+	await paymentsarea.clickpaypalcreditimage();
+	await BrowserUtil.wait(5);  
 });
 
 
-When(/^I click calender image$/, () => {
+When(/^I click calender image$/, async() => {
 	const paymentsarea = new shoppingcartpage;
-	paymentsarea.clickcalenderimage();
-	BrowserUtil.wait(5);
+	await paymentsarea.clickcalenderimage();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click accreditation busniess image$/, () => {
+When(/^I click accreditation busniess image$/, async() => {
 	const accreditationarea = new shoppingcartpage;
-	BrowserUtil.wait(3);
-	accreditationarea.clickaccrediationbusiness();
+	await BrowserUtil.wait(3);
+	await accreditationarea.clickaccrediationbusiness();
 });
 
-When(/^I click norton image$/, () => {
+When(/^I click norton image$/, async() => {
 	const accreditationarea = new shoppingcartpage;
-	BrowserUtil.wait(3);
-	accreditationarea.clicknorton();
+	await BrowserUtil.wait(3);
+	await accreditationarea.clicknorton();
 });
 
-When(/^I click affirm image$/, () => {
+When(/^I click affirm image$/, async() => {
 	const paymentsarea = new shoppingcartpage;
-	paymentsarea.clickaffirm();
-	BrowserUtil.wait(3);
+	await paymentsarea.clickaffirm();
+	await BrowserUtil.wait(3);
 });
 
-When(/^I click jewelery financing page link is displayed$/, () => {
+When(/^I click jewelery financing page link is displayed$/, async() => {
 	const accreditationarea = new shoppingcartpage;
-	BrowserUtil.wait(3);
-	accreditationarea.clickaffirmjewlrylink();
+	await BrowserUtil.wait(3);
+	await accreditationarea.clickaffirmjewlrylink();
 });
 
-When(/^I select Add ring and band button$/, () => {
+When(/^I select Add ring and band button$/, async() => {
 	const matchingbandpopuparea = new shoppingcartpage;
-	matchingbandpopuparea.clickaddringbandband();
+	await matchingbandpopuparea.clickaddringbandband();
 });
 
-When(/^I move to complements texts$/, () => {
+When(/^I move to complements texts$/, async() => {
 	const matchingbandpopuparea = new shoppingcartpage;
-	matchingbandpopuparea.movetocomplimentstext();
+	await matchingbandpopuparea.movetocomplimentstext();
 });
 
 //start with setting / diamond
-When(/^I select setting add to cart button$/, () => {
+When(/^I select setting add to cart button$/, async() => {
 	const startwithsettingarea = new shoppingcartpage;
-	//startwithsettingarea.movetoaddtocartbtn();
-	startwithsettingarea.clickaddtocartbtn();
+	//await startwithsettingarea.movetoaddtocartbtn();
+	await startwithsettingarea.clickaddtocartbtn();
 });
 
-When(/^I click express delivery radiobutton$/, () => {
+When(/^I click express delivery radiobutton$/, async() => {
 	const deliveryarea = new shoppingcartpage;
-	deliveryarea.clickfedexdelivery();
-	BrowserUtil.wait(5);
+	await deliveryarea.clickfedexdelivery();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click remove button of express delivery$/, () => {
+When(/^I click remove button of express delivery$/, async() => {
 	const deliveryarea = new shoppingcartpage;
-	deliveryarea.clickremoveexpressdelivery();
-	BrowserUtil.wait(5);
+	await deliveryarea.clickremoveexpressdelivery();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click easy delivery radiobutton$/, () => {
+When(/^I click easy delivery radiobutton$/, async() => {
 	const deliveryarea = new shoppingcartpage;
-	deliveryarea.clickeasydelivery();
-	BrowserUtil.wait(5);
+	await deliveryarea.clickeasydelivery();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click show discount details link$/, () => {
+When(/^I click show discount details link$/, async() => {
 	const nilahproductarea = new shoppingcartpage;
-	nilahproductarea.clickshowdetailslink();
-	BrowserUtil.wait(5);
+	await nilahproductarea.clickshowdetailslink();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click 5 year button$/, () => {
+When(/^I click 5 year button$/, async() => {
 	const xylosproductarea = new shoppingcartpage;
-	xylosproductarea.click5yearplan();
-	BrowserUtil.wait(5)
+	await xylosproductarea.click5yearplan();
+	await BrowserUtil.wait(5)
 });
 
-When(/^I enter text in additional instruction field$/, () => {
+When(/^I enter text in additional instruction field$/, async() => {
 	const totalarea = new shoppingcartpage;
-	totalarea.enteradditionaldetails();
+	await totalarea.enteradditionaldetails();
 });
 
-When(/^I click Add mensband link$/, () => {
+When(/^I click Add mensband link$/, async() => {
 	const menslink = new shoppingcartpage;
-	menslink.clickmenslink();
-	BrowserUtil.wait(5);
+	await menslink.clickmenslink();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click shopping cart icon$/, () => {
+When(/^I click shopping cart icon$/, async() => {
 	const bannerHomepage = new shoppingcartpage;
-	bannerHomepage.clickscicon();
+	await bannerHomepage.clickscicon();
 });
 
-When(/^I click Proceed to payment$/, () => {
+When(/^I click Proceed to payment$/, async() => {
 	const cartpagearea = new shoppingcartpage;
-	cartpagearea.clicktoppaymentbutton();
-	BrowserUtil.wait(5);
+	await cartpagearea.clicktoppaymentbutton();
+	await BrowserUtil.wait(5);
 });
 
 
@@ -870,7 +859,7 @@ Then(/^I ensure error message will popup$/, async() => {
 });
 
 
-When(/^I select Add to cart button in the popup$/, () => {
+When(/^I select Add to cart button in the popup$/, async() => {
 	const addBand = new shoppingcartpage;
 	addBand.selectAddToCart();
 });
@@ -896,7 +885,7 @@ Then(/^I ensure Shape of the diamond is display$/, async () => {
 	await expect(cartarea.diamondShape).toExist();
 });
 
-Then(/^I click on view diamond details$/, () => {
+Then(/^I click on view diamond details$/, async() => {
 	const cartarea = new shoppingcartpage;
 	cartarea.clickDiaViewdetails();
 });

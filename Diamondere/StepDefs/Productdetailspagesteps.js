@@ -5,543 +5,543 @@ const dmd = require('../Configs/dmd_' + global.testEnv + '.js');
 const productdetailspage = require('../PageObjects/Page3page.js');
 const data = require('../TestData/productdetailsdata.json')
 
-Given(/^I browse ring product details page$/, () => {
-	browser.url(dmd.config.ringproducturl);
+Given(/^I browse ring product details page$/, async() => {
+	await browser.url(dmd.config.ringproducturl);
 });
 
-Given(/^I browse dannete ring product details page$/, () => {
-	browser.url(dmd.config.danneteringproducturl);
-	BrowserUtil.wait(5)
+Given(/^I browse dannete ring product details page$/, async() => {
+	await browser.url(dmd.config.danneteringproducturl);
+	await BrowserUtil.wait(5)
 });
 
-Given(/^I browse couple band product details page$/, () => {
-	browser.url(dmd.config.seasoncouplebandproducturl);
+Given(/^I browse couple band product details page$/, async() => {
+	await browser.url(dmd.config.seasoncouplebandproducturl);
 });
 
-Given(/^I browse bracelet product details page$/, () => {
-	browser.url(dmd.config.braceletproducturl);
+Given(/^I browse bracelet product details page$/, async() => {
+	await browser.url(dmd.config.braceletproducturl);
 });
 
-Given(/^I browse necklace product details page$/, () => {
-	browser.url(dmd.config.necklaceproducturl);
+Given(/^I browse necklace product details page$/, async() => {
+	await browser.url(dmd.config.necklaceproducturl);
 });
-Given(/^I browse rainbow sapphire product details page$/, () => {
-	browser.url(dmd.config.rainbowsapphireproducturl);
+Given(/^I browse rainbow sapphire product details page$/, async() => {
+	await browser.url(dmd.config.rainbowsapphireproducturl);
 });
-Given(/^I browse Men's ring product details page$/, () => {
-	browser.url(dmd.config.mensringproducturl);
-});
-
-Given(/^I browse earring product details page$/, () => {
-	browser.url(dmd.config.jolieearringproducturl);
+Given(/^I browse Men's ring product details page$/, async() => {
+	await browser.url(dmd.config.mensringproducturl);
 });
 
-Given(/^I browse Bangle product details page$/, () => {
-	browser.url(dmd.config.bangleproducturl);
+Given(/^I browse earring product details page$/, async() => {
+	await browser.url(dmd.config.jolieearringproducturl);
 });
 
-Given(/^I browse applewatchband metal and gemstone product details page$/, () => {
-	browser.url(dmd.config.applewatchMGproducturl);
+Given(/^I browse Bangle product details page$/, async() => {
+	await browser.url(dmd.config.bangleproducturl);
 });
 
-Given(/^I browse applewatchband metal product details page$/, () => {
-	browser.url(dmd.config.applewatchMproducturl);
+Given(/^I browse applewatchband metal and gemstone product details page$/, async() => {
+	await browser.url(dmd.config.applewatchMGproducturl);
 });
 
-Given(/^I browse metal and gemstone charms product details page$/, () => {
-	browser.url(dmd.config.charmsMGproducturl);
+Given(/^I browse applewatchband metal product details page$/, async() => {
+	await browser.url(dmd.config.applewatchMproducturl);
 });
 
-Given(/^I browse metal and gemstone bangle product details page$/, () => {
-	browser.url(dmd.config.bangleMGproducturl);
+Given(/^I browse metal and gemstone charms product details page$/, async() => {
+	await browser.url(dmd.config.charmsMGproducturl);
 });
 
-Given(/^I browse metal charms product details page$/, () => {
-	browser.url(dmd.config.bangleMproducturl);
+Given(/^I browse metal and gemstone bangle product details page$/, async() => {
+	await browser.url(dmd.config.bangleMGproducturl);
 });
 
-Given(/^I browse metal and gemstone men's earring product details page$/, () => {
-	browser.url(dmd.config.mensearringMGproducturl);
+Given(/^I browse metal charms product details page$/, async() => {
+	await browser.url(dmd.config.bangleMproducturl);
+});
+
+Given(/^I browse metal and gemstone men's earring product details page$/, async() => {
+	await browser.url(dmd.config.mensearringMGproducturl);
 });
 
 
                          ///When///
-When(/^I click Home in breadcrumb$/, () => {
+When(/^I click Home in breadcrumb$/, async() => {
 	const breadcrumbsection = new productdetailspage;
-    breadcrumbsection.selecthome();
+    await breadcrumbsection.selecthome();
 });
 
-When(/^I click category in breadcrumb$/, () => {
+When(/^I click category in breadcrumb$/, async() => {
 	const categorybreadcrumbsection = new productdetailspage;
-    categorybreadcrumbsection.selectcategory();
+    await categorybreadcrumbsection.selectcategory();
 });
 
-When(/^I click gemstone in breadcrumb$/, () => {
+When(/^I click gemstone in breadcrumb$/, async() => {
 	const gemstonebreadcrumbsection = new productdetailspage;
-    gemstonebreadcrumbsection.selectgemstone();
+    await gemstonebreadcrumbsection.selectgemstone();
 });
 
-When(/^I click video$/, () => {
+When(/^I click video$/, async() => {
 	const productimage = new productdetailspage;
-	productimage.clickvideo();
+	await productimage.clickvideo();
 });
 
-When(/^I click cross button$/, () => {
+When(/^I click cross button$/, async() => {
 	const productimage = new productdetailspage;
-	productimage.clickcrossbutton();
-	BrowserUtil.wait(3);
+	await productimage.clickcrossbutton();
+	await BrowserUtil.wait(3);
 });
 
-When(/^I click Email image$/, () => {
+When(/^I click Email image$/, async() => {
 	const mailimage = new productdetailspage;
-	mailimage.clickmailicon();
-	BrowserUtil.wait(5);
+	await mailimage.clickmailicon();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click pinterest image$/, () => {
+When(/^I click pinterest image$/, async() => {
 	const pinterestimage = new productdetailspage;
-	pinterestimage.clickpinteresticon();
-	browser.switchWindow('https://www.pinterest.com/pin/create/button/?url=https://staging.diamondere.com/p/rings-sidestone-xylos-10847-10676?metal=14k-white-gold&stones=ruby&stones=si-diamond&media=https://images.diamondere.com/new_images/products/xylos/xylos_wg_ru_di_0.jpg&description=Xylos%20Ring%20with%20Round%20Ruby,%20SI%20Diamond%20|%200.77%20carats%20Round%20Ruby%20Sidestone%20Ring%20in%2014k%20White%20Gold%20|%20Diamondere')
+	await pinterestimage.clickpinteresticon();
+	await browser.switchWindow('https://www.pinterest.com/pin/create/button/?url=https://staging.diamondere.com/p/rings-sidestone-xylos-10847-10676?metal=14k-white-gold&stones=ruby&stones=si-diamond&media=https://images.diamondere.com/new_images/products/xylos/xylos_wg_ru_di_0.jpg&description=Xylos%20Ring%20with%20Round%20Ruby,%20SI%20Diamond%20|%200.77%20carats%20Round%20Ruby%20Sidestone%20Ring%20in%2014k%20White%20Gold%20|%20Diamondere')
 });
 
-When(/^I click facebook image$/, () => {
+When(/^I click facebook image$/, async() => {
 	const facebookimage = new productdetailspage;
-	facebookimage.clickfacebookicon();
-	browser.switchWindow('https://www.facebook.com/')
+	await facebookimage.clickfacebookicon();
+	await browser.switchWindow('https://www.facebook.com/')
 });
 
-When(/^I click change centre stone dropdown$/, () => {
+When(/^I click change centre stone dropdown$/, async() => {
 	const centrestonedropdown = new productdetailspage;
-	centrestonedropdown.clickchangecentrestone();
+	await centrestonedropdown.clickchangecentrestone();
 });
-When(/^I click change Earring centre stone dropdown$/, () => {
+When(/^I click change Earring centre stone dropdown$/, async() => {
 	const centrestonedropdown = new productdetailspage;
-	BrowserUtil.wait(5);
-	centrestonedropdown.clickchangeearringcentrestone();
+	await BrowserUtil.wait(5);
+	await centrestonedropdown.clickchangeearringcentrestone();
 });
 
-When(/^I click change Mens Earring centre stone dropdown$/, () => {
+When(/^I click change Mens Earring centre stone dropdown$/, async() => {
 	const centrestonedropdown = new productdetailspage;
-	BrowserUtil.wait(5);
-	centrestonedropdown.clickchangemensearringcentrestone();
+	await BrowserUtil.wait(5);
+	await centrestonedropdown.clickchangemensearringcentrestone();
 });
 
 
-When(/^I click selected centre stone video$/, () => {
+When(/^I click selected centre stone video$/, async() => {
 	const centrestonevideoproduct = new productdetailspage;
-	centrestonevideoproduct.clickcentrestonevideo();
+	await centrestonevideoproduct.clickcentrestonevideo();
 });
 
-When(/^I click change accent stones dropdown$/, () => {
+When(/^I click change accent stones dropdown$/, async() => {
 	const accentstonesdropdown = new productdetailspage;
-	accentstonesdropdown.clickchangeaccentstones();
+	await accentstonesdropdown.clickchangeaccentstones();
 });
 
-When(/^I click charms change accent stones dropdown$/, () => {
+When(/^I click charms change accent stones dropdown$/, async() => {
 	const accentstonesdropdown = new productdetailspage;
-	accentstonesdropdown.clickchangecharmaccentstones();
+	await accentstonesdropdown.clickchangecharmaccentstones();
 });
 
-When(/^I click change accent stone 1 dropdown$/, () => {
+When(/^I click change accent stone 1 dropdown$/, async() => {
 	const accentstone1dropdown = new productdetailspage;
-	accentstone1dropdown.clickchangeaccentstone1();
-	BrowserUtil.wait(3)
+	await accentstone1dropdown.clickchangeaccentstone1();
+	await BrowserUtil.wait(3)
 });
 
-When(/^I click change necklace accent stone-1 dropdown$/, () => {
+When(/^I click change necklace accent stone-1 dropdown$/, async() => {
 	const accentstone1dropdown = new productdetailspage;
-	accentstone1dropdown.clickchangenaccentstone1();
+	await accentstone1dropdown.clickchangenaccentstone1();
 });
 
 
-When(/^I click selected accent stones video$/, () => {
+When(/^I click selected accent stones video$/, async() => {
 	const accentstone1videoproduct = new productdetailspage;
-	accentstone1videoproduct.clickaccentstonesvideo();
+	await accentstone1videoproduct.clickaccentstonesvideo();
 });
 
-When(/^I click change accent stone-1 dropdown$/, () => {
+When(/^I click change accent stone-1 dropdown$/, async() => {
 	const accentstone1dropdown = new productdetailspage;
-	accentstone1dropdown.clickchangeaccentstone1();
+	await accentstone1dropdown.clickchangeaccentstone1();
 });
 
-When(/^I click selected accent stone-1 video$/, () => {
+When(/^I click selected accent stone-1 video$/, async() => {
 	const accentstone1video = new productdetailspage;
-	accentstone1video.clickaccentstone1video();
+	await accentstone1video.clickaccentstone1video();
 });
 
-When(/^I click selected accent stone-2 video$/, () => {
+When(/^I click selected accent stone-2 video$/, async() => {
 	const accentstone1video = new productdetailspage;
-	accentstone1video.clickaccentstone2video();
+	await accentstone1video.clickaccentstone2video();
 });
 
-When(/^I click change metal dropdown$/, () => {
+When(/^I click change metal dropdown$/, async() => {
 	const metalarea = new productdetailspage;
-	metalarea.clickchangemetal();
+	await metalarea.clickchangemetal();
 });
 
-When(/^I click select dropdown$/, () => {
+When(/^I click select dropdown$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.clickringselect();
+	await ringsizearea.clickringselect();
 });
 
-When(/^I click ring-size dropdown$/, () => {
+When(/^I click ring-size dropdown$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.clickringsizedropdown();
+	await ringsizearea.clickringsizedropdown();
 });
 
-When(/^I click engrave dropdown$/, () => {
+When(/^I click engrave dropdown$/, async() => {
 	const freeengravingarea = new productdetailspage;
-	freeengravingarea.clicklnkengrave();
+	await freeengravingarea.clicklnkengrave();
 });
 
-When(/^I enter text in engrave field$/, () => {
+When(/^I enter text in engrave field$/, async() => {
 	const freeengravingarea = new productdetailspage;
-	freeengravingarea.enterengrave();
+	await freeengravingarea.enterengrave();
 });
 
 
-When(/^I click the View matching bands$/, () => {
+When(/^I click the View matching bands$/, async() => {
 	const matchingbandarea = new productdetailspage;
-	matchingbandarea.clicklnkmatchingbands();
+	await matchingbandarea.clicklnkmatchingbands();
 });
 
-When(/^I click the View Details link of Agacia$/, () => {
+When(/^I click the View Details link of Agacia$/, async() => {
 	const matchingbandarea = new productdetailspage;
-	matchingbandarea.clickagaciamatchingbands();
+	await matchingbandarea.clickagaciamatchingbands();
 });
 
-When(/^I move to product details$/, () => {
+When(/^I move to product details$/, async() => {
 	const productdetailsarea = new productdetailspage;
-	productdetailsarea.movetoproductdetailsection();
-	BrowserUtil.wait(5);
+	await productdetailsarea.movetoproductdetailsection();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I move to centre stone$/, () => {
+When(/^I move to centre stone$/, async() => {
 	const centrestonearea = new productdetailspage;
-	centrestonearea.movetocenterstonesection();
+	await centrestonearea.movetocenterstonesection();
 });
 
-When(/^I select emerald diamond, heirloom quality and 0.75 size of the diamond$/, () => {
+When(/^I select emerald diamond, heirloom quality and 0.75 size of the diamond$/, async() => {
 	const centrestonearea = new productdetailspage;
-	centrestonearea.clickcenteremarldprecious();
-	BrowserUtil.wait(3);
-	centrestonearea.clickcenterheirloomquality();
-	BrowserUtil.wait(3);
-	centrestonearea.clickcenter06ct();
-	BrowserUtil.wait(3);
+	await centrestonearea.clickcenteremarldprecious();
+	await BrowserUtil.wait(3);
+	await centrestonearea.clickcenterheirloomquality();
+	await BrowserUtil.wait(3);
+	await centrestonearea.clickcenter06ct();
+	await BrowserUtil.wait(3);
 });
-When(/^I select heirloom quality and 1.02 size of the diamond$/, () => {
+When(/^I select heirloom quality and 1.02 size of the diamond$/, async() => {
 	const centrestonearea = new productdetailspage;
-	centrestonearea.clickcenterheirloomquality();
-	BrowserUtil.wait(3);
-	centrestonearea.clickcenter102ct();
-	BrowserUtil.wait(3);
+	await centrestonearea.clickcenterheirloomquality();
+	await BrowserUtil.wait(3);
+	await centrestonearea.clickcenter102ct();
+	await BrowserUtil.wait(3);
 });
 
-When(/^I move to accent stones in product area$/, () => {
+When(/^I move to accent stones in product area$/, async() => {
 	const accentstonesarea = new productdetailspage;
-	accentstonesarea.movetoaccentstonesarea();
-	BrowserUtil.wait(5);
+	await accentstonesarea.movetoaccentstonesarea();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select emerald dimaond, heirloom quality in accent stones of product$/, () => {
+When(/^I select emerald dimaond, heirloom quality in accent stones of product$/, async() => {
 	const accentstonesarea = new productdetailspage;
-	accentstonesarea.clickaccentemarldprecious();
-	BrowserUtil.wait(3);
-	accentstonesarea.clickaccentstonesheirloomquality();
-	BrowserUtil.wait(3);
+	await accentstonesarea.clickaccentemarldprecious();
+	await BrowserUtil.wait(3);
+	await accentstonesarea.clickaccentstonesheirloomquality();
+	await BrowserUtil.wait(3);
 });
 
 
-When(/^I move to accent stone 1$/, () => {
+When(/^I move to accent stone 1$/, async() => {
 	const accentstone1area = new productdetailspage;
-	accentstone1area.movetoaccentstone1section();
+	await accentstone1area.movetoaccentstone1section();
 });
 
-When(/^I select emerald stone and heirloom quality in accent stone 1 of product$/, () => {
+When(/^I select emerald stone and heirloom quality in accent stone 1 of product$/, async() => {
 	const accentstone1area = new productdetailspage;
-	accentstone1area.clickaccent1emarldprecious();
-	BrowserUtil.wait(2)
-	accentstone1area.clickaccent1heirloom();
+	await accentstone1area.clickaccent1emarldprecious();
+	await BrowserUtil.wait(2)
+	await accentstone1area.clickaccent1heirloom();
 });
 
-When(/^I move to accent stone 2$/, () => {
+When(/^I move to accent stone 2$/, async() => {
 	const accentstone2area = new productdetailspage;
-	accentstone2area.movetoaccentstone2section();
+	await accentstone2area.movetoaccentstone2section();
 });
 
-When(/^I click change accent stone-2 dropdown$/, () => {
+When(/^I click change accent stone-2 dropdown$/, async() => {
 	const accentstone2area = new productdetailspage;
-	accentstone2area.clickchangeaccentstone2dropdown();
+	await accentstone2area.clickchangeaccentstone2dropdown();
 });
-When(/^I click change necklace accent stone-2 dropdown$/, () => {
+When(/^I click change necklace accent stone-2 dropdown$/, async() => {
 	const accentstone2area = new productdetailspage;
-	accentstone2area.clickchangeNaccentstone2dropdown();
+	await accentstone2area.clickchangeNaccentstone2dropdown();
 });
-When(/^I select white sapphire stone in accent stone 2 of product$/, () => {
+When(/^I select white sapphire stone in accent stone 2 of product$/, async() => {
 	const accentstone2area = new productdetailspage;
-	accentstone2area.clickaccent2whitesapphireprecious();
+	await accentstone2area.clickaccent2whitesapphireprecious();
 });
 
-When(/^I move to metal section$/, () => {
+When(/^I move to metal section$/, async() => {
 	const metalarea = new productdetailspage;
-	metalarea.movetometalsection();
-	BrowserUtil.wait(5);
+	await metalarea.movetometalsection();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select 18k white gold in metaltype of product$/, () => {
+When(/^I select 18k white gold in metaltype of product$/, async() => {
 	const metalarea = new productdetailspage;
-	metalarea.click18kwhitegold();
-	BrowserUtil.wait(5);
+	await metalarea.click18kwhitegold();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select 14k yellow gold in metaltype of product$/, () => {
+When(/^I select 14k yellow gold in metaltype of product$/, async() => {
 	const metalarea = new productdetailspage;
-	metalarea.click14kyellowgold();
+	await metalarea.click14kyellowgold();
 });
 
 
-When(/^I move to ring size$/, () => {
+When(/^I move to ring size$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.movetoringsize();
-	BrowserUtil.wait(5);
+	await ringsizearea.movetoringsize();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select for ring size dropdown$/, () => {
+When(/^I select for ring size dropdown$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.clickboxchoosesize();
+	await ringsizearea.clickboxchoosesize();
 });
 
-When(/^I select 7UK size dropdown$/, () => {
+When(/^I select 7UK size dropdown$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.select7UKringsize();
+	await ringsizearea.select7UKringsize();
 });
 
-When(/^I move to free engraving$/, () => {
+When(/^I move to free engraving$/, async() => {
 	const freeengravingareaarea = new productdetailspage;
-	freeengravingareaarea.movetoengravingsection();
+	await freeengravingareaarea.movetoengravingsection();
 });
 
-When(/^I click select his ringsize dropdown$/, () => {
+When(/^I click select his ringsize dropdown$/, async() => {
 	const hissizeandbandwidtharea = new productdetailspage;
-	hissizeandbandwidtharea.clickhisringsize();
+	await hissizeandbandwidtharea.clickhisringsize();
 });
 
-When(/^I click select him ringsize dropdown$/, () => {
+When(/^I click select him ringsize dropdown$/, async() => {
 	const himsizeandbandwidtharea = new productdetailspage;
-	himsizeandbandwidtharea.clickhimringsize();
+	await himsizeandbandwidtharea.clickhimringsize();
 });
 
-When(/^I click band width dropdown$/, () => {
+When(/^I click band width dropdown$/, async() => {
 	const hissizeandbandwidtharea = new productdetailspage;
-	hissizeandbandwidtharea.clickhisbandwidthdropdown();
+	await hissizeandbandwidtharea.clickhisbandwidthdropdown();
 });
 
-When(/^I select 7mm band width$/, () => {
+When(/^I select 7mm band width$/, async() => {
 	const hissizeandbandwidtharea = new productdetailspage;
-	hissizeandbandwidtharea.clickselect7mmbandwidth();
-	BrowserUtil.wait(5);
+	await hissizeandbandwidtharea.clickselect7mmbandwidth();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select 11 UK size$/, () => {
+When(/^I select 11 UK size$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.select11UKringsize();
+	await ringsizearea.select11UKringsize();
 });
 
-When(/^I select 11 UK size in him size$/, () => {
+When(/^I select 11 UK size in him size$/, async() => {
 	const himringsizearea = new productdetailspage;
-	himringsizearea.select11UKhisringsize();
-	BrowserUtil.wait(5);
+	await himringsizearea.select11UKhisringsize();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select 11 UK size in mens size$/, () => {
+When(/^I select 11 UK size in mens size$/, async() => {
 	const himringsizearea = new productdetailspage;
-	himringsizearea.select11UKringsize();
-	BrowserUtil.wait(5);
+	await himringsizearea.select11UKringsize();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I enter number, alphabet and special character in special message field$/, () => {
+When(/^I enter number, alphabet and special character in special message field$/, async() => {
 	const freeengravingarea = new productdetailspage;
-	freeengravingarea.enternameinengraving();
+	await freeengravingarea.enternameinengraving();
 });
 
-When(/^I click add to cart button$/, () => {
+When(/^I click add to cart button$/, async() => {
 	const cartarea = new productdetailspage;
-	cartarea.clickaddtocart();
+	await cartarea.clickaddtocart();
 });
 
-When(/^I click matching band product view details link$/, () => {
+When(/^I click matching band product view details link$/, async() => {
 	const matchingbandarea = new productdetailspage;
-	matchingbandarea.clickmatchingbandviewdetails();
+	await matchingbandarea.clickmatchingbandviewdetails();
 });
 
-When(/^I click ring size of matching band product in full details popup$/, () => {
+When(/^I click ring size of matching band product in full details popup$/, async() => {
 	const matchingbandpopuparea = new productdetailspage;
-	matchingbandpopuparea.clickmatchingbandringsize();
+	await matchingbandpopuparea.clickmatchingbandringsize();
 });
 
-When(/^I move to recently viewed area$/, () => {
+When(/^I move to recently viewed area$/, async() => {
 	const recentlyviewedarea = new productdetailspage;
-	recentlyviewedarea.movetorecentlyview();
+	await recentlyviewedarea.movetorecentlyview();
 });
 
-When(/^I click product from recently viewed area$/, () => {
+When(/^I click product from recently viewed area$/, async() => {
 	const recentlyviewedarea = new productdetailspage;
-	recentlyviewedarea.clickrecentlyviewedproduct();
-	BrowserUtil.wait(5)
+	await recentlyviewedarea.clickrecentlyviewedproduct();
+	await BrowserUtil.wait(5)
 });
 
-When(/^I move to free shipping and global return area$/, () => {
+When(/^I move to free shipping and global return area$/, async() => {
 	const freeshippingarea = new productdetailspage;
-	freeshippingarea.movetofreeshippingsection();
+	await freeshippingarea.movetofreeshippingsection();
 });
 
-When(/^I click return policy link$/, () => {
+When(/^I click return policy link$/, async() => {
 	const freeshippingarea = new productdetailspage;
-	freeshippingarea.clicklnkmoneyguarantee();
-	BrowserUtil.wait(3)
+	await freeshippingarea.clicklnkmoneyguarantee();
+	await BrowserUtil.wait(3)
 });
 
-When(/^I click warranty link$/, () => {
+When(/^I click warranty link$/, async() => {
 	const freeshippingarea = new productdetailspage;
-	freeshippingarea.clicklnkwarranty();
+	await freeshippingarea.clicklnkwarranty();
 });
 
-When(/^I click bracelet length dropdown$/, () => {
+When(/^I click bracelet length dropdown$/, async() => {
 	const braceletarea = new productdetailspage;
-	BrowserUtil.wait(3)
-	braceletarea.clickbraceletlengthdropdown();
+	await BrowserUtil.wait(3)
+	await braceletarea.clickbraceletlengthdropdown();
 });
 
-When(/^I click box bracelet length dropdown$/, () => {
+When(/^I click box bracelet length dropdown$/, async() => {
 	const braceletarea = new productdetailspage;
-	braceletarea.clickboxbraceletlengthdropdown();
+	await braceletarea.clickboxbraceletlengthdropdown();
 });
 
-When(/^I select 6mm bracelet length$/, () => {
+When(/^I select 6mm bracelet length$/, async() => {
 	const braceletarea = new productdetailspage;
-	braceletarea.select6mmbraceletlength();
-	BrowserUtil.wait(5)
+	await braceletarea.select6mmbraceletlength();
+	await BrowserUtil.wait(5)
 });
 
-When(/^I select 7.5mm bracelet length$/, () => {
+When(/^I select 7.5mm bracelet length$/, async() => {
 	const braceletarea = new productdetailspage;
-	braceletarea.select75mmbraceletlength();
-	BrowserUtil.wait(5)
+	await braceletarea.select75mmbraceletlength();
+	await BrowserUtil.wait(5)
 });
 
 
-When(/^I click customize chain length$/, () => {
+When(/^I click customize chain length$/, async() => {
 	const necklacearea = new productdetailspage;
-	necklacearea.clickcustomizechainlength();
+	await necklacearea.clickcustomizechainlength();
 });
 
 
-When(/^I select yellow gold metal$/, () => {
+When(/^I select yellow gold metal$/, async() => {
 	const metalarea = new productdetailspage
-	metalarea.Select18KYG();
+	await metalarea.Select18KYG();
 });
 
-When(/^I click 18 inch chain button$/, () => {
+When(/^I click 18 inch chain button$/, async() => {
 	const chainarea = new productdetailspage
-	chainarea.Select18inchbutton();
+	await chainarea.Select18inchbutton();
 });
 
-When(/^I click custom diamond$/, () => {
+When(/^I click custom diamond$/, async() => {
 	const centerstonearea = new productdetailspage
-	centerstonearea.clickringcustomdiamond();
-	BrowserUtil.wait(5);
+	await centerstonearea.clickringcustomdiamond();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click custom lab diamond$/, () => {
+When(/^I click custom lab diamond$/, async() => {
 	const centerstonearea = new productdetailspage
-	centerstonearea.clickringcustomlabdiamond();
-	BrowserUtil.wait(5);
+	await centerstonearea.clickringcustomlabdiamond();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click Men'scategory in breadcrumb$/, () => {
+When(/^I click Men'scategory in breadcrumb$/, async() => {
 	const categoryarea = new productdetailspage;
-    categoryarea.clickmensringcategory();
+    await categoryarea.clickmensringcategory();
 });
-When(/^I click customize earring back dropdown$/, () => {
+When(/^I click customize earring back dropdown$/, async() => {
 	const earringarea = new productdetailspage;
-	BrowserUtil.wait(5);
-	earringarea.clickearringdropdown();
-	BrowserUtil.wait(5);
+	await BrowserUtil.wait(5);
+	await earringarea.clickearringdropdown();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select 8us size$/, () => {
+When(/^I select 8us size$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.click8usringsize();
-	BrowserUtil.wait(5);
+	await ringsizearea.click8usringsize();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select 11us size$/, () => {
+When(/^I select 11us size$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.click11usringsize();
-	BrowserUtil.wait(5);
+	await ringsizearea.click11usringsize();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I select 11us his size$/, () => {
+When(/^I select 11us his size$/, async() => {
 	const ringsizearea = new productdetailspage;
-	ringsizearea.click11ushisringsize();
-	BrowserUtil.wait(5);
+	await ringsizearea.click11ushisringsize();
+	await BrowserUtil.wait(5);
 });
 
-When(/^I click choose ring size dropdown field$/, () => {
+When(/^I click choose ring size dropdown field$/, async() => {
 	const chooseringsizearea = new productdetailspage;
-	chooseringsizearea.clickchooseringsize();
-	BrowserUtil.wait(5)
+	await chooseringsizearea.clickchooseringsize();
+	await BrowserUtil.wait(5)
 });
 
 
-When(/^I click the Ring Size Dropdown$/, () => {
+When(/^I click the Ring Size Dropdown$/, async() => {
 	const chooseringsizearea = new productdetailspage;
-	chooseringsizearea.selectRingSizeDropdown();
+	await chooseringsizearea.selectRingSizeDropdown();
 });
 
 
-When(/^I click choose mens ring size dropdown field$/, () => {
+When(/^I click choose mens ring size dropdown field$/, async() => {
 	const chooseringsizearea = new productdetailspage;
-	chooseringsizearea.clickchoosehimringsize();
-	BrowserUtil.wait(5)
+	await chooseringsizearea.clickchoosehimringsize();
+	await BrowserUtil.wait(5)
 });
 
-When(/^I select Natural AAA button in centre stone$/, () => {
+When(/^I select Natural AAA button in centre stone$/, async() => {
 	const qualityarea = new productdetailspage;
-	qualityarea.clickcentrestonenaturalAAA();
-	BrowserUtil.wait(5)
+	await qualityarea.clickcentrestonenaturalAAA();
+	await BrowserUtil.wait(5)
 });
 
-When(/^I click heirloom quality and 10 cts size of centre stone$/, () => {
+When(/^I click heirloom quality and 10 cts size of centre stone$/, async() => {
 	const qualityarea = new productdetailspage;
-	qualityarea.clickcenterheirloomquality();
-	BrowserUtil.wait(5)
-	qualityarea.clickcenter102ct();
-	BrowserUtil.wait(5)
+	await qualityarea.clickcenterheirloomquality();
+	await BrowserUtil.wait(5)
+	await qualityarea.clickcenter102ct();
+	await BrowserUtil.wait(5)
 });
 
-When(/^I click screw back$/, () => {
+When(/^I click screw back$/, async() => {
 	const earringarea = new productdetailspage;
-	BrowserUtil.wait(5)
-	earringarea.clickscrewback();
-	BrowserUtil.wait(5)
+	await BrowserUtil.wait(5)
+	await earringarea.clickscrewback();
+	await BrowserUtil.wait(5)
 });
 
-When(/^I move to couple centre stone$/, () => {
+When(/^I move to couple centre stone$/, async() => {
 	const earringarea = new productdetailspage;
-	earringarea.movetocouplecentrestone();
-	BrowserUtil.wait(3)
+	await earringarea.movetocouplecentrestone();
+	await BrowserUtil.wait(3)
 });
 
-When(/^I select Add to cart button$/, () => {
+When(/^I select Add to cart button$/, async() => {
 	const productpoparea = new productdetailspage;
-    productpoparea.clickaddtocartbtn();
-	BrowserUtil.wait(5);
+    await productpoparea.clickaddtocartbtn();
+	await BrowserUtil.wait(5);
 });
-When(/^I move to Diamonderelogo$/, () => {
+When(/^I move to Diamonderelogo$/, async() => {
 	const productarea = new productdetailspage;
-	productarea.movetologo();
+	await productarea.movetologo();
 });
 
 
@@ -983,15 +983,7 @@ Then(/^I ensure selected accent stone-2 video is displayed$/, async() => {
 Then(/^I ensure selected accent stone-2 video popup is displayed$/, async() => {
 	const accentstone2product = new productdetailspage;
 	await expect(accentstone2product.productvideopopup).toExist();
-});
-
-
-
-
-
-
-
-
+})
 
 Then(/^I ensure metal section is displayed$/, async() => {
 	const metalarea = new productdetailspage;
@@ -1806,8 +1798,8 @@ Then(/^I ensure price changed after changing chain$/, async() => {
 	await expect(priceValue).not.toEqual(data.Price.changedpricebychain);
 });
 
-Given(/^I browse page 3 of Claudine$/, () => {
-	browser.url(dmd.config.ClaudinePage3);
+Given(/^I browse page 3 of Claudine$/, async() => {
+	await browser.url(dmd.config.ClaudinePage3);
 });
 
 
@@ -1818,27 +1810,27 @@ Then(/^I verify the Precious stone selection options and Quality selection optio
 });
 
 
-When(/^I select Ruby under Precious stone$/, () => {
+When(/^I select Ruby under Precious stone$/, async() => {
 	const agaciaBand = new productdetailspage;
-	agaciaBand.selectRubyBand();
+	await agaciaBand.selectRubyBand();
 });
 
 
-When(/^I select Quality as Heirloom$/, () => {
+When(/^I select Quality as Heirloom$/, async() => {
 	const agaciaBand = new productdetailspage;
-	agaciaBand.selectHeirloomBand();
+	await agaciaBand.selectHeirloomBand();
 });
 
 
-When(/^I click Add ring and band button$/, () => {
+When(/^I click Add ring and band button$/, async() => {
 	const agaciaBand = new productdetailspage;
-	agaciaBand.addRingAndBand();
+	await agaciaBand.addRingAndBand();
 });
 
 
-When(/^I select the matching band ring size$/, () => {
+When(/^I select the matching band ring size$/, async() => {
 	const agaciaBand = new productdetailspage;
-	agaciaBand.addBandSize();
+	await agaciaBand.addBandSize();
 });
 
 
@@ -1855,9 +1847,9 @@ Then(/^I ensure cable button selected and box button are displayed$/, async() =>
 });
 
 
-When(/^I click Box button$/, () => {
+When(/^I click Box button$/, async() => {
 	const chainSilver = new productdetailspage;
-	chainSilver.clickBox();
+	await chainSilver.clickBox();
 });
 
 

@@ -73,5 +73,9 @@ exports.config = {
     imageJpg: "../Diamondere/Diamondere/TestData/Images/amina_wg_pt_0.jpg",
     imagePng: "../Diamondere/Diamondere/TestData/Images/amina_wg_pt_0.png",
     
-    ClaudinePage3: "https://staging.diamondere.com/p/rings-vintage-claudine-1973-1962?metal=14k-white-gold&stones=emerald&stones=si-diamond"
+    ClaudinePage3: "https://staging.diamondere.com/p/rings-vintage-claudine-1973-1962?metal=14k-white-gold&stones=emerald&stones=si-diamond",
+
+    registerAPI: "https://staging.diamondere.com/v1/api/register",
+    loginAPI: "https://staging.diamondere.com/v1/api/login",
+    addToCartAPI: "https://staging.diamondere.com/v1/api/cart/add"
 }

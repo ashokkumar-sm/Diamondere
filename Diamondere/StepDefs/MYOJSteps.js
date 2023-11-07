@@ -8,16 +8,16 @@ const data = require('../TestData/MYOJ.json');
 const context = require("../../CommonUtils/ScenarioContext")
 
 
-When(/^I remove products if already added in cart$/, () => {
+When(/^I remove products if already added in cart$/, async() => {
 	const makeCartEmpty = new MYOJ;
-    makeCartEmpty.removeDesignInCart();
+    await makeCartEmpty.removeDesignInCart();
 });
 
 
 //Scenario - 1
-When(/^I select Start with a Diamond under Rings menu$/, () => {
+When(/^I select Start with a Diamond under Rings menu$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectRingsSwad();
+    await startWithADiamond.selectRingsSwad();
 });
 
 
@@ -31,9 +31,9 @@ Then(/^I ensure the Make Your Diamond Engagement Ring page is displayed with the
 
 
 //Scenario - 2
-When(/^I select Start with a Diamond under Engagement menu$/, () => {
+When(/^I select Start with a Diamond under Engagement menu$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectEngagementSwad();
+    await startWithADiamond.selectEngagementSwad();
 });
 
 
@@ -47,9 +47,9 @@ Then(/^I ensure the Make Your Diamond Engagement Ring page is displayed with the
 
 
 //Scenario - 3
-When(/^I select Start with a Diamond under Earrings menu$/, () => {
+When(/^I select Start with a Diamond under Earrings menu$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectEarringsSwad();
+    await startWithADiamond.selectEarringsSwad();
 });
 
 
@@ -63,9 +63,9 @@ Then(/^I ensure the Make Your Diamond Earrings page is displayed with the banner
 
 
 //Scenario - 4
-When(/^I select Start with a Lab Diamond under Necklaces menu$/, () => {
+When(/^I select Start with a Lab Diamond under Necklaces menu$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectNecklacesSwald();
+    await startWithALabDiamond.selectNecklacesSwald();
 });
 
 
@@ -79,9 +79,9 @@ Then(/^I ensure the Make Your Lab Diamond Necklaces page is displayed with the b
 
 
 //Scenario - 5
-When(/^I select Start with a Lab Diamond under Men's menu$/, () => {
+When(/^I select Start with a Lab Diamond under Men's menu$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMensSwald();
+    await startWithALabDiamond.selectMensSwald();
 });
 
 
@@ -95,9 +95,9 @@ Then(/^I ensure the Make Your Lab Diamond Men's Rings page is displayed with the
 
 
 //Scenario - 6
-Given(/^I browse Start with a Diamond page of Rings menu$/, () => {
-    browser.url(dmd.config.ringsSWADUrl);
-    BrowserUtil.wait(5)
+Given(/^I browse Start with a Diamond page of Rings menu$/, async() => {
+    await browser.url(dmd.config.ringsSWADUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -111,10 +111,10 @@ Then(/^I verify the presence of breadcrumb for rings and the number of available
 });
 
 
-When(/^I click Home and Loose Diamonds links in breadcrumb$/, () => {
+When(/^I click Home and Loose Diamonds links in breadcrumb$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectLinkHome();
-    startWithADiamond.selectLinkLooseDiamonds();
+    await startWithADiamond.selectLinkHome();
+    await startWithADiamond.selectLinkLooseDiamonds();
 });
 
 
@@ -124,9 +124,9 @@ Then(/^I ensure the links redirects to respective Home and Loose Diamonds page$/
 });
 
 
-When(/^I browse Start with a Diamond page of Earrings menu$/, () => {
-    browser.url(dmd.config.earringsSWADUrl);
-    BrowserUtil.wait(5)
+When(/^I browse Start with a Diamond page of Earrings menu$/, async() => {
+    await browser.url(dmd.config.earringsSWADUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -140,9 +140,9 @@ Then(/^I verify the presence of breadcrumb for earrings and the number of availa
 });
 
 
-When(/^I browse Start with a Diamond page of Necklaces menu$/, () => {
-    browser.url(dmd.config.necklacesSWADUrl);
-    BrowserUtil.wait(5)
+When(/^I browse Start with a Diamond page of Necklaces menu$/, async() => {
+    await browser.url(dmd.config.necklacesSWADUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -156,9 +156,9 @@ Then(/^I verify the presence of breadcrumb for necklaces and the number of avail
 });
 
 
-When(/^I browse Start with a Diamond page of Men's menu$/, () => {
-    browser.url(dmd.config.mensSWADUrl);
-    BrowserUtil.wait(5)
+When(/^I browse Start with a Diamond page of Men's menu$/, async() => {
+    await browser.url(dmd.config.mensSWADUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -173,9 +173,9 @@ Then(/^I verify the presence of breadcrumb for men's rings and the number of ava
 
 
 //Sceanrio - 7
-Given(/^I browse Start with a Lab Diamond page of Rings menu$/, () => {
-	browser.url(dmd.config.ringsSWALDUrl);
-    BrowserUtil.wait(5)
+Given(/^I browse Start with a Lab Diamond page of Rings menu$/, async() => {
+	await browser.url(dmd.config.ringsSWALDUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -189,10 +189,10 @@ Then(/^I verify the presence of breadcrumb for rings and the number of available
 });
 
 
-When(/^I click Home and Loose Lab Diamonds links in breadcrumb$/, () => {
+When(/^I click Home and Loose Lab Diamonds links in breadcrumb$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectLinkHome();
-    startWithALabDiamond.selectLinkLooseLabDiamonds();
+    await startWithALabDiamond.selectLinkHome();
+    await startWithALabDiamond.selectLinkLooseLabDiamonds();
 });
 
 
@@ -202,9 +202,9 @@ Then(/^I ensure the links redirects to respective Home and Loose Lab Diamonds pa
 });
 
 
-When(/^I browse Start with a Lab Diamond page of Earrings menu$/, () => {
-	browser.url(dmd.config.earringsSWALDUrl);
-    BrowserUtil.wait(5)
+When(/^I browse Start with a Lab Diamond page of Earrings menu$/, async() => {
+	await browser.url(dmd.config.earringsSWALDUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -218,9 +218,9 @@ Then(/^I verify the presence of breadcrumb for earrings and the number of availa
 });
 
 
-When(/^I browse Start with a Lab Diamond page of Necklaces menu$/, () => {
-	browser.url(dmd.config.necklacesSWALDUrl);
-    BrowserUtil.wait(5)
+When(/^I browse Start with a Lab Diamond page of Necklaces menu$/, async() => {
+	await browser.url(dmd.config.necklacesSWALDUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -234,9 +234,9 @@ Then(/^I verify the presence of breadcrumb for necklaces and the number of avail
 });
 
 
-When(/^I browse Start with a Lab Diamond page of Men's menu$/, () => {
-	browser.url(dmd.config.mensSWALDUrl);
-    BrowserUtil.wait(5)
+When(/^I browse Start with a Lab Diamond page of Men's menu$/, async() => {
+	await browser.url(dmd.config.mensSWALDUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -376,9 +376,9 @@ Then(/^I verify the Ways to Save More section along with the dropdown options$/,
 
 
 //Scenario - 12
-When(/^I hover over Ways to Save More text$/, () => {
+When(/^I hover over Ways to Save More text$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoverWaysToSaveMore();
+    await startWithADiamond.hoverWaysToSaveMore();
 });
 
 
@@ -428,9 +428,9 @@ Then(/^I verify the Bands selection options are not displayed in the Ways to Sav
 
 
 //Scenario - 16
-When(/^I hover over Bands selection dropdown$/, () => {
+When(/^I hover over Bands selection dropdown$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoverBandsSelection();
+    await startWithADiamond.hoverBandsSelection();
 });
 
 
@@ -475,9 +475,9 @@ Then(/^I verify the Saving column is not displayed when Standard delivery option
 });
 
 
-When(/^I select Easy delivery option under Ways to Save More$/, () => {
+When(/^I select Easy delivery option under Ways to Save More$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectEasyDelivery();
+    await startWithALabDiamond.selectEasyDelivery();
 });
 
 
@@ -489,10 +489,10 @@ Then(/^I ensure the Saving column is displayed in the diamond listing$/, async()
 
 
 //Scenario - 19
-When(/^I select Both Bands option under Ways to Save More$/, () => {
+When(/^I select Both Bands option under Ways to Save More$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoverBandsSelection();
-    startWithADiamond.selectBothBands();
+    await startWithADiamond.hoverBandsSelection();
+    await startWithADiamond.selectBothBands();
 });
 
 
@@ -506,10 +506,10 @@ Then(/^I ensure the men's and women's band tabs along with the icons are display
 
 
 //Scenario - 20
-When(/^I select Men's Band option under Ways to Save More$/, () => {
+When(/^I select Men's Band option under Ways to Save More$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.hoverBandsSelection();
-    startWithALabDiamond.selectMensBands();
+    await startWithALabDiamond.hoverBandsSelection();
+    await startWithALabDiamond.selectMensBands();
 });
 
 
@@ -520,17 +520,17 @@ Then(/^I ensure the men's band tab along with the icon is displayed$/, async() =
 });
 
 
-When(/^I select Women's Band option under Ways to Save More of same page$/, () => {
+When(/^I select Women's Band option under Ways to Save More of same page$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.hoverMensBandSelection();
-    startWithALabDiamond.selectWomensBands();
+    await startWithALabDiamond.hoverMensBandSelection();
+    await startWithALabDiamond.selectWomensBands();
 });
 
 
-When(/^I select Women's Band option under Ways to Save More$/, () => {
+When(/^I select Women's Band option under Ways to Save More$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.hoverBandsSelection();
-    startWithALabDiamond.selectWomensBands();
+    await startWithALabDiamond.hoverBandsSelection();
+    await startWithALabDiamond.selectWomensBands();
 });
 
 
@@ -542,11 +542,11 @@ Then(/^I ensure the women's band tab along with the icon is displayed$/, async()
 
 
 //Scenario - 21
-When(/^I select multiple savings option under Ways to Save More$/, () => {
+When(/^I select multiple savings option under Ways to Save More$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoverBandsSelection();
-    startWithADiamond.selectBothBands();
-    startWithADiamond.selectEasyDelivery();
+    await startWithADiamond.hoverBandsSelection();
+    await startWithADiamond.selectBothBands();
+    await startWithADiamond.selectEasyDelivery();
 });
 
 
@@ -579,9 +579,9 @@ Then(/^I ensure the MYOJ page updates from Earrings to Necklaces$/, async() => {
 
 
 //Scenario - 24
-When(/^I select Oval shape filter$/, () => {
+When(/^I select Oval shape filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectOvalShape();
+    await startWithADiamond.selectOvalShape();
 });
 
 
@@ -605,14 +605,14 @@ Then(/^I ensure the few filters are present in the page$/, async() => {
 
 
 //Scenario - 26
-When(/^I select More Filters button$/, () => {
+When(/^I select More Filters button$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
+    await startWithADiamond.selectMoreFilters();
 });
 
-When(/^I hover over each filter name$/, () => {
+When(/^I hover over each filter name$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoveringFilters();
+    await startWithADiamond.hoveringFilters();
 });
 
 
@@ -623,15 +623,15 @@ Then(/^I ensure the preview text description is displayed$/, async() => {
 
 
 //Scenario - 27
-When(/^I hover over Clarity filter$/, () => {
+When(/^I hover over Clarity filter$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.hoveringClarityFilter();
+    await startWithALabDiamond.hoveringClarityFilter();
 });
 
 
-When(/^I click View Details link in the preview of Clarity filter$/, () => {
+When(/^I click View Details link in the preview of Clarity filter$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.clickClarityPopup();
+    await startWithALabDiamond.clickClarityPopup();
 });
 
 
@@ -641,9 +641,9 @@ Then(/^I ensure the Clarity popup with detailed description is displayed$/, asyn
 });
 
 
-When(/^I click the X button in the filter description popup$/, () => {
+When(/^I click the X button in the filter description popup$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.clickXPopup();
+    await startWithALabDiamond.clickXPopup();
 });
 
 
@@ -654,15 +654,15 @@ Then(/^I ensure the filter description popup is closed$/, async() => {
 
 
 //Scenario - 28
-When(/^I hover over Color filter$/, () => {
+When(/^I hover over Color filter$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.hoveringColorFilter();
+    await startWithALabDiamond.hoveringColorFilter();
 });
 
 
-When(/^I click View Details link in the preview of Color filter$/, () => {
+When(/^I click View Details link in the preview of Color filter$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.clickColorPopup();
+    await startWithALabDiamond.clickColorPopup();
 });
 
 
@@ -673,15 +673,15 @@ Then(/^I ensure the Color popup with detailed description is displayed$/, async(
 
 
 //Scenario - 29
-When(/^I hover over Symmetry filter$/, () => {
+When(/^I hover over Symmetry filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoveringSymmetryFilter();
+    await startWithADiamond.hoveringSymmetryFilter();
 });
 
 
-When(/^I click View Details link in the preview of Symmetry filter$/, () => {
+When(/^I click View Details link in the preview of Symmetry filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.clickSymmetryPopup();
+    await startWithADiamond.clickSymmetryPopup();
 });
 
 
@@ -692,15 +692,15 @@ Then(/^I ensure the Symmetry popup with detailed description is displayed$/, asy
 
 
 //Scenario - 30
-When(/^I hover over Cut filter$/, () => {
+When(/^I hover over Cut filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoveringCutFilter();
+    await startWithADiamond.hoveringCutFilter();
 });
 
 
-When(/^I click View Details link in the preview of Cut filter$/, () => {
+When(/^I click View Details link in the preview of Cut filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.clickCutPopup();
+    await startWithADiamond.clickCutPopup();
 });
 
 
@@ -733,9 +733,9 @@ Then(/^I ensure the filters are present in the page$/, async() => {
 
 
 //Scenario - 32
-When(/^I select G color filter$/, () => {
+When(/^I select G color filter$/, async() => {
     const startWithADiamond = new MYOJ;
-    startWithADiamond.selectGColor();
+    await startWithADiamond.selectGColor();
 });
 
 
@@ -745,9 +745,9 @@ Then(/^I ensure the listing display only the Oval shaped G to M colored diamonds
 });
 
 
-When(/^I select Reset Filters button$/, () => {
+When(/^I select Reset Filters button$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectResetFilters();
+    await startWithADiamond.selectResetFilters();
 });
 
 
@@ -758,9 +758,9 @@ Then(/^I ensure the diamond listing updates to the default$/, async () => {
 
 
 //Scenario - 33
-When(/^I get the number of available diamonds$/, () => {
+When(/^I get the number of available diamonds$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.getNoOfDiamonds();
+    await startWithADiamond.getNoOfDiamonds();
 });
 
 
@@ -783,9 +783,9 @@ Then(/^I validate the presence of Gems filter with the icons, options and pre-se
 });
 
 
-When(/^I select Diamond gems filter$/, () => {
+When(/^I select Diamond gems filter$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectNaturalDiamond();
+    await startWithALabDiamond.selectNaturalDiamond();
 });
 
 
@@ -799,9 +799,9 @@ Then(/^I validate the presence of Gems filter with the icons, options and pre-se
 });
 
 
-When(/^I select Lab Diamond gems filter$/, () => {
+When(/^I select Lab Diamond gems filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectLabDiamond();
+    await startWithADiamond.selectLabDiamond();
 });
 
 
@@ -876,9 +876,9 @@ Then(/^I validate the Shapes filter with the options for Men's rings$/, async() 
 
 
 //Scenario - 37
-When(/^I select the shapes available for Rings$/, () => {
+When(/^I select the shapes available for Rings$/, async() => {
     const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.ringsLengthAndBreadth();
+    await startWithALabDiamond.ringsLengthAndBreadth();
 });
 
 
@@ -890,9 +890,9 @@ Then(/^I ensure the Length and Breadth ranges displays the pre-fixed range accor
 
 
 //Scenario - 38
-When(/^I select the shapes available for Earrings$/, () => {
+When(/^I select the shapes available for Earrings$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.earringsLengthAndBreadth();
+    await startWithADiamond.earringsLengthAndBreadth();
 });
 
 
@@ -904,9 +904,9 @@ Then(/^I ensure the Length and Breadth ranges displays the pre-fixed range accor
 
 
 //Scenario - 39
-When(/^I select the shapes available for Necklaces$/, () => {
+When(/^I select the shapes available for Necklaces$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.necklacesLengthAndBreadth();
+    await startWithALabDiamond.necklacesLengthAndBreadth();
 });
 
 
@@ -918,9 +918,9 @@ Then(/^I ensure the Length and Breadth ranges displays the pre-fixed range accor
 
 
 //Scenario - 40
-When(/^I select the shapes available for Men's rings$/, () => {
+When(/^I select the shapes available for Men's rings$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.mensRingsLengthAndBreadth();
+    await startWithADiamond.mensRingsLengthAndBreadth();
 });
 
 
@@ -945,9 +945,9 @@ Then(/^I Validate the price range filter with slider, slider thumbs, textboxes a
 
 
 //Scenario - 42
-When(/^I drag the min and max Price filter sliders$/, () => {
+When(/^I drag the min and max Price filter sliders$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.dragPriceSlider();
+    await startWithADiamond.dragPriceSlider();
 });
 
 
@@ -958,9 +958,9 @@ Then(/^I ensure the diamond listing updates according to the dragged price range
 
 
 //Scenario - 43
-When(/^I enter the min and max price range$/, () => {
+When(/^I enter the min and max price range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterPriceRange();
+    await startWithALabDiamond.enterPriceRange();
 });
 
 Then(/^I ensure the slider thumbs automatically points to the entered price range in the textbox$/, async() => {
@@ -979,9 +979,9 @@ Then(/^I ensure the pointed price range is displayed in textboxes$/, async() => 
 
 
 //Scenario - 45
-Given(/^I browse Loose Diamonds page$/, () => {
-	browser.url(dmd.config.looseDiamondsUrl);
-    BrowserUtil.wait(5)
+Given(/^I browse Loose Diamonds page$/, async() => {
+	await browser.url(dmd.config.looseDiamondsUrl);
+    await BrowserUtil.wait(5)
 });
 
 
@@ -993,23 +993,23 @@ Then(/^I ensure the min and max price range filter displays the pre-fixed range$
 
 
 //Scenario - 46
-Given(/^I browse Loose Lab Diamonds page$/, () => {
-	browser.url(dmd.config.looseLabDiamondsUrl);
-    BrowserUtil.wait(5)
+Given(/^I browse Loose Lab Diamonds page$/, async() => {
+	await browser.url(dmd.config.looseLabDiamondsUrl);
+    await BrowserUtil.wait(5)
 });
 
 
 Then(/^I ensure the diamond listing updates according to the entered price range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const looseLabDiamonds = await browser.getUrl();
     await expect(looseLabDiamonds).toEqual(data.Filters.EnteredPriceUrl);
 });
 
 
 //Scenario - 47
-When(/^I enter min price lesser than 50$/, () => {
+When(/^I enter min price lesser than 50$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.enterInvalidMinPrice();
+    await startWithADiamond.enterInvalidMinPrice();
 });
 
 
@@ -1020,9 +1020,9 @@ Then(/^I ensure the invalid min price message is displayed$/, async() => {
 
 
 //Scenario - 48
-When(/^I enter max price greater than 99999$/, () => {
+When(/^I enter max price greater than 99999$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.enterInvalidMaxPrice();
+    await startWithADiamond.enterInvalidMaxPrice();
 });
 
 Then(/^I ensure the invalid max price message is displayed$/, async() => {
@@ -1032,9 +1032,9 @@ Then(/^I ensure the invalid max price message is displayed$/, async() => {
 
 
 //Scenario - 49
-When(/^I enter alphabets and special characters in the price range textboxes$/, () => {
+When(/^I enter alphabets and special characters in the price range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterInvalidCharPrice();
+    await startWithALabDiamond.enterInvalidCharPrice();
 });
 
 
@@ -1046,9 +1046,9 @@ Then(/^I ensure the input validation is implemented for price range textboxes$/,
 
 
 //Scenario - 50
-When(/^I enter decimal values in min and max price range textboxes$/, () => {
+When(/^I enter decimal values in min and max price range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterDecimalPrice();
+    await startWithALabDiamond.enterDecimalPrice();
 });
 
 
@@ -1060,11 +1060,11 @@ Then(/^I ensure the invalid decimal price message is displayed$/, async() => {
 
 
 //Scenario - 51
-When(/^I enter invalid min and max price range$/, () => {
+When(/^I enter invalid min and max price range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterInvalidMinPrice();
-    startWithALabDiamond.enterInvalidMaxPrice();
-    ElementUtil.click(startWithALabDiamond.pricerightbox, "Clicking max price box")
+    await startWithALabDiamond.enterInvalidMinPrice();
+    await startWithALabDiamond.enterInvalidMaxPrice();
+    await ElementUtil.click(startWithALabDiamond.pricerightbox, "Clicking max price box")
 });
 
 
@@ -1083,15 +1083,15 @@ Then(/^I ensure the invalid price message is automatically disappeared$/, async(
 
 
 //Scenario - 52
-When(/^I select the increment button in the min price textbox$/, () => {
+When(/^I select the increment button in the min price textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectIncrementPrice();
+    await looseDiamonds.selectIncrementPrice();
 });
 
 
-When(/^I select the decrement button in the max price textbox$/, () => {
+When(/^I select the decrement button in the max price textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectDecrementPrice();
+    await looseDiamonds.selectDecrementPrice();
 });
 
 
@@ -1113,23 +1113,23 @@ Then(/^I Validate the carat range filter with slider, slider thumbs and textboxe
 
 
 //Scenario - 54
-When(/^I drag the min and max Carat filter sliders$/, () => {
+When(/^I drag the min and max Carat filter sliders$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.dragCaratSlider();
+    await startWithADiamond.dragCaratSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged carat range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DraggedCaratUrl);
 });
 
 
 //Scenario - 55
-When(/^I enter the min and max carat range$/, () => {
+When(/^I enter the min and max carat range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterCaratRange();
+    await startWithALabDiamond.enterCaratRange();
 });
 
 
@@ -1158,16 +1158,16 @@ Then(/^I ensure the min and max carat range filter displays the pre-fixed range$
 
 //Scenario - 58
 Then(/^I ensure the diamond listing updates according to the entered carat range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const looseLabDiamonds = await browser.getUrl();
     await expect(looseLabDiamonds).toEqual(data.Filters.EnteredCaratUrl);
 });
 
 
 //Scenario - 59
-When(/^I enter min carat lesser than 0.2$/, () => {
+When(/^I enter min carat lesser than 0.2$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.enterInvalidMinCarat();
+    await startWithADiamond.enterInvalidMinCarat();
 });
 
 
@@ -1178,9 +1178,9 @@ Then(/^I ensure the invalid min carat message is displayed$/, async() => {
 
 
 //Scenario - 60
-When(/^I enter max carat greater than 30$/, () => {
+When(/^I enter max carat greater than 30$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.enterInvalidMaxCarat();
+    await startWithADiamond.enterInvalidMaxCarat();
 });
 
 
@@ -1191,9 +1191,9 @@ Then(/^I ensure the invalid max carat message is displayed$/, async() => {
 
 
 //Scenario - 61
-When(/^I enter alphabets and special characters in the carat range textboxes$/, () => {
+When(/^I enter alphabets and special characters in the carat range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterInvalidCharCarat();
+    await startWithALabDiamond.enterInvalidCharCarat();
 });
 
 
@@ -1205,23 +1205,23 @@ Then(/^I ensure the input validation is implemented for carat range textboxes$/,
 
 
 //Scenario - 62
-When(/^I enter decimal values with two decimal places in carat range textboxes$/, () => {
+When(/^I enter decimal values with two decimal places in carat range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterDecimalCarat();
+    await startWithALabDiamond.enterDecimalCarat();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the entered decimal carat range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.DecimalCaratUrl);
 });
 
 
 //Scenario - 63
-When(/^I enter decimal values with more than two decimal places in carat range textboxes$/, () => {
+When(/^I enter decimal values with more than two decimal places in carat range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterInvalidDecimalCarat();
+    await startWithALabDiamond.enterInvalidDecimalCarat();
 });
 
 
@@ -1233,11 +1233,11 @@ Then(/^I ensure the invalid decimal carat message is displayed$/, async() => {
 
 
 //Scenario - 64
-When(/^I enter invalid min and max carat range$/, () => {
+When(/^I enter invalid min and max carat range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterInvalidMinCarat();
-    startWithALabDiamond.enterInvalidMaxCarat();
-    ElementUtil.click(startWithALabDiamond.caratrightbox, "Clicking max carat box")
+    await startWithALabDiamond.enterInvalidMinCarat();
+    await startWithALabDiamond.enterInvalidMaxCarat();
+    await ElementUtil.click(startWithALabDiamond.caratrightbox, "Clicking max carat box")
 });
 
 
@@ -1256,15 +1256,15 @@ Then(/^I ensure the invalid carat message is automatically disappeared$/, async(
 
 
 //Scenario - 65
-When(/^I select the increment button in the min carat textbox$/, () => {
+When(/^I select the increment button in the min carat textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectIncrementCarat();
+    await looseDiamonds.selectIncrementCarat();
 });
 
 
-When(/^I select the decrement button in the max carat textbox$/, () => {
+When(/^I select the decrement button in the max carat textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectDecrementCarat();
+    await looseDiamonds.selectDecrementCarat();
 });
 
 
@@ -1275,38 +1275,38 @@ Then(/^I ensure the diamond listing updates to the entered min and max carat val
 
 
 //Scenario - 66
-When(/^I drag the sliders to the left end$/, () => {
+When(/^I drag the sliders to the left end$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.dragToLeftEnd();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.dragToLeftEnd();
 });
 
 
 Then(/^I ensure the specific option at the left end of the slider is selected and display results accordingly$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DragToLeftUrl);
 });
 
 
 //Scenario - 67
-When(/^I drag the sliders to the right end$/, () => {
+When(/^I drag the sliders to the right end$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.dragToRightEnd();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.dragToRightEnd();
 });
 
 Then(/^I ensure the specific option at the right end of the slider is selected and display results accordingly$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DragToRightUrl);
 });
 
 
 //Scenario - 68
-When(/^I scroll to clarity and color filter$/, () => {
+When(/^I scroll to clarity and color filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.scrollToClarityFilter();
+    await startWithADiamond.scrollToClarityFilter();
 });
 
 
@@ -1331,15 +1331,15 @@ Then(/^I ensure the clarity filter is displayed with slider, slider thumbs and s
 
 
 //Scenario - 69
-When(/^I drag the min and max Clarity filter sliders$/, () => {
+When(/^I drag the min and max Clarity filter sliders$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollToClarityFilter();
-    startWithALabDiamond.dragClaritySlider();
+    await startWithALabDiamond.scrollToClarityFilter();
+    await startWithALabDiamond.dragClaritySlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged clarity range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.DraggedClarityUrl);
 });
@@ -1365,15 +1365,15 @@ Then(/^I ensure the color filter is displayed with slider, slider thumbs and sca
 
 
 //Scenario - 71
-When(/^I drag the min and max Color filter sliders$/, () => {
+When(/^I drag the min and max Color filter sliders$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollToClarityFilter();
-    startWithALabDiamond.dragColorSlider();
+    await startWithALabDiamond.scrollToClarityFilter();
+    await startWithALabDiamond.dragColorSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged color range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.DraggedColorUrl);
 });
@@ -1393,11 +1393,11 @@ Then(/^I ensure the symmetry filter is displayed with slider, slider thumbs and 
 
 
 //Scenario - 73
-When(/^I drag the min and max Symmetry filter sliders$/, () => {
+When(/^I drag the min and max Symmetry filter sliders$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.selectMoreFilters();
-    looseLabDiamonds.scrollToSymmetryFilter();
-    looseLabDiamonds.dragSymmetrySlider();
+    await looseLabDiamonds.selectMoreFilters();
+    await looseLabDiamonds.scrollToSymmetryFilter();
+    await looseLabDiamonds.dragSymmetrySlider();
 });
 
 
@@ -1422,11 +1422,11 @@ Then(/^I ensure the fluorescence filter is displayed with slider, slider thumbs 
 
 
 //Scenario - 75
-When(/^I drag the min and max Fluorescence filter sliders$/, () => {
+When(/^I drag the min and max Fluorescence filter sliders$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToSymmetryFilter();
-    startWithADiamond.dragFluorescenceSlider();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToSymmetryFilter();
+    await startWithADiamond.dragFluorescenceSlider();
 });
 
 
@@ -1448,26 +1448,26 @@ Then(/^I Validate the length range filter with slider, slider thumbs and textbox
 
 
 //Scenario - 77
-When(/^I drag the min and max Length filter sliders$/, () => {
+When(/^I drag the min and max Length filter sliders$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.dragLengthSlider();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.dragLengthSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged length range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DraggedLengthUrl);
 });
 
 
 //Scenario - 78
-When(/^I enter the min and max length range$/, () => {
+When(/^I enter the min and max length range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterLengthRange();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterLengthRange();
 });
 
 
@@ -1494,43 +1494,43 @@ Then(/^I ensure the diamond listing updates according to the entered length rang
 
 
 //Scenario - 81
-When(/^I enter min length lesser than 3$/, () => {
+When(/^I enter min length lesser than 3$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMinLength();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMinLength();
 });
 
 
 Then(/^I ensure the invalid min length message is displayed$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = new MYOJ;
     await expect(startWithADiamond.msgInvalidMinLength).toExist();
 });
 
 
 //Scenario - 82
-When(/^I enter max length greater than 12$/, () => {
+When(/^I enter max length greater than 12$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterInvalidMaxLength();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterInvalidMaxLength();
 });
 
 
 Then(/^I ensure the invalid max length message is displayed$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = new MYOJ;
     await expect(startWithALabDiamond.msgInvalidMaxLength).toExist();
 });
 
 
 //Scenario - 83
-When(/^I enter alphabets and special characters in the length range textboxes$/, () => {
+When(/^I enter alphabets and special characters in the length range textboxes$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidCharLength();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidCharLength();
 });
 
 Then(/^I ensure the input validation is implemented for length range textboxes$/, async() => {
@@ -1541,27 +1541,27 @@ Then(/^I ensure the input validation is implemented for length range textboxes$/
 
 
 //Scenario - 84
-When(/^I enter decimal values with two decimal places in length range textboxes$/, () => {
+When(/^I enter decimal values with two decimal places in length range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterDecimalLength();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterDecimalLength();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the entered decimal length range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.DecimalLengthUrl);
 });
 
 
 //Scenario - 85
-When(/^I enter decimal values with more than two decimal places in length range textboxes$/, () => {
+When(/^I enter decimal values with more than two decimal places in length range textboxes$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidDecimalLength();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidDecimalLength();
 });
 
 
@@ -1573,13 +1573,13 @@ Then(/^I ensure the invalid decimal length message is displayed$/, async() => {
 
 
 //Scenario - 86
-When(/^I enter invalid min and max length range$/, () => {
+When(/^I enter invalid min and max length range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterInvalidMinLength();
-    startWithALabDiamond.enterInvalidMaxLength();
-    ElementUtil.click(startWithALabDiamond.lengthrightbox, "Clicking max length box")
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterInvalidMinLength();
+    await startWithALabDiamond.enterInvalidMaxLength();
+    await ElementUtil.click(startWithALabDiamond.lengthrightbox, "Clicking max length box")
 });
 
 
@@ -1590,9 +1590,9 @@ Then(/^I ensure the invalid length range message is displayed$/, async() => {
 });
 
 
-When(/^I re-enter the min and max length range$/, () => {
+When(/^I re-enter the min and max length range$/, async() => {
     const startWithALabDiamond = new MYOJ;
-	startWithALabDiamond.reEnterLengthRange();
+	await startWithALabDiamond.reEnterLengthRange();
 });
 
 
@@ -1604,22 +1604,22 @@ Then(/^I ensure the invalid length message is automatically disappeared$/, async
 
 
 //Scenario - 87
-When(/^I select the increment button in the min length textbox$/, () => {
+When(/^I select the increment button in the min length textbox$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.selectIncrementLength();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.selectIncrementLength();
 });
 
 
-When(/^I select the decrement button in the max length textbox$/, () => {
+When(/^I select the decrement button in the max length textbox$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectDecrementLength();
+    await startWithADiamond.selectDecrementLength();
 });
 
 
 Then(/^I ensure the diamond listing updates to the entered min and max length value$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
     const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.IncrementAndDecrementLength);
 });
@@ -1637,27 +1637,27 @@ Then(/^I Validate the breadth range filter with slider, slider thumbs and textbo
 
 
 //Scenario - 89
-When(/^I drag the min and max Breadth filter sliders$/, () => {
+When(/^I drag the min and max Breadth filter sliders$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.dragBreadthSlider();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.dragBreadthSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged breadth range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DraggedBreadthUrl);
 });
 
 
 //Scenario - 90
-When(/^I enter the min and max breadth range$/, () => {
+When(/^I enter the min and max breadth range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterBreadthRange();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterBreadthRange();
 });
 
 
@@ -1678,18 +1678,18 @@ Then(/^I ensure the pointed breadth range is displayed in textboxes$/, async() =
 
 //Scenario - 92
 Then(/^I ensure the diamond listing updates according to the entered breadth range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.EnteredBreadthUrl);
 });
 
 
 //Scenario - 93
-When(/^I enter min breadth lesser than 5$/, () => {
+When(/^I enter min breadth lesser than 5$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMinBreadth();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMinBreadth();
 });
 
 
@@ -1700,11 +1700,11 @@ Then(/^I ensure the invalid min breadth message is displayed$/, async() => {
 
 
 //Scenario - 94
-When(/^I enter max breadth greater than 8$/, () => {
+When(/^I enter max breadth greater than 8$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterInvalidMaxBreadth();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterInvalidMaxBreadth();
 });
 
 
@@ -1715,11 +1715,11 @@ Then(/^I ensure the invalid max breadth message is displayed$/, async() => {
 
 
 //Scenario - 95
-When(/^I enter alphabets and special characters in the breadth range textboxes$/, () => {
+When(/^I enter alphabets and special characters in the breadth range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterInvalidCharBreadth();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterInvalidCharBreadth();
 });
 
 
@@ -1731,27 +1731,27 @@ Then(/^I ensure the input validation is implemented for breadth range textboxes$
 
 
 //Scenario - 96
-When(/^I enter decimal values with two decimal places in breadth range textboxes$/, () => {
+When(/^I enter decimal values with two decimal places in breadth range textboxes$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterDecimalBreadth();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterDecimalBreadth();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the entered decimal breadth range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DecimalBreadthUrl);
 });
 
 
 //Scenario - 97
-When(/^I enter decimal values with more than two decimal places in breadth range textboxes$/, () => {
+When(/^I enter decimal values with more than two decimal places in breadth range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterInvalidDecimalBreadth();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterInvalidDecimalBreadth();
 });
 
 
@@ -1763,19 +1763,19 @@ Then(/^I ensure the invalid decimal breadth message is displayed$/, async() => {
 
 
 //Scenario - 98
-When(/^I enter invalid min and max breadth range$/, () => {
+When(/^I enter invalid min and max breadth range$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMinBreadth();
-    startWithADiamond.enterInvalidMaxBreadth();
-    ElementUtil.click(startWithADiamond.breadthrightbox, "Clicking max breadth box")
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMinBreadth();
+    await startWithADiamond.enterInvalidMaxBreadth();
+    await ElementUtil.click(startWithADiamond.breadthrightbox, "Clicking max breadth box")
 });
 
 
-When(/^I re-enter the min and max breadth range$/, () => {
+When(/^I re-enter the min and max breadth range$/, async() => {
 	const startWithADiamond = new MYOJ;
-	startWithADiamond.reEnterBreadthRange();
+	await startWithADiamond.reEnterBreadthRange();
 });
 
 
@@ -1794,22 +1794,22 @@ Then(/^I ensure the invalid breadth message is automatically disappeared$/, asyn
 
 
 //Scenario - 99
-When(/^I select the increment button in the min breadth textbox$/, () => {
+When(/^I select the increment button in the min breadth textbox$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.selectIncrementBreadth();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.selectIncrementBreadth();
 });
 
 
-When(/^I select the decrement button in the max breadth textbox$/, () => {
+When(/^I select the decrement button in the max breadth textbox$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectDecrementBreadth();
+    await startWithALabDiamond.selectDecrementBreadth();
 });
 
 
 Then(/^I ensure the diamond listing updates to the entered min and max breadth value$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.IncrementAndDecrementBreadth);
 });
@@ -1827,26 +1827,26 @@ Then(/^I Validate the table% range filter with slider, slider thumbs and textbox
 
 
 //Scenario - 101
-When(/^I drag the min and max Table% filter sliders$/, () => {
+When(/^I drag the min and max Table% filter sliders$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.dragTableSlider();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.dragTableSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged table% range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DraggedTableUrl);
 });
 
 
 //Scenario - 102
-When(/^I enter the min and max table% range$/, () => {
+When(/^I enter the min and max table% range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterTableRange();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterTableRange();
 });
 
 
@@ -1875,18 +1875,18 @@ Then(/^I ensure the min and max table% range filter displays the pre-fixed range
 
 //Scenario - 105
 Then(/^I ensure the diamond listing updates according to the entered table% range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const looseLabDiamonds = await browser.getUrl();
     await expect(looseLabDiamonds).toEqual(data.Filters.EnteredTableUrl);
 });
 
 
 //Scenario - 106
-When(/^I enter min table% lesser than 1$/, () => {
+When(/^I enter min table% lesser than 1$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMinTable();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMinTable();
 });
 
 
@@ -1897,11 +1897,11 @@ Then(/^I ensure the invalid min table% message is displayed$/, async() => {
 
 
 //Scenario - 107
-When(/^I enter max table% greater than 100$/, () => {
+When(/^I enter max table% greater than 100$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMaxTable();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMaxTable();
 });
 
 
@@ -1912,11 +1912,11 @@ Then(/^I ensure the invalid max table% message is displayed$/, async() => {
 
 
 //Scenario - 108
-When(/^I enter alphabets and special characters in the table% range textboxes$/, () => {
+When(/^I enter alphabets and special characters in the table% range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterInvalidCharTable();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterInvalidCharTable();
 });
 
 
@@ -1928,11 +1928,11 @@ Then(/^I ensure the input validation is implemented for table% range textboxes$/
 
 
 //Scenario - 109
-When(/^I enter decimal values in min and max table% range textboxes$/, () => {
+When(/^I enter decimal values in min and max table% range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterDecimalTable();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterDecimalTable();
 });
 
 
@@ -1944,19 +1944,19 @@ Then(/^I ensure the invalid table% decimal message is displayed$/, async() => {
 
 
 //Scenario - 110
-When(/^I enter invalid min and max table% range$/, () => {
+When(/^I enter invalid min and max table% range$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMinTable();
-    startWithADiamond.enterInvalidMaxTable();
-    ElementUtil.click(startWithADiamond.tablerightbox, "Clicking max table box")
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMinTable();
+    await startWithADiamond.enterInvalidMaxTable();
+    await ElementUtil.click(startWithADiamond.tablerightbox, "Clicking max table box")
 });
 
 
-When(/^I re-enter the min and max table% range$/, () => {
+When(/^I re-enter the min and max table% range$/, async() => {
 	const startWithADiamond = new MYOJ;
-	startWithADiamond.reEnterTableRange();
+	await startWithADiamond.reEnterTableRange();
 });
 
 
@@ -1975,22 +1975,22 @@ Then(/^I ensure the invalid table% message is automatically disappeared$/, async
 
 
 //Scenario - 111
-When(/^I select the increment button in the min table% textbox$/, () => {
+When(/^I select the increment button in the min table% textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectMoreFilters();
-    looseDiamonds.scrollToLengthFilter();
-    looseDiamonds.selectIncrementTable();
+    await looseDiamonds.selectMoreFilters();
+    await looseDiamonds.scrollToLengthFilter();
+    await looseDiamonds.selectIncrementTable();
 });
 
 
-When(/^I select the decrement button in the max table% textbox$/, () => {
+When(/^I select the decrement button in the max table% textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectDecrementTable();
+    await looseDiamonds.selectDecrementTable();
 });
 
 
 Then(/^I ensure the diamond listing updates to the entered min and max table% value$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const looseDiamonds = await browser.getUrl();
     await expect(looseDiamonds).toEqual(data.Filters.IncrementAndDecrementTable);
 });
@@ -2008,26 +2008,26 @@ Then(/^I Validate the depth% range filter with slider, slider thumbs and textbox
 
 
 //Scenario - 113
-When(/^I drag the min and max Depth% filter sliders$/, () => {
+When(/^I drag the min and max Depth% filter sliders$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.dragDepthSlider();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.dragDepthSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged depth% range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.DraggedDepthUrl);
 });
 
 
 //Scenario - 114
-When(/^I enter the min and max depth% range$/, () => {
+When(/^I enter the min and max depth% range$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterDepthRange();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterDepthRange();
 });
 
 
@@ -2056,18 +2056,18 @@ Then(/^I ensure the min and max depth% range filter displays the pre-fixed range
 
 //Scenario - 117
 Then(/^I ensure the diamond listing updates according to the entered depth% range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const looseLabDiamonds = await browser.getUrl();
     await expect(looseLabDiamonds).toEqual(data.Filters.EnteredDepthUrl);
 });
 
 
 //Scenario - 118
-When(/^I enter min depth% lesser than 1$/, () => {
+When(/^I enter min depth% lesser than 1$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMinDepth();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMinDepth();
 });
 
 
@@ -2078,11 +2078,11 @@ Then(/^I ensure the invalid min depth% message is displayed$/, async() => {
 
 
 //Scenario - 119
-When(/^I enter max depth% greater than 100$/, () => {
+When(/^I enter max depth% greater than 100$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMaxDepth();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMaxDepth();
 });
 
 
@@ -2093,11 +2093,11 @@ Then(/^I ensure the invalid max depth% message is displayed$/, async() => {
 
 
 //Scenario - 120
-When(/^I enter alphabets and special characters in the depth% range textboxes$/, () => {
+When(/^I enter alphabets and special characters in the depth% range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterInvalidCharDepth();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterInvalidCharDepth();
 });
 
 
@@ -2109,11 +2109,11 @@ Then(/^I ensure the input validation is implemented for depth% range textboxes$/
 
 
 //Scenario - 121
-When(/^I enter decimal values in min and max depth% range textboxes$/, () => {
+When(/^I enter decimal values in min and max depth% range textboxes$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.enterDecimalDepth();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.enterDecimalDepth();
 });
 
 
@@ -2125,19 +2125,19 @@ Then(/^I ensure the invalid decimal depth% message is displayed$/, async() => {
 
 
 //Scenario - 122
-When(/^I enter invalid min and max depth% range$/, () => {
+When(/^I enter invalid min and max depth% range$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.enterInvalidMinDepth();
-    startWithADiamond.enterInvalidMaxDepth();
-    ElementUtil.click(startWithADiamond.depthrightbox, "Clicking max depth box")
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.enterInvalidMinDepth();
+    await startWithADiamond.enterInvalidMaxDepth();
+    await ElementUtil.click(startWithADiamond.depthrightbox, "Clicking max depth box")
 });
 
 
-When(/^I re-enter the min and max depth% range$/, () => {
+When(/^I re-enter the min and max depth% range$/, async() => {
 	const startWithADiamond = new MYOJ;
-	startWithADiamond.reEnterDepthRange();
+	await startWithADiamond.reEnterDepthRange();
 });
 
 
@@ -2156,22 +2156,22 @@ Then(/^I ensure the invalid depth% message is automatically disappeared$/, async
 
 
 //Scenario - 123
-When(/^I select the increment button in the min depth% textbox$/, () => {
+When(/^I select the increment button in the min depth% textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectMoreFilters();
-    looseDiamonds.scrollToLengthFilter();
-    looseDiamonds.selectIncrementDepth();
+    await looseDiamonds.selectMoreFilters();
+    await looseDiamonds.scrollToLengthFilter();
+    await looseDiamonds.selectIncrementDepth();
 });
 
 
-When(/^I select the decrement button in the max depth% textbox$/, () => {
+When(/^I select the decrement button in the max depth% textbox$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectDecrementDepth();
+    await looseDiamonds.selectDecrementDepth();
 });
 
 
 Then(/^I ensure the diamond listing updates to the entered min and max depth% value$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
     const looseDiamonds = await browser.getUrl();
     await expect(looseDiamonds).toEqual(data.Filters.IncrementAndDecrementDepth);
 });
@@ -2191,27 +2191,27 @@ Then(/^I ensure the cut filter is displayed with slider, slider thumbs and scale
 
 
 //Scenario - 125
-When(/^I drag the min and max Cut filter sliders$/, () => {
+When(/^I drag the min and max Cut filter sliders$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.dragCutSlider();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.dragCutSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged cut range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.DraggedCutUrl);
 });
 
 
 //Scenario - 126
-When(/^I choose the list of shape filters$/, () => {
+When(/^I choose the list of shape filters$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectMoreFilters();
-    looseDiamonds.scrollToBanner();
-    looseDiamonds.disabledCutFilter();
+    await looseDiamonds.selectMoreFilters();
+    await looseDiamonds.scrollToBanner();
+    await looseDiamonds.disabledCutFilter();
 });
 
 
@@ -2236,16 +2236,16 @@ Then(/^I ensure the polish filter is displayed with slider, slider thumbs and sc
 
 
 //Scenario - 128
-When(/^I drag the min and max Polish filter sliders$/, () => {
+When(/^I drag the min and max Polish filter sliders$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.dragPolishSlider();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.dragPolishSlider();
 });
 
 
 Then(/^I ensure the diamond listing updates according to the dragged polish range$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.DraggedPolishUrl);
 });
@@ -2262,103 +2262,103 @@ Then(/^I ensure the Certificate filter is displayed with IGI and GIA checkboxes$
 
 
 //Scenario - 130
-When(/^I uncheck the GIA option$/, () => {
+When(/^I uncheck the GIA option$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMoreFilters();
-    startWithALabDiamond.scrollToLengthFilter();
-    startWithALabDiamond.uncheckGIA();
+    await startWithALabDiamond.selectMoreFilters();
+    await startWithALabDiamond.scrollToLengthFilter();
+    await startWithALabDiamond.uncheckGIA();
 });
 
 
 Then(/^I ensure only the IGI diamonds are displayed in the table$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.Filters.UncheckGIAUrl);
 });
 
 
 //Scenario - 131
-When(/^I uncheck the IGI option$/, () => {
+When(/^I uncheck the IGI option$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToLengthFilter();
-    startWithADiamond.uncheckIGI();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToLengthFilter();
+    await startWithADiamond.uncheckIGI();
 });
 
 
 Then(/^I ensure only the GIA diamonds are displayed in the table$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.UncheckIGIUrl);
 });
 
 
 //Scenario - 132
-When(/^I uncheck the IGI certificate option$/, () => {
+When(/^I uncheck the IGI certificate option$/, async() => {
 	const startWithADiamond = new MYOJ;
-    BrowserUtil.wait(10)
-    startWithADiamond.uncheckIGI();
+    await BrowserUtil.wait(10)
+    await startWithADiamond.uncheckIGI();
 });
 
 
 Then(/^I ensure both options got selected automatically$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.LooseDiamondsLinks.LooseLabDiamonds);
 });
 
 
 //Scenario - 133
-When(/^I apply multiple diamond filters$/, () => {
+When(/^I apply multiple diamond filters$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectOvalShape();
-    startWithADiamond.enterPriceRange();
-    startWithADiamond.dragColorSlider();
-    startWithADiamond.selectMoreFilters();
-    startWithADiamond.scrollToGemsFilter();
-    startWithADiamond.dragSymmetrySlider();
-    startWithADiamond.enterTableRange();
-    startWithADiamond.uncheckIGI();
+    await startWithADiamond.selectOvalShape();
+    await startWithADiamond.enterPriceRange();
+    await startWithADiamond.dragColorSlider();
+    await startWithADiamond.selectMoreFilters();
+    await startWithADiamond.scrollToGemsFilter();
+    await startWithADiamond.dragSymmetrySlider();
+    await startWithADiamond.enterTableRange();
+    await startWithADiamond.uncheckIGI();
 });
 
 
-When(/^I refresh the page$/, () => {
-    browser.refresh();
-    BrowserUtil.wait(5);
+When(/^I refresh the page$/, async() => {
+    await browser.refresh();
+    await BrowserUtil.wait(5);
 });
 
 
 Then(/^I ensure the applied filters are retained$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithADiamond = await browser.getUrl();
     await expect(startWithADiamond).toEqual(data.Filters.MultipleFiltersUrl);
 });
 
 
 //Scenario - 134
-When(/^I select Quick view dropdown$/, () => {
+When(/^I select Quick view dropdown$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    //looseLabDiamonds.hoverLogo()
-    looseLabDiamonds.selectQuickView();
+    //await looseLabDiamonds.hoverLogo()
+    await looseLabDiamonds.selectQuickView();
 });
 
 
-When(/^I select View Lab Diamond button$/, () => {
+When(/^I select View Lab Diamond button$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.selectViewLabDiamond();
+    await looseLabDiamonds.selectViewLabDiamond();
 });
 
 
-When(/^I navigate back to the Loose Lab Diamonds page$/, () => {
-	browser.back();
-    BrowserUtil.wait(5);
+When(/^I navigate back to the Loose Lab Diamonds page$/, async() => {
+	await browser.back();
+    await BrowserUtil.wait(5);
 });
 
 
 //Scenario - 135
-When(/^I enter the min and max carat range as 30$/, () => {
+When(/^I enter the min and max carat range as 30$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.enterCarat30();
+    await startWithADiamond.enterCarat30();
 });
 
 
@@ -2370,16 +2370,16 @@ Then(/^I ensure the Nothing here message is displayed in the table section$/, as
 
 //Scenario - 136
 Then(/^I ensure the applied filters are not retained$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const startWithALabDiamond = await browser.getUrl();
     await expect(startWithALabDiamond).toEqual(data.StartWithALabDiamondLinks.Necklaces);
 });
 
 
 //Scenario - 261
-When(/^I select the available shapes of loose diamonds$/, () => {
+When(/^I select the available shapes of loose diamonds$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.looseDiamondsLengthAndBreadth();
+    await looseDiamonds.looseDiamondsLengthAndBreadth();
 });
 
 
@@ -2393,23 +2393,23 @@ Then(/^I ensure the Length and Breadth ranges displays the pre-fixed range as 0 
 
 
 //Scenario - 262
-When(/^I enter same price in price range textboxes$/, () => {
+When(/^I enter same price in price range textboxes$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.enterPrice1500();
+    await looseLabDiamonds.enterPrice1500();
 });
 
 
 Then(/^I ensure the results are updated according to the price entered$/, async() => {
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
 	const looseLabDiamonds = await browser.getUrl();
     await expect(looseLabDiamonds).toEqual(data.Filters.Price1500Url);
 });
 
 
 //Scenario - 263
-When(/^I enter min caratage in max textbox and max caratage in min textbox$/, () => {
+When(/^I enter min caratage in max textbox and max caratage in min textbox$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.enterDifferentCaratRange();
+    await looseLabDiamonds.enterDifferentCaratRange();
 });
 
 
@@ -2439,10 +2439,10 @@ Then(/^I verify that the recently viewed tab shows the number as 1$/, async() =>
 });
 
 
-When(/^I select Recently Viewed tab$/, () => {
+When(/^I select Recently Viewed tab$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.scrollToListingNoFilters();
-    looseLabDiamonds.selectRecentlyViewed();
+    await looseLabDiamonds.scrollToListingNoFilters();
+    await looseLabDiamonds.selectRecentlyViewed();
 });
 
 
@@ -2460,10 +2460,10 @@ Then(/^I ensure the Sort by filter is disabled$/, async() => {
 
 
 //Scenario - 141
-When(/^I select five diamonds for comparison$/, () => {
+When(/^I select five diamonds for comparison$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.scrollToListingNoFilters();
-    startWithADiamond.selectForCompare();
+    await startWithADiamond.scrollToListingNoFilters();
+    await startWithADiamond.selectForCompare();
 });
 
 
@@ -2474,16 +2474,16 @@ Then(/^I ensure that the compare tab shows the number as 5$/, async() => {
 
 
 //Scenario - 142
-When(/^I select Compare tab$/, () => {
+When(/^I select Compare tab$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.scrollToListingNoFilters();
-    startWithADiamond.selectCompareTab();
+    await startWithADiamond.scrollToListingNoFilters();
+    await startWithADiamond.selectCompareTab();
 });
 
 
-When(/^I click right and left arrow buttons$/, () => {
+When(/^I click right and left arrow buttons$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectCaretCompare();
+    await startWithADiamond.selectCaretCompare();
 });
 
 
@@ -2499,10 +2499,10 @@ Then(/^I ensure that the diamond details of the selected diamonds are displayed$
 
 
 //Scenario - 143
-When(/^I select two diamonds for comparison$/, () => {
+When(/^I select two diamonds for comparison$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollToListingNoFilters();
-    startWithALabDiamond.selectTwoForCompare();
+    await startWithALabDiamond.scrollToListingNoFilters();
+    await startWithALabDiamond.selectTwoForCompare();
 });
 
 
@@ -2519,10 +2519,10 @@ Then(/^I ensure both the diamond details are displayed in the compare tab$/, asy
 
 
 //Scenario - 144
-When(/^I remove the first diamond column$/, () => {
+When(/^I remove the first diamond column$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.scrollToListingNoFilters();
-    looseLabDiamonds.removeFirstDiamond();
+    await looseLabDiamonds.scrollToListingNoFilters();
+    await looseLabDiamonds.removeFirstDiamond();
 });
 
 
@@ -2569,24 +2569,24 @@ Then(/^I verify the diamond details section in the compare table$/, async() => {
 
 
 //Scenario - 147
-When(/^I select View button of the first compared diamond$/, () => {
+When(/^I select View button of the first compared diamond$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectViewCompare();
+    await startWithADiamond.selectViewCompare();
 });
 
 
 Then(/^I ensure the diamond details page of necklaces is displayed$/, async() => {
 	const startWithADiamond = new MYOJ;
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
     await expect(startWithADiamond.createYourOwnNecklace).toExist();
 });
 
 
 //Scenario - 149
-When(/^I hover over the Sort by filter$/, () => {
+When(/^I hover over the Sort by filter$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.scrollToListingNoFilters();
-    looseLabDiamonds.hoverSortBy();
+    await looseLabDiamonds.scrollToListingNoFilters();
+    await looseLabDiamonds.hoverSortBy();
 });
 
 
@@ -2608,10 +2608,10 @@ Then(/^I ensure the sortby dropdown shows the dropdown menu with options$/, asyn
 
 
 //Scenario - 150
-When(/^I select the filters in the dropdown$/, () => {
+When(/^I select the filters in the dropdown$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.scrollToListingNoFilters();
-    startWithADiamond.selectSortByOption();
+    await startWithADiamond.scrollToListingNoFilters();
+    await startWithADiamond.selectSortByOption();
 });
 
 
@@ -2622,10 +2622,10 @@ Then(/^I ensure the table sorts according to the filter chosen$/, async() => {
 
 
 //Scenario - 151
-When(/^I select gallery view button$/, () => {
+When(/^I select gallery view button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollToListingNoFilters();
-    startWithALabDiamond.selectGalleryView();
+    await startWithALabDiamond.scrollToListingNoFilters();
+    await startWithALabDiamond.selectGalleryView();
 });
 
 
@@ -2655,15 +2655,15 @@ Then(/^I ensure the list of both diamonds are displayed in grid view format$/, a
 
 
 //Scenario - 152
-When(/^I scroll to the diamond listing table$/, () => {
+When(/^I scroll to the diamond listing table$/, async() => {
     const startWithADiamond = new MYOJ;
-    startWithADiamond.scrollToListingNoFilters();
+    await startWithADiamond.scrollToListingNoFilters();
 });
 
 
-When(/^I select Quick view dropdown for earrings$/, () => {
+When(/^I select Quick view dropdown for earrings$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.selectQuickViewEarrings();
+    await looseLabDiamonds.selectQuickViewEarrings();
 });
 
 
@@ -2681,9 +2681,9 @@ Then(/^I ensure the diamond details and the expanded area are displayed$/, async
 });
 
 
-When(/^I select X button in the Quick view section$/, () => {
+When(/^I select X button in the Quick view section$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.closeQuickView();
+    await startWithADiamond.closeQuickView();
 });
 
 
@@ -2696,15 +2696,15 @@ Then(/^I ensure the expanded area is closed$/, async() => {
 //Scenario - 153
 Then(/^I ensure the diamond details page is displayed$/, async() => {
 	const startWithADiamond = new MYOJ;
-    BrowserUtil.wait(5)
+    await BrowserUtil.wait(5)
     await expect(startWithADiamond.LooseDiamondsDDPBanner).toExist();
 });
 
 
 //Scenario - 154
-When(/^I select View Diamond button$/, () => {
+When(/^I select View Diamond button$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectViewDiamond();
+    await startWithADiamond.selectViewDiamond();
 });
 
 
@@ -2757,9 +2757,9 @@ Then(/^I ensure the Shape icon is selected as default in the Diamond details pag
 
 
 //Scenario - 157
-When(/^I click the Play Video icon$/, () => {
+When(/^I click the Play Video icon$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.selectPlayVideo();
+    await looseLabDiamonds.selectPlayVideo();
 });
 
 
@@ -2770,23 +2770,23 @@ Then(/^I ensure the video popup plays in the screen$/, async() => {
 
 
 //Scenario - 158
-When(/^I click the view GIA certificate button$/, () => {
+When(/^I click the view GIA certificate button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectIconGIA();
+    await startWithALabDiamond.selectIconGIA();
 });
 
 
 //Scenario - 159
-When(/^I click the view IGI certificate button$/, () => {
+When(/^I click the view IGI certificate button$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectIconIGI();
+    await startWithADiamond.selectIconIGI();
 });
 
 
 //Scenario - 160
-When(/^I select the Top View icon$/, () => {
+When(/^I select the Top View icon$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectIconTopView();
+    await startWithALabDiamond.selectIconTopView();
 });
 
 
@@ -2796,9 +2796,9 @@ Then(/^I ensure the Top View image of the diamond is displayed$/, async() => {
 });
 
 
-When(/^I select the Side View icon$/, () => {
+When(/^I select the Side View icon$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectIconSideView();
+    await startWithALabDiamond.selectIconSideView();
 });
 
 
@@ -2809,9 +2809,9 @@ Then(/^I ensure the Side View image of the diamond is displayed$/, async() => {
 
 
 //Scenario - 161
-When(/^I hover over each feature name$/, () => {
+When(/^I hover over each feature name$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoveringDiamondFeatures();
+    await startWithADiamond.hoveringDiamondFeatures();
 });
 
 
@@ -2822,9 +2822,9 @@ Then(/^I ensure the Your Diamond Details section includes all the Diamond featur
 
 
 //Scenario - 162
-When(/^I hover over features with detailed popup and click View Details$/, () => {
+When(/^I hover over features with detailed popup and click View Details$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.hoverViewDetailsDiamondFeatures();
+    await startWithALabDiamond.hoverViewDetailsDiamondFeatures();
 });
 
 
@@ -2835,9 +2835,9 @@ Then(/^I ensure the respective diamond feature popup is displayed$/, async() => 
 
 
 //Scenario - 163
-When(/^I scroll to Diamond Details section$/, () => {
+When(/^I scroll to Diamond Details section$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollEarringDDP();
+    await startWithALabDiamond.scrollEarringDDP();
 });
 
 
@@ -2865,9 +2865,9 @@ Then(/^I ensure the Diamond details of first diamond is displayed under Diamond 
 });
 
 
-When(/^I select Diamond Details - 2$/, () => {
+When(/^I select Diamond Details - 2$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectDiamondDetails2();
+    await startWithALabDiamond.selectDiamondDetails2();
 });
 
 
@@ -2907,9 +2907,9 @@ Then(/^I ensure the Carat section with the details of the chosen diamond is disp
 
 
 //Scenario - 167
-When(/^I scroll to Cut section$/, () => {
+When(/^I scroll to Cut section$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollToCutSection();
+    await startWithALabDiamond.scrollToCutSection();
 });
 
 
@@ -2924,9 +2924,9 @@ Then(/^I ensure the Cut section with the details of the chosen diamond is displa
 
 
 //Scenario - 168
-When(/^I scroll to Color section$/, () => {
+When(/^I scroll to Color section$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollToColorSection();
+    await startWithALabDiamond.scrollToColorSection();
 });
 
 
@@ -2941,9 +2941,9 @@ Then(/^I ensure the Color section with the details of the chosen diamond is disp
 
 
 //Scenario - 169
-When(/^I scroll to Clarity section$/, () => {
+When(/^I scroll to Clarity section$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollToClaritySection();
+    await startWithALabDiamond.scrollToClaritySection();
 });
 
 
@@ -2968,9 +2968,9 @@ Then(/^I ensure the breadcrumb is present in the Diamond Details Page$/, async()
 });
 
 
-When(/^I click View Details and Make Your Diamond Earring links in breadcrumb$/, () => {
+When(/^I click View Details and Make Your Diamond Earring links in breadcrumb$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectLinksBreadcrumb();
+    await startWithADiamond.selectLinksBreadcrumb();
 });
 
 
@@ -2992,9 +2992,9 @@ Then(/^I ensure the total number of pages in the table is represented at the bot
 
 
 //Scenario - 172
-When(/^I click Page 3$/, () => {
+When(/^I click Page 3$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectPage3Button();
+    await startWithADiamond.selectPage3Button();
 });
 
 
@@ -3005,28 +3005,28 @@ Then(/^I ensure the page 3 of the table is displayed$/, async() => {
 
 
 //Scenario - 173
-When(/^I enter 3 in the pagination textbox$/, () => {
+When(/^I enter 3 in the pagination textbox$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.enterPageNumber();
+    await startWithALabDiamond.enterPageNumber();
 });
 
 
 //Scenario - 174
-When(/^I click Page 2$/, () => {
+When(/^I click Page 2$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectPage2Button();
+    await looseDiamonds.selectPage2Button();
 });
 
 
-When(/^I click right caret icon$/, () => {
+When(/^I click right caret icon$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectRightCaretPage();
+    await looseDiamonds.selectRightCaretPage();
 });
 
 
-When(/^I click left caret icon$/, () => {
+When(/^I click left caret icon$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectLeftCaretPage();
+    await looseDiamonds.selectLeftCaretPage();
 });
 
 
@@ -3037,9 +3037,9 @@ Then(/^I ensure the page 2 of the table is displayed$/, async() => {
 
 
 //Scenario - 175
-When(/^I click Select Earring button$/, () => {
+When(/^I click Select Earring button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectEarringDDP();
+    await startWithALabDiamond.selectEarringDDP();
 });
 
 
@@ -3050,9 +3050,9 @@ Then(/^I ensure the page 2 of earrings for the custom stone is displayed$/, asyn
 });
 
 
-When(/^I click Select Necklace button$/, () => {
+When(/^I click Select Necklace button$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectNecklaceDDP();
+    await startWithADiamond.selectNecklaceDDP();
 });
 
 
@@ -3063,9 +3063,9 @@ Then(/^I ensure the page 2 of necklaces for the custom stone is displayed$/, asy
 });
 
 
-When(/^I click Select Men's Ring button$/, () => {
+When(/^I click Select Men's Ring button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectMensRingDDP();
+    await startWithALabDiamond.selectMensRingDDP();
 });
 
 
@@ -3076,9 +3076,9 @@ Then(/^I ensure the page 2 of men's rings for the custom stone is displayed$/, a
 });
 
 
-When(/^I click Select Ring button$/, () => {
+When(/^I click Select Ring button$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectRingDDP();
+    await startWithADiamond.selectRingDDP();
 });
 
 
@@ -3100,9 +3100,9 @@ Then(/^I verify the presence of breadcrumb and the number of available diamonds 
 });
 
 
-When(/^I click Make Your Diamond Engagement Ring and Engagement Ring links in breadcrumb$/, () => {
+When(/^I click Make Your Diamond Engagement Ring and Engagement Ring links in breadcrumb$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectRingsBreadcrumb();
+    await startWithADiamond.selectRingsBreadcrumb();
 });
 
 
@@ -3112,9 +3112,9 @@ Then(/^I ensure the links redirects to respective Engagement Ring page$/, async(
 });
 
 
-When(/^I browse back to Settings page$/, () => {
+When(/^I browse back to Settings page$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.browseBack();
+    await startWithADiamond.browseBack();
 });
 
 
@@ -3128,9 +3128,9 @@ Then(/^I verify the presence of breadcrumb and the number of available diamonds 
 });
 
 
-When(/^I click Make Your Diamond Earring and Earrings links in breadcrumb$/, () => {
+When(/^I click Make Your Diamond Earring and Earrings links in breadcrumb$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectEarringsBreadcrumb();
+    await startWithADiamond.selectEarringsBreadcrumb();
 });
 
 
@@ -3150,9 +3150,9 @@ Then(/^I verify the presence of breadcrumb and the number of available diamonds 
 });
 
 
-When(/^I click Make Your Diamond Necklace and Necklaces links in breadcrumb$/, () => {
+When(/^I click Make Your Diamond Necklace and Necklaces links in breadcrumb$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectNecklacesBreadcrumb();
+    await startWithADiamond.selectNecklacesBreadcrumb();
 });
 
 
@@ -3172,9 +3172,9 @@ Then(/^I verify the presence of breadcrumb and the number of available diamonds 
 });
 
 
-When(/^I click Make Your Diamond Men's Ring and Men's Rings links in breadcrumb$/, () => {
+When(/^I click Make Your Diamond Men's Ring and Men's Rings links in breadcrumb$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectMensRingsBreadcrumb();
+    await startWithADiamond.selectMensRingsBreadcrumb();
 });
 
 
@@ -3195,9 +3195,9 @@ Then(/^I verify the presence of breadcrumb and the number of available lab diamo
 });
 
 
-When(/^I click Make Your Lab Diamond Engagement Ring and Engagement Ring links in breadcrumb$/, () => {
+When(/^I click Make Your Lab Diamond Engagement Ring and Engagement Ring links in breadcrumb$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectLabRingsBreadcrumb();
+    await startWithALabDiamond.selectLabRingsBreadcrumb();
 });
 
 
@@ -3211,9 +3211,9 @@ Then(/^I verify the presence of breadcrumb and the number of available lab diamo
 });
 
 
-When(/^I click Make Your Lab Diamond Earring and Earrings links in breadcrumb$/, () => {
+When(/^I click Make Your Lab Diamond Earring and Earrings links in breadcrumb$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectLabEarringsBreadcrumb();
+    await startWithALabDiamond.selectLabEarringsBreadcrumb();
 });
 
 
@@ -3227,9 +3227,9 @@ Then(/^I verify the presence of breadcrumb and the number of available lab diamo
 });
 
 
-When(/^I click Make Your Lab Diamond Necklace and Necklaces links in breadcrumb$/, () => {
+When(/^I click Make Your Lab Diamond Necklace and Necklaces links in breadcrumb$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectLabNecklacesBreadcrumb();
+    await startWithALabDiamond.selectLabNecklacesBreadcrumb();
 });
 
 
@@ -3243,9 +3243,9 @@ Then(/^I verify the presence of breadcrumb and the number of available lab diamo
 });
 
 
-When(/^I click Make Your Lab Diamond Men's Ring and Men's Rings links in breadcrumb$/, () => {
+When(/^I click Make Your Lab Diamond Men's Ring and Men's Rings links in breadcrumb$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectLabMensRingsBreadcrumb();
+    await startWithALabDiamond.selectLabMensRingsBreadcrumb();
 });
 
 
@@ -3277,9 +3277,9 @@ Then(/^I ensure the carat and price of the chosen diamonds along with Change lin
 
 
 //Scenario - 180
-When(/^I click Change link in Diamond tab$/, () => {
+When(/^I click Change link in Diamond tab$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectChangeDiamond();
+    await startWithADiamond.selectChangeDiamond();
 });
 
 
@@ -3292,9 +3292,9 @@ Then(/^I ensure it redirects to diamond listing page$/, async() => {
 });
 
 
-When(/^I click Change link in Lab Diamond tab$/, () => {
+When(/^I click Change link in Lab Diamond tab$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectChangeLabDiamond();
+    await startWithALabDiamond.selectChangeLabDiamond();
 });
 
 
@@ -3321,9 +3321,9 @@ Then(/^I ensure the Ways to save more options are displayed and the Easy deliver
 });
 
 
-When(/^I select Wire payment option under Ways to Save More$/, () => {
+When(/^I select Wire payment option under Ways to Save More$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectWirePayment();
+    await startWithALabDiamond.selectWirePayment();
 });
 
 
@@ -3483,9 +3483,9 @@ Then(/^I ensure the lab diamond inline description is displayed in the page 2$/,
 
 
 //Scenario - 188
-When(/^I click the star rating in the SEO section in page 2$/, () => {
+When(/^I click the star rating in the SEO section in page 2$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectStarRating();
+    await startWithALabDiamond.selectStarRating();
 });
 
 
@@ -3514,9 +3514,9 @@ Then(/^I ensure the SEO section is present in page 2 of men's rings$/, async() =
 
 
 //Scenario - 189
-When(/^I select a product in page 2$/, () => {
+When(/^I select a product in page 2$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectProductPage2();
+    await startWithADiamond.selectProductPage2();
 });
 
 
@@ -3587,9 +3587,9 @@ Then(/^I ensure the request custom order button is not displayed and the add to 
 
 
 //Scenario - 195
-When(/^I click Add to cart in page 3$/, () => {
+When(/^I click Add to cart in page 3$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectAddToCart();
+    await startWithALabDiamond.selectAddToCart();
 });
 
 
@@ -3602,9 +3602,9 @@ Then(/^I validate the order summary and absence of continue shopping button$/, a
 });
 
 
-When(/^I click Checkout button$/, () => {
+When(/^I click Checkout button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectCheckOut();
+    await startWithALabDiamond.selectCheckOut();
 });
 
 
@@ -3614,9 +3614,9 @@ Then(/^I ensure the product added to cart and redirects to shopping cart$/, asyn
 });
 
 
-When(/^I select ring size$/, () => {
+When(/^I select ring size$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.selectRingSize();
+    await startWithALabDiamond.selectRingSize();
 });
 
 
@@ -3629,9 +3629,9 @@ Then(/^I ensure Select Women's Band button is displayed in page 3$/, async() => 
 
 
 //Scenario - 197
-When(/^I click Select Women's Band button$/, () => {
+When(/^I click Select Women's Band button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.clickSelectWomensBand();
+    await startWithALabDiamond.clickSelectWomensBand();
 });
 
 
@@ -3669,9 +3669,9 @@ Then(/^I validate the Settings tab with the product name, price and Change link$
 });
 
 
-When(/^I click Change link in Settings tab$/, () => {
+When(/^I click Change link in Settings tab$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectChangeSettings();
+    await startWithADiamond.selectChangeSettings();
 });
 
 
@@ -3708,9 +3708,9 @@ Then(/^I ensure the presence of ways to save more section, filters, product disp
 
 
 //Scenario - 202
-When(/^I hover other element in page$/, () => {
+When(/^I hover other element in page$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.hoverLogin();
+    await startWithADiamond.hoverLogin();
 });
 
 
@@ -3721,16 +3721,16 @@ Then(/^I ensure the 14K White gold metal tag is displayed by default$/, async() 
 });
 
 
-When(/^I go back to the page 3 of the chosen ring and choose 10K Black gold metal$/, () => {
-	browser.back();
+When(/^I go back to the page 3 of the chosen ring and choose 10K Black gold metal$/, async() => {
+	await browser.back();
     const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.select10kBg();
+    await startWithALabDiamond.select10kBg();
 });
 
 
-When(/^I scroll down the page 2$/, () => {
+When(/^I scroll down the page 2$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.scrollPage2()
+    await startWithALabDiamond.scrollPage2()
 });
 
 
@@ -3764,9 +3764,9 @@ Then(/^I verify the matching womens band text in short description and product d
 
 
 //Scenario - 205
-When(/^I click Select Men's Band button$/, () => {
+When(/^I click Select Men's Band button$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.clickSelectMensBand();
+    await startWithADiamond.clickSelectMensBand();
 });
 
 
@@ -3778,21 +3778,21 @@ Then(/^I verify the mens ring text in short description and product details sect
 
 
 //Scenario - 206
-When(/^I select Change link in the Women's Band tab$/, () => {
+When(/^I select Change link in the Women's Band tab$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectChangeWomensBand();
+    await startWithADiamond.selectChangeWomensBand();
 });
 
 
-When(/^I change the metal type of women's band to 10K White gold metal$/, () => {
+When(/^I change the metal type of women's band to 10K White gold metal$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.select10kWg();
+    await startWithADiamond.select10kWg();
 });
 
 
-When(/^I click cart icon$/, () => {
+When(/^I click cart icon$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectCart();
+    await startWithADiamond.selectCart();
 });
 
 
@@ -3880,9 +3880,9 @@ Then(/^I ensure it redirects to men's rings reviews page$/, async() => {
 
 
 //Scenario - 213
-When(/^I click Free 100 Day Returns link$/, () => {
+When(/^I click Free 100 Day Returns link$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectFree100DayReturns();
+    await startWithADiamond.selectFree100DayReturns();
 });
 
 
@@ -3892,9 +3892,9 @@ Then(/^I ensure the Returns Text Link redirects to the respective page$/, async(
 });
 
 
-When(/^I browse back and select Free Global Shipping link$/, () => {
+When(/^I browse back and select Free Global Shipping link$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectFreeGlobalShipping();
+    await startWithADiamond.selectFreeGlobalShipping();
 });
 
 
@@ -3904,9 +3904,9 @@ Then(/^I ensure the Free shipping Text Link redirects to the respective page$/, 
 });
 
 
-When(/^I browse back and select Lab Certification link$/, () => {
+When(/^I browse back and select Lab Certification link$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectLabCertification();
+    await startWithADiamond.selectLabCertification();
 });
 
 
@@ -3916,9 +3916,9 @@ Then(/^I ensure Lab Certification Link redirects to the respective page$/, async
 });
 
 
-When(/^I browse back and select Free Resizing & Warranty link$/, () => {
+When(/^I browse back and select Free Resizing & Warranty link$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectFreeResizingAndWarranty();
+    await startWithADiamond.selectFreeResizingAndWarranty();
 });
 
 
@@ -3936,9 +3936,9 @@ Then(/^I ensure the VVS Diamond tag is displayed$/, async() => {
 });
 
 
-When(/^I select Black Diamond under stone filter$/, () => {
+When(/^I select Black Diamond under stone filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectBlackDiamond();
+    await startWithADiamond.selectBlackDiamond();
 });
 
 
@@ -3948,9 +3948,9 @@ Then(/^I ensure Black Diamond men's rings are displayed$/, async() => {
 });
 
 
-When(/^I select VVS Diamond again under stone filter$/, () => {
+When(/^I select VVS Diamond again under stone filter$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.reSelectVVSDiamond();
+    await startWithADiamond.reSelectVVSDiamond();
 });
 
 
@@ -3969,9 +3969,9 @@ Then(/^I ensure the page 3 of Men's band with the tab and ways to save more sect
 
 
 //Scenario - 217
-When(/^I select Additional Men's Ring option under Ways to Save More$/, () => {
+When(/^I select Additional Men's Ring option under Ways to Save More$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectAdditionalMensRing();
+    await startWithADiamond.selectAdditionalMensRing();
 });
 
 
@@ -3983,9 +3983,9 @@ Then(/^I ensure Add Another Men's Ring button is displayed in page 3$/, async() 
 
 
 //Scenario - 218
-When(/^I click Add Another Men's Ring button$/, () => {
+When(/^I click Add Another Men's Ring button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.clickAddAnotherMensRingBand();
+    await startWithALabDiamond.clickAddAnotherMensRingBand();
 });
 
 
@@ -4065,9 +4065,9 @@ Then(/^I validate the presence of request custom order and Select Diamond button
 });
 
 
-When(/^I click Select Diamond button$/, () => {
+When(/^I click Select Diamond button$/, async() => {
 	const startWithALabDiamond = new MYOJ;
-    startWithALabDiamond.clickSelectDiamond();
+    await startWithALabDiamond.clickSelectDiamond();
 });
 
 
@@ -4099,9 +4099,9 @@ Then(/^I ensure it redirects to the page 3 of the setting$/, async() => {
 
 
 //Scenario - 224
-When(/^I click the Add Diamond and Checkout button in the diamond details page$/, () => {
+When(/^I click the Add Diamond and Checkout button in the diamond details page$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.clickAddDiamondAndCheckout();
+    await startWithADiamond.clickAddDiamondAndCheckout();
 });
 
 
@@ -4115,7 +4115,7 @@ Then(/^I ensure the details of the chosen diamond along with Change link is disp
 
 
 //Scenario - 225
-When(/^I select Start with a Setting under Rings menu$/, () => {
+When(/^I select Start with a Setting under Rings menu$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectRingsSwas();
 });
@@ -4130,7 +4130,7 @@ Then(/^I ensure the Make Your Diamond Engagement Ring page is displayed for sett
 });
 
 
-When(/^I select Start with a Setting under Engagement menu$/, () => {
+When(/^I select Start with a Setting under Engagement menu$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectEngagementSwas();
 });
@@ -4145,7 +4145,7 @@ Then(/^I ensure the page is displayed for settings with the banner$/, async() =>
 });
 
 
-When(/^I select Start with a Setting under Earrings menu$/, () => {
+When(/^I select Start with a Setting under Earrings menu$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectEarringsSwas();
 });
@@ -4160,7 +4160,7 @@ Then(/^I ensure the Make Your Diamond Earrings page is displayed for settings wi
 });
 
 
-When(/^I select Start with a Setting under Necklaces menu$/, () => {
+When(/^I select Start with a Setting under Necklaces menu$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectNecklacesSwas();
 });
@@ -4175,7 +4175,7 @@ Then(/^I ensure the Make Your Diamond Necklaces page is displayed for settings w
 });
 
 
-When(/^I select Start with a Setting under Men's menu$/, () => {
+When(/^I select Start with a Setting under Men's menu$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectMensRingsSwas();
 });
@@ -4191,9 +4191,9 @@ Then(/^I ensure the Make Your Diamond Men's Rings page is displayed for settings
 
 
 //Scenario - 226
-Given(/^I browse Start with a Setting page of Rings menu$/, () => {
-	browser.url(dmd.config.ringsSWASUrl);
-    BrowserUtil.wait(8)
+Given(/^I browse Start with a Setting page of Rings menu$/, async() => {
+	await browser.url(dmd.config.ringsSWASUrl);
+    await BrowserUtil.wait(8)
 });
 
 
@@ -4208,46 +4208,46 @@ Then(/^I verify the Settings tab with icon is enabled and pre-selected and the d
 });
 
 
-When(/^I click Home and Engagement Ring links in breadcrumb with available number of diamonds$/, () => {
+When(/^I click Home and Engagement Ring links in breadcrumb with available number of diamonds$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectLinkHome();
     startWithASetting.selectRingsBreadcrumb();
 });
 
 
-When(/^I browse Start with a Setting page of Earrings menu$/, () => {
-	browser.url(dmd.config.earringsSWASUrl);
-    BrowserUtil.wait(8)
+When(/^I browse Start with a Setting page of Earrings menu$/, async() => {
+	await browser.url(dmd.config.earringsSWASUrl);
+    await BrowserUtil.wait(8)
 });
 
 
-When(/^I click Home and Earrings links in breadcrumb with available number of diamonds$/, () => {
+When(/^I click Home and Earrings links in breadcrumb with available number of diamonds$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectLinkHome();
     startWithASetting.selectEarringsBreadcrumb();
 });
 
 
-When(/^I browse Start with a Setting page of Necklaces menu$/, () => {
-	browser.url(dmd.config.necklacesSWASUrl);
-    BrowserUtil.wait(8)
+When(/^I browse Start with a Setting page of Necklaces menu$/, async() => {
+	await browser.url(dmd.config.necklacesSWASUrl);
+    await BrowserUtil.wait(8)
 });
 
 
-When(/^I click Home and Necklaces links in breadcrumb with available number of diamonds$/, () => {
+When(/^I click Home and Necklaces links in breadcrumb with available number of diamonds$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectLinkHome();
     startWithASetting.selectNecklacesBreadcrumb();
 });
 
 
-When(/^I browse Start with a Setting page of Men's menu$/, () => {
-	browser.url(dmd.config.mensSWASUrl);
-    BrowserUtil.wait(8)
+When(/^I browse Start with a Setting page of Men's menu$/, async() => {
+	await browser.url(dmd.config.mensSWASUrl);
+    await BrowserUtil.wait(8)
 });
 
 
-When(/^I click Home and Men's Rings links in breadcrumb with available number of diamonds$/, () => {
+When(/^I click Home and Men's Rings links in breadcrumb with available number of diamonds$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectLinkHome();
     startWithASetting.selectMensRingsBreadcrumb();
@@ -4255,7 +4255,7 @@ When(/^I click Home and Men's Rings links in breadcrumb with available number of
 
 
 //Scenario - 227
-When(/^I scroll to product display$/, () => {
+When(/^I scroll to product display$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.scrollToProduct();
 });
@@ -4310,7 +4310,7 @@ Then(/^I ensure it redirects to page 3 of the chosen setting$/, async() => {
 
 
 //Scenario - 234
-When(/^I click Select Men's Band button in Diamond Details Page$/, () => {
+When(/^I click Select Men's Band button in Diamond Details Page$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.clickSelectMensBandDDP();
 });
@@ -4355,9 +4355,9 @@ Then(/^I ensure the presence of multiple filters, product display, inline descri
 
 
 //Scenario - 237
-When(/^I go back to the page 3 of the chosen ring and choose 10K White gold metal$/, () => {
-	browser.back();
-    BrowserUtil.wait(5)
+When(/^I go back to the page 3 of the chosen ring and choose 10K White gold metal$/, async() => {
+	await browser.back();
+    await BrowserUtil.wait(5)
     const startWithASetting = new MYOJ;
     startWithASetting.select10kWg();
 });
@@ -4369,7 +4369,7 @@ Then(/^I ensure the Update Men's Band button is displayed$/, async() => {
 });
 
 
-When(/^I click Update Men's Band button$/, () => {
+When(/^I click Update Men's Band button$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectUpdateMensBand();
 });
@@ -4382,7 +4382,7 @@ Then(/^I ensure the updated men's band product is added to cart and redirects to
 
 
 //Scenario - 238
-When(/^I click Select Women's Band button in Diamond Details Page$/, () => {
+When(/^I click Select Women's Band button in Diamond Details Page$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.clickSelectWomensBandDDP();
 });
@@ -4430,7 +4430,7 @@ Then(/^I ensure the Update Women's Band button is displayed$/, async() => {
 });
 
 
-When(/^I click Update Women's Band button$/, () => {
+When(/^I click Update Women's Band button$/, async() => {
 	const startWithASetting = new MYOJ;
     startWithASetting.selectUpdateWomensBand();
 });
@@ -4443,9 +4443,9 @@ Then(/^I ensure the updated women's band product is added to cart and redirects 
 
 
 //Scenario - 243
-When(/^I select Loose Diamonds in the breadcrumb$/, () => {
+When(/^I select Loose Diamonds in the breadcrumb$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.selectLinkLooseDiamonds();
+    await looseDiamonds.selectLinkLooseDiamonds();
 });
 
 
@@ -4458,9 +4458,9 @@ Then(/^I ensure the Loose Diamonds page is displayed with the filters and the di
 });
 
 
-When(/^I select Loose Lab Diamonds in the breadcrumb$/, () => {
+When(/^I select Loose Lab Diamonds in the breadcrumb$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.selectLinkLooseLabDiamonds();
+    await looseLabDiamonds.selectLinkLooseLabDiamonds();
 });
 
 
@@ -4494,9 +4494,9 @@ Then(/^I ensure the Ways to Save More text is not present with the filters$/, as
 
 
 //Scenario - 246
-When(/^I hover over each filter name in Loose Diamonds page$/, () => {
+When(/^I hover over each filter name in Loose Diamonds page$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.hoveringFiltersLooseDiamonds();
+    await looseLabDiamonds.hoveringFiltersLooseDiamonds();
 });
 
 
@@ -4522,9 +4522,9 @@ Then(/^I ensure the shape filter options are displayed$/, async() => {
 
 
 //Scenario - 248
-When(/^I click View Diamond button in the table$/, () => {
+When(/^I click View Diamond button in the table$/, async() => {
 	const looseDiamonds = new MYOJ;
-    looseDiamonds.clickViewDiamondButton();
+    await looseDiamonds.clickViewDiamondButton();
 });
 
 
@@ -4537,9 +4537,9 @@ Then(/^I ensure the Add to Cart, Select with Ring and Select with Necklace butto
 
 
 //Scenario - 249
-When(/^I select Add to Cart button in the Diamond Details Page$/, () => {
+When(/^I select Add to Cart button in the Diamond Details Page$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.selectAddToCartLooseDiamonds();
+    await looseLabDiamonds.selectAddToCartLooseDiamonds();
 });
 
 
@@ -4554,9 +4554,9 @@ Then(/^I ensure the order summary popup is displayed$/, async() => {
 });
 
 
-When(/^I select Select with Ring button in the Diamond Details Page$/, () => {
+When(/^I select Select with Ring button in the Diamond Details Page$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.clickSelectWithRing();
+    await looseLabDiamonds.clickSelectWithRing();
 });
 
 
@@ -4567,9 +4567,9 @@ Then(/^I ensure the Start with a Setting page of Rings is displayed$/, async() =
 });
 
 
-When(/^I select Select with Necklace button in the Diamond Details Page$/, () => {
+When(/^I select Select with Necklace button in the Diamond Details Page$/, async() => {
 	const looseLabDiamonds = new MYOJ;
-    looseLabDiamonds.clickSelectWithNecklace();
+    await looseLabDiamonds.clickSelectWithNecklace();
 });
 
 
@@ -4581,15 +4581,15 @@ Then(/^I ensure the Start with a Setting page of Necklaces is displayed$/, async
 
 
 //Scenario - 260
-When(/^I click Change link in the Diamond tab from the page 3 of Women's Band$/, () => {
+When(/^I click Change link in the Diamond tab from the page 3 of Women's Band$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectChangeDiamond();
+    await startWithADiamond.selectChangeDiamond();
 });
 
 
-When(/^I select Quick view dropdown of second row$/, () => {
+When(/^I select Quick view dropdown of second row$/, async() => {
 	const startWithADiamond = new MYOJ;
-    startWithADiamond.selectQuickViewRow2();
+    await startWithADiamond.selectQuickViewRow2();
 });
 
 
@@ -4620,14 +4620,14 @@ Then(/^I ensure it redirects to page 2 of men's bands along with the heading tab
 
 
 //Scenario - 250
-Given(/^I browse page 3 of ring Miya$/, () => {
-	browser.url(dmd.config.PageThreeMiya_url);
-    //BrowserUtil.maximize();
-    BrowserUtil.wait(5)
+Given(/^I browse page 3 of ring Miya$/, async() => {
+	await browser.url(dmd.config.PageThreeMiya_url);
+    //await BrowserUtil.maximize();
+    await BrowserUtil.wait(5)
 });
 
 
-When(/^I click Request Custom Order button in page 3$/, () => {
+When(/^I click Request Custom Order button in page 3$/, async() => {
 	const reqcustom = new MYOJ;
     reqcustom.clickReqCustomBtn();
 });
@@ -4639,14 +4639,14 @@ Then(/^I ensure it redirects to Request custom order page$/, async() => {
 });
 
 
-When(/^I browse page 3 of ring Miya with custom diamond$/, () => {
-	browser.url(dmd.config.PageThreeCustomMiya_url);
-    //BrowserUtil.maximize();
-    BrowserUtil.wait(5)
+When(/^I browse page 3 of ring Miya with custom diamond$/, async() => {
+	await browser.url(dmd.config.PageThreeCustomMiya_url);
+    //await BrowserUtil.maximize();
+    await BrowserUtil.wait(5)
 });
 
 
-When(/^I click Request Custom Order button$/, () => {
+When(/^I click Request Custom Order button$/, async() => {
 	const reqcustom = new MYOJ;
     reqcustom.clickReqCustomBtn();
 });
@@ -4664,7 +4664,7 @@ Then(/^I ensure the image details in page 3 are present$/, async() => {
 });
 
 
-When(/^I click Request Custom Order link$/, () => {
+When(/^I click Request Custom Order link$/, async() => {
 	const reqcustom = new MYOJ;
     reqcustom.clickReqCustomLnk();
 });
@@ -4700,13 +4700,13 @@ Then(/^I ensure the Name field is displayed in the request custom order form$/, 
 });
 
 
-When(/^I enter name in the request custom order form$/, () => {
+When(/^I enter name in the request custom order form$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.enterName();
 });
 
 
-When(/^I clear the entered data in name field$/, () => {
+When(/^I clear the entered data in name field$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.clearenteredName();
 });
@@ -4718,7 +4718,7 @@ Then(/^I ensure the Name field is marked mandatory$/, async() => {
 });
 
 
-When(/^I enter special characters and numbers in the name field of request custom order$/, () => {
+When(/^I enter special characters and numbers in the name field of request custom order$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.enterSpecName();
 });
@@ -4736,13 +4736,13 @@ Then(/^I ensure the Email field is displayed in the request custom order form$/,
 });
 
 
-When(/^I enter email in the request custom order form$/, () => {
+When(/^I enter email in the request custom order form$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.enterEmail();
 });
 
 
-When(/^I clear the entered data in email field$/, () => {
+When(/^I clear the entered data in email field$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.clearenteredEmail();
 });
@@ -4754,7 +4754,7 @@ Then(/^I ensure the Email field is marked mandatory$/, async() => {
 });
 
 
-When(/^I enter special characters and spaces in the email field$/, () => {
+When(/^I enter special characters and spaces in the email field$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.enterSpecEmail();
 });
@@ -4772,13 +4772,13 @@ Then(/^I ensure the Phone field is displayed in the request custom order form$/,
 });
 
 
-When(/^I enter phone number in the request custom order form$/, () => {
+When(/^I enter phone number in the request custom order form$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.enterphoneNumber();
 });
 
 
-When(/^I clear the entered data in phone number field$/, () => {
+When(/^I clear the entered data in phone number field$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.clearenteredphoneNumber();
 });
@@ -4790,7 +4790,7 @@ Then(/^I ensure the Phone field is marked mandatory$/, async() => {
 });
 
 
-When(/^I enter restricted characters in the Phone field$/, () => {
+When(/^I enter restricted characters in the Phone field$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.enterSpecphoneNumber();
 });
@@ -4808,13 +4808,13 @@ Then(/^I ensure the Customization Request field is displayed in the request cust
 });
 
 
-When(/^I enter Customization Request in the request custom order form$/, () => {
+When(/^I enter Customization Request in the request custom order form$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.enterCustomReq();
 });
 
 
-When(/^I clear the entered data in Customization Request number field$/, () => {
+When(/^I clear the entered data in Customization Request number field$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.clearenteredCustomReq();
 });
@@ -4834,7 +4834,7 @@ Then(/^I ensure the upload image button with the accepted format is displayed$/,
 });
 
 
-When(/^I click Submit Customization Request button$/, () => {
+When(/^I click Submit Customization Request button$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.clicksubmitCustom();
 });
@@ -4848,13 +4848,13 @@ Then(/^I ensure the success popup for the submitted customization request is dis
 });
 
 
-When(/^I upload image in request custom order form$/, () => {
+When(/^I upload image in request custom order form$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.uploadImageCustom();
 });
 
 
-When(/^I upload invalid image in request custom order form$/, () => {
+When(/^I upload invalid image in request custom order form$/, async() => {
 	const reqcustom = new MYOJ;
 	reqcustom.uploadWrongImageCustom();
 });

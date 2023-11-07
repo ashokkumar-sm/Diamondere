@@ -6,9 +6,9 @@ const RegistrationandLogin = require('../PageObjects/RegistrationandLogin')
 const data = require('../TestData/RegistrationandLogin.json');
 
 
-Given(/^I click the Login and Signup icon in the Homepage$/, () => {
+Given(/^I click the Login and Signup icon in the Homepage$/, async() => {
 	const loginsignup= new RegistrationandLogin;
-    loginsignup.clickLogin();
+    await loginsignup.clickLogin();
 });
 
 Then(/^I ensure clicking the Login and Signup icon opens the Login Register page$/, async() => {
@@ -24,9 +24,9 @@ Then(/^I ensure the Login and Register sections are displayed$/, async() => {
     await expect(loginsignup.sctnRegisterForm).toExist();
 });
 
-Given(/^I browse Solace ring in page 2$/, () => {
-	browser.url(dmd.config.PageTwo_url);
-    //BrowserUtil.maximize();
+Given(/^I browse Solace ring in page 2$/, async() => {
+	await browser.url(dmd.config.PageTwo_url);
+    //await BrowserUtil.maximize();
 });
 
 Then(/^I ensure the Login and Signup icon is present in page 2$/, async() => {
@@ -35,9 +35,9 @@ Then(/^I ensure the Login and Signup icon is present in page 2$/, async() => {
 });
 
 
-Given(/^I browse Solace ring in page 3$/, () => {
-	browser.url(dmd.config.PageThree_url);
-    //BrowserUtil.maximize();
+Given(/^I browse Solace ring in page 3$/, async() => {
+	await browser.url(dmd.config.PageThree_url);
+    //await BrowserUtil.maximize();
 });
 
 Then(/^I ensure the Login and Signup icon is present in page 3$/, async() => {
@@ -46,9 +46,9 @@ Then(/^I ensure the Login and Signup icon is present in page 3$/, async() => {
 });
 
 
-Given(/^I browse Solace ring the shopping cart page$/, () => {
-	browser.url(dmd.config.Shoppingcart_url);
-    //BrowserUtil.maximize();
+Given(/^I browse Solace ring the shopping cart page$/, async() => {
+	await browser.url(dmd.config.Shoppingcart_url);
+    //await BrowserUtil.maximize();
 });
 
 Then(/^I ensure Login and Signup icon is present in the shopping cart page$/,async () => {
@@ -68,9 +68,9 @@ Then(/^I ensure the Register text, First Name, Last Name,Email and Password fiel
 
 });
 
-When(/^I enter the first name, last name,Email and password in the respective fields in the register form$/, () => {
+When(/^I enter the first name, last name,Email and password in the respective fields in the register form$/, async() => {
 	const regfieldsentry = new RegistrationandLogin;
-    regfieldsentry.enterRegFields();
+    await regfieldsentry.enterRegFields();
 });
 
 Then(/^I ensure the Terms of use section is present$/, async() => {
@@ -78,9 +78,9 @@ Then(/^I ensure the Terms of use section is present$/, async() => {
     await expect(regfieldsentry.sctnTermsOfUse).toExist();
 });
 
-When(/^I click the Terms of use link$/, () => {
+When(/^I click the Terms of use link$/, async() => {
 	const regfieldsentry = new RegistrationandLogin;
-    regfieldsentry.termsOfUseLink();
+    await regfieldsentry.termsOfUseLink();
 });
 
 Then(/^I ensure clicking the terms of use link redirects to the expected page$/, async() => {
@@ -89,14 +89,14 @@ Then(/^I ensure clicking the terms of use link redirects to the expected page$/,
     await browser.back();
 });
 
-When(/^I click the Terms and use checkbox$/, () => {
+When(/^I click the Terms and use checkbox$/, async() => {
 	const regfieldsentry = new RegistrationandLogin;
-    regfieldsentry.clicktermsOfUsebtn();
+    await regfieldsentry.clicktermsOfUsebtn();
 });
 
-When(/^I click the Register button$/, () => {
+When(/^I click the Register button$/, async() => {
 	const regfieldsentry = new RegistrationandLogin;
-    regfieldsentry.clickRegisterbtn();
+    await regfieldsentry.clickRegisterbtn();
     
 });
 
@@ -105,9 +105,9 @@ Then(/^I ensure the welcome page is displayed$/, async() => {
     await expect(regfieldsentry).toEqual(data.RegandLoginlinks.RegistrationSuccessPage);
 });
     
-Given(/^I browse welcome screen$/, () => {
-	browser.url(dmd.config.RegSuccessPage_url);
-    BrowserUtil.maximize();
+Given(/^I browse welcome screen$/, async() => {
+	await browser.url(dmd.config.RegSuccessPage_url);
+    await BrowserUtil.maximize();
 });
 
 Then(/^I ensure the welcome page is displayed with welcome components,categories and links,and footer section present$/, async() => {
@@ -121,9 +121,9 @@ Then(/^I ensure the welcome page is displayed with welcome components,categories
 
 });
 
-When(/^I click the FREE 100 DAY RETURNS link in the welcome page$/, () => {
+When(/^I click the FREE 100 DAY RETURNS link in the welcome page$/, async() => {
 	const welcmpage= new RegistrationandLogin;
-    welcmpage.clickFreeReturn();
+    await welcmpage.clickFreeReturn();
 });
 
 Then(/^I ensure the link redirects to the return policy page$/,async () => {
@@ -132,9 +132,9 @@ Then(/^I ensure the link redirects to the return policy page$/,async () => {
     await browser.back();
 });
 
-When(/^I click the complimentary global shipping link in the welcome page$/, () => {
+When(/^I click the complimentary global shipping link in the welcome page$/, async() => {
 	const welcmpage= new RegistrationandLogin;
-    welcmpage.clickglobalshipping();
+    await welcmpage.clickglobalshipping();
 });
 
 Then(/^I ensure the link redirects to the shipping policy page$/,async () => {
@@ -143,9 +143,9 @@ Then(/^I ensure the link redirects to the shipping policy page$/,async () => {
     await browser.back();
 });
 
-When(/^I click the free 100 day resizing link in the welcome page$/, () => {
+When(/^I click the free 100 day resizing link in the welcome page$/, async() => {
 	const welcmpage= new RegistrationandLogin;
-    welcmpage.clickresizing();
+    await welcmpage.clickresizing();
 });
 
 Then(/^I ensure the link redirects to the free resizing page$/,async () => {
@@ -154,9 +154,9 @@ Then(/^I ensure the link redirects to the free resizing page$/,async () => {
     await browser.back();
 });
 
-When(/^I click the complimentary engraving link in the welcome page$/, () => {
+When(/^I click the complimentary engraving link in the welcome page$/, async() => {
 	const welcmpage= new RegistrationandLogin;
-    welcmpage.clickengraving();
+    await welcmpage.clickengraving();
 });
 
 Then(/^I ensure the link redirects to the engraving page$/, async() => {
@@ -165,9 +165,9 @@ Then(/^I ensure the link redirects to the engraving page$/, async() => {
     await browser.back();
 });
 
-When(/^I click the Start creating your jewelery button$/, () => {
+When(/^I click the Start creating your jewelery button$/, async() => {
 	const welcmpage= new RegistrationandLogin;
-    welcmpage.clickstartCrtJewel();
+    await welcmpage.clickstartCrtJewel();
 });
 
 Then(/^I ensure clicking the Start creating your jewelery button redirects to the rings page$/,async () => {
@@ -184,9 +184,9 @@ Then(/^I ensure the Rings text ,Sapphire Rings,Ruby Rings and Emerald Rings link
     await expect(ringstext.lnkRubyRings).toExist();
 });
 
-When(/^I click the Emerald rings under rings category$/, () => {
+When(/^I click the Emerald rings under rings category$/, async() => {
 	const ringstext= new RegistrationandLogin;
-    ringstext.clickEmeraldRings();
+    await ringstext.clickEmeraldRings();
 });
 
 Then(/^I ensure clicking the emerald rings move to the emerald rings page$/,async () => {
@@ -203,9 +203,9 @@ Then(/^I ensure the engagement text,Solitaire Rings,Vintage Inspired and Platinu
 
 });
 
-When(/^I click the Solitaire Rings under rings category$/, () => {
+When(/^I click the Solitaire Rings under rings category$/, async() => {
 	const engagetext= new RegistrationandLogin;
-    engagetext.clickSolitaire();
+    await engagetext.clickSolitaire();
 });
 
 Then(/^I ensure clicking the Solitaire Rings move to the Solitaire Rings page$/,async () => {
@@ -221,9 +221,9 @@ Then(/^I ensure the necklaces text, Heart, Unique and Sapphire pendants links ar
     await expect(necktext.lnkSapphireNecklaces).toExist();
 });
 
-When(/^I click the Heart pendants under necklaces category$/, () => {
+When(/^I click the Heart pendants under necklaces category$/, async() => {
 	const necktext= new RegistrationandLogin;
-    necktext.clickHeartpendant();
+    await necktext.clickHeartpendant();
 });
 
 Then(/^I ensure clicking the Heart pendants move to the Heart pendants page$/, async() => {
@@ -240,9 +240,9 @@ Then(/^I ensure the earrings text,Stud Earrings,Drop Earrings and Chandelier Ear
    
 });
 
-When(/^I click the Chandelier Earrings under rings category$/, () => {
+When(/^I click the Chandelier Earrings under rings category$/, async() => {
 	const necktext= new RegistrationandLogin;
-    necktext.clickChandEarring();
+    await necktext.clickChandEarring();
 });
 
 Then(/^I ensure clicking the Chandelier Earrings move to the Chandelier Earrings page$/, async() => {
@@ -259,9 +259,9 @@ Then(/^I ensure the Mens text, Men's Diamond Rings,Men's Wedding Rings and Cuffl
     await expect(necktext.lnkCufflinks).toExist();
 });
 
-When(/^I click the  under Cufflinks Mens category$/, () => {
+When(/^I click the  under Cufflinks Mens category$/, async() => {
 	const necktext= new RegistrationandLogin;
-    necktext.clickCufflinks();
+    await necktext.clickCufflinks();
 });
 
 Then(/^I ensure clicking the Cufflinks move to the Cufflinks page$/, async() => {
@@ -270,9 +270,9 @@ Then(/^I ensure clicking the Cufflinks move to the Cufflinks page$/, async() => 
 });
 
 
-When(/^I enter the special characters, numbers in the First name field in the register form$/, () => {
+When(/^I enter the special characters, numbers in the First name field in the register form$/, async() => {
 	const negScene = new RegistrationandLogin;
-    negScene.enterSpecFirstname();
+    await negScene.enterSpecFirstname();
 });
 
 Then(/^I ensure the invalid error message for the first name field is displayed$/,async() => {
@@ -280,9 +280,9 @@ Then(/^I ensure the invalid error message for the first name field is displayed$
     await expect(negScene.msgInvalidName).toExist();
 });
 
-When(/^I enter the  in the Last name field in the register form$/, () => {
+When(/^I enter the  in the Last name field in the register form$/, async() => {
 	const negScene = new RegistrationandLogin;
-    negScene.enterSpecLastname();
+    await negScene.enterSpecLastname();
 });
 
 Then(/^I ensure the invalid error message for the last name field is displayed$/, async() => {
@@ -290,9 +290,9 @@ Then(/^I ensure the invalid error message for the last name field is displayed$/
     await expect(negScene.msgInvalidName).toExist();
 });
 
-When(/^I enter the Email in the email field in the register form$/, () => {
+When(/^I enter the Email in the email field in the register form$/, async() => {
 	const negScene = new RegistrationandLogin;
-    negScene.enterSpecEmail();
+    await negScene.enterSpecEmail();
 });
 
 Then(/^I ensure the invalid error message for the email field is displayed$/, async() => {
@@ -300,9 +300,9 @@ Then(/^I ensure the invalid error message for the email field is displayed$/, as
     await expect(negScene.msgInvalidEmail).toExist();
 });
 
-When(/^I click the register button without entering fields$/, () => {
+When(/^I click the register button without entering fields$/, async() => {
 	const negScene = new RegistrationandLogin;
-    negScene.mandatoryFields();
+    await negScene.mandatoryFields();
 });
 
 Then(/^I ensure the mandatory field validation for the fields are displayed$/, async() => {
@@ -324,14 +324,14 @@ Then(/^I ensure the Login text,Email and Password fields are displayed at the to
     
 });
 
-When(/^I enter the Email and Password fields in the login form$/, () => {
+When(/^I enter the Email and Password fields in the login form$/, async() => {
 	const login = new RegistrationandLogin;
-    login.enterCredLogin();
+    await login.enterCredLogin();
 });
 
-Then(/^I click the login button$/, () => {
+Then(/^I click the login button$/, async() => {
 	const login = new RegistrationandLogin;
-    login.clickLoginbutton();
+    await login.clickLoginbutton();
 });
 
 Then(/^I ensure the login button returns to the Homepage of the diamondere$/, async() => {
@@ -340,9 +340,9 @@ Then(/^I ensure the login button returns to the Homepage of the diamondere$/, as
 });
 
 
-When(/^I hover on Login and Signup icon$/, () => {
+When(/^I hover on Login and Signup icon$/, async() => {
 	const login = new RegistrationandLogin;
-    login.hoverLogin();
+    await login.hoverLogin();
 });
 
 Then(/^I ensure the track my order, order history and logout options are visible$/, async() => {
@@ -354,9 +354,9 @@ Then(/^I ensure the track my order, order history and logout options are visible
 });
 
 
-When(/^I click the Logout option$/, () => {
+When(/^I click the Logout option$/, async() => {
 	const login = new RegistrationandLogin;
-    login.clickLogout();
+    await login.clickLogout();
 });
 
 Then(/^I ensure the user stays in the Homepage of Diamondere$/,async () => {
@@ -365,9 +365,9 @@ Then(/^I ensure the user stays in the Homepage of Diamondere$/,async () => {
 });
 
 
-When(/^I enter the special characters in the email field in the login form$/, () => {
+When(/^I enter the special characters in the email field in the login form$/, async() => {
 	const login = new RegistrationandLogin;
-    login.enterSpecCharLogin();
+    await login.enterSpecCharLogin();
 });
 
 Then(/^I ensure the mandatory field validation for the email field is displayed$/,async () => {
@@ -375,14 +375,14 @@ Then(/^I ensure the mandatory field validation for the email field is displayed$
     await expect(login.loginValidMsg).toExist();
 });
 
-When(/^I enter the invalid email and password in the respective fields in the login form$/, () => {
+When(/^I enter the invalid email and password in the respective fields in the login form$/, async() => {
 	const login = new RegistrationandLogin;
-    login.enterInvalidLogin();
+    await login.enterInvalidLogin();
 });
 
-Then(/^I click Login button using an unregistered login$/, () => {
+Then(/^I click Login button using an unregistered login$/, async() => {
 	const login = new RegistrationandLogin;
-    login.clickInvalidLogin();
+    await login.clickInvalidLogin();
 });
 
 Then(/^I ensure the invalid login credentials error message is displayed$/,async () => {
@@ -390,19 +390,19 @@ Then(/^I ensure the invalid login credentials error message is displayed$/,async
     await expect(login.pwErrorMsg).toExist();
 });
 
-When(/^I enter the valid email and invalid password in the respective fields in the login form$/, () => {
+When(/^I enter the valid email and invalid password in the respective fields in the login form$/, async() => {
 	const login = new RegistrationandLogin;
-    login.entervalidEmailLogin();
+    await login.entervalidEmailLogin();
 });
 
-Then(/^I click Login button using an invalid password$/, () => {
+Then(/^I click Login button using an invalid password$/, async() => {
 	const login = new RegistrationandLogin;
-    login.clickInvalidLogin();
+    await login.clickInvalidLogin();
 });
 
-When(/^I click the Forgot password link$/, () => {
+When(/^I click the Forgot password link$/, async() => {
 	const login = new RegistrationandLogin;
-    login.clickForgotPWLink();
+    await login.clickForgotPWLink();
 });
 
 Then(/^I ensure the Forgot password link redirects to the forgot password page$/, async() => {
@@ -419,14 +419,14 @@ Then(/^I ensure the forgot password text,email box are present$/, async() => {
     
 });
 
-Then(/^I enter the registered email in the Email address field$/, () => {
+Then(/^I enter the registered email in the Email address field$/, async() => {
 	const login = new RegistrationandLogin;
-    login.enteremailForgot();
+    await login.enteremailForgot();
 });
 
-When(/^I click the submit button in the Forgot password form$/, () => {
+When(/^I click the submit button in the Forgot password form$/, async() => {
 	const frgtpw = new RegistrationandLogin;
-    frgtpw.clickSubmitFrgtPw();
+    await frgtpw.clickSubmitFrgtPw();
 });
 
 Then(/^I ensure the success message is displayed in the screen$/, async() => {
@@ -434,9 +434,9 @@ Then(/^I ensure the success message is displayed in the screen$/, async() => {
     await expect(frgtpw.msgSuccessFPW).toExist();
 });
 
-When(/^I enter the special characters, numbers in the Email address field in the forgot password form$/, () => {
+When(/^I enter the special characters, numbers in the Email address field in the forgot password form$/, async() => {
 	const login = new RegistrationandLogin;
-    login.enterSpecEmail();
+    await login.enterSpecEmail();
 });
 
 Then(/^I ensure the field validation message for the email address field is displayed$/,async () => {
@@ -444,15 +444,14 @@ Then(/^I ensure the field validation message for the email address field is disp
     await expect(login.errormsgEmail).toExist();
 });
 
-
-When(/^I enter the unregistered email in the Email address field$/, () => {
+When(/^I enter the unregistered email in the Email address field$/, async() => {
 	const login = new RegistrationandLogin;
-    login.enterUnregEmailFPw();
+    await login.enterUnregEmailFPw();
 });
 
-When(/^I click submit button in the Forgot password form$/, () => {
+When(/^I click submit button in the Forgot password form$/, async() => {
 	const frgtpw = new RegistrationandLogin;
-    frgtpw.clickSubmitFrgtPw();
+    await frgtpw.clickSubmitFrgtPw();
 });
 
 Then(/^I ensure the error message for the invalid email address is displayed$/, async() => {
@@ -462,47 +461,47 @@ Then(/^I ensure the error message for the invalid email address is displayed$/, 
 
 ///////////////////////////////
 
-Given(/^I click the rings menu$/, () => {
+Given(/^I click the rings menu$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.ringsmainmenu();
+    await shopbag.ringsmainmenu();
 });
 
-Then(/^I select the Diamond rings from the submenu$/, () => {
+Then(/^I select the Diamond rings from the submenu$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.slctDiaRing();
-
-});
-
-Then(/^I select the Flori ring$/, () => {
-	const shopbag = new RegistrationandLogin;
-    shopbag.slctFloriRing();
+    await shopbag.slctDiaRing();
 
 });
 
-When(/^I click the select ring-size dropdown$/, () => {
+Then(/^I select the Flori ring$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.slctSelectDropdwn();
+    await shopbag.slctFloriRing();
 
 });
 
-Then(/^I Click the ring size dropdown$/, () => {
+When(/^I click the select ring-size dropdown$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.slctRingSizeDropdown();
+    await shopbag.slctSelectDropdwn();
+
 });
 
-Then(/^I select the US3-UK& AU-F ring size$/, () => {
+Then(/^I Click the ring size dropdown$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.slctUSRing();
+    await shopbag.slctRingSizeDropdown();
 });
 
-Then(/^I click the Add to cart button$/, () => {
+Then(/^I select the US3-UK& AU-F ring size$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.clickAddtocart();
+    await shopbag.slctUSRing();
 });
 
-Then(/^I click the checkout button$/, () => {
+Then(/^I click the Add to cart button$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.clickCheckout();
+    await shopbag.clickAddtocart();
+});
+
+Then(/^I click the checkout button$/, async() => {
+	const shopbag = new RegistrationandLogin;
+    await shopbag.clickCheckout();
 });
 
 Then(/^I ensure the shopping cart page is displayed with the order quantity mentioned in the bag icon and login icon present$/, async() => {
@@ -510,9 +509,9 @@ Then(/^I ensure the shopping cart page is displayed with the order quantity ment
     await expect(shopbag.shpbagSC).toExist();
 });
 
-When(/^I click the login signup icon in the shopping cart page$/, () => {
+When(/^I click the login signup icon in the shopping cart page$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.clickLogin();
+    await shopbag.clickLogin();
 });
 
 Then(/^I ensure the login register page opens$/, async() => {
@@ -521,21 +520,21 @@ Then(/^I ensure the login register page opens$/, async() => {
     await expect(shopbag.loginSection).toExist();
 });
 
-When(/^I enter the Registered Email and password in the respective fields$/, () => {
+When(/^I enter the Registered Email and password in the respective fields$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.enterCredLogin();
+    await shopbag.enterCredLogin();
 });
 
 
-When(/^I click the Login Button$/, () => {
+When(/^I click the Login Button$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.clickLoginAndWait();
+    await shopbag.clickLoginAndWait();
 });
 
 
-When(/^I click the Login button$/, () => {
+When(/^I click the Login button$/, async() => {
 	const shopbag = new RegistrationandLogin;
-    shopbag.clickLoginbutton();
+    await shopbag.clickLoginbutton();
 });
 
 Then(/^I ensure the shopping cart page is displayed with the order quantity mentioned in the bag icon$/,async () => {
@@ -544,13 +543,13 @@ Then(/^I ensure the shopping cart page is displayed with the order quantity ment
 });
 
 
-When(/^I click logout$/, () => {
+When(/^I click logout$/, async() => {
 	const login = new RegistrationandLogin;
-    login.hoverLogin();
-    login.clickLogout();
+    await login.hoverLogin();
+    await login.clickLogout();
 });
 
-When(/^I click remove button for the login$/, () => {
+When(/^I click remove button for the login$/, async() => {
     const login = new RegistrationandLogin;
-    login.removedesigninLogin();
+    await login.removedesigninLogin();
 });

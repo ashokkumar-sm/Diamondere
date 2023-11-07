@@ -15,9 +15,9 @@ Then(/^Ensure May we Assist you button is present$/, async() => {
 
 //Scenario 1
 
-Given(/^I select May we Assist you button$/, () => {
+Given(/^I select May we Assist you button$/, async() => {
 	const assist = new maywe;
-    assist.selectbuttonmaywe();
+    await assist.selectbuttonmaywe();
 });
 
 Then(/^Ensure a customer care popup is displayed$/, async() => {
@@ -32,9 +32,9 @@ Then(/^Ensure remove icon is present$/, async() => {
     await expect(assist.btnCloseMayWeAssistYou).toExist;
 });
 
-When(/^I select remove icon in the popup$/, () => {
+When(/^I select remove icon in the popup$/, async() => {
 	const assist = new maywe;
-    assist.selectclosebutton();
+    await assist.selectclosebutton();
 });
 
 //Scenario 3:
@@ -86,26 +86,26 @@ Then(/^Ensure cancel button is displayed$/, async() => {
 
 //Scenario 4:
 
-When(/^I select cancel button$/, () => {
+When(/^I select cancel button$/, async() => {
 	const assist = new maywe;
-    assist.selectcancelbuttonmaywe();
+    await assist.selectcancelbuttonmaywe();
 });
 
 //Scenario 5:
 
-When(/^I enter any email in EmailAddress field in may we assist you popup$/, () => {
+When(/^I enter any email in EmailAddress field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.enteremailmaywe();
+    await assist.enteremailmaywe();
 });
 
-When(/^I enter any query in Detail your query field in may we assist you popup$/, () => {
+When(/^I enter any query in Detail your query field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.enterquerymaywe();
+    await assist.enterquerymaywe();
 });
 
-When(/^I select submit button in may we assist you popup$/, () => {
+When(/^I select submit button in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.selectsubmitbuttonmaywe();
+    await assist.selectsubmitbuttonmaywe();
 });
 
 Then(/^Ensure an error message is displayed under Name field and form submission is unsuccessful$/, async() => {
@@ -115,9 +115,9 @@ Then(/^Ensure an error message is displayed under Name field and form submission
 
 //Scenario 6:
 
-When(/^I enter any name in Name field in may we assist you popup$/, () => {
+When(/^I enter any name in Name field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.enternamemaywe();
+    await assist.enternamemaywe();
 });
 
 Then(/^Ensure an error message is displayed under EmailAddress field and form submission is unsuccessful$/, async() => {
@@ -134,9 +134,9 @@ Then(/^Ensure an error message is displayed under Detail your query field and fo
 
 //Scenario 8:
 
-When(/^I enter any characters other than letters and space in Name field in may we assist you popup$/, () => {
+When(/^I enter any characters other than letters and space in Name field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.enterinvalidnamemaywe();
+    await assist.enterinvalidnamemaywe();
 });
 
 Then(/^Ensure a validation message is displayed under Name field in may we assist you popup$/, async() => {
@@ -146,9 +146,9 @@ Then(/^Ensure a validation message is displayed under Name field in may we assis
 
 //Scenario 9:
 
-When(/^I enter any emailid with space and avoid at sign in EmailAddress field in may we assist you popup$/, () => {
+When(/^I enter any emailid with space and avoid at sign in EmailAddress field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.enterinvalidemailmaywe();
+    await assist.enterinvalidemailmaywe();
 });
 
 Then(/^Ensure a validation message is displayed under EmailAddress field in may we assist you popup$/, async() => {
@@ -158,9 +158,9 @@ Then(/^Ensure a validation message is displayed under EmailAddress field in may 
 
 //Scenario 10
 
-When(/^I enter any invalid character like double quotation or square bracket in Detail your query field in may we assist you popup$/, () => {
+When(/^I enter any invalid character like double quotation or square bracket in Detail your query field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.enterinvalidquerymaywe();
+    await assist.enterinvalidquerymaywe();
 });
 
 Then(/^Ensure a validation message is displayed under Detail your query field in may we assist you popup$/, async() => {
@@ -170,9 +170,9 @@ Then(/^Ensure a validation message is displayed under Detail your query field in
 
 //Scenario 11
 
-When(/^I enter any design link Detail your query field in may we assist you popup$/, () => {
+When(/^I enter any design link Detail your query field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.enterdesignlinkinquerymaywe();
+    await assist.enterdesignlinkinquerymaywe();
 });
 
 Then(/^Ensure a success message is displayed and form submission is successful in may we assist you popup$/, async() => {
@@ -182,9 +182,9 @@ Then(/^Ensure a success message is displayed and form submission is successful i
 
 //Scenario 12:
 
-When(/^I enter any name more than 40 characters in Name field in may we assist you popup$/, () => {
+When(/^I enter any name more than 40 characters in Name field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.entermaxlimitnamemaywe();
+    await assist.entermaxlimitnamemaywe();
 });
 
 Then(/^Ensure the Name field accepts only 40 characters in may we assist you popup$/, async() => {
@@ -197,9 +197,9 @@ Then(/^Ensure the Name field accepts only 40 characters in may we assist you pop
 
 //Scenario 13
 
-When(/^I enter any query more than 200 characters in Detail your query field in may we assist you popup$/, () => {
+When(/^I enter any query more than 200 characters in Detail your query field in may we assist you popup$/, async() => {
 	const assist = new maywe;
-    assist.entermaxlimitquerymaywe();
+    await assist.entermaxlimitquerymaywe();
 });
 
 Then(/^Ensure the Detail your query field accepts only 200 characters in may we assist you popup$/, async() => {
@@ -211,9 +211,9 @@ Then(/^Ensure the Detail your query field accepts only 200 characters in may we 
 
 //Scenario 14
 
-When(/^I select close button in success popup in may we assist you$/, () => {
+When(/^I select close button in success popup in may we assist you$/, async() => {
 	const assist = new maywe;
-    assist.selectclosebuttonsuccessassist();
+    await assist.selectclosebuttonsuccessassist();
 });
 
 Then(/^Ensure the success popup is closed in may we asssit you$/, async() => {

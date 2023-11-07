@@ -8,9 +8,9 @@ class ElementUtil {
     @param {Object} element that we want to click
     @param {String} description for the element that we want to click
     */
-    static click(element, description) {
+    static async click(element, description) {
         Log.info("Clicking '" + description + "'");
-        element.click()
+        await element.click()
     }
 
     /**
@@ -19,10 +19,10 @@ class ElementUtil {
      * @param {Object} element that we want to click
      * @param {String} description for the element that we want to click
      */
-    static tryClick(element, description) {
+    static async tryClick(element, description) {
         if (element.isClickable()) {
             Log.info("Clicking '" + description + "'");
-            element.click()
+            await element.click()
         }
         else {
             Log.info("Attempted to click '" + description + "' but was unsucessful");
@@ -36,20 +36,26 @@ class ElementUtil {
      * @param {Object} element that we want to click
      * @param {String} description for the element that we want to click
      */
-    static forceClick(element, description) {
+    // static async forceClick(element, description) {
+    //     Log.info("Clicking '" + description + "'");
+    //     var executeScript = function (arg) { arg.click(); };
+    //     await browser.execute(executeScript, element)
+    // }
+       static async forceClick(element, description) {
         Log.info("Clicking '" + description + "'");
-        var executeScript = function (arg) { arg.click(); };
-        browser.execute(executeScript, element)
-    }
+        await element.scrollIntoView(); // Ensure the element is in the viewport
+        await element.waitForClickable({ timeout: 30000 }); // Wait for the element to become clickable
+        await element.click();
+       }
 
     /**
      * Make the mouse pointer hover over an element
      * @param {*} element - element that we want hover the mouse over
      * @param {*} description - description of the element
      */
-    static mouseHover(element, description) {
+    static async mouseHover(element, description) {
         Log.info(`Mouse Hover: ${description}`)
-        element.moveTo()
+        await element.moveTo()
     }
 
     /**
@@ -57,33 +63,33 @@ class ElementUtil {
     @param {String} locator of the element we want to find
     @param {String} description for this element
     */
-    static findElement(locator, description) {
+    static async findElement(locator, description) {
         Log.info("Finding element '" + description + "'");
-        return browser.$(locator)
+        return await browser.$(locator)
     }
 
     /**
     Find if an element is visible
     @param {Object} element we want to find is visible 
     */
-    static isVisible(element) {
-        return element.isDisplayed() ? true : false;
+    static async isVisible(element) {
+        return await element.isDisplayed() ? true : false;
     }
 
     /**
      * Find if an element is clickable
      * @param {Object} element we want to find is clickable
      */
-    static isClickable(element) {
-        return element.isClickable() ? true : false;
+    static async isClickable(element) {
+        return await element.isClickable() ? true : false;
     }
 
     /**
      * Find if an element is enabled
      * @param {Object} element we want to find is enabled
      */
-    static isEnabled(element) {
-        return element.isEnabled() ? true : false;
+    static async isEnabled(element) {
+        return await element.isEnabled() ? true : false;
     }
 
     /**
@@ -93,14 +99,14 @@ class ElementUtil {
      * @param {String} description description of the element
      * @param {boolean} reverse if true it waits for the opposite - Not exist (default: false)
      */
-    static waitForDisplayed(element, waitTimeInSeconds, description, reverse = false) {
+    static async waitForDisplayed(element, waitTimeInSeconds, description, reverse = false) {
         if (reverse) {
             Log.info("Waiting for '" + description + "' to be not displayed within " + waitTimeInSeconds + " seconds")
         }
         else {
             Log.info("Waiting for '" + description + "' to be displayed within " + waitTimeInSeconds + " seconds")
         }
-        element.waitForDisplayed({ timeout: waitTimeInSeconds * 1000 }, reverse);
+        await element.waitForDisplayed({ timeout: waitTimeInSeconds * 1000 }, reverse);
     }
 
     /**
@@ -110,14 +116,14 @@ class ElementUtil {
      * @param {String} description description of the element
      * @param {boolean} reverse if true it waits for the opposite - Not exist (default: false)
      */
-    static waitForClickable(element, waitTimeInSeconds, description, reverse = false) {
+    static async waitForClickable(element, waitTimeInSeconds, description, reverse = false) {
         if (reverse) {
             Log.info("Waiting for '" + description + "' to be not clickable within " + waitTimeInSeconds + " seconds")
         }
         else {
             Log.info("Waiting for '" + description + "' to be clickable within " + waitTimeInSeconds + " seconds")
         }
-        element.waitForClickable({ timeout: waitTimeInSeconds * 1000 }, reverse);
+        await element.waitForClickable({ timeout: waitTimeInSeconds * 1000 }, reverse);
     }
 
     /**
@@ -127,14 +133,14 @@ class ElementUtil {
      * @param {String} description description of the element
      * @param {boolean} reverse if true it waits for the opposite - Not exist (default: false)
      */
-    static waitForExist(element, waitTimeInSeconds, description, reverse = false) {
+    static async waitForExist(element, waitTimeInSeconds, description, reverse = false) {
         if (reverse) {
             Log.info("Waiting for '" + description + "' to not exist within " + waitTimeInSeconds + " seconds")
         }
         else {
             Log.info("Waiting for '" + description + "' to exist within " + waitTimeInSeconds + " seconds")
         }
-        element.waitForExist({ timeout: waitTimeInSeconds * 1000, reverse });
+        await element.waitForExist({ timeout: waitTimeInSeconds * 1000, reverse });
     }
 
     /**
@@ -144,14 +150,14 @@ class ElementUtil {
      * @param {String} description description of the element
      * @param {boolean} reverse if true it waits for the opposite - Not exist (default: false)
      */
-    static waitForEnabled(element, waitTimeInSeconds, description, reverse = false) {
+    static async waitForEnabled(element, waitTimeInSeconds, description, reverse = false) {
         if (reverse) {
             Log.info("Waiting for '" + description + "' to not be enabled within " + waitTimeInSeconds + " seconds")
         }
         else {
             Log.info("Waiting for '" + description + "' to be enabled within " + waitTimeInSeconds + " seconds")
         }
-        element.waitForEnabled({ timeout: waitTimeInSeconds * 1000, reverse });
+        await element.waitForEnabled({ timeout: waitTimeInSeconds * 1000, reverse });
     }
 
     /**
@@ -159,9 +165,9 @@ class ElementUtil {
     @param {Object} element we want to clear text for
     @param {String} description for this element
     */
-    static clearText(element, description) {
+    static async clearText(element, description) {
         Log.info("clearing text for '" + description + "'")
-        element.clearValue();
+        await element.clearValue();
     }
 
     /**
@@ -169,9 +175,9 @@ class ElementUtil {
     @param {Object} element we want to send text to
     @param {String} description for this element
     */
-        static sendText(element, inputText, description) {
+        static async sendText(element, inputText, description) {
         Log.info("Entering text '" + inputText + "' for '" + description + "'")
-         element.setValue(inputText);
+        await element.setValue(inputText);
     }
 
     /**
@@ -180,9 +186,9 @@ class ElementUtil {
     @param {String} description for this element
     @return {String} returns string value
     */
-    static getText(element, description) {
+    static async getText(element, description) {
         Log.info("Retrieving text for '" + description + "'")
-        return element.getText();
+        return await element.getText();
     }
 
     /**
@@ -191,9 +197,9 @@ class ElementUtil {
     @param {String} description for this element
     @return {String} returns string value
     */
-    static getValue(element, description) {
+    static async getValue(element, description) {
         Log.info("Retrieving value for '" + description + "'")
-        return element.getValue();
+        return await element.getValue();
     }
 
     /**
@@ -202,9 +208,9 @@ class ElementUtil {
      * @param {String} attributeName requested attribute
      * @param {String} description description this element
      */
-    static getAttribute(element, attributeName, description) {
+    static async getAttribute(element, attributeName, description) {
         Log.info(`Retrieving attribute ${attributeName} from ${description}`)
-        return element.getAttribute(attributeName)
+        return await element.getAttribute(attributeName)
     }
 
     /**
@@ -212,9 +218,9 @@ class ElementUtil {
      * @param {*} element - the element we want to be displayed in view port
      * @param {*} description - description of the element
      */
-    static scrollIntoView(element, description){
+    static async scrollIntoView(element, description){
         Log.info(`Scrolling to bring ${description} to view port`)
-        element.scrollIntoView()
+        await element.scrollIntoView()
     }
 
     /**
@@ -223,10 +229,10 @@ class ElementUtil {
     @param {String} text for the value to be selected
     @param {String} description for the drop down
     */
-    static selectDropDown(element, value, description) {
+    static async selectDropDown(element, value, description) {
         Log.info("Selecting '" + value + "' for drop down '" + description + "'")
-        element.click()
-        element.selectByVisibleText(value)
+        await element.click()
+        await element.selectByVisibleText(value)
         //element.click()
     }
 
@@ -236,11 +242,11 @@ class ElementUtil {
     @param {String} text for the value to be selected
     @param {String} description for the drop down
     */
-    static selectDropDownByAttr(element, attrName, value, description) {
+    static async selectDropDownByAttr(element, attrName, value, description) {
         Log.info("Selecting entry with '" + attrName + ":" + value + "' for drop down '" + description + "'")
-        element.click()
-        element.selectByAttribute(attrName, value)
-        element.click()
+        await element.click()
+        await element.selectByAttribute(attrName, value)
+        await element.click()
     }
 
 
@@ -248,8 +254,8 @@ class ElementUtil {
      * Check if option or input of type checkbox or radio is selected
      * @param {Object} element we want to check if selected
      */
-    static isSelected(element) {
-        return element.isSelected() ? true : false;
+    static async isSelected(element) {
+        return await element.isSelected() ? true : false;
     }
 
     /**
@@ -260,7 +266,7 @@ class ElementUtil {
      * @param {*} value - desired end state (true or false) 
      * @param {String} description - for the checkbox
      */
-    static toggleCheckBox(element, value, description) {
+    static async toggleCheckBox(element, value, description) {
         Log.info('Toggling ' + description + ' to "' + value + '"')
         if (value != undefined) {
             //if value is not a boolean value, convert it to boolean
@@ -280,11 +286,11 @@ class ElementUtil {
      * @param {String} filePath - path of the file to upload
      * @param {String} description - description for the file upload operation
      */
-    static uploadFile(fileInputElement, uploadButtonElement, filePath, description) {
+    static async uploadFile(fileInputElement, uploadButtonElement, filePath, description) {
         Log.info(`Uploading file '${filePath}' on ${description}`)
-        const remoteFilePath = browser.uploadFile(filePath)
-        fileInputElement.setValue(remoteFilePath)
-        uploadButtonElement.click()
+        const remoteFilePath = await browser.uploadFile(filePath)
+        await fileInputElement.setValue(remoteFilePath)
+        await uploadButtonElement.click()
     }
 
 
@@ -297,11 +303,11 @@ class ElementUtil {
      * @param {Object} tableElement - table element we want to extract the rows from
      * @param {String} [trClassName] - className of table rows (if available)
      */
-    static getTableRows(tableElement, trClassName) {
+    static async getTableRows(tableElement, trClassName) {
         if (trClassName)
-            return tableElement.$$(`.${trClassName}`)
+            return await tableElement.$$(`.${trClassName}`)
         else
-            return tableElement.$$("tr")
+            return await tableElement.$$("tr")
     }
 
     /**
@@ -311,11 +317,11 @@ class ElementUtil {
      * @param {Number} colNum - column number
      * @param {String} [trClassName] - className of table rows (if available)
      */
-    static getTableCell(tableElement, rowNum, colNum, trClassName) {
+    static async getTableCell(tableElement, rowNum, colNum, trClassName) {
         if (trClassName)
-            return tableElement.$$(`.${trClassName}`)[rowNum].$$("td")[colNum]
+            return await tableElement.$$(`.${trClassName}`)[rowNum].$$("td")[colNum]
         else
-            return tableElement.$$("tr")[rowNum].$$("td")[colNum]
+            return await tableElement.$$("tr")[rowNum].$$("td")[colNum]
     }
 
     /**
@@ -323,11 +329,11 @@ class ElementUtil {
      * @param {Object} tableRowElement - row (wdio element) we want to extract cells from
      * @param {Number} [colNum] - column number to return. If absent, then method returns a list of all columns 
      */
-    static getRowCells(tableRowElement, colNum) {
+    static async getRowCells(tableRowElement, colNum) {
         if (colNum)
-            return tableRowElement.$$("td")[colNum]
+            return await  tableRowElement.$$("td")[colNum]
         else
-            return tableRowElement.$$("td")
+            return await tableRowElement.$$("td")
     }
 
     /**
@@ -335,10 +341,10 @@ class ElementUtil {
      * @param {Object} tableElement - table web element we want to search from
      * @param {String} searchText - search string
      */
-    static getTableRowsContainingText(tableElement, searchText) {
+    static async getTableRowsContainingText(tableElement, searchText) {
         //return tableElement.$$("//tr[normalize-space(text())='" + searchText + "']/..")
         let rows = tableElement.$$("tr")
-        return rows.filter((row)=> {
+        return await  rows.filter((row)=> {
             if(row){ 
                 return row.getText().includes(searchText) 
             }
@@ -352,26 +358,26 @@ class ElementUtil {
     /**
      * Fetches the text from the alert
      */
-    static getAlertText() {
+    static async getAlertText() {
         Log.info("Retrieving text from alert popup")
-        return browser.getAlertText()
+        return await  browser.getAlertText()
     }
 
     /**
      * Accepts the given alert/presses OK button, and brings back the focus to the web application.
      */
-    static acceptAlert() {
+    static async acceptAlert() {
         Log.info("Accepting alert prompt")
-        browser.acceptAlert()
+        await  browser.acceptAlert()
     }
 
     /**
      * Closes the alert using (X) present in the alert,
      * dismissAlert() never presses the cancel button
      */
-    static dismissAlert() {
+    static async dismissAlert() {
         Log.info("Dismissing alert prompt")
-        browser.dismissAlert()
+        await browser.dismissAlert()
     }
 
 

@@ -432,197 +432,199 @@ class RegistrationandLogin {
 
 /////////////////////////////////////////////////////////////////////////
     
-    clickLogin(){
-        ElementUtil.click(this.loginIconHome, "click login icon");
-        BrowserUtil.wait(5);
-        ElementUtil.waitForClickable(this.txtBoxFirstName, 55, "wait fo page load")
-    }
-    enterRegFields(){
-        ElementUtil.sendText(this.txtBoxFirstName,data.RegandLoginlinks.RegistrationFirstName, "Enter First Name")
-        ElementUtil.sendText(this.txtBoxLastName,data.RegandLoginlinks.RegistrationLastName,"Enter last Name")
-        let randomInt = Math.floor(Math.random() * 99999)
-        let email = 'diamonderetest' + randomInt + '@gmail.com'
-        ElementUtil.sendText(this.txtBoxEmail, email, "Entering the email for registration");
-        ElementUtil.sendText(this.txtPassword,data.RegandLoginlinks.RegistrationPassword,"Enter password")
-    }
-    termsOfUseLink(){
-        ElementUtil.click(this.lnkTermsOfUse,"click terms of use link")
-        BrowserUtil.wait(5);
-    }
-    clicktermsOfUsebtn(){
-        ElementUtil.click(this.btnAgreeTermsOfUse," click button terms of use")
-        BrowserUtil.wait(5);
-    }
-    clickRegisterbtn(){
-        ElementUtil.click(this.btnRegister,"click terms of use checkbox")
-        BrowserUtil.wait(10);
-    }
-    clickFreeReturn(){
-        ElementUtil.click(this.lnkFreeReturns,"click free returns link")
-        BrowserUtil.wait(5);
-        
-    }
-    clickglobalshipping(){
-        ElementUtil.click(this.lnkComplimentaryShipping,"click shipping")
-        BrowserUtil.wait(5);
-    }
-    clickresizing(){
-        ElementUtil.click(this.lnkResizing,"click resizing")
-        BrowserUtil.wait(5);
-    }
-    clickengraving(){
-        ElementUtil.click(this.lnkComplimentaryEngraving,"click engraving")
-        BrowserUtil.wait(5);
-    }
-    clickstartCrtJewel(){
-        ElementUtil.click(this.btnStartCreating,"click Start creating your jewelery")
-        BrowserUtil.wait(5);
-    }
-    clickEmeraldRings(){
-        ElementUtil.click(this.lnkEmeraldRings,"click emerald rings")
-        BrowserUtil.wait(5);
-    }
-    clickSolitaire(){
-        ElementUtil.click(this.lnkSolitaireRings,"click solitaire rings")
-        BrowserUtil.wait(5);
-    }
-    clickHeartpendant(){
-        ElementUtil.click(this.lnkHeartPendants,"click heart pendants")
-        BrowserUtil.wait(5);
-    }
-    clickChandEarring(){
-        ElementUtil.click(this.lnkChandelierEarrings,"click chandlier earrings")
-        BrowserUtil.wait(5);
-    }
-    clickCufflinks(){
-        ElementUtil.click(this.lnkCufflinks,"click cufflinks")
-        BrowserUtil.wait(5);
-    }
-    enterSpecFirstname(){
-        ElementUtil.sendText(this.txtBoxFirstName,data.RegandLoginlinks.SpecCharacterFirstName,"enterlogin first name")
-    }
-    enterSpecLastname(){
-        ElementUtil.sendText(this.txtBoxLastName,data.RegandLoginlinks.SpecCharacterLastName,"enterlogin lastname")
-    }
-    enterSpecEmail(){
-        ElementUtil.sendText(this.txtBoxEmail,data.RegandLoginlinks.SpecCharacterEmail,"enterlogin email")
-    }
-    mandatoryFields(){
-        ElementUtil.click(this.btnRegister,"click regiter button")
-    }
-    enterCredLogin(){
-        ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.LoginEmail,"enterlogin credentials")
-        ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.RegistrationPassword,"enterlogin credentials")
-        BrowserUtil.wait(3);
-    }
-    clickLoginbutton(){
-        ElementUtil.click(this.btnLogin,"click register button")
-        BrowserUtil.wait(8);
-    }
-    clickLoginAndWait() {
-        ElementUtil.click(this.btnLogin,"click register button")
-        BrowserUtil.wait(3);
-        ElementUtil.waitForDisplayed(this.shpbagSC, 50, "wait for page load")
-    }
-    hoverLogin(){
-        ElementUtil.mouseHover(this.loggedIconHome,"Hover over Login icon") 
-    }
-    clickLogout(){
-        ElementUtil.click(this.drpdownLogout,"click logout button") 
-        BrowserUtil.wait(5);
-    }
-    enterSpecCharLogin(){
-        ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.SpecCharacterEmail, "enter spc chracters")
-       
-    }
-    enterInvalidLogin(){
-        ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.InvalidMail,"enter invalid mail")
-        ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.SpecCharacterEmail,"enter spc chracters")
-    }
-    clickInvalidLogin(){
-        ElementUtil.click(this.btnLogin,"click login button") 
-        BrowserUtil.wait(5);
-    }
-    entervalidEmailLogin(){
-        ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.LoginEmail,"enter mail")
-        ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.InvalidPW," enter invalid PW")
-    }
-    clickForgotPWLink(){
-        ElementUtil.click(this.lnkForgotPW,"click login button") 
-        BrowserUtil.wait(5);
-    }
-    enteremailForgot(){
-        ElementUtil.sendText(this.emailAddress,data.RegandLoginlinks.LoginEmail,"enter mail")
-    }
-    enterSpecEmail(){
-        ElementUtil.sendText(this.emailAddress,data.RegandLoginlinks.SpecCharacterEmail,"enter spc chracters")
-    }
-    clickSubmitFrgtPw(){
-        ElementUtil.click(this.btnSubmit,"click submit button in forgot password form") 
-        BrowserUtil.wait(5);
-    }
-    clickCloseFpw(){
-        ElementUtil.click(this.btnCloseFPW,"click close button ") 
-        BrowserUtil.wait(5);
-    }
-    enterUnregEmailFPw(){
-        ElementUtil.sendText(this.emailAddress,data.RegandLoginlinks.UnregisteredEmail,"enter unregistred email")
-    }
-    ringsmainmenu(){
-        ElementUtil.click(this.ringsmenu,"click rings menu") 
-        BrowserUtil.wait(5);
-    }
-    slctDiaRing(){
-        ElementUtil.click(this.ringsdiamond,"click diamond rings") 
-        BrowserUtil.wait(5);
-    }
-    slctFloriRing(){
-        ElementUtil.click(this.floriring,"click flori diamond rings") 
-        BrowserUtil.wait(5);
-    }
-    slctSelectDropdwn(){
-        ElementUtil.click(this.selectdrpdown,"click diamond rings") 
-        BrowserUtil.wait(5);
-    }
-    slctRingSizeDropdown(){
-        ElementUtil.click(this.slctringsizedrpdwn,"click diamond rings") 
-        BrowserUtil.wait(5);
-    }
-    slctUSRing(){
-        ElementUtil.click(this.ringsizeUk,"click diamond rings") 
-        BrowserUtil.wait(5);
-    }
-    clickAddtocart(){
-        ElementUtil.click(this.btnaddtocart,"click diamond rings") 
-        BrowserUtil.wait(5);
-    }
-    clickCheckout(){
-        ElementUtil.click(this.btnchkout,"click diamond rings") 
-        BrowserUtil.wait(5);
+    async clickLogin(){
+        await ElementUtil.click(this.loginIconHome, "click login icon");
+        await BrowserUtil.wait(5);
+        await ElementUtil.waitForClickable(this.txtBoxFirstName, 55, "wait fo page load")
     }
 
-    selectProfile() {
-        let checkLoggedin = ElementUtil.isVisible(this.loggedIconHome, "check user is loggedin");
+    async enterRegFields(){
+        await ElementUtil.sendText(this.txtBoxFirstName,data.RegandLoginlinks.RegistrationFirstName, "Enter First Name")
+        await ElementUtil.sendText(this.txtBoxLastName,data.RegandLoginlinks.RegistrationLastName,"Enter last Name")
+        let randomInt = Math.floor(Math.random() * 99999)
+        let email = 'diamonderetest' + randomInt + '@gmail.com'
+        await ElementUtil.sendText(this.txtBoxEmail, email, "Entering the email for registration");
+        await ElementUtil.sendText(this.txtPassword,data.RegandLoginlinks.RegistrationPassword,"Enter password")
+    }
+    async termsOfUseLink(){
+        await ElementUtil.click(this.lnkTermsOfUse,"click terms of use link")
+        await BrowserUtil.wait(5);
+    }
+    async clicktermsOfUsebtn(){
+        await ElementUtil.click(this.btnAgreeTermsOfUse," click button terms of use")
+        await BrowserUtil.wait(5);
+    }
+    async clickRegisterbtn(){
+        await ElementUtil.click(this.btnRegister,"click terms of use checkbox")
+        await BrowserUtil.wait(10);
+    }
+    async clickFreeReturn(){
+        await ElementUtil.click(this.lnkFreeReturns,"click free returns link")
+        await BrowserUtil.wait(5);
+        
+    }
+    async clickglobalshipping(){
+        await ElementUtil.click(this.lnkComplimentaryShipping,"click shipping")
+        await BrowserUtil.wait(5);
+    }
+    async clickresizing(){
+        await ElementUtil.click(this.lnkResizing,"click resizing")
+        await BrowserUtil.wait(5);
+    }
+    async clickengraving(){
+        await ElementUtil.click(this.lnkComplimentaryEngraving,"click engraving")
+        await BrowserUtil.wait(5);
+    }
+    async clickstartCrtJewel(){
+        await ElementUtil.click(this.btnStartCreating,"click Start creating your jewelery")
+        await BrowserUtil.wait(5);
+    }
+    async clickEmeraldRings(){
+        await ElementUtil.click(this.lnkEmeraldRings,"click emerald rings")
+        await BrowserUtil.wait(5);
+    }
+    async clickSolitaire(){
+        await ElementUtil.click(this.lnkSolitaireRings,"click solitaire rings")
+        await BrowserUtil.wait(5);
+    }
+    async clickHeartpendant(){
+        await ElementUtil.click(this.lnkHeartPendants,"click heart pendants")
+        await BrowserUtil.wait(5);
+    }
+    async clickChandEarring(){
+        await ElementUtil.click(this.lnkChandelierEarrings,"click chandlier earrings")
+        await BrowserUtil.wait(5);
+    }
+    async clickCufflinks(){
+        await ElementUtil.click(this.lnkCufflinks,"click cufflinks")
+        await BrowserUtil.wait(5);
+    }
+    async enterSpecFirstname(){
+        await ElementUtil.sendText(this.txtBoxFirstName,data.RegandLoginlinks.SpecCharacterFirstName,"enterlogin first name")
+    }
+    async enterSpecLastname(){
+        await ElementUtil.sendText(this.txtBoxLastName,data.RegandLoginlinks.SpecCharacterLastName,"enterlogin lastname")
+    }
+    async enterSpecEmail(){
+        await ElementUtil.sendText(this.txtBoxEmail,data.RegandLoginlinks.SpecCharacterEmail,"enterlogin email")
+    }
+    async mandatoryFields(){
+        await ElementUtil.click(this.btnRegister,"click regiter button")
+    }
+    async enterCredLogin(){
+        await ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.LoginEmail,"enterlogin credentials")
+        await ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.RegistrationPassword,"enterlogin credentials")
+        await BrowserUtil.wait(3);
+    }
+    async clickLoginbutton(){
+        await ElementUtil.click(this.btnLogin,"click register button")
+        await BrowserUtil.wait(8);
+    }
+    async clickLoginAndWait() {
+        await ElementUtil.click(this.btnLogin,"click register button")
+        await BrowserUtil.wait(3);
+        await ElementUtil.waitForDisplayed(this.shpbagSC, 50, "wait for page load")
+    }
+    async hoverLogin(){
+        await ElementUtil.mouseHover(this.loggedIconHome,"Hover over Login icon") 
+    }
+    async clickLogout(){
+        await ElementUtil.click(this.drpdownLogout,"click logout button") 
+        await BrowserUtil.wait(5);
+    }
+    async enterSpecCharLogin(){
+        await ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.SpecCharacterEmail, "enter spc chracters")
+       
+    }
+    async enterInvalidLogin(){
+        await ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.InvalidMail,"enter invalid mail")
+        await ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.SpecCharacterEmail,"enter spc chracters")
+    }
+    async clickInvalidLogin(){
+        await ElementUtil.click(this.btnLogin,"click login button") 
+        await BrowserUtil.wait(5);
+    }
+    async entervalidEmailLogin(){
+        await ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.LoginEmail,"enter mail")
+        await ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.InvalidPW," enter invalid PW")
+    }
+    async clickForgotPWLink(){
+        await ElementUtil.click(this.lnkForgotPW,"click login button") 
+        await BrowserUtil.wait(5);
+    }
+    async enteremailForgot(){
+        await ElementUtil.sendText(this.emailAddress,data.RegandLoginlinks.LoginEmail,"enter mail")
+    }
+    async enterSpecEmail(){
+        await ElementUtil.sendText(this.emailAddress,data.RegandLoginlinks.SpecCharacterEmail,"enter spc chracters")
+    }
+    async clickSubmitFrgtPw(){
+        await ElementUtil.click(this.btnSubmit,"click submit button in forgot password form") 
+        await BrowserUtil.wait(5);
+    }
+    async clickCloseFpw(){
+        await ElementUtil.click(this.btnCloseFPW,"click close button ") 
+        await BrowserUtil.wait(5);
+    }
+    async enterUnregEmailFPw(){
+        await ElementUtil.sendText(this.emailAddress,data.RegandLoginlinks.UnregisteredEmail,"enter unregistred email")
+    }
+    async ringsmainmenu(){
+        await ElementUtil.click(this.ringsmenu,"click rings menu") 
+        await BrowserUtil.wait(5);
+    }
+    async slctDiaRing(){
+        await ElementUtil.click(this.ringsdiamond,"click diamond rings") 
+        await BrowserUtil.wait(5);
+    }
+    async slctFloriRing(){
+        await ElementUtil.click(this.floriring,"click flori diamond rings") 
+        await BrowserUtil.wait(5);
+    }
+    async slctSelectDropdwn(){
+        await ElementUtil.click(this.selectdrpdown,"click diamond rings") 
+        await BrowserUtil.wait(5);
+    }
+    async slctRingSizeDropdown(){
+        await ElementUtil.click(this.slctringsizedrpdwn,"click diamond rings") 
+        await BrowserUtil.wait(5);
+    }
+    async slctUSRing(){
+        await ElementUtil.click(this.ringsizeUk,"click diamond rings") 
+        await BrowserUtil.wait(5);
+    }
+    async clickAddtocart(){
+        await ElementUtil.click(this.btnaddtocart,"click diamond rings") 
+        await BrowserUtil.wait(5);
+    }
+    async clickCheckout(){
+        await ElementUtil.click(this.btnchkout,"click diamond rings") 
+        await BrowserUtil.wait(5);
+    }
+
+    async selectProfile() {
+        let checkLoggedin = await ElementUtil.isVisible(this.loggedIconHome, "check user is loggedin");
         if (checkLoggedin == true) {
             this.hoverLogin();
             this.clickLogout();
         } 
     }
 
-    enterCheckoutLogin() {
-        ElementUtil.sendText(this.loginEmail,data.RegandLoginlinks.CheckoutEmail,"enterlogin credentials")
-        ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.CheckoutPassword,"enterlogin credentials")
+    async enterCheckoutLogin() {
+        const registeredEmailUsingAPI = context.getValue('registeredEmail')
+        await ElementUtil.sendText(this.loginEmail, registeredEmailUsingAPI,"enterlogin credentials")
+        await ElementUtil.sendText(this.loginPW,data.RegandLoginlinks.CheckoutPassword,"enterlogin credentials")
     }
     
-    removedesigninLogin() {
-        while (ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
-            let removeLink = ElementUtil.isVisible(this.btnFirstRemove, "Check for remove button");
+    async removedesigninLogin() {
+        let cartCountVisible = await ElementUtil.isVisible(this.lblCartCount, "Check the cart value");
+        
+        while (cartCountVisible) {
+            await ElementUtil.waitForClickable(this.btnFirstRemove, 20, "wait for page load");
+            await ElementUtil.click(this.btnFirstRemove, "select remove");
+            await BrowserUtil.wait(5);
 
-            if (removeLink) {
-                ElementUtil.waitForClickable(this.btnFirstRemove, 20, "wait for page load")
-                ElementUtil.click(this.btnFirstRemove, "select remove");
-                BrowserUtil.wait(5);
-            }
+            cartCountVisible = await ElementUtil.isVisible(this.lblCartCount, "Check the cart value");
         }
     }
 }

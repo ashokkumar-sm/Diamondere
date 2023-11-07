@@ -7,14 +7,14 @@ const data = require('../TestData/CA.json');
 const { start } = require('chromedriver');
 
 
-When(/^I enter into page 3 of any product$/, () => {
-	browser.url(diamondere.config.Writeareviewpage3url);
-    // BrowserUtil.maximize();
+When(/^I enter into page 3 of any product$/, async() => {
+	await browser.url(diamondere.config.Writeareviewpage3url);
+    // await BrowserUtil.maximize();
 });
 
-When(/^I scrolldown to the read reviews section at the bottom$/, () => {
+When(/^I scrolldown to the read reviews section at the bottom$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.movetoreadreview();
+	await writeareview.movetoreadreview();
 });
 
 Then(/^Ensure the Recently purchased text is present$/, async() => {
@@ -29,9 +29,9 @@ Then(/^Ensure Write a review button is displayed$/, async() => {
 
 // Scenario 1:
 
-Given(/^I select Write a review button$/, () => {
+Given(/^I select Write a review button$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.selectbtnwriteareview();
+	await writeareview.selectbtnwriteareview();
 });
 
 Then(/^Ensure Write a review popup is displayed$/, async() => {
@@ -58,9 +58,9 @@ Then(/^Ensure Your star text and rating stars are displayed$/, async() => {
 
 //Scenario 4:
 
-When(/^I click any star$/, () => {
+When(/^I click any star$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.selectstarrating();
+	await writeareview.selectstarrating();
 });
 
 Then(/^Ensure the stars are highlighted upto the selected star$/, async() => {
@@ -102,29 +102,29 @@ Then(/^Ensure the Submit your review button is displayed$/, async() => {
 
 //Scenario 6:
 
-When(/^I enter any emailId in EmailId field$/, () => {
+When(/^I enter any emailId in EmailId field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enteremailIdreview();
+	await writeareview.enteremailIdreview();
 });
 
-When(/^I enter any Location in Location field$/, () => {
+When(/^I enter any Location in Location field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterlocationreview();
+	await writeareview.enterlocationreview();
 });
 
-When(/^I enter any review title in Review title field$/, () => {
+When(/^I enter any review title in Review title field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterReviewtitle();
+	await writeareview.enterReviewtitle();
 });
 
-When(/^I enter any review comments in Your Review comments field$/, () => {
+When(/^I enter any review comments in Your Review comments field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterReviewcomments();
+	await writeareview.enterReviewcomments();
 });
 
-When(/^I select Submit your review button$/, () => {
+When(/^I select Submit your review button$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.selectSubmitbutton();
+	await writeareview.selectSubmitbutton();
 });
 
 Then(/^Ensure an error message is displayed under name field and form submission is unsuccessful$/, async() => {
@@ -134,9 +134,9 @@ Then(/^Ensure an error message is displayed under name field and form submission
 
 //Scenario 7:
 
-When(/^I enter any name in Name field$/, () => {
+When(/^I enter any name in Name field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enternamereview();
+	await writeareview.enternamereview();
 });
 
 Then(/^Ensure an error message is displayed under Star rating field and form submission is unsuccessful$/, async() => {
@@ -174,9 +174,9 @@ Then(/^Ensure an error message is displayed under Your Review comments field and
 
 //Scenario 12
 
-When(/^I enter any characters other than letters and space in Name field$/, () => {
+When(/^I enter any characters other than letters and space in Name field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterinvalidnamereview();
+	await writeareview.enterinvalidnamereview();
 });
 
 Then(/^Ensure a validation message is displayed under name field$/, async() => {
@@ -186,9 +186,9 @@ Then(/^Ensure a validation message is displayed under name field$/, async() => {
 
 //Scenario 13
 
-When(/^I enter any emailid with space and avoid at sign in EmailId field$/, () => {
+When(/^I enter any emailid with space and avoid at sign in EmailId field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterinvalidemailIdreview();
+	await writeareview.enterinvalidemailIdreview();
 });
 
 Then(/^Ensure a validation message is displayed under EmailId field$/, async() => {
@@ -198,9 +198,9 @@ Then(/^Ensure a validation message is displayed under EmailId field$/, async() =
 
 //Scenario 14
 
-When(/^I enter any apostrophe or hashtag or dollar or percent or asterisk or any invalid characters in Location field$/, () => {
+When(/^I enter any apostrophe or hashtag or dollar or percent or asterisk or any invalid characters in Location field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterinvalidlocationreview();
+	await writeareview.enterinvalidlocationreview();
 });
 
 Then(/^Ensure a validation message is displayed under Location field$/, async() => {
@@ -210,9 +210,9 @@ Then(/^Ensure a validation message is displayed under Location field$/, async() 
 
 //Scenario 15
 
-When(/^I enter any characters other than letters, numbers and space in Review title field$/, () => {
+When(/^I enter any characters other than letters, numbers and space in Review title field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterinvalidReviewtitle();
+	await writeareview.enterinvalidReviewtitle();
 });
 
 Then(/^Ensure a validation message is displayed under Review Title field$/, async() => {
@@ -222,9 +222,9 @@ Then(/^Ensure a validation message is displayed under Review Title field$/, asyn
 
 //Scenario 16
 
-When(/^I enter any characters other than letters, numbers and space in Your Review Comments field$/, () => {
+When(/^I enter any characters other than letters, numbers and space in Your Review Comments field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.enterinvalidReviewcomments();
+	await writeareview.enterinvalidReviewcomments();
 });
 
 Then(/^Ensure a validation message is displayed under Your Review Comments field$/, async() => {
@@ -234,9 +234,9 @@ Then(/^Ensure a validation message is displayed under Your Review Comments field
 
 //Scenario 17
 
-When(/^I enter any name more than 40 characters in Name field$/, () => {
+When(/^I enter any name more than 40 characters in Name field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.entermaxnamereview();
+	await writeareview.entermaxnamereview();
 });
 
 Then(/^Ensure the name field accepts only 40 characters$/, async() => {
@@ -248,9 +248,9 @@ Then(/^Ensure the name field accepts only 40 characters$/, async() => {
 
 //Scenario 18
 
-When(/^I enter any emailId more than 40 characters in EmailId field$/, () => {
+When(/^I enter any emailId more than 40 characters in EmailId field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.entermaxemailreview();
+	await writeareview.entermaxemailreview();
 });
 
 Then(/^Ensure the emailId field accepts only 40 characters$/, async() => {
@@ -262,9 +262,9 @@ Then(/^Ensure the emailId field accepts only 40 characters$/, async() => {
 
 //Scenario 19
 
-When(/^I enter any location text more than 40 characters in location field$/, () => {
+When(/^I enter any location text more than 40 characters in location field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.entermaxlocationreview();
+	await writeareview.entermaxlocationreview();
 });
 
 Then(/^Ensure the location field accepts only 40 characters$/, async() => {
@@ -276,9 +276,9 @@ Then(/^Ensure the location field accepts only 40 characters$/, async() => {
 
 //Scenario 20
 
-When(/^I enter any text more than 40 characters in Review title field$/, () => {
+When(/^I enter any text more than 40 characters in Review title field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.entermaxReviewtitle();
+	await writeareview.entermaxReviewtitle();
 });
 
 Then(/^Ensure the Review title field accepts only 40 characters$/, async() => {
@@ -290,9 +290,9 @@ Then(/^Ensure the Review title field accepts only 40 characters$/, async() => {
 
 //Scenario 21
 
-When(/^I enter any text more than 200 characters in Your Review Comments field$/, () => {
+When(/^I enter any text more than 200 characters in Your Review Comments field$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.entermaxReviewcomments();
+	await writeareview.entermaxReviewcomments();
 });
 
 Then(/^Ensure the Your Review Comments field accepts only 200 characters$/, async() => {
@@ -304,9 +304,9 @@ Then(/^Ensure the Your Review Comments field accepts only 200 characters$/, asyn
 
 //Scenario 22
 
-When(/^select the remove button or icon at the top right of the popup$/, () => {
+When(/^select the remove button or icon at the top right of the popup$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.selectClosebuttonWAR();
+	await writeareview.selectClosebuttonWAR();
 });
 
 Then(/^Ensure the Write a review popup is closed$/, async() => {
@@ -322,9 +322,9 @@ Then(/^Ensure a success message is displayed and the form submission is successf
 	await expect(writeareview.txtmsgSucc).toExist();
 });
 
-When(/^I select close button in success popup$/, () => {
+When(/^I select close button in success popup$/, async() => {
 	const writeareview = new reviewpop;
-	writeareview.selectClosebuttonSuccess();
+	await writeareview.selectClosebuttonSuccess();
 });
 
 Then(/^Ensure the success popup is closed$/, async() => {

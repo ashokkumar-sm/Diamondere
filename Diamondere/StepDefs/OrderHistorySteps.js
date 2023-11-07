@@ -6,9 +6,9 @@ const ShoppingCart = require('../PageObjects/OrderHistory')
 const data = require('../TestData/OrderHistory.json');
 
 
-When(/^I click the Order history option from the dropdown$/, () => {
+When(/^I click the Order history option from the dropdown$/, async() => {
 	const orderHistory = new ShoppingCart;
-    orderHistory.clickOrderHistOptn();
+    await orderHistory.clickOrderHistOptn();
 });
 
 Then(/^I ensure clicking the Order history option redirects to the order history page$/, async() => {
@@ -39,9 +39,9 @@ Then(/^I ensure the order details,View detail link, shipping and billing address
     await expect(orderHistory.txtheadingBillingaddress).toExist();
 });
 
-When(/^I click the View Details link in the order details card$/, () => {
+When(/^I click the View Details link in the order details card$/, async() => {
 	const orderHistory = new ShoppingCart;
-    orderHistory.clickViewDetails();
+    await orderHistory.clickViewDetails();
 });
 
 Then(/^I ensure clicking the View Details link in the order details card redirects to the order details page$/, async() => {
@@ -49,9 +49,9 @@ Then(/^I ensure clicking the View Details link in the order details card redirec
     await expect(orderHistory).toEqual(data.OrderHistory.OrderDetailsPage2);
 });
 
-Given(/^I browse the first Order Details page$/, () => {
-	browser.url(dmd.config.OrderDetailsPage1);
-    BrowserUtil.wait(5)
+Given(/^I browse the first Order Details page$/, async() => {
+	await browser.url(dmd.config.OrderDetailsPage1);
+    await BrowserUtil.wait(5)
 });
 
 Then(/^I ensure the Order Details,Order ID,Order Status and order date are present$/, async() => {
@@ -112,9 +112,9 @@ Then(/^I ensure the payment type and payment method text are present$/, async() 
     await expect(orderHistory.txtpaymentName).toExist();
 });
 
-When(/^I move to the address section in the order details page$/, () => {
+When(/^I move to the address section in the order details page$/, async() => {
     const orderHistory = new ShoppingCart;
-    orderHistory.moveToaddressSection();
+    await orderHistory.moveToaddressSection();
 });
 
 Then(/^shipping and billing information text,shipping and billing address are present$/, async() => {
@@ -124,9 +124,9 @@ Then(/^shipping and billing information text,shipping and billing address are pr
     await expect(orderHistory.txtheadingBillingaddress).toExist();
 });
 
-Given(/^I browse the second Order Details page$/, () => {
-        browser.url(dmd.config.OrderDetailsPage2);
-        BrowserUtil.wait(5)
+Given(/^I browse the second Order Details page$/, async() => {
+        await browser.url(dmd.config.OrderDetailsPage2);
+        await BrowserUtil.wait(5)
 });
 
 Then(/^I ensure the chain size text is present$/, async() => {
@@ -144,9 +144,9 @@ Then(/^I ensure the payment type and payment method text are present in the seco
     await expect(orderHistory.txtpaymentNamePaypal).toExist();
 });
 
-Given(/^I browse the third Order Details page$/, () => {
-    browser.url(dmd.config.OrderDetailsPage3);
-    BrowserUtil.wait(5)
+Given(/^I browse the third Order Details page$/, async() => {
+    await browser.url(dmd.config.OrderDetailsPage3);
+    await BrowserUtil.wait(5)
 });
 
 Then(/^I ensure the engraving text and extend plan are present$/,async () => {
@@ -156,9 +156,9 @@ Then(/^I ensure the engraving text and extend plan are present$/,async () => {
     
 });
 
-When(/^I move to the Rayce ring$/, () => {
+When(/^I move to the Rayce ring$/, async() => {
 	const orderHistory = new ShoppingCart;
-    orderHistory.movetoRayceRing();
+    await orderHistory.movetoRayceRing();
 });
 
 Then(/^I ensure the His and Her ring text are present$/,async () => {
@@ -167,16 +167,16 @@ Then(/^I ensure the His and Her ring text are present$/,async () => {
     await expect(orderHistory.txtHisRingSize).toExist();
 });
 
-When(/^I click the extend link in the third order details page$/, () => {
+When(/^I click the extend link in the third order details page$/, async() => {
 	const orderHistory = new ShoppingCart;
-    orderHistory.clickExtend();
+    await orderHistory.clickExtend();
 
 });
 
 Then(/^I ensure clicking the extend link redirects to the extend page$/,async () => {
     const footer = await browser.getUrl();
 	await expect(footer).toEqual(dmd.config.ExtendPage);
-    browser.switchWindow(dmd.config.OrderDetailsPage3);
+    await browser.switchWindow(dmd.config.OrderDetailsPage3);
 });
 
 Then(/^I ensure the protection plan,payment type and payment method text are present in the third order details page$/, async() => {
