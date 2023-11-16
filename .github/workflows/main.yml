@@ -1,8 +1,9 @@
 name: WebDriverIO Tests
 
 on:
-  schedule:
-    - cron: '0 0 */15 * *'
+   push:
+        branches:
+          - main
 
 jobs:
   webdriverio:
@@ -25,10 +26,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y nodejs
 
-      - name: Install dependencies with --unsafe-perm and wdio-chromedriver-service
+      - name: Install dependencies with --unsafe-perm, wdio-cucumberjs-json-reporter and wdio-chromedriver-service
         run: |
           npm install --unsafe-perm --force
           npm install wdio-chromedriver-service --save-dev
+          npm install wdio-cucumberjs-json-reporter@4.4.0 --force
 
       - name: Set TZ environment variable
         run: |
