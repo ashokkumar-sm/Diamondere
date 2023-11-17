@@ -15,7 +15,7 @@ Feature: Testing the Registration and Login of Diamondere
         Given I browse Solace ring in page 2
         Then I ensure the Login and Signup icon is present in page 2
     #3
-    @smoketest
+    @smoketest1
     Scenario: Checking the Presence of Login and Signup Icon in page 3
         Given I browse Solace ring in page 3
         Then I ensure the Login and Signup icon is present in page 3
@@ -145,7 +145,7 @@ Feature: Testing the Registration and Login of Diamondere
         And I ensure the Login text,Email and Password fields are displayed at the top of the login section
 
     #18
-    @smoketest
+    @smoketest1
     Scenario: Validating the homepage after logging in
         Given I click the Login and Signup icon in the Homepage
         Then I ensure clicking the Login and Signup icon opens the Login Register page
