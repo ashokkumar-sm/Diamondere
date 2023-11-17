@@ -56,7 +56,7 @@ Feature: Testing Request Custom Order feature of Diamondere
         Then I ensure the error validation message for the name field is displayed
 
     #Scenario - 255
-    @smoketest @functional
+    @smoketest1 @functional
     Scenario: Validating the Email field in the request custom order form
         Given I browse page 3 of ring Miya
         When I click Request Custom Order button in page 3
@@ -100,7 +100,7 @@ Feature: Testing Request Custom Order feature of Diamondere
         Then I ensure the upload image button with the accepted format is displayed
 
     #Scenario - 259
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Validating the response submitted in the request custom order form after skipping the photo uploading option
         Given I browse page 3 of ring Miya
         When I click Request Custom Order link
@@ -125,7 +125,7 @@ Feature: Testing Request Custom Order feature of Diamondere
         Then I ensure the success popup for the submitted customization request is displayed
 
     #Scenario - 265
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Validating the error response in the request custom order form after uploading the invalid format
         Given I browse page 3 of ring Miya
         When I click Request Custom Order link
