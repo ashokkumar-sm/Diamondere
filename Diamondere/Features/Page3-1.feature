@@ -41,7 +41,7 @@ Feature: Testing Page 3 features of Diamondere - 1
         When I click cross button
         Then I ensure video pop is closed
     #6
-    @smoketest
+    @smoketest1
     Scenario: Checking Email page is displayed
         Given I browse ring product details page
         Then I ensure Email image is displayed
@@ -89,7 +89,7 @@ Feature: Testing Page 3 features of Diamondere - 1
         When I click cross button
         Then I ensure video pop is closed
     #11
-    @smoketest
+    @smoketest1
     Scenario: Checking accent stones area is displayed for possible products
         Given I browse ring product details page
         Then I ensure accent stones area is displayed
@@ -256,7 +256,7 @@ Feature: Testing Page 3 features of Diamondere - 1
         And I move to product details
         Then I ensure changed type,quality,size,weight in centre stone product display is displayed
     #24 
-    @smoketest
+    @smoketest1
     Scenario: Checking changed accent stones of product details is displayed
         Given I browse ring product details page
         When I move to product details
@@ -308,7 +308,7 @@ Feature: Testing Page 3 features of Diamondere - 1
         And I move to product details
         Then I ensure changed metal name in metal column is displayed
     #27 (ring size)
-    @smoketest
+    @smoketest1
     Scenario: Checking ring size of product details is displayed
         Given I browse ring product details page
         Then I ensure ring size area is displayed
@@ -403,7 +403,7 @@ Feature: Testing Page 3 features of Diamondere - 1
         When I enter number, alphabet and special character in special message field
         #Then I ensure number, alphabet and special character can be entered
     #35
-    @smoketest
+    @smoketest1
     Scenario: checking error message will displayed when not selecting ring size
         Given I browse ring product details page
         When I click add to cart button
@@ -558,7 +558,7 @@ Feature: Testing Page 3 features of Diamondere - 1
         And I ensure chain price and chain image are displayed
 
     #56(Necklace chain)
-    @smoketest
+    @smoketest1
     Scenario: Checking changed necklace chain details
         Given I browse necklace product details page
         Then I ensure necklace chain area is displayed
