@@ -40,7 +40,7 @@ Feature: Testing Page 3 features of Diamondere - 2
         And I ensure rainbow sapphire change stone dropdown is disabled
 
     #50(Men'sring breadcrumb)   
-    @smoketest 
+    @smoketest 1
     Scenario: Checking Men'sCategory is opened when clicking category Breadcrumb part of the Diamondere page-3
         Given I browse Men's ring product details page
         Then I ensure breadcrumb for the product is present
@@ -127,7 +127,7 @@ Feature: Testing Page 3 features of Diamondere - 2
         Then I ensure coupleband product price is changed
 
     #66(updatedprice-coupleband-his)
-    @smoketest
+    @smoketest1
     Scenario: Checking couple product price is changed when changing his ring size is displayed
         Given I browse couple band product details page
         Then I ensure couple centre stone area is displayed
@@ -388,7 +388,7 @@ Feature: Testing Page 3 features of Diamondere - 2
         And I ensure delivery details are displayed
 
      #81(Necklace-page)
-     @smoketest
+     @smoketest1
      Scenario: Checking necklace Page is displayed
         Given I browse necklace product details page 
         Then I ensure necklace accent stone1 area is displayed
@@ -519,7 +519,7 @@ Feature: Testing Page 3 features of Diamondere - 2
 
     
     #91 
-    @smoketest
+    @smoketest1
     Scenario: Verifying the stone selection option for Agacia band in Page 3
         Given I browse page 3 of Claudine
         When I select ring size
