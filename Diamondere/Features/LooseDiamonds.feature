@@ -17,7 +17,7 @@ Feature: Testing Loose Diamond/Loose Lab Diamond pages of Diamondere
         Then I ensure the Loose Lab Diamonds page is displayed with the filters and the diamond listing table
 
     #Scenario - 244
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the number of diamonds listed for the search is displayed near the breadcrumb
         Given I browse Start with a Diamond page of Earrings menu
         When I select Loose Diamonds in the breadcrumb
@@ -37,7 +37,7 @@ Feature: Testing Loose Diamond/Loose Lab Diamond pages of Diamondere
         Then I ensure the Ways to Save More text is not present with the filters
 
     #Scenario - 246
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Validating the filters in the Loose Diamonds/Loose Lab Diamonds page
         Given I browse Start with a Lab Diamond page of Earrings menu
         When I select Loose Lab Diamonds in the breadcrumb
@@ -61,7 +61,7 @@ Feature: Testing Loose Diamond/Loose Lab Diamond pages of Diamondere
         Then I ensure the shape filter options are displayed
 
     #Scenario - 248
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the Add to Cart, Select with Ring and Select with Necklace buttons are displayed in the Diamond details page
         Given I browse Start with a Diamond page of Earrings menu
         When I select Loose Diamonds in the breadcrumb
