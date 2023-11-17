@@ -37,7 +37,7 @@ Feature: Check the Reviews Screening and Display for any product in page 3
       And Ensure the product image, rating, customer name, location, date, review title and review comments are displayed for the customer
 
 # Scenario 4:
-@smoketest
+@smoketest1
    Scenario: Check the reviews screening section - for a product has less than 6 reviews
       Given I enter into page 3 of any product has less than 6 reviews
       When I scrolldown to the read reviews section at the bottom
