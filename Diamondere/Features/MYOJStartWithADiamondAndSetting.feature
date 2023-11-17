@@ -8,7 +8,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
 
 #DIAMOND DETAILS PAGE
     #Scenario - 153
-    @smoketest
+    @smoketest1
     Scenario: Ensure the view diamond button in the diamond details is clickable and redirects to next page
         Given I browse Loose Diamonds page
         When I select Quick view dropdown
@@ -39,7 +39,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the images and the diamond details are present for both diamonds in the Diamond details page
 
     #Scenario - 156
-    @smoketest
+    @smoketest1
     Scenario: Check whether the Shape icon is selected as default
         Given I browse Loose Diamonds page
         When I select Quick view dropdown
@@ -107,7 +107,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the respective diamond feature popup is displayed
 
     #Scenario - 163
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure "Your Diamond Details" section includes all the Diamond features for both Diamonds
         Given I browse Start with a Lab Diamond page of Earrings menu
         When I select Quick view dropdown for earrings
@@ -179,7 +179,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the Clarity section with the details of the chosen diamond is displayed
 
     #Scenario - 170
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Validating the breacrumb flow in the Diamond Details Page
         Given I browse Start with a Diamond page of Earrings menu
         When I select Quick view dropdown for earrings
@@ -215,7 +215,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
 
     # PAGE 2
     #Scenario - 176
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Start with a Diamond - Validating the breadcrumb of page 2 of all menus
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
@@ -279,7 +279,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the links redirects to respective Men's Rings page
 
     #Scenario - 178
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the "2. Settings" tab is enabled and pre-selected with Select link after selecting a diamond from the diamond listing page
         Given I browse Start with a Lab Diamond page of Rings menu
         When I select Quick view dropdown
@@ -363,7 +363,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I validate the Diamond tag in page 2
 
     #Scenario - 183
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the style, metal and sort by filters are displayed in page 2 of rings, earrings and necklaces
         Given I browse Start with a Lab Diamond page of Rings menu
         When I select Quick view dropdown
@@ -391,7 +391,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the style filter is not displayed in page 2 of men's rings
 
     #Scenario - 185
-    @smoketest
+    @smoketest1
     Scenario: Ensure the image, product name, price and short description of the product is displayed in page 2
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
@@ -410,7 +410,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the actual price is striked out and the discounted price for the product is displayed
 
     #Scenario - 187
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the stone (diamond/lab diamond) description is displayed in the page 2
     Given I browse Start with a Diamond page of Rings menu
     When I select Quick view dropdown
@@ -434,7 +434,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
     Then I ensure the lab diamond inline description is displayed in the page 2
 
     #Scenario - 188
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Verify clicking the star rating in the SEO section in page 2 takes the user to the respective reviews page
         Given I browse Start with a Lab Diamond page of Rings menu
         When I select Quick view dropdown
@@ -482,7 +482,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the page 3 of the product with the custom diamond is displayed with the image, description and price
 
     #Scenario - 191
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the discounted price for the product is displayed while choosing Easy delivery option in page 3
         Given I browse Start with a Diamond page of Men's menu
         When I select Quick view dropdown
@@ -503,7 +503,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure the product details section matches the details in product display with custom diamonds
 
     #Scenario - 193
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the certificate link for the custom diamond is displayed as a image under the main product image
         Given I browse Start with a Lab Diamond page of Men's menu
         When I select Quick view dropdown
@@ -655,7 +655,7 @@ Feature: Testing Start with a Diamond and Start with a Setting features of Diamo
         Then I ensure it redirects to diamond listing page with the applicable filters and updated Settings tab
 
     #Scenario - 233
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the "Add Diamond & Checkout" button is clickable and redirects to the cart page
         Given I browse Start with a Setting page of Necklaces menu
         When I select a product in page 2
