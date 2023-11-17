@@ -31,7 +31,7 @@ Feature: Testing the APIs and checkout page of Diamondere
         And I browse back and click logout
 
     #Scenario - 39
-    @smoketest
+    @smoketest1
     Scenario: Validate the Necklace and Chain details with protection plan options
         Given I browse Diamondere
         When I logout if already logged in
@@ -45,7 +45,7 @@ Feature: Testing the APIs and checkout page of Diamondere
         And I browse back and click logout
 
     #Scenario - 40
-    @smoketest
+    @smoketest1
     Scenario: Validate the Bracelet details with protection plan options
         Given I browse Diamondere
         When I logout if already logged in
@@ -73,7 +73,7 @@ Feature: Testing the APIs and checkout page of Diamondere
         And I browse back and click logout
 
     #Scenario - 43
-    @smoketest
+    @smoketest1
     Scenario: Ensure that the protection plan options are available only for US and not for other countries
         Given I browse Diamondere
         When I logout if already logged in
@@ -123,7 +123,7 @@ Feature: Testing the APIs and checkout page of Diamondere
         And I browse back and click logout
 
     #Scenario - 54
-    @smoketest
+    @smoketest1
     Scenario: Verifying that the name and email are pre populated for loggedin users
         Given I browse Diamondere
         When I logout if already logged in
