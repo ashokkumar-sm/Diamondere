@@ -63,7 +63,7 @@ Feature: Testing MYOJ Diamond Listing Page of Diamondere
         Then I ensure the links redirects to respective Home and Loose Diamonds page
 
     #Scenario - 7
-    @smoketest
+    @smoketest1
     Scenario: Validating the breadcrumb of Start with a Lab Diamond page of all menus
         Given I browse Start with a Lab Diamond page of Rings menu
         Then I verify the presence of breadcrumb for rings and the number of available lab diamonds
@@ -95,7 +95,7 @@ Feature: Testing MYOJ Diamond Listing Page of Diamondere
         Then I verify the Diamond and Settings tab with diamond and men's ring icons
 
     #Scenario - 9
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Start with a Lab Diamond - Validating the heading tab with icons of all menus
         Given I browse Start with a Lab Diamond page of Rings menu
         Then I verify the Lab Diamond and Settings tab with diamond and ring icons
@@ -314,7 +314,7 @@ Feature: Testing MYOJ Diamond Listing Page of Diamondere
         Then I ensure the diamond list and the number of available diamonds gets updated
 
     #Scenario - 34
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Validating the Gems filter in Start with a Diamond and Lab Diamond pages
         Given I browse Start with a Lab Diamond page of Earrings menu
         Then I validate the presence of Gems filter with the icons, options and pre-selected lab diamond option
@@ -338,7 +338,7 @@ Feature: Testing MYOJ Diamond Listing Page of Diamondere
         Then I ensure the listing display only the Oval shaped diamonds for men's rings
 
     #Scenario - 36
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Validate the shapes filter options are displayed as configured for different categories
         Given I browse Start with a Diamond page of Rings menu
         Then I validate the Shapes filter with the options for Rings
@@ -1211,7 +1211,7 @@ Feature: Testing MYOJ Diamond Listing Page of Diamondere
         Then I ensure the table sorts according to the filter chosen
 
     #Scenario - 151
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Ensure the gallery view button shows the list of diamonds in grid view format
         Given I browse Start with a Lab Diamond page of Necklaces menu
         When I select gallery view button
@@ -1238,14 +1238,14 @@ Feature: Testing MYOJ Diamond Listing Page of Diamondere
         Then I ensure the total number of pages in the table is represented at the bottom of the table
 
     #Scenario - 172
-    @smoketest
+    @smoketest1
     Scenario: Ensure clicking the page number moves to the respective page in the table
         Given I browse Start with a Diamond page of Earrings menu
         When I click Page 3
         Then I ensure the page 3 of the table is displayed
 
     #Scenario - 173
-    @smoketest
+    @smoketest1
     Scenario: Check whether the user can able to enter the page number in the textbox
         Given I browse Start with a Lab Diamond page of Men's menu
         When I enter 3 in the pagination textbox
@@ -1262,7 +1262,7 @@ Feature: Testing MYOJ Diamond Listing Page of Diamondere
         Then I ensure the page 2 of the table is displayed
 
     #Scenario - 213
-    @smoketest @validations
+    @smoketest1 @validations
     Scenario: Validating the links present in Diamond listing page
         Given I browse Start with a Diamond page of Rings menu
         When I click Free 100 Day Returns link
