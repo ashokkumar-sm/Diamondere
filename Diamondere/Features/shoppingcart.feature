@@ -39,7 +39,7 @@ Feature: Testing Shoppingcartpage of Diamondere
         And I ensure productimage, product name,price,description and ring size is displayed
 
     #3(Aftercheckout-checkout)
-    @smoketest
+    @smoketest1
     Scenario: Checking shopping cart page is redirected when clicking checkout button in checkout popup is displayed
         Given I browse ring product details page
         Then I ensure centre stone area is displayed
@@ -106,7 +106,7 @@ Feature: Testing Shoppingcartpage of Diamondere
 
     #Shopping cart
     #1(Aftercheckout-continue shopping)
-    @smoketest
+    @smoketest1
     Scenario: Checking product details page move to shopping cart page when hitting checkout
         Given I browse ring product details page
         Then I ensure centre stone area is displayed
@@ -176,7 +176,7 @@ Feature: Testing Shoppingcartpage of Diamondere
 
 
     #5
-    @smoketest
+    @smoketest1
     Scenario: Checking matching product is shown when clicking matching band link in shoppingcart page
         Given I browse ring product details page
         Then I ensure centre stone area is displayed
@@ -225,7 +225,7 @@ Feature: Testing Shoppingcartpage of Diamondere
 
 
     #7
-    @smoketest
+    @smoketest1
     Scenario: Checking matchingband product details are displayed under matchingband section in shopping page
         Given I browse ring product details page
         Then I ensure centre stone area is displayed
@@ -277,7 +277,7 @@ Feature: Testing Shoppingcartpage of Diamondere
 
 
     #9 (matching band)
-    @smoketest
+    @smoketest1
     Scenario: Checking ring size and special message can be selected in matching band section in shoppingcart page
         Given I browse ring product details page
         Then I ensure ring size area is displayed
@@ -414,7 +414,7 @@ Feature: Testing Shoppingcartpage of Diamondere
 
 
     #14(Setting)(changes)
-    @smoketest
+    @smoketest1
     Scenario: Checking setting product in shopping cart page
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
@@ -495,7 +495,7 @@ Feature: Testing Shoppingcartpage of Diamondere
         Then I ensure show discount popup is displayed
     
     #16(1)
-    @smoketest
+    @smoketest1
     Scenario: Checking the loose diamonds checkout in cart page
         Given I browse Start with a Diamond page of Rings menu
         When I select Loose Diamonds in the breadcrumb
@@ -565,7 +565,7 @@ Feature: Testing Shoppingcartpage of Diamondere
 
 
     #19(Ring-Delivery Options-Express Delivery)
-    @smoketest
+    @smoketest1
     Scenario: Checking Express delievery option is selected and check express order area
         Given I browse ring product details page
         Then I ensure centre stone area is displayed
@@ -729,7 +729,7 @@ Feature: Testing Shoppingcartpage of Diamondere
 
 
     #25(Setting Product pricing area-Easy shipping)
-    @smoketest
+    @smoketest1
     Scenario: setting product pricing area subtotal,free shipping, total
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
@@ -953,7 +953,7 @@ Feature: Testing Shoppingcartpage of Diamondere
         Then I ensure Agacia is added to cart
 
     # #39(Both bands)(negative)
-    @smoketest
+    @smoketest1
     Scenario: Checking error popup will display when selecting both bands
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
