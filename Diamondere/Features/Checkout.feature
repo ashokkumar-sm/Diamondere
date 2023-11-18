@@ -118,7 +118,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
 
     #Scenario - 16
-    @smoketest1
+    @smoketest2
     Scenario: Shipping - Ensure the confirmed address is displayed after skipping address line 2
         Given I enter First Name in Shipping address
         When I enter Last Name in Shipping address
