@@ -1,23 +1,23 @@
 Feature: Testing the APIs and checkout page of Diamondere
 
-    @smoketest
+    @smoketest1
     Scenario: Checking the Registration API
     Given I call the registration API endpoint
     Then I verify the response of the registration API
 
-    @smoketest
+    @smoketest1
     Scenario: Checking the Login API
     Given I call the login API endpoint
     Then I verify the response of the login API
     And I get the AuthToken for the loggedin user
 
-    @smoketest
+    @smoketest1
     Scenario: Checking the Add to cart API for multiple products
     Given I call the Add to Cart API endpoint
     Then I verify the response of the Add to Cart API 
 
     #Scenario - 38
-    @smoketest
+    @smoketest1
     Scenario: Validate the Ring details with pre-selected protection plan
         Given I browse Diamondere website
         When I logout if already logged in
@@ -105,7 +105,7 @@ Feature: Testing the APIs and checkout page of Diamondere
         And I browse back and click logout
 
     #Scenario - 52
-    @smoketest
+    @smoketest1
     Scenario: Ensure user can remove the chosen protection plan and choose any other plan in checkout page
         Given I browse Diamondere
         When I logout if already logged in
