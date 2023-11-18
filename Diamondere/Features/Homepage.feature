@@ -63,7 +63,7 @@ Feature: Testing Homepage of Diamondere
         Then I ensure the Black Diamond redirects to the Black Diamond rings page
 
     #10
-    @smoketest
+    @smoketest1
     Scenario: Checking the shop by precious Gemstone submenu under Rings Menu
         Given I hover over the Rings menu
         Then I Ensure that Rings submenu dropdown is visible
@@ -148,7 +148,7 @@ Feature: Testing Homepage of Diamondere
         Then I ensure the Sapphire redirects to the Sapphire engagement rings page
 
     #20
-    @smoketest1
+    @smoketest2
     Scenario: Checking the shop by semiprecious Gemstone submenu under Engagement menu in the homepage
         Given I hover over the Engagement menu
         Then I Ensure that Engagement submenu dropdown is visible with all the semiprecious Gemstone are present under shop by semiprecious Gemstone submenu
@@ -257,7 +257,7 @@ Feature: Testing Homepage of Diamondere
         Then I ensure the Read more link under How To Choose Matching Wedding Bands redirects to the respective page
 
     #35
-    @smoketest1
+    @smoketest2
     Scenario: Checking the shop by diamond under Bracelets menu in the homepage
         Given I hover over the Bracelets menu
         Then I Ensure that Bracelets submenu dropdown is visible with all diamonds present under shop by diamond
