@@ -29,7 +29,7 @@ Feature: User enters into page 2
       Then Ensure a popup video plays Emerald buying guide 
 
 #  Scenario 3:
-   @smoketest1
+   @smoketest
    Scenario: Check the star link in SEO section - Emerald from Rings category
       Given I select Rings category
       When I select Emerald from Shop By Gemstone
@@ -212,7 +212,7 @@ Feature: User enters into page 2
 
 
 # Scenario 16:
-   @smoketest1
+   @smoketest
    Scenario: Selecting any carat from carat filter
       Given I select Rings category
       When I select View All from Rings
@@ -249,7 +249,7 @@ Feature: User enters into page 2
       And Ensure the Most popular is selected by default
       
 # Scenario 19:
-   @smoketest1
+   @smoketest
    Scenario: Selecting New Arrival option from Sort By filter
       Given I select Rings category
       When I select View All from Rings
@@ -463,7 +463,7 @@ Feature: User enters into page 2
 
 
 # Scenario 34:
-   @smoketest1
+   @smoketest
    Scenario: Check the Functionality of Search box feature - Content option
       Given I select search box in header
       When I enter rings in search box
