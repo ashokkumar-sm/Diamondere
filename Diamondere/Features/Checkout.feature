@@ -118,7 +118,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
 
     #Scenario - 16
-    @smoketest2
+    @smoketest
     Scenario: Shipping - Ensure the confirmed address is displayed after skipping address line 2
         Given I enter First Name in Shipping address
         When I enter Last Name in Shipping address
@@ -134,7 +134,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
 
     #Scenario - 17
-    @smoketest1
+    @smoketest
     Scenario: Shipping - Ensure the state field is mandatory only for US and not for other countries
         Given I enter First Name in Shipping address
         When I enter Last Name in Shipping address
@@ -170,7 +170,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
 
     #Scenario - 19
-    @smoketest1
+    @smoketest
     Scenario: Validating the edited details under shipping and billing sections
         Given I enter First Name in Shipping address
         When I enter Last Name in Shipping address
@@ -307,7 +307,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
 
     #Scenario - 34
-    @smoketest1
+    @smoketest
     Scenario: Billing - Ensure the confirmed address is displayed after skipping address line 2
         Given I disable the Same as shipping address toggle button
         When I enter valid address details in Shipping & Billing section
@@ -325,7 +325,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
 
     #Scenario - 35
-    @smoketest1
+    @smoketest
     Scenario: Billing - Ensure the state field is mandatory only for US and not for other countries
         Given I disable the Same as shipping address toggle button
         When I enter valid address details in Shipping & Billing section
@@ -345,7 +345,7 @@ Feature: Testing the checkout page of Diamondere
         When I want to clear local storage
 
     #Scenario - 36
-    @smoketest1
+    @smoketest
     Scenario: Validating the shipping and billing sections with the different entered details
         Given I disable the Same as shipping address toggle button
         When I enter valid address details in Shipping & Billing section
@@ -400,7 +400,7 @@ Feature: Testing the checkout page of Diamondere
 
     
     #Scenario - 46
-    @smoketest1
+    @smoketest
     Scenario: Verifying the sales tax amount generated based on the state chosen in the US
         Given I enter valid address details in Shipping & Billing section
         Then I verify that the sales tax amount is generated for California and I validate the disclaimer message
@@ -436,7 +436,7 @@ Feature: Testing the checkout page of Diamondere
         Then I ensure it redirects to the Disclaimer page of Diamondere
     
     #Scenario - 51
-    @smoketest1
+    @smoketest
     Scenario: Verify the payment section is displayed after entering valid address details
         Given I enter valid address details in Shipping & Billing section
         When I click Continue To Payment button
