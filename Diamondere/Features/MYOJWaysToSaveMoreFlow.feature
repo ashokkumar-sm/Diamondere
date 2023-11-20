@@ -19,7 +19,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure Select Women's Band button is displayed in page 3
 
     #Scenario - 197
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Ensure selecting "Select Women's band" button redirects to the page 2 of matching women's bands and breadcrumb updates accordingly
         Given I browse Start with a Lab Diamond page of Men's menu
         When I select Quick view dropdown
@@ -32,7 +32,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure it redirects to page 2 of matching women's bands and breadcrumb updates accordingly
 
     #Scenario - 198
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Ensure the "3. Women's Band" tab is enabled and pre-selected after selecting a ring
         Given I browse Start with a Lab Diamond page of Rings menu
         When I select Quick view dropdown
@@ -88,7 +88,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
     Then I ensure the presence of ways to save more section, filters, product display, inline description and SEO section
 
     #Scenario - 202
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Validate the metal tag displayed in the page 2 of matching women's bands
         Given I browse Start with a Lab Diamond page of Rings menu
         When I select Quick view dropdown
@@ -140,7 +140,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure the product added to cart and redirects to shopping cart
 
     #Scenario - 205
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Validating the flow of selecting Both Bands option under Ways to Save More
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
@@ -215,7 +215,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure the Men's Band tab is enabled and pre-selected after selecting a ring
 
     #Scenario - 210
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Ensure the "1. Diamond/Lab Diamond" tab is not disabled in the page 2 of matching men's bands
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
@@ -290,7 +290,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure the page 3 of Men's band with the tab and ways to save more section is displayed
 
     #Scenario - 216
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Validating the page 3 of matching men's bands
         Given I browse Start with a Diamond page of Rings menu
         When I select Quick view dropdown
@@ -338,7 +338,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure it redirects to Make Your Diamond Men's Rings page
 
     #Scenario - 219
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Validating the page 2 of additional men's ring
     Given I browse Start with a Diamond page of Men's menu
     When I select Quick view dropdown
@@ -384,7 +384,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure the custom diamond is selected by default in stone options and Add Diamond to complete message is displayed
 
     #Scenario - 222
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Validating the Select Diamond button in page 3 of additional men's ring
         Given I browse Start with a Lab Diamond page of Men's menu
         When I select Quick view dropdown
@@ -472,7 +472,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I ensure it redirects to men's rings reviews page
 
     #Scenario - 236
-    @smoketest1 @validations
+    @smoketest @validations
     Scenario: Validating page 3 of men's bands in Settings page
         Given I browse Start with a Setting page of Rings menu
         When I select a product in page 2
@@ -541,7 +541,7 @@ Feature: Testing Ways to save more flows (Start with a diamond & setting) and lo
         Then I verify the presence of filters, product display, inline description and SEO section
 
     #Scenario - 240
-    @smoketest1
+    @smoketest
     Scenario: Validating page 3 of men's bands in Settings page
         Given I browse Start with a Setting page of Rings menu
         When I select a product in page 2
