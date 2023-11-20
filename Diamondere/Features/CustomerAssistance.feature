@@ -153,7 +153,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure it opens the request call back page in a popup
 
     #Scenario - 17
-    @smoketest1
+    @smoketest
     Scenario: Ensure the user can submit the request call back form by accessing the popup in checkout page
         Given I browse page 3 of ring Miya
         When I select ring size
@@ -312,7 +312,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure the request has been registered success popup is displayed
 
     #Scenario - 14
-    @smoketest1
+    @smoketest
     Scenario: Ensure that can be able to submit Contact Us form upon entering valid details
         Given I browse Contact Us page
         When I enter name in the form
@@ -423,7 +423,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure the request has been registered success popup is displayed
 
     #Scenario - 27
-    @smoketest1
+    @smoketest
     Scenario: Ensure an error message is displayed and when user tries to uploads invalid format of image in Contact Us page
         Given I browse Contact Us page
         When I enter name in the form
@@ -465,7 +465,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure it redirects to a new mailchimp page with all the fields
 
     #Scenario - 2
-    @smoketest1
+    @smoketest
     Scenario: Ensure that can be able to submit Join Diamondere Community form upon entering valid details
         Given I browse Join Diamondere Community page
         When I enter email in Join Diamondere Community form
@@ -503,7 +503,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure the character validation message for the birthday fields is displayed in Join Diamondere Community form
 
     #Scenario - 6
-    @smoketest1
+    @smoketest
     Scenario: Ensure the user cannot submit the Join Diamondere Community form by skipping the email field
         Given I browse Join Diamondere Community page
         When I enter first name in Join Diamondere Community form
@@ -542,7 +542,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure the character validation message for the birthday fields is displayed in Join Diamondere Community form
 
     #Scenario - 10
-    @smoketest1
+    @smoketest
     Scenario: Ensure typing a number in the "DD" (Date) area of "Birthday" field is limited to only "31" 
         Given I browse Join Diamondere Community page
         When I enter email in Join Diamondere Community form
@@ -632,7 +632,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure the character validation message for the name field is displayed
 
     #Scenario - 9
-    @smoketest1
+    @smoketest
     Scenario: Ensure that can be able to submit Share Product form upon entering valid details
         Given I browse page 3 of ring Miya
         When I click Email icon in page 3
@@ -682,7 +682,7 @@ Feature: Testing the Customer Assistance Features of Diamondere Website
         Then I ensure the format validation message for the email field is displayed
 
     #Scenario - 14
-    @smoketest1
+    @smoketest
     Scenario: Ensure the user cannot submit the Share Product form by skipping the your friend's email field
         Given I browse page 3 of ring Miya
         When I click Email icon in page 3
