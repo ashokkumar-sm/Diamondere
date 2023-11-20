@@ -36,7 +36,7 @@ Feature: Testing Order History page of Diamondere
         Then I ensure the Order Details,Order ID,Order Status and order date are present
 
     #4
-    @smoketest1
+    @smoketest
     Scenario: Checking the order summary section in the first order details page
         Given I browse the first Order Details page
         Then I ensure the order summary text is present in the Order summary section
