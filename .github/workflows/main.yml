@@ -3,7 +3,7 @@ name: WebDriverIO Tests
 on:
    push:
         branches:
-          - mains
+          - main
 
 jobs:
   webdriverio:
@@ -46,7 +46,7 @@ jobs:
 
       - name: Run WebDriverIO tests in Selenium Grid
         run: |
-          npx wdio wdio.conf.js --cucumberOpts.tagExpression="@smoketest2" --headless --log=ERROR
+          npx wdio wdio.conf.js --cucumberOpts.tagExpression="@smoketest" --headless --log=ERROR
         continue-on-error: true
 
       - name: Compress HTML Artifacts
