@@ -68,7 +68,7 @@ jobs:
           username: qa@litefury.com
           password: wpra uabk nhiz cmtq
           subject: "Diamondere Automation Report"
-          to: ashok@litefury.com, pradeep.ac@litefury.com, resshmaa@litefury.com
+          to: ashok@litefury.com, pradeep.ac@litefury.com, resshmaa@litefury.com, rajeev@diamondere.com 
           from: Test Suite
           attachments: "./DiamondereTestReport.zip"
 
