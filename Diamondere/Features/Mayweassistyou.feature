@@ -96,7 +96,7 @@ Feature: Check the Functionality of May We Assist You button in homepage
       Then Ensure a validation message is displayed under Detail your query field in may we assist you popup 
 
 # Scenario 11:
-   @smoketest1
+   @smoketest
    Scenario: Ensure the Detail your query field accepts design link   
       Given I select May we Assist you button 
       Then Ensure a customer care popup is displayed  
