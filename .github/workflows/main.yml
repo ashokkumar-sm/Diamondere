@@ -63,8 +63,10 @@ jobs:
 
       - name: Install gdrive
         run: |
-         RELEASE_URL=$(curl -s https://api.github.com/repos/prasmussen/gdrive/releases/latest | jq -r .assets[0].browser_download_url)
-         # Download the latest release
+         # Get the latest release URL
+         RELEASE_URL=$(curl -s https://api.github.com/repos/prasmussen/gdrive/releases/latest | jq -r '.assets[] | select(.name | contains("linux64")) | .browser_download_url')
+          # Download the latest release for Linux x64
+          sudo apt-get install jq
          wget -O gdrive $RELEASE_URL
           chmod +x gdrive
           sudo mv gdrive /usr/local/bin/gdrive
