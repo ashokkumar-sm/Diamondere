@@ -84,7 +84,7 @@ jobs:
            env:
              -CI: false
 
-      - name: Upload Test Artifacts to Google Drive
+      - name: Upload Test Artifacts to Google Drives
         run: |
           gdrive upload --parent 106OH5czPBhM9dzAtbhfbzgmaM470BWnE "./DiamondereTestReport.zip" | tee upload_result.txt
           export ARTIFACT_LINK=$(grep "https://drive.google.com" upload_result.txt)
