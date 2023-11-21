@@ -63,17 +63,27 @@ jobs:
 
       - name: Install gdrive
         run: |
-         # Get the latest release URL
+          # Get the latest release URL
           RELEASE_URL=$(curl -s https://api.github.com/repos/prasmussen/gdrive/releases/latest | jq -r '.assets[] | select(.name | contains("linux64")) | .browser_download_url')
+    
+    # Print the URL for debugging
+    echo "Release URL: $RELEASE_URL"
+    
           # Install jq
           sudo apt-get install jq
-          # Download the latest release for Linux x64
-          wget -O gdrive "$RELEASE_URL"
-          chmod +x gdrive
-          sudo mv gdrive /usr/local/bin/gdrive
-          shell: /usr/bin/bash -e {0}
-           env:
-             CI: false
+    
+    # Download the latest release for Linux x64
+    wget -O gdrive "$RELEASE_URL"
+    
+    # Print the downloaded file for debugging
+    ls -l gdrive
+    
+    chmod +x gdrive
+    sudo mv gdrive /usr/local/bin/gdrive
+     shell: /usr/bin/bash -e {0}
+     env:
+       -CI: false
+
 
 
       - name: Upload Test Artifacts to Google Drive
