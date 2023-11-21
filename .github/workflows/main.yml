@@ -69,20 +69,27 @@ jobs:
           # Print the URL for debugging
           echo "Release URL: $RELEASE_URL"
     
+          # Check if the URL is empty
+          if [ -z "$RELEASE_URL" ]; then
+            echo "Error: Failed to retrieve release URL."
+            exit 1
+          fi
+          
           # Install jq
           sudo apt-get install jq
-    
+          
           # Download the latest release for Linux x64
           wget -O gdrive "$RELEASE_URL"
-    
+          
           # Print the downloaded file for debugging
           ls -l gdrive
     
           chmod +x gdrive
           sudo mv gdrive /usr/local/bin/gdrive
            shell: /usr/bin/bash -e {0}
-           env:
-             -CI: false
+        env:
+          CI: false
+
 
       - name: Upload Test Artifacts to Google Drives
         run: |
