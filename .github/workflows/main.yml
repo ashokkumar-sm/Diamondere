@@ -46,7 +46,7 @@ jobs:
 
       - name: Run WebDriverIO tests in Selenium Grid
         run: |
-          npx wdio wdio.conf.js --cucumberOpts.tagExpression="@smoketest" --headless --log=ERROR
+          npx wdio wdio.conf.js --cucumberOpts.tagExpression="@smoketest1" --headless --log=ERROR
         continue-on-error: true
 
       - name: Compress HTML Artifacts
@@ -60,6 +60,22 @@ jobs:
           name: test-results
           path: "./DiamondereTestReport.zip"
 
+
+      - name: Install gdrive
+        run: |
+             wget -O gdrive https://github.com/gdrive-org/gdrive/releases/latest/download/gdrive-linux-x64
+             chmod +x gdrive
+             sudo mv gdrive /usr/local/bin/gdrive
+
+
+      - name: Upload Test Artifacts to Google Drive
+        run: |
+          gdrive upload --parent 106OH5czPBhM9dzAtbhfbzgmaM470BWnE "./DiamondereTestReport.zip" | tee upload_result.txt
+          export ARTIFACT_LINK=$(grep "https://drive.google.com" upload_result.txt)
+          echo "ARTIFACT_LINK=${ARTIFACT_LINK}" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Send Email Notification
         uses: dawidd6/action-send-mail@v3.7.1
         with: 
@@ -68,9 +84,9 @@ jobs:
           username: qa@litefury.com
           password: wpra uabk nhiz cmtq
           subject: "Diamondere Automation Report"
-          to: ashok@litefury.com, pradeep.ac@litefury.com, resshmaa@litefury.com, rajeev@diamondere.com 
+          to: ashok@litefury.com, pradeep.ac@litefury.com, resshmaa@litefury.com
           from: Test Suite
-          attachments: "./DiamondereTestReport.zip"
+          body: "View the results on Google Drive: ${{ env.ARTIFACT_LINK }}"
 
       - name: Notify Google Space
         run: |
