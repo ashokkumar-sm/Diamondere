@@ -4,7 +4,7 @@ Feature: Testing the Registration and Login of Diamondere
         Given I browse Diamondere website
 
     #1
-    @smoketest1
+    @smoketest
     Scenario: Checking the Presence of Login/Signup Icon in the homepage
         Given I click the Login and Signup icon in the Homepage
         Then I ensure clicking the Login and Signup icon opens the Login Register page
