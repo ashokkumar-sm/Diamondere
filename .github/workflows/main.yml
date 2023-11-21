@@ -63,9 +63,11 @@ jobs:
 
       - name: Install gdrive
         run: |
-             wget -O gdrive https://github.com/gdrive-org/gdrive/releases/latest/download/gdrive-linux-x64
-             chmod +x gdrive
-             sudo mv gdrive /usr/local/bin/gdrive
+         RELEASE_URL=$(curl -s https://api.github.com/repos/prasmussen/gdrive/releases/latest | jq -r .assets[0].browser_download_url)
+         # Download the latest release
+         wget -O gdrive $RELEASE_URL
+          chmod +x gdrive
+          sudo mv gdrive /usr/local/bin/gdrive
 
 
       - name: Upload Test Artifacts to Google Drive
