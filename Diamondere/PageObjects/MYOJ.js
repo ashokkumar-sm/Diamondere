@@ -5048,21 +5048,16 @@ class MYOJ {
 
     async removeDesignInCart() {
         await ElementUtil.click(this.lnkCartIcon, "click on shopping cart link");
-        await BrowserUtil.wait(5)
-        if (await ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
-            while (await ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
-                let removeLink = await ElementUtil.isVisible(this.btnFirstRemove, "Check for remove button");
-                
-                if (removeLink) {
-                    await ElementUtil.waitForClickable(this.btnFirstRemove, 20, "wait for page load")
-                    await ElementUtil.click(this.btnFirstRemove, "select remove");
-                    await BrowserUtil.wait(5);
-                }
-            }
-        } else {
-            await ElementUtil.click(this.diamondereLogo, "Click logo"); 
-            await BrowserUtil.wait(3);
+        await BrowserUtil.wait(5);
+        
+        while (await ElementUtil.isVisible(this.lblCartCount, "Check the cart value")) {
+            await ElementUtil.waitForClickable(this.btnFirstRemove, 20, "wait for page load");
+            await ElementUtil.click(this.btnFirstRemove, "select remove");
+            await BrowserUtil.wait(5);
         }
+        
+        await ElementUtil.click(this.diamondereLogo, "Click logo"); 
+        await BrowserUtil.wait(3);
     }
     
     
